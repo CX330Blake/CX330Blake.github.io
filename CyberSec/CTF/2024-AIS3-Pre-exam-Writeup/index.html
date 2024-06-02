@@ -24,18 +24,26 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="Hello Internet! Welcome to CX330&#39;s Universe, the place I can share my experience and leave some proof that I existed. Hope u guys enjoy my universe. GLHF!">
+        <meta name="description" content="Intro請容我先自我介紹一下！我今年大一，在高中的時候並不是理工背景的學生，相反，我原本是打算去唸法律系的。但是在高三下的時候意外接觸到了CTF的資訊，自己稍微摸索了一下，也學了一點程式設計後發現自己對這個領域更為有興趣。可惜當時已經來不及報名學測的自然科目，我就下定決心要到成大不分系，利用他們的選課權利多修習資工系的課程。最終，我如願進到了成大，也在這將近一年的時間裡，修著和資工系一樣的課程，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2024 AIS3 Pre-exam Writeup">
 <meta property="og:url" content="https://cx330.tw/CyberSec/CTF/2024-AIS3-Pre-exam-Writeup/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Hello Internet! Welcome to CX330&#39;s Universe, the place I can share my experience and leave some proof that I existed. Hope u guys enjoy my universe. GLHF!">
+<meta property="og:description" content="Intro請容我先自我介紹一下！我今年大一，在高中的時候並不是理工背景的學生，相反，我原本是打算去唸法律系的。但是在高三下的時候意外接觸到了CTF的資訊，自己稍微摸索了一下，也學了一點程式設計後發現自己對這個領域更為有興趣。可惜當時已經來不及報名學測的自然科目，我就下定決心要到成大不分系，利用他們的選課權利多修習資工系的課程。最終，我如願進到了成大，也在這將近一年的時間裡，修著和資工系一樣的課程，">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://hackmd.io/_uploads/SydoCk94C.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/S1DlyecE0.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/r1EEdx9VR.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/SJkMtl5NA.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/SkGcFx5N0.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/HJA09l9N0.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/SyqholcNR.png">
 <meta property="article:published_time" content="2024-06-02T13:42:41.000Z">
-<meta property="article:modified_time" content="2024-06-02T13:42:41.988Z">
+<meta property="article:modified_time" content="2024-06-02T14:31:40.441Z">
 <meta property="article:author" content="CX330">
 <meta property="article:tag" content="CX330, 陳子雋, CX330 universe, CX330 Blog, Blog, CTF, CX330 hacker, hacker">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hackmd.io/_uploads/SydoCk94C.png">
     
     
         <!-- Google tag (gtag.js) -->
@@ -589,8 +597,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-06-02 21:42:41</span>
-            <span class="mobile">2024-06-02 21:42:41</span>
+            <span class="desktop">2024-06-02 22:31:40</span>
+            <span class="mobile">2024-06-02 22:31:40</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -600,9 +608,13 @@
 
     
     
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.5k Words</span>
+        </span>
+    
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>5 Mins</span>
         </span>
     
     
@@ -621,7 +633,91 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            
+            <h1 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h1><p>請容我先自我介紹一下！我今年大一，在高中的時候並不是理工背景的學生，相反，我原本是打算去唸法律系的。但是在高三下的時候意外接觸到了CTF的資訊，自己稍微摸索了一下，也學了一點程式設計後發現自己對這個領域更為有興趣。可惜當時已經來不及報名學測的自然科目，我就下定決心要到成大不分系，利用他們的選課權利多修習資工系的課程。最終，我如願進到了成大，也在這將近一年的時間裡，修著和資工系一樣的課程，也更加地堅定了自己的選擇是正確的。</p>
+<p>而進到成大後我也並沒有忘記自己當時的初衷，是因為對資安特別感興趣，才誘使我轉換到了這條跑道，所以我也報名了SCIST的課程，希望可以在資安領域有更多的成長。嚴格說起來，加上SCIST的期末考試，這次是我第二次正式的資安比賽。而這次的我又比上次(SCIST期末考)花了更多的時間在解題。這次三天的賽程，我幾乎是除了吃飯睡覺以外的時間，都在解題(三點睡覺八點起床💤)，可惜最後還是一直卡在一些想不出來的點，所以解出來的題目還是有點少。希望在我今年暑假的修煉過後，下次參賽可以有更好的表現！</p>
+<p>(這次的參賽紀錄我也有放在個人網站上，等審查結束後打算公開，可以透過<a href="https://cx330.tw/CyberSec/CTF/2024-AIS3-Pre-exam-Writeup/">這個連結</a>訪問，密碼<code>2024AIS3</code>)</p>
+<h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><h2 id="Evil-Calculator"><a href="#Evil-Calculator" class="headerlink" title="Evil Calculator"></a>Evil Calculator</h2><blockquote>
+<p>這是一題command injection的題目</p>
+</blockquote>
+<p>先觀察題目，打開F12的開發者工具，隨便輸入點東西看看它的運作。這邊我們先在計算機上按下3+3。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://hackmd.io/_uploads/SydoCk94C.png"
+                      alt="image"
+                ></p>
+<p>在圖中我們可以看見，他其實是傳了一個request給後端服務器，後端服務器會去執行這個計算，並且把結果回傳給前端。這邊的payload長這樣:</p>
+<div class="highlight-container" data-rel="Json"><figure class="iseeu highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span>expression<span class="punctuation">:</span> <span class="string">&quot;3+3&quot;</span><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></div>
+<p>我們可以發現他就是執行了後面的3+3。這時候我們再去看題目給的<code>app.py</code>文件，就可以更加地確定我們的想法是對的。如下:</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&quot;/calculate&quot;</span>, methods=[<span class="string">&quot;POST&quot;</span>]</span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">calculate</span>():</span><br><span class="line">    data = request.json</span><br><span class="line">    expression = data[<span class="string">&quot;expression&quot;</span>].replace(<span class="string">&quot; &quot;</span>, <span class="string">&quot;&quot;</span>).replace(<span class="string">&quot;_&quot;</span>, <span class="string">&quot;&quot;</span>)</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        result = <span class="built_in">eval</span>(expression) <span class="comment"># 這裡就是我們要inject的地方！</span></span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        result = <span class="built_in">str</span>(e)</span><br><span class="line">    <span class="keyword">return</span> jsonify(result=<span class="built_in">str</span>(result))</span><br></pre></td></tr></table></figure></div>
+<p>所以我們只要把<code>&#123;expression: &quot;3+3&quot;&#125;</code>中的<code>&quot;3+3&quot;</code>替換成我們要注入的命令就可以被執行了。</p>
+<p>我這邊是用Chrome的插件HackBar去送請求，本來想要直接<code>cat ../flag</code>，但我發現他的源碼中會把空格給取代掉，像這樣</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expression = data[<span class="string">&quot;expression&quot;</span>].replace(<span class="string">&quot; &quot;</span>, <span class="string">&quot;&quot;</span>).replace(<span class="string">&quot;_&quot;</span>, <span class="string">&quot;&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+<p>所以換了種寫法，payload如下:</p>
+<div class="highlight-container" data-rel="Json"><figure class="iseeu highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span>expression<span class="punctuation">:</span> <span class="string">&quot;&#x27;&#x27;.join([open(&#x27;../flag&#x27;).read()])&quot;</span><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></div>
+<p>然後我們就得到flag了！</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://hackmd.io/_uploads/S1DlyecE0.png"
+                      alt="evil_calculator_flag"
+                ></p>
+<p>(圖片的字可能有點小，flag我放在下面)</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AIS3&#123;Welc0me_to_AIS3_PreExam_2o24!&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>(我在寫writeup的時候才想到，原來題目叫做evil calculator是因為作者給了個小提示告訴我們源碼中的eval函式有問題😶)</p>
+<h1 id="Crypto"><a href="#Crypto" class="headerlink" title="Crypto"></a>Crypto</h1><h1 id="Reverse"><a href="#Reverse" class="headerlink" title="Reverse"></a>Reverse</h1><h2 id="The-Long-Print"><a href="#The-Long-Print" class="headerlink" title="The Long Print"></a>The Long Print</h2><h1 id="Pwn"><a href="#Pwn" class="headerlink" title="Pwn"></a>Pwn</h1><h1 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h1><h2 id="Three-Dimensional-Secret"><a href="#Three-Dimensional-Secret" class="headerlink" title="Three Dimensional Secret"></a>Three Dimensional Secret</h2><p>這題給了一個<code>capture.pcapng</code>，所以我們先用Wireshark把檔案給打開來，看看他葫蘆裡賣的是甚麼藥。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://hackmd.io/_uploads/r1EEdx9VR.png"
+                      alt="image"
+                ><br>在圖片中我們可以看到超級多的TCP封包，我一開始還不太知道接下來該怎麼做，但我在翻了一下<a class="link"   target="_blank" rel="noopener" href="https://www.books.com.tw/products/0010884220" >這本書 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>之後就找到解法了！</p>
+<p>首先我們先對著這坨TCP封包點右鍵，會出現一個選項叫做Follow，如圖:</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://hackmd.io/_uploads/SJkMtl5NA.png"
+                      alt="image"
+                ></p>
+<p>然後我們把它點下去，然後再選擇TCP Stream，就可以看到Wireshark所解析出來的內容，如下:</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://hackmd.io/_uploads/SkGcFx5N0.png"
+                      alt="image"
+                ></p>
+<p>因為之前忘記在哪裡刷提的時候有寫過類似的題目，所以我知道這串看不懂的字其實是一個叫做Gcode的東西，它是用來控制工業中的一些自動工具機的代碼。因為太長了，所以我只放一小部分在下面。Gcode就長下面這樣。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">G0 X171.826 Y145.358</span><br><span class="line">G0 X171.773 Y144.928</span><br><span class="line">G0 X171.082 Y142.074</span><br><span class="line">G0 X171.877 Y141.336</span><br><span class="line">G0 X172.029 Y138.178</span><br><span class="line">G0 X172.802 Y136.983</span><br><span class="line">;TYPE:WALL-INNER</span><br><span class="line">G1 F1500 E2061.27916</span><br><span class="line">G1 F21000 X173.166 Y136.922 E2061.89293</span><br><span class="line">G1 X173.47 Y136.79 E2062.44409</span><br><span class="line">G1 X173.747 Y136.571 E2063.03132</span><br><span class="line">G1 X173.95 Y136.281 E2063.62001</span><br><span class="line">G1 X174.046 Y135.929 E2064.22677</span><br><span class="line">G1 X174.043 Y135.473 E2064.98511</span><br></pre></td></tr></table></figure></div>
+
+<p>既然已經知道了他是Gcode，我們就趕快來找一個線上的Viewer來看看他生做圓還是扁吧！我使用的網站是<a class="link"   target="_blank" rel="noopener" href="https://ncviewer.com/" >這個 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。把那串代碼放上去後，就點一下圖中的Plot來看看！</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://hackmd.io/_uploads/HJA09l9N0.png"
+                      alt="image"
+                ></p>
+<p>點下去後發現居然沒有東西，我直接愣在原地被硬控三秒鐘。難道是我想錯了嗎！！！在慌亂之中，我趕緊調整視角，終於發現了偷偷躲在旁邊的Flag，如下:</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://hackmd.io/_uploads/SyqholcNR.png"
+                      alt="image"
+                ></p>
+<p>(然後因為我偷懶+怕打錯字所以用了OCR把它的文字題取出來)</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AIS3&#123;b4d1y_tun3d PriN73r)</span><br></pre></td></tr></table></figure></div>
+<h1 id="Forensics"><a href="#Forensics" class="headerlink" title="Forensics"></a>Forensics</h1><p>這次好像把Forensic的題目都放在Misc裡面了所以跳過這Part</p>
+<h1 id="My-Thoughts"><a href="#My-Thoughts" class="headerlink" title="My Thoughts"></a>My Thoughts</h1><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>有鑑於我認為自己在資訊這個領域中，如果能有任何的成就或是進展，很大部分的原因都是站在了許多巨人的肩膀上，所以我會把比賽過程中用到的資源都放上來。</p>
+<p>不僅僅是為了致敬及感謝，更要提醒自己，自己的不足及渺小。</p>
+<ul>
+<li><a class="link"   target="_blank" rel="noopener" href="https://www.books.com.tw/products/0010884220" >駭客廝殺不講武德：CTF強者攻防大戰直擊 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://scist.org/blog/2020/10/27/2020%20SCIST%20Web/" >2020&#x2F;10&#x2F;24 Web Security 基礎 題解 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/vanarrow/article/details/107846987" >CTF Crypto RSA算法 入门总结（全） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/orchid_sea/article/details/134164177" >CTF-RSA加密-1 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/ISHobbyst/article/details/108918079" >CTF-Crypto-RSA基本原理及常见攻击方法 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45198339/article/details/128741483" >CTF学习笔记——RSA加密 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+<p>已經盡力回想及搜尋有用到的資源，但可能還是會有些漏網之魚，還請見諒。</p>
+
         </div>
 
         
@@ -635,7 +731,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-06-02 21:42:41
+                    :</strong> 2024-06-02 22:31:40
             </li>
         
         <li>
@@ -735,7 +831,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">2024 AIS3 Pre-exam Writeup</div>
-        
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Intro"><span class="nav-text">Intro</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Web"><span class="nav-text">Web</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Evil-Calculator"><span class="nav-text">Evil Calculator</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Crypto"><span class="nav-text">Crypto</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reverse"><span class="nav-text">Reverse</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Long-Print"><span class="nav-text">The Long Print</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Pwn"><span class="nav-text">Pwn</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Misc"><span class="nav-text">Misc</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Three-Dimensional-Secret"><span class="nav-text">Three Dimensional Secret</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Forensics"><span class="nav-text">Forensics</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#My-Thoughts"><span class="nav-text">My Thoughts</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-text">Reference</span></a></li></ol>
 
     </div>
 </div>
@@ -774,7 +870,7 @@
                     </span>
                     
                         <span>
-                            5k words in total
+                            6.5k words in total
                         </span>
                     
                 </p>
@@ -934,7 +1030,19 @@
 </main>
 
 
-    <script src="https://cdn.staticfile.net/hexo-theme-redefine/2.6.2/js/libs/Swup.min.js"></script><script src="https://cdn.staticfile.net/hexo-theme-redefine/2.6.2/js/libs/SwupSlideTheme.min.js"></script><script src="https://cdn.staticfile.net/hexo-theme-redefine/2.6.2/js/libs/SwupScriptsPlugin.min.js"></script><script src="https://cdn.staticfile.net/hexo-theme-redefine/2.6.2/js/libs/SwupProgressPlugin.min.js"></script><script src="https://cdn.staticfile.net/hexo-theme-redefine/2.6.2/js/libs/SwupScrollPlugin.min.js"></script><script src="https://cdn.staticfile.net/hexo-theme-redefine/2.6.2/js/libs/SwupPreloadPlugin.min.js"></script>
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
 <script>
     const swup = new Swup({
         plugins: [

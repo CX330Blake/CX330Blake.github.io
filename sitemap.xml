@@ -20,7 +20,16 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/ls/index.html</loc>
+    <loc>https://cx330.tw/links/index.html</loc>
+    
+    <lastmod>2024-06-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/whoami/index.html</loc>
     
     <lastmod>2024-06-02</lastmod>
     
@@ -38,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/links/index.html</loc>
+    <loc>https://cx330.tw/ls/index.html</loc>
     
     <lastmod>2024-06-02</lastmod>
     
@@ -48,15 +57,6 @@
   
   <url>
     <loc>https://cx330.tw/tags/index.html</loc>
-    
-    <lastmod>2024-06-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://cx330.tw/whoami/index.html</loc>
     
     <lastmod>2024-06-02</lastmod>
     

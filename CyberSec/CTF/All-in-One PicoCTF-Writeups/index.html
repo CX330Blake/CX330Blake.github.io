@@ -19,21 +19,21 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://cx330.tw/cybersec/ctf/picoctf-writeups/"/>
+    <link rel="canonical" href="https://cx330.tw/cybersec/ctf/all-in-one picoctf-writeups/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
         <meta name="description" content="前言TODO Webpicobrowser這題我們點進URL後會看到一個FLAG的按鈕，按下去會發現我們不能得到FLAG。他說我們應該要是picobrowser，所以我就寫了一個selenium的Python腳本來運行，看看能不能拿到flag。 123456789101112131415from selenium import webdriverfrom selenium.webdriver.ch">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PicoCTF Writeups">
-<meta property="og:url" content="https://cx330.tw/CyberSec/CTF/PicoCTF-Writeups/index.html">
+<meta property="og:title" content="All-in-One PicoCTF Writeups">
+<meta property="og:url" content="https://cx330.tw/CyberSec/CTF/All-in-One%20PicoCTF-Writeups/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="前言TODO Webpicobrowser這題我們點進URL後會看到一個FLAG的按鈕，按下去會發現我們不能得到FLAG。他說我們應該要是picobrowser，所以我就寫了一個selenium的Python腳本來運行，看看能不能拿到flag。 123456789101112131415from selenium import webdriverfrom selenium.webdriver.ch">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://hackmd.io/_uploads/SJB9S0p70.png">
 <meta property="article:published_time" content="2024-06-01T02:27:03.000Z">
-<meta property="article:modified_time" content="2024-06-02T09:19:39.488Z">
+<meta property="article:modified_time" content="2024-06-14T14:33:27.215Z">
 <meta property="article:author" content="CX330">
 <meta property="article:tag" content="CX330, 陳子雋, CX330 universe, CX330 Blog, Blog, CTF, CX330 hacker, hacker">
 <meta name="twitter:card" content="summary">
@@ -59,7 +59,7 @@
     
     <title>
         
-            PicoCTF Writeups -
+            All-in-One PicoCTF Writeups -
         
         CX330&#39;s Universe
     </title>
@@ -675,7 +675,7 @@ mjx-container[display="true"] + br {
         <div class="article-title relative w-full">
             
                 <div class="w-full flex items-center pt-6 justify-start">
-                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">PicoCTF Writeups</h1>
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">All-in-One PicoCTF Writeups</h1>
                 </div>
             
             </div>
@@ -703,8 +703,8 @@ mjx-container[display="true"] + br {
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-06-02 17:19:39</span>
-            <span class="mobile">2024-06-02 17:19:39</span>
+            <span class="desktop">2024-06-14 22:33:27</span>
+            <span class="mobile">2024-06-14 22:33:27</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -789,11 +789,7 @@ mjx-container[display="true"] + br {
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apbopjbobpnjpjnmnnnmnlnbamnpnononpnaaaamnlnkapndnkncamnpapncnbannaapncndnlnpna</span><br></pre></td></tr></table></figure></div>
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> string</span><br><span class="line"></span><br><span class="line">LOWERCASE_OFFSET = <span class="built_in">ord</span>(<span class="string">"a"</span>)</span><br><span class="line">ALPHABET = string.ascii_lowercase[:<span class="number">16</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">b16_encode</span>(<span class="params">plain</span>):</span><br><span class="line">	enc = <span class="string">""</span></span><br><span class="line">	<span class="keyword">for</span> c <span class="keyword">in</span> plain:</span><br><span class="line">		binary = <span class="string">"{0:08b}"</span>.<span class="built_in">format</span>(<span class="built_in">ord</span>(c))</span><br><span class="line">		enc += ALPHABET[<span class="built_in">int</span>(binary[:<span class="number">4</span>], <span class="number">2</span>)]</span><br><span class="line">		enc += ALPHABET[<span class="built_in">int</span>(binary[<span class="number">4</span>:], <span class="number">2</span>)]</span><br><span class="line">	<span class="keyword">return</span> enc</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">shift</span>(<span class="params">c, k</span>):</span><br><span class="line">	t1 = <span class="built_in">ord</span>(c) - LOWERCASE_OFFSET</span><br><span class="line">	t2 = <span class="built_in">ord</span>(k) - LOWERCASE_OFFSET</span><br><span class="line">	<span class="keyword">return</span> ALPHABET[(t1 + t2) % <span class="built_in">len</span>(ALPHABET)]</span><br><span class="line"></span><br><span class="line">flag = <span class="string">"redacted"</span></span><br><span class="line">key = <span class="string">"redacted"</span></span><br><span class="line"><span class="keyword">assert</span> <span class="built_in">all</span>([k <span class="keyword">in</span> ALPHABET <span class="keyword">for</span> k <span class="keyword">in</span> key])</span><br><span class="line"><span class="keyword">assert</span> <span class="built_in">len</span>(key) == <span class="number">1</span></span><br><span class="line"></span><br><span class="line">b16 = b16_encode(flag)</span><br><span class="line">enc = <span class="string">""</span></span><br><span class="line"><span class="keyword">for</span> i, c <span class="keyword">in</span> <span class="built_in">enumerate</span>(b16):</span><br><span class="line">	enc += shift(c, key[i % <span class="built_in">len</span>(key)])</span><br><span class="line"><span class="built_in">print</span>(enc)</span><br></pre></td></tr></table></figure></div>
 <p>先觀察這個加密腳本。發現他是把明文每個字母的Ascii值轉為Binary後，從左邊補0補到8個Bits，然後</p>
-<h2 id="Mind-your-Ps-and-Qs"><a href="#Mind-your-Ps-and-Qs" class="headerlink" title="Mind your Ps and Qs"></a>Mind your Ps and Qs</h2><p>這題是個RSA加密，先來複習一下RSA加密裡面的各個參數還有加密流程。</p>
-<blockquote>
-<p>Find two prime numbers p &amp; q<br>n = p * q<br>phi(n) = (p-1) * (q-1)<br>e is the encryption exponent<br>d = e^-1 mod phi(n)<br>c is the encrypted message; c = m^e mod n<br>m is the message; m = c^d mod n<br>Public key  = (e, n)<br>Private key = (d, n)</p>
-</blockquote>
-<p>複習完後，看一下題目的說明。</p>
+<h2 id="Mind-your-Ps-and-Qs"><a href="#Mind-your-Ps-and-Qs" class="headerlink" title="Mind your Ps and Qs"></a>Mind your Ps and Qs</h2><p>這題是個RSA加密，先來複習一下RSA加密裡面的各個參數。<br>:::info<br>Find two prime numbers p &amp; q<br>n = p * q<br>phi(n) = (p-1) * (q-1)<br>e is the encryption exponent<br>d = e^-1 mod phi(n)<br>c is the encrypted message; c = m^e mod n<br>m is the message; m = c^d mod n<br>Public key  = (e, n)<br>Private key = (d, n)<br>:::<br>複習完後，看一下題目的說明。</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Description:</span><br><span class="line">In RSA, a small e value can be problematic, but what about N? Can you decrypt this?</span><br><span class="line">==============================</span><br><span class="line">Decrypt my super sick RSA:</span><br><span class="line">c: 421345306292040663864066688931456845278496274597031632020995583473619804626233684</span><br><span class="line">n: 631371953793368771804570727896887140714495090919073481680274581226742748040342637</span><br><span class="line">e: 65537</span><br></pre></td></tr></table></figure></div>
 <p>這題的敘述中告訴我們，當e太小的時候我們可以使用小公鑰指數攻擊(Low public exponent attack)，而題目要我們思考當N太小的時候我們可以如何利用。</p>
 <p>回去看一下RSA加密的流程後，我們發現N是兩個質數的乘積，而當N太小的時候我們就可以暴力破解出兩個P跟Q。這裡我們直接使用FactorDB去找N的因數，就可以找到P和Q了。</p>
@@ -816,7 +812,7 @@ mjx-container[display="true"] + br {
 <p>先看題目。</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">******************Welcome to our OTP implementation!******************</span><br><span class="line">This is the encrypted flag!</span><br><span class="line">551e6c4c5e55644b56566d1b5100153d4004026a4b52066b4a5556383d4b0007</span><br><span class="line"></span><br><span class="line">What data would you like to encrypt?</span><br></pre></td></tr></table></figure></div>
 <p>在這題中，我們要先閱讀他給我們的Code。在encrypt函式中我們可以看到一些事情。因為題目給的Cipher的長度為64，又因為他是以十六進制的方式輸出Cipher，所以我們可以知道他用掉的<code>key_location</code>長度為32，也就是說，我們下次在加密的時候是用第33位開始的key。</p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">encrypt</span>(<span class="params">key_location</span>):</span><br><span class="line">    ui = <span class="built_in">input</span>(<span class="string">"What data would you like to encrypt? "</span>).rstrip()</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(ui) == <span class="number">0</span> <span class="keyword">or</span> <span class="built_in">len</span>(ui) &gt; KEY_LEN:</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line">    start = key_location  <span class="comment"># 這裡從32開始</span></span><br><span class="line">    stop = key_location + <span class="built_in">len</span>(ui)</span><br><span class="line"></span><br><span class="line">    kf = <span class="built_in">open</span>(KEY_FILE, <span class="string">"rb"</span>).read()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> stop &gt;= KEY_LEN:</span><br><span class="line">        stop = stop % KEY_LEN</span><br><span class="line">        key = kf[start:] + kf[:stop]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        key = kf[start:stop]</span><br><span class="line">    key_location = stop</span><br><span class="line"></span><br><span class="line">    result = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> p, k: <span class="string">"{:02x}"</span>.<span class="built_in">format</span>(<span class="built_in">ord</span>(p) ^ k), ui, key))</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"Here ya go!\n{}\n"</span>.<span class="built_in">format</span>(<span class="string">""</span>.join(result)))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> key_location</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">def encrypt(key_location):</span><br><span class="line">    ui = input("What data would you like to encrypt? ").rstrip()</span><br><span class="line">    if len(ui) == 0 or len(ui) &gt; KEY_LEN:</span><br><span class="line">        return -1</span><br><span class="line"></span><br><span class="line">    start = key_location  # 這裡從32開始</span><br><span class="line">    stop = key_location + len(ui)</span><br><span class="line"></span><br><span class="line">    kf = open(KEY_FILE, "rb").read()</span><br><span class="line"></span><br><span class="line">    if stop &gt;= KEY_LEN:</span><br><span class="line">        stop = stop % KEY_LEN</span><br><span class="line">        key = kf[start:] + kf[:stop]</span><br><span class="line">    else:</span><br><span class="line">        key = kf[start:stop]</span><br><span class="line">    key_location = stop</span><br><span class="line"></span><br><span class="line">    result = list(map(lambda p, k: "{:02x}".format(ord(p) ^ k), ui, key))</span><br><span class="line"></span><br><span class="line">    print("Here ya go!\n{}\n".format("".join(result)))</span><br><span class="line"></span><br><span class="line">    return key_location</span><br></pre></td></tr></table></figure></div>
 <p>知道了我們第一次輸入要加密的銘文是從第32個key開始後，我們要想辦法可以使用到跟題目一樣的那組key，而在程式碼的這個區段我們可以發現一些事。</p>
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> stop &gt;= KEY_LEN:</span><br><span class="line">        stop = stop % KEY_LEN</span><br><span class="line">        key = kf[start:] + kf[:stop]</span><br></pre></td></tr></table></figure></div>
 <p>在這邊，如果我們讓<code>stop</code>和<code>KEY_LEN</code>相等，讓<code>stop % KEY_LEN == 0</code>的話，<code>stop</code>就會被設定為0，所以我們就可以讓one-time pad被重複使用了！所以我們先輸入一堆沒用的字元去填充那個區間段，讓他把第一個50000循環結束，再進入一次循環後我們就可以得到跟題目一樣的key了。</p>
@@ -832,18 +828,18 @@ mjx-container[display="true"] + br {
             <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> PicoCTF Writeups</li>
+        <li><strong>Title:</strong> All-in-One PicoCTF Writeups</li>
         <li><strong>Author:</strong> CX330</li>
         <li><strong>Created at
                 :</strong> 2024-06-01 10:27:03</li>
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-06-02 17:19:39
+                    :</strong> 2024-06-14 22:33:27
             </li>
         
         <li>
-            <strong>Link:</strong> https://redefine.ohevan.com/CyberSec/CTF/PicoCTF-Writeups/
+            <strong>Link:</strong> https://cx330.tw/CyberSec/CTF/All-in-One PicoCTF-Writeups/
         </li>
         <li>
             <strong>
@@ -953,7 +949,7 @@ mjx-container[display="true"] + br {
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">PicoCTF Writeups</div>
+        <div class="page-title">All-in-One PicoCTF Writeups</div>
         <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Web"><span class="nav-text">Web</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#picobrowser"><span class="nav-text">picobrowser</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Crypto"><span class="nav-text">Crypto</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Easy1"><span class="nav-text">Easy1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Caesar"><span class="nav-text">Caesar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#New-Caesar"><span class="nav-text">New Caesar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mind-your-Ps-and-Qs"><span class="nav-text">Mind your Ps and Qs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#No-padding-no-problem"><span class="nav-text">No padding, no problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Easy-peasy"><span class="nav-text">Easy peasy</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Pwn"><span class="nav-text">Pwn</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Forensic"><span class="nav-text">Forensic</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reverse"><span class="nav-text">Reverse</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Misc"><span class="nav-text">Misc</span></a></li></ol>
 
     </div>

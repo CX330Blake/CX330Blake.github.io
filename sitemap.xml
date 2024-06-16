@@ -2,18 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://cx330.tw/ls/index.html</loc>
+    <loc>https://cx330.tw/Life%20and%20Talk/Why-do-I-start-blogging/</loc>
     
-    <lastmod>2024-06-14</lastmod>
+    <lastmod>2024-06-16</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://cx330.tw/Life%20&%20Talk/Reading%20List/Reading-List/</loc>
+    <loc>https://cx330.tw/Life%20and%20Talk/Reading%20List/Reading-List/</loc>
     
-    <lastmod>2024-06-14</lastmod>
+    <lastmod>2024-06-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/Life%20and%20Talk/2024-Summer-Intensive-Training-Plan/</loc>
+    
+    <lastmod>2024-06-16</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -21,6 +30,24 @@
   
   <url>
     <loc>https://cx330.tw/CyberSec/CTF/All-in-One%20PicoCTF-Writeups/</loc>
+    
+    <lastmod>2024-06-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/CyberSec/CTF/2024-AIS3-Pre-exam-Writeup/</loc>
+    
+    <lastmod>2024-06-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/ls/index.html</loc>
     
     <lastmod>2024-06-14</lastmod>
     
@@ -38,34 +65,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/CyberSec/CTF/2024-AIS3-Pre-exam-Writeup/</loc>
-    
-    <lastmod>2024-06-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://cx330.tw/Life%20&%20Talk/2024-Summer-Intensive-Training-Plan/</loc>
-    
-    <lastmod>2024-06-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://cx330.tw/categories/index.html</loc>
-    
-    <lastmod>2024-06-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://cx330.tw/links/index.html</loc>
     
     <lastmod>2024-06-02</lastmod>
     
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/Life%20&%20Talk/Why-do-I-start-blogging/</loc>
+    <loc>https://cx330.tw/links/index.html</loc>
     
     <lastmod>2024-06-02</lastmod>
     
@@ -103,7 +103,7 @@
 
   <url>
     <loc>https://cx330.tw/</loc>
-    <lastmod>2024-06-15</lastmod>
+    <lastmod>2024-06-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -111,14 +111,14 @@
   
   <url>
     <loc>https://cx330.tw/tags/CTF/</loc>
-    <lastmod>2024-06-15</lastmod>
+    <lastmod>2024-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://cx330.tw/tags/Security/</loc>
-    <lastmod>2024-06-15</lastmod>
+    <lastmod>2024-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -126,29 +126,29 @@
 
   
   <url>
-    <loc>https://cx330.tw/categories/Life-Talk/</loc>
-    <lastmod>2024-06-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cx330.tw/categories/Life-Talk/Reading-List/</loc>
-    <lastmod>2024-06-15</lastmod>
+    <loc>https://cx330.tw/categories/Life-and-Talk/</loc>
+    <lastmod>2024-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://cx330.tw/categories/CyberSec/</loc>
-    <lastmod>2024-06-15</lastmod>
+    <lastmod>2024-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://cx330.tw/categories/CyberSec/CTF/</loc>
-    <lastmod>2024-06-15</lastmod>
+    <lastmod>2024-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/categories/Life-and-Talk/Reading-List/</loc>
+    <lastmod>2024-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

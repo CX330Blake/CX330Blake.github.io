@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://cx330.tw/DevCorner/AI/2024-GDSC-NCKU-AI-Team/</loc>
+    
+    <lastmod>2024-06-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://cx330.tw/whoami/index.html</loc>
     
     <lastmod>2024-06-21</lastmod>
@@ -11,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/subscribe/index.html</loc>
+    <loc>https://cx330.tw/ls/index.html</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -20,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/ls/index.html</loc>
+    <loc>https://cx330.tw/subscribe/index.html</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -92,7 +101,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/tags/index.html</loc>
+    <loc>https://cx330.tw/links/index.html</loc>
     
     <lastmod>2024-06-02</lastmod>
     
@@ -101,7 +110,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/links/index.html</loc>
+    <loc>https://cx330.tw/tags/index.html</loc>
     
     <lastmod>2024-06-02</lastmod>
     
@@ -141,10 +150,38 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://cx330.tw/tags/AI/</loc>
+    <lastmod>2024-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/tags/GDSC/</loc>
+    <lastmod>2024-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
     <loc>https://cx330.tw/categories/Life-and-Talk/</loc>
+    <lastmod>2024-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/categories/DevCorner/</loc>
+    <lastmod>2024-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/categories/DevCorner/AI/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

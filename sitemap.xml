@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/ls/index.html</loc>
+    <loc>https://cx330.tw/subscribe/index.html</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/subscribe/index.html</loc>
+    <loc>https://cx330.tw/ls/index.html</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/links/index.html</loc>
+    <loc>https://cx330.tw/categories/index.html</loc>
     
     <lastmod>2024-06-02</lastmod>
     
@@ -92,7 +92,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/index.html</loc>
+    <loc>https://cx330.tw/links/index.html</loc>
     
     <lastmod>2024-06-02</lastmod>
     
@@ -165,21 +165,21 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/DevCorner/</loc>
-    <lastmod>2024-06-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cx330.tw/categories/DevCorner/AI/</loc>
-    <lastmod>2024-06-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cx330.tw/categories/CyberSec/</loc>
+    <lastmod>2024-06-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/categories/CyberSec/CTF/</loc>
+    <lastmod>2024-06-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/categories/DevCorner/</loc>
     <lastmod>2024-06-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -193,7 +193,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/CyberSec/CTF/</loc>
+    <loc>https://cx330.tw/categories/DevCorner/AI/</loc>
     <lastmod>2024-06-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

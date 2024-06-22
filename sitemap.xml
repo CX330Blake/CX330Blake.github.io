@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://cx330.tw/subscribe/index.html</loc>
+    <loc>https://cx330.tw/Life%20and%20Talk/Why-do-I-start-blogging/</loc>
     
     <lastmod>2024-06-22</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/Life%20and%20Talk/Why-do-I-start-blogging/</loc>
+    <loc>https://cx330.tw/subscribe/index.html</loc>
     
     <lastmod>2024-06-22</lastmod>
     
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/links/index.html</loc>
+    <loc>https://cx330.tw/categories/index.html</loc>
     
     <lastmod>2024-06-02</lastmod>
     
@@ -92,7 +92,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/index.html</loc>
+    <loc>https://cx330.tw/links/index.html</loc>
     
     <lastmod>2024-06-02</lastmod>
     
@@ -179,14 +179,14 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/DevCorner/</loc>
+    <loc>https://cx330.tw/categories/Life-and-Talk/Reading-List/</loc>
     <lastmod>2024-06-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/Life-and-Talk/Reading-List/</loc>
+    <loc>https://cx330.tw/categories/DevCorner/</loc>
     <lastmod>2024-06-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

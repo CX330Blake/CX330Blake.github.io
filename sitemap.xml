@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://cx330.tw/Life%20and%20Talk/Why-do-I-start-blogging/</loc>
+    
+    <lastmod>2024-06-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://cx330.tw/DevCorner/AI/2024-GDSC-NCKU-AI-Team/</loc>
     
     <lastmod>2024-06-21</lastmod>
@@ -50,15 +59,6 @@
     <loc>https://cx330.tw/CyberSec/CTF/2024-AIS3-Pre-exam-Writeup/</loc>
     
     <lastmod>2024-06-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://cx330.tw/Life%20and%20Talk/Why-do-I-start-blogging/</loc>
-    
-    <lastmod>2024-06-16</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -165,21 +165,21 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/CyberSec/</loc>
-    <lastmod>2024-06-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cx330.tw/categories/CyberSec/CTF/</loc>
-    <lastmod>2024-06-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cx330.tw/categories/DevCorner/</loc>
+    <lastmod>2024-06-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/categories/DevCorner/AI/</loc>
+    <lastmod>2024-06-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/categories/CyberSec/</loc>
     <lastmod>2024-06-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -193,7 +193,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/DevCorner/AI/</loc>
+    <loc>https://cx330.tw/categories/CyberSec/CTF/</loc>
     <lastmod>2024-06-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

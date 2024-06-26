@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://cx330.tw/CyberSec/CTF/All-in-One%20PicoCTF-Writeups/</loc>
+    
+    <lastmod>2024-06-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/TechStreak30/2024%20CTF%20Training/Day-01-Grinding-PicoCTF/</loc>
+    
+    <lastmod>2024-06-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://cx330.tw/whoami/</loc>
     
     <lastmod>2024-06-26</lastmod>
@@ -74,16 +92,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/CyberSec/CTF/All-in-One%20PicoCTF-Writeups/</loc>
-    
-    <lastmod>2024-06-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://cx330.tw/categories/</loc>
+    <loc>https://cx330.tw/links/</loc>
     
     <lastmod>2024-06-02</lastmod>
     
@@ -92,7 +101,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/links/</loc>
+    <loc>https://cx330.tw/categories/</loc>
     
     <lastmod>2024-06-02</lastmod>
     
@@ -155,6 +164,27 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://cx330.tw/tags/PicoCTF/</loc>
+    <lastmod>2024-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/tags/CyberSec/</loc>
+    <lastmod>2024-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/tags/TechStreak30/</loc>
+    <lastmod>2024-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -186,6 +216,13 @@
   </url>
   
   <url>
+    <loc>https://cx330.tw/categories/TechStreak30/</loc>
+    <lastmod>2024-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://cx330.tw/categories/Life-and-Talk/Reading-List/</loc>
     <lastmod>2024-06-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -194,6 +231,13 @@
   
   <url>
     <loc>https://cx330.tw/categories/DevCorner/AI/</loc>
+    <lastmod>2024-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/categories/TechStreak30/2024-CTF-Training/</loc>
     <lastmod>2024-06-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

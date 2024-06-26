@@ -73,19 +73,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Reading List</title>
-    <url>/Life%20and%20Talk/Reading%20List/Reading-List/</url>
-    <content><![CDATA[<ol>
-<li><a class="link"   href="https://johnliutw.medium.com/list/google-4cfac4644843" >Google 的軟體工程之道 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li><a class="link"   href="https://octobug.gitbooks.io/sqlmap-wiki-zhcn/content/" >Sqlmap 文檔中文版 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>Life and Talk</category>
-        <category>Reading List</category>
-      </categories>
-  </entry>
-  <entry>
     <title>2024 AIS3 Pre-exam Writeup</title>
     <url>/CyberSec/CTF/2024-AIS3-Pre-exam-Writeup/</url>
     <content><![CDATA[
@@ -238,5 +225,18 @@
         <tag>CTF</tag>
         <tag>Security</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Reading List</title>
+    <url>/Life%20and%20Talk/Reading%20List/Reading-List/</url>
+    <content><![CDATA[<ol>
+<li><a class="link"   href="https://johnliutw.medium.com/list/google-4cfac4644843" >Google 的軟體工程之道 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://octobug.gitbooks.io/sqlmap-wiki-zhcn/content/" >Sqlmap 文檔中文版 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Life and Talk</category>
+        <category>Reading List</category>
+      </categories>
   </entry>
 </search>

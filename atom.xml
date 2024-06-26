@@ -33,13 +33,13 @@
     
     
     
-    <category term="CyberSec" scheme="https://cx330.tw/categories/CyberSec/"/>
-    
-    <category term="CTF" scheme="https://cx330.tw/categories/CyberSec/CTF/"/>
-    
     <category term="TechStreak30" scheme="https://cx330.tw/categories/TechStreak30/"/>
     
+    <category term="CyberSec" scheme="https://cx330.tw/categories/CyberSec/"/>
+    
     <category term="2024 CTF Training" scheme="https://cx330.tw/categories/TechStreak30/2024-CTF-Training/"/>
+    
+    <category term="CTF" scheme="https://cx330.tw/categories/CyberSec/CTF/"/>
     
     
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>

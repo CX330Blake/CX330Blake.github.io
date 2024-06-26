@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://cx330.tw/subscribe/</loc>
+    <loc>https://cx330.tw/whoami/</loc>
     
-    <lastmod>2024-06-22</lastmod>
+    <lastmod>2024-06-26</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://cx330.tw/whoami/</loc>
+    <loc>https://cx330.tw/subscribe/</loc>
     
     <lastmod>2024-06-22</lastmod>
     
@@ -165,21 +165,21 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/DevCorner/</loc>
-    <lastmod>2024-06-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cx330.tw/categories/DevCorner/AI/</loc>
-    <lastmod>2024-06-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cx330.tw/categories/CyberSec/</loc>
+    <lastmod>2024-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/categories/CyberSec/CTF/</loc>
+    <lastmod>2024-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/categories/DevCorner/</loc>
     <lastmod>2024-06-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -193,7 +193,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/CyberSec/CTF/</loc>
+    <loc>https://cx330.tw/categories/DevCorner/AI/</loc>
     <lastmod>2024-06-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

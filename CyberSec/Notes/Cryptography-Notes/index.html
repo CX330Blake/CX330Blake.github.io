@@ -17,26 +17,29 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://cx330.tw/techstreak30/2024 ctf training/day-01-grinding-picoctf/"/>
+    <link rel="canonical" href="https://cx330.tw/cybersec/notes/cryptography-notes/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="前言因為已經有開了一篇文章，打算放上所有 picoCTF 的 writeups 了，所以就不把解題思路寫在這邊啦，如果想看的話請見這邊! 今日進度今天打算先刷一點 picoCTF 的題目，因為成大資安社加入戰隊的標準是一萬分，然後我現在才六千多。但是！當我今天開始刷題目之後我發現 pico 他們的制度整個大改！現在沒有計算分數的機制了，改為把題目分成三個不同的難度（像是 Leetcode 那樣），">
+        <meta name="description" content="公告                  這篇文章會先發布公開，但是有內容都還在完善中，等補完內容後會把這個公告撤掉。           前言為甚麼會想寫這篇文因為自己在學習的時候一直覺得密碼學是個很困難的領域，所以決定自己把一些筆記給記錄下來。一來是幫助自己以後可以回來翻，其次也希望可以幫助到正在學習密碼學的人！加油啦！ 柯克霍夫原則 Kerckhoffs’s pr">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[Day 01] Grinding PicoCTF">
-<meta property="og:url" content="https://cx330.tw/TechStreak30/2024%20CTF%20Training/Day-01-Grinding-PicoCTF/">
+<meta property="og:title" content="Cryptography Notes">
+<meta property="og:url" content="https://cx330.tw/CyberSec/Notes/Cryptography-Notes/">
 <meta property="og:site_name" content="CX330&#39;s Universe">
-<meta property="og:description" content="前言因為已經有開了一篇文章，打算放上所有 picoCTF 的 writeups 了，所以就不把解題思路寫在這邊啦，如果想看的話請見這邊! 今日進度今天打算先刷一點 picoCTF 的題目，因為成大資安社加入戰隊的標準是一萬分，然後我現在才六千多。但是！當我今天開始刷題目之後我發現 pico 他們的制度整個大改！現在沒有計算分數的機制了，改為把題目分成三個不同的難度（像是 Leetcode 那樣），">
+<meta property="og:description" content="公告                  這篇文章會先發布公開，但是有內容都還在完善中，等補完內容後會把這個公告撤掉。           前言為甚麼會想寫這篇文因為自己在學習的時候一直覺得密碼學是個很困難的領域，所以決定自己把一些筆記給記錄下來。一來是幫助自己以後可以回來翻，其次也希望可以幫助到正在學習密碼學的人！加油啦！ 柯克霍夫原則 Kerckhoffs’s pr">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-06-26T08:42:14.000Z">
-<meta property="article:modified_time" content="2024-06-27T12:14:34.750Z">
+<meta property="og:image" content="https://hackmd.io/_uploads/rJ6NTsq8A.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/r1KgQh5LR.png">
+<meta property="article:published_time" content="2024-06-27T12:05:01.000Z">
+<meta property="article:modified_time" content="2024-06-27T12:14:45.341Z">
 <meta property="article:author" content="CX330">
 <meta property="article:tag" content="CTF">
+<meta property="article:tag" content="Cryptography">
 <meta property="article:tag" content="CyberSec">
-<meta property="article:tag" content="PicoCTF">
-<meta property="article:tag" content="TechStreak30">
+<meta property="article:tag" content="Notes">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hackmd.io/_uploads/rJ6NTsq8A.png">
     
     
         <!-- Google tag (gtag.js) -->
@@ -58,7 +61,7 @@
     
     <title>
         
-            [Day 01] Grinding PicoCTF -
+            Cryptography Notes -
         
         CX330&#39;s Universe
     </title>
@@ -733,10 +736,10 @@ mjx-container[display="true"] + br {
             
                 
                 
-                <img src="/images/hacker_in_the_universe.webp" alt="[Day 01] Grinding PicoCTF" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75"/>
+                <img src="/images/cryptography.webp" alt="Cryptography Notes" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75"/>
                 
                 <div class="w-full flex items-center absolute bottom-0 justify-start">
-                    <h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">[Day 01] Grinding PicoCTF</h1>
+                    <h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">Cryptography Notes</h1>
                 </div>
             
             </div>
@@ -757,15 +760,15 @@ mjx-container[display="true"] + br {
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2024-06-26 16:42:14</span>
-        <span class="mobile">2024-06-26 16:42:14</span>
+        <span class="desktop">2024-06-27 20:05:01</span>
+        <span class="mobile">2024-06-27 20:05:01</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-06-27 20:14:34</span>
-            <span class="mobile">2024-06-27 20:14:34</span>
+            <span class="desktop">2024-06-27 20:14:45</span>
+            <span class="mobile">2024-06-27 20:14:45</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -789,27 +792,7 @@ mjx-container[display="true"] + br {
                             <li>></li>
                         
                         <li>
-                            <a href="/categories/CyberSec/CTF/">CTF</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/TechStreak30/">TechStreak30</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/TechStreak30/2024-CTF-Training/">2024 CTF Training</a>&nbsp;
+                            <a href="/categories/CyberSec/Notes/">Notes</a>&nbsp;
                         </li>
                     
                     
@@ -827,15 +810,15 @@ mjx-container[display="true"] + br {
                     </li>
                 
                     <li>
+                        | <a href="/tags/Cryptography/">Cryptography</a>&nbsp;
+                    </li>
+                
+                    <li>
                         | <a href="/tags/CyberSec/">CyberSec</a>&nbsp;
                     </li>
                 
                     <li>
-                        | <a href="/tags/PicoCTF/">PicoCTF</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        | <a href="/tags/TechStreak30/">TechStreak30</a>&nbsp;
+                        | <a href="/tags/Notes/">Notes</a>&nbsp;
                     </li>
                 
             </ul>
@@ -845,12 +828,12 @@ mjx-container[display="true"] + br {
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>297 Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.5k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>5 Mins</span>
         </span>
     
     
@@ -869,38 +852,71 @@ mjx-container[display="true"] + br {
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>因為已經有開了一篇文章，打算放上所有 picoCTF 的 writeups 了，所以就不把解題思路寫在這邊啦，如果想看的話請見<a href="https://cx330.tw/CyberSec/CTF/All-in-One%20PicoCTF-Writeups/">這邊</a>!</p>
-<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天打算先刷一點 picoCTF 的題目，因為成大資安社加入戰隊的標準是一萬分，然後我現在才六千多。但是！當我今天開始刷題目之後我發現 pico 他們的制度整個大改！現在沒有計算分數的機制了，改為把題目分成三個不同的難度（像是 Leetcode 那樣），分別是 easy, medium, hard。所以不知道到時候加戰隊的標準會是多少呢，不過以下就是我今天的進度啦！</p>
-<ol>
-<li>More SQLi</li>
-<li>Trickster</li>
-</ol>
-<p>今天進度就兩題，不過感覺多多少少是有學習到新知識的。之後可能要找一天特別來研究一下 sqlmap 的文檔，到時候再出成一篇筆記文章吧！兩題可能聽起來有點少，但畢竟剛放暑假，我還在那個耍費狀態 XD，慢慢調整啦！</p>
-<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
-<li>起床時間：<code>8:30</code></li>
-<li>知識量：⭐⭐⭐</li>
-<li>疲勞程度：⭐⭐</li>
-<li>精神狀態：⭐⭐⭐⭐⭐</li>
-</ul>
+            
+  <div class="note-large red">
+    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
+      <p>公告</p>
 
+    </div>
+    <div class="notel-content">
+      <p>這篇文章會先發布公開，但是有內容都還在完善中，等補完內容後會把這個公告撤掉。</p>
+
+    </div>
+  </div>
+
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="為甚麼會想寫這篇文"><a href="#為甚麼會想寫這篇文" class="headerlink" title="為甚麼會想寫這篇文"></a>為甚麼會想寫這篇文</h2><p>因為自己在學習的時候一直覺得密碼學是個很困難的領域，所以決定自己把一些筆記給記錄下來。一來是幫助自己以後可以回來翻，其次也希望可以幫助到正在學習密碼學的人！加油啦！</p>
+<h2 id="柯克霍夫原則-Kerckhoffs’s-principle"><a href="#柯克霍夫原則-Kerckhoffs’s-principle" class="headerlink" title="柯克霍夫原則 Kerckhoffs’s principle"></a>柯克霍夫原則 Kerckhoffs’s principle</h2><blockquote>
+<p>“A cryptosystem should remain secure even if an adversary knows all the details of the system, except for the secret decryption key.” — <strong><em>Kerckhoffs’s principle</em></strong></p>
+</blockquote>
+<p>柯克霍夫原則是由 Auguste Kerckhoffs 在 19 世紀提出的，其內容主要就是說明一個好的加密系統即使其運作原理全部都是公開的，只要金鑰未公開，他就應該要是安全的。資訊理論的創始人 Claude Shannon 將其改說為以下說法。</p>
+<blockquote>
+<p>“The enemy knows the system” — <strong><em>Claude Shannon</em></strong></p>
+</blockquote>
+<p>也就是說，永遠預設敵人知道你的整個加密系統是如何運作的，包括其中的算法以及各種原理。一個加密系統要在這樣的情境下還能保證其加密資料的安全性才稱得上是安全的。</p>
+<h2 id="領域展開：密碼學的三大領域"><a href="#領域展開：密碼學的三大領域" class="headerlink" title="領域展開：密碼學的三大領域"></a>領域展開：密碼學的三大領域</h2><p>在密碼學中的任何知識幾乎都是圍繞著<strong>編碼</strong>、<strong>雜湊</strong>、<strong>加密</strong>這三個領域，所以就先來分別簡單聊聊他們各自都是甚麼吧！</p>
+<h3 id="編碼-Encoding"><a href="#編碼-Encoding" class="headerlink" title="編碼 Encoding"></a>編碼 Encoding</h3><p>編碼的目的是為了資料的傳輸或表達，把原本的資料<strong>換一種方式</strong>表達而已。因為他只是把資料轉換成另一種形式，所以編碼後的資料仍然可以被解碼（Decode），也就是說整個過程完全是<strong>可逆的</strong>。</p>
+<p>所以這裡要特別注意。<strong>編碼不是加密！編碼不是加密！編碼不是加密！</strong></p>
+<h3 id="雜湊-Hashing"><a href="#雜湊-Hashing" class="headerlink" title="雜湊 Hashing"></a>雜湊 Hashing</h3><p>雜湊，又名哈希（對就是直接從 Hash 直接翻過來）。雜湊的話主要是用於數據校驗以及數據完整性的驗證，還有一些其他的安全應用比如數位簽章等。雜湊算法會有以下的特性：</p>
+<ol>
+<li><strong>不可逆性</strong>：雜湊的算法是不可逆的，無法透過已知的雜湊值（哈希值 Hash values）回推原始資料。</li>
+<li><strong>固定長度輸出</strong>：不管輸入的數據長度為何，哈希函式都會生成固定長度的哈希值。比如 SHA-256 的輸出長度就是固定 256 個 Bits。</li>
+<li><strong>唯一性</strong>：理想情況下，兩個不同的輸入會產生不同的輸出（避免碰撞）。</li>
+</ol>
+<h3 id="加密-Encryption"><a href="#加密-Encryption" class="headerlink" title="加密 Encryption"></a>加密 Encryption</h3><p>加密就相對好理解啦！就是用於保護數據的機密性（Confidentiality），確保只有被授權的用戶才能訪問數據。其加密和解密的過程都<strong>依賴於密鑰</strong>（Key），密鑰的保密性也會直接的影響到數據的安全性。</p>
+<p>就好比是一個保險箱，要打開它需要一把鑰匙，而那把鑰匙就是密鑰。如果密鑰被盜取，那麼保險箱也就毫無用處了。</p>
+<h1 id="常見編碼-Common-Encoding"><a href="#常見編碼-Common-Encoding" class="headerlink" title="常見編碼 Common Encoding"></a>常見編碼 Common Encoding</h1><h2 id="ASCII-Encoding"><a href="#ASCII-Encoding" class="headerlink" title="ASCII Encoding"></a>ASCII Encoding</h2><h3 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h3><p>這應該大家都很熟悉吧！他的全名是 American Standard Code for Information Interchange，反正不是很重要，就是一個挺常見的編碼方式。以下是一張 ASCII 表：</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/rJ6NTsq8A.png" alt="ASCII Table from GeeksforGeeks"><figcaption>ASCII Table from GeeksforGeeks</figcaption></figure></p>
+<h3 id="Python-Code"><a href="#Python-Code" class="headerlink" title="Python Code"></a>Python Code</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 將字符串轉換為 ASCII 編碼</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">ascii_encode</span>(<span class="params">input_string</span>):</span><br><span class="line">    <span class="keyword">return</span> [<span class="built_in">ord</span>(char) <span class="keyword">for</span> char <span class="keyword">in</span> input_string]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 將 ASCII 編碼轉換回字串</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">ascii_decode</span>(<span class="params">ascii_codes</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="string">''</span>.join(<span class="built_in">chr</span>(code) <span class="keyword">for</span> code <span class="keyword">in</span> ascii_codes)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 示例</span></span><br><span class="line">input_string = <span class="string">"This is ASCII encoding"</span></span><br><span class="line">ascii_encoded = ascii_encode(input_string)</span><br><span class="line">ascii_decoded = ascii_decode(ascii_encoded)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"Original string:"</span>, input_string)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"ASCII encoded:"</span>, ascii_encoded)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"ASCII decoded:"</span>, ascii_decoded)</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="Base64-Encoding"><a href="#Base64-Encoding" class="headerlink" title="Base64 Encoding"></a>Base64 Encoding</h2><h3 id="簡介-1"><a href="#簡介-1" class="headerlink" title="簡介"></a>簡介</h3><p>Base64 通常用於傳輸二進制數據的場合，例如在電子郵件中嵌入圖像、文件等。它的範圍是從使用<code>A-Z</code>、<code>a-z</code>、<code>0-9</code>，共 62 個字符，加上兩個額外字符<code>+</code>和<code>/</code>，共 64 個字符。</p>
+<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>Base64 編碼這個名稱代表著它<strong>基於 64 個可列印字元</strong>所形成的編碼。由於 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.546ex;" xmlns="http://www.w3.org/2000/svg" width="10.667ex" height="2.116ex" role="img" focusable="false" viewBox="0 -694 4714.8 935.4"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="6C" d="M42 46H56Q95 46 103 60V68Q103 77 103 91T103 124T104 167T104 217T104 272T104 329Q104 366 104 407T104 482T104 542T103 586T103 603Q100 622 89 628T44 637H26V660Q26 683 28 683L38 684Q48 685 67 686T104 688Q121 689 141 690T171 693T182 694H185V379Q185 62 186 60Q190 52 198 49Q219 46 247 46H263V0H255L232 1Q209 2 183 2T145 3T107 3T57 1L34 0H26V46H42Z"></path><path data-c="6F" d="M28 214Q28 309 93 378T250 448Q340 448 405 380T471 215Q471 120 407 55T250 -10Q153 -10 91 57T28 214ZM250 30Q372 30 372 193V225V250Q372 272 371 288T364 326T348 362T317 390T268 410Q263 411 252 411Q222 411 195 399Q152 377 139 338T126 246V226Q126 130 145 91Q177 30 250 30Z" transform="translate(278,0)"></path><path data-c="67" d="M329 409Q373 453 429 453Q459 453 472 434T485 396Q485 382 476 371T449 360Q416 360 412 390Q410 404 415 411Q415 412 416 414V415Q388 412 363 393Q355 388 355 386Q355 385 359 381T368 369T379 351T388 325T392 292Q392 230 343 187T222 143Q172 143 123 171Q112 153 112 133Q112 98 138 81Q147 75 155 75T227 73Q311 72 335 67Q396 58 431 26Q470 -13 470 -72Q470 -139 392 -175Q332 -206 250 -206Q167 -206 107 -175Q29 -140 29 -75Q29 -39 50 -15T92 18L103 24Q67 55 67 108Q67 155 96 193Q52 237 52 292Q52 355 102 398T223 442Q274 442 318 416L329 409ZM299 343Q294 371 273 387T221 404Q192 404 171 388T145 343Q142 326 142 292Q142 248 149 227T179 192Q196 182 222 182Q244 182 260 189T283 207T294 227T299 242Q302 258 302 292T299 343ZM403 -75Q403 -50 389 -34T348 -11T299 -2T245 0H218Q151 0 138 -6Q118 -15 107 -34T95 -74Q95 -84 101 -97T122 -127T170 -155T250 -167Q319 -167 361 -139T403 -75Z" transform="translate(778,0)"></path></g><g data-mml-node="TeXAtom" transform="translate(1311,-241.4) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g><g data-mml-node="mo" transform="translate(1714.6,0)"><path data-c="2061" d=""></path></g><g data-mml-node="mn" transform="translate(1881.2,0)"><path data-c="36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z"></path><path data-c="34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z" transform="translate(500,0)"></path></g><g data-mml-node="mo" transform="translate(3159,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mn" transform="translate(4214.8,0)"><path data-c="36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z"></path></g></g></g></svg></mjx-container>，所以每 6 個位元（Bit）為一個基本單元，對應著一個可列印字元。每 3 個位元組（Byte）為 24 個位元，相當於 4 個 Base64 基本單元，代表每 3 個位元組可以由 4 個可列印字元表示。下圖就是每個可列印字元所對應的索引值。</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/r1KgQh5LR.png" alt="Base64 encoding table from GeeksforGeeks"><figcaption>Base64 encoding table from GeeksforGeeks</figcaption></figure></p>
+<h3 id="Python-Code-1"><a href="#Python-Code-1" class="headerlink" title="Python Code"></a>Python Code</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">base64_encode</span>(<span class="params">data</span>):</span><br><span class="line">    <span class="comment"># 使用 base64 模組的 b64encode 函式進行編碼</span></span><br><span class="line">    encoded_bytes = base64.b64encode(data)</span><br><span class="line">    <span class="comment"># 將編碼後的位元組轉換為字串並回傳</span></span><br><span class="line">    <span class="keyword">return</span> encoded_bytes.decode(<span class="string">"utf-8"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">base64_decode</span>(<span class="params">encoded_data</span>):</span><br><span class="line">    <span class="comment"># 將 Base64 編碼的字串轉為位元組</span></span><br><span class="line">    encoded_bytes = encoded_data.encode(<span class="string">"utf-8"</span>)</span><br><span class="line">    <span class="comment"># 用 base64 的 b64decode 解碼</span></span><br><span class="line">    decoded_bytes = base64.b64decode(encoded_bytes)</span><br><span class="line">    <span class="comment"># 回傳解碼後的字串</span></span><br><span class="line">    <span class="keyword">return</span> decoded_bytes.decode(<span class="string">"utf-8"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 測試</span></span><br><span class="line">data_to_encode = <span class="string">b"This is Base64 encoding"</span></span><br><span class="line"></span><br><span class="line">encoded_data = base64_encode(data_to_encode)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"Base64 Encoded Data:"</span>, encoded_data)</span><br><span class="line"></span><br><span class="line">decoded_data = base64_decode(encoded_data)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"Base64 Decoded Data:"</span>, decoded_data)</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="延伸"><a href="#延伸" class="headerlink" title="延伸"></a>延伸</h3><p>除了 Base64 編碼以外，這個 Base 家族還有許多例如 Base16（Hex）、Base32、Base58（用於 Bitcoin）等不同的編碼方式。如果有興趣的話歡迎閱讀<a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/Sciurdae/article/details/133642336">這篇文章 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。</p>
+<h2 id="URL-Encoding"><a href="#URL-Encoding" class="headerlink" title="URL Encoding"></a>URL Encoding</h2><h3 id="簡介-2"><a href="#簡介-2" class="headerlink" title="簡介"></a>簡介</h3><p>URL Encoding 也稱作為 Percent-encoding，是一種將 URL 中的特殊字符和非 ASCII 字符轉換為百分號（%）後跟兩個十六進制數字的形式，以確保這些字符在 URL 中能夠被正確解析和傳輸。</p>
+<h3 id="Python-Code-2"><a href="#Python-Code-2" class="headerlink" title="Python Code"></a>Python Code</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.parse</span><br><span class="line"></span><br><span class="line"><span class="comment"># URL 編碼</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">url_encode</span>(<span class="params">input_string</span>):</span><br><span class="line">    <span class="keyword">return</span> urllib.parse.quote(input_string)</span><br><span class="line"></span><br><span class="line"><span class="comment"># URL 解碼</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">url_decode</span>(<span class="params">encoded_string</span>):</span><br><span class="line">    <span class="keyword">return</span> urllib.parse.unquote(encoded_string)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 示例</span></span><br><span class="line">input_string = <span class="string">"This is URL encoding"</span></span><br><span class="line">url_encoded = url_encode(input_string)</span><br><span class="line">url_decoded = url_decode(url_encoded)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"Original string:"</span>, input_string)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"URL encoded:"</span>, url_encoded)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"URL decoded:"</span>, url_decoded)</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="小結"><a href="#小結" class="headerlink" title="小結"></a>小結</h2><p>這裡面其實在打 CTF 的時候最常用到的就是 Base64 了，所以其實只要熟悉一下 Base64 的原理還有代碼，在比賽的時候可以快速編碼解碼就可以啦！</p>
+<h1 id="常見雜湊函式-Common-Hash-Functions"><a href="#常見雜湊函式-Common-Hash-Functions" class="headerlink" title="常見雜湊函式 Common Hash Functions"></a>常見雜湊函式 Common Hash Functions</h1><h2 id="MD5"><a href="#MD5" class="headerlink" title="MD5"></a>MD5</h2><h2 id="SHA-256"><a href="#SHA-256" class="headerlink" title="SHA-256"></a>SHA-256</h2><h1 id="古典密碼學-Classical-Cryptography"><a href="#古典密碼學-Classical-Cryptography" class="headerlink" title="古典密碼學 Classical Cryptography"></a>古典密碼學 Classical Cryptography</h1><h1 id="對稱式加密-Symmetric-Cryptography"><a href="#對稱式加密-Symmetric-Cryptography" class="headerlink" title="對稱式加密 Symmetric Cryptography"></a>對稱式加密 Symmetric Cryptography</h1><h1 id="非對稱式加密-Asymmetric-Cryptography"><a href="#非對稱式加密-Asymmetric-Cryptography" class="headerlink" title="非對稱式加密 Asymmetric Cryptography"></a>非對稱式加密 Asymmetric Cryptography</h1>
         </div>
 
         
             <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> [Day 01] Grinding PicoCTF</li>
+        <li><strong>Title:</strong> Cryptography Notes</li>
         <li><strong>Author:</strong> CX330</li>
         <li><strong>Created at
-                :</strong> 2024-06-26 16:42:14</li>
+                :</strong> 2024-06-27 20:05:01</li>
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-06-27 20:14:34
+                    :</strong> 2024-06-27 20:14:45
             </li>
         
         <li>
-            <strong>Link:</strong> https://cx330.tw/TechStreak30/2024 CTF Training/Day-01-Grinding-PicoCTF/
+            <strong>Link:</strong> https://cx330.tw/CyberSec/Notes/Cryptography-Notes/
         </li>
         <li>
             <strong>
@@ -926,15 +942,15 @@ mjx-container[display="true"] + br {
                     </li>
                 
                     <li class="tag-item mx-0.5">
+                        <a href="/tags/Cryptography/">#Cryptography</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
                         <a href="/tags/CyberSec/">#CyberSec</a>&nbsp;
                     </li>
                 
                     <li class="tag-item mx-0.5">
-                        <a href="/tags/PicoCTF/">#PicoCTF</a>&nbsp;
-                    </li>
-                
-                    <li class="tag-item mx-0.5">
-                        <a href="/tags/TechStreak30/">#TechStreak30</a>&nbsp;
+                        <a href="/tags/Notes/">#Notes</a>&nbsp;
                     </li>
                 
             </ul>
@@ -949,12 +965,12 @@ mjx-container[display="true"] + br {
     <div class="recommended-article-group"><a class="recommended-article-item" href="/TechStreak30/2024 CTF Training/Day-02-Learning-Cryptography/" title="[Day 02] Learning Cryptography" rel="bookmark">
   <img src="/images/hacker_in_the_universe.webp" alt="[Day 02] Learning Cryptography" class="!max-w-none">
   <span class="title">[Day 02] Learning Cryptography</span>
-</a><a class="recommended-article-item" href="/Life and Talk/2024-Summer-Intensive-Training-Plan/" title="2024 Summer Intensive Training Plan" rel="bookmark">
-  <img src="/assets/Lakeside_2019_Evening_UHD2.png" alt="2024 Summer Intensive Training Plan" class="!max-w-none">
-  <span class="title">2024 Summer Intensive Training Plan</span>
-</a><a class="recommended-article-item" href="/DevCorner/AI/2024-GDSC-NCKU-AI-Team/" title="2024 GDSC NCKU AI Team" rel="bookmark">
-  <img src="https://hackmd.io/_uploads/rJKaUHmIA.png" alt="2024 GDSC NCKU AI Team" class="!max-w-none">
-  <span class="title">2024 GDSC NCKU AI Team</span>
+</a><a class="recommended-article-item" href="/CyberSec/CTF/All-in-One PicoCTF-Writeups/" title="All-in-One PicoCTF Writeups" rel="bookmark">
+  <img src="https://hackmd.io/_uploads/BJxhDLKL0.png" alt="All-in-One PicoCTF Writeups" class="!max-w-none">
+  <span class="title">All-in-One PicoCTF Writeups</span>
+</a><a class="recommended-article-item" href="/CyberSec/CTF/2024-AIS3-Pre-exam-Writeup/" title="2024 AIS3 Pre-exam Writeup" rel="bookmark">
+  <img src="https://hackmd.io/_uploads/rk2dgM3NA.jpg" alt="2024 AIS3 Pre-exam Writeup" class="!max-w-none">
+  <span class="title">2024 AIS3 Pre-exam Writeup</span>
 </a></div>
    </div>
    <div class="recommended-mobile">
@@ -964,9 +980,9 @@ mjx-container[display="true"] + br {
    <div class="recommended-article-group"><a class="recommended-article-item" href="/TechStreak30/2024 CTF Training/Day-02-Learning-Cryptography/" title="[Day 02] Learning Cryptography" rel="bookmark">
   <img src="/images/hacker_in_the_universe.webp" alt="[Day 02] Learning Cryptography" class="!max-w-none">
   <span class="title">[Day 02] Learning Cryptography</span>
-</a><a class="recommended-article-item" href="/Life and Talk/2024-Summer-Intensive-Training-Plan/" title="2024 Summer Intensive Training Plan" rel="bookmark">
-  <img src="/assets/Lakeside_2019_Evening_UHD2.png" alt="2024 Summer Intensive Training Plan" class="!max-w-none">
-  <span class="title">2024 Summer Intensive Training Plan</span>
+</a><a class="recommended-article-item" href="/CyberSec/CTF/All-in-One PicoCTF-Writeups/" title="All-in-One PicoCTF Writeups" rel="bookmark">
+  <img src="https://hackmd.io/_uploads/BJxhDLKL0.png" alt="All-in-One PicoCTF Writeups" class="!max-w-none">
+  <span class="title">All-in-One PicoCTF Writeups</span>
 </a></div>
    </div>
   </div>
@@ -977,13 +993,13 @@ mjx-container[display="true"] + br {
                     <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="prev"
                         rel="prev"
-                        href="/CyberSec/Notes/Cryptography-Notes/"
+                        href="/TechStreak30/2024%20CTF%20Training/Day-02-Learning-Cryptography/"
                         >
                             <span class="left arrow-icon flex justify-center items-center">
                                 <i class="fa-solid fa-chevron-left"></i>
                             </span>
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">Cryptography Notes</span>
+                                <span class="post-nav-title-item">[Day 02] Learning Cryptography</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -993,10 +1009,10 @@ mjx-container[display="true"] + br {
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="next"
                         rel="next"
-                        href="/DevCorner/AI/2024-GDSC-NCKU-AI-Team/"
+                        href="/TechStreak30/2024%20CTF%20Training/Day-01-Grinding-PicoCTF/"
                         >
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">2024 GDSC NCKU AI Team</span>
+                                <span class="post-nav-title-item">[Day 01] Grinding PicoCTF</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex justify-center items-center">
@@ -1060,8 +1076,8 @@ mjx-container[display="true"] + br {
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">[Day 01] Grinding PicoCTF</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%8A%E6%97%A5%E9%80%B2%E5%BA%A6"><span class="nav-text">今日進度</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%8A%E6%97%A5%E7%8B%80%E6%85%8B"><span class="nav-text">今日狀態</span></a></li></ol>
+        <div class="page-title">Cryptography Notes</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%82%BA%E7%94%9A%E9%BA%BC%E6%9C%83%E6%83%B3%E5%AF%AB%E9%80%99%E7%AF%87%E6%96%87"><span class="nav-text">為甚麼會想寫這篇文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%AF%E5%85%8B%E9%9C%8D%E5%A4%AB%E5%8E%9F%E5%89%87-Kerckhoffs%E2%80%99s-principle"><span class="nav-text">柯克霍夫原則 Kerckhoffs’s principle</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A0%98%E5%9F%9F%E5%B1%95%E9%96%8B%EF%BC%9A%E5%AF%86%E7%A2%BC%E5%AD%B8%E7%9A%84%E4%B8%89%E5%A4%A7%E9%A0%98%E5%9F%9F"><span class="nav-text">領域展開：密碼學的三大領域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B7%A8%E7%A2%BC-Encoding"><span class="nav-text">編碼 Encoding</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%9C%E6%B9%8A-Hashing"><span class="nav-text">雜湊 Hashing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86-Encryption"><span class="nav-text">加密 Encryption</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A6%8B%E7%B7%A8%E7%A2%BC-Common-Encoding"><span class="nav-text">常見編碼 Common Encoding</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ASCII-Encoding"><span class="nav-text">ASCII Encoding</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B0%A1%E4%BB%8B"><span class="nav-text">簡介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-Code"><span class="nav-text">Python Code</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Base64-Encoding"><span class="nav-text">Base64 Encoding</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B0%A1%E4%BB%8B-1"><span class="nav-text">簡介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%9F%E7%90%86"><span class="nav-text">原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-Code-1"><span class="nav-text">Python Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%B6%E4%BC%B8"><span class="nav-text">延伸</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#URL-Encoding"><span class="nav-text">URL Encoding</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B0%A1%E4%BB%8B-2"><span class="nav-text">簡介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-Code-2"><span class="nav-text">Python Code</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%8F%E7%B5%90"><span class="nav-text">小結</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A6%8B%E9%9B%9C%E6%B9%8A%E5%87%BD%E5%BC%8F-Common-Hash-Functions"><span class="nav-text">常見雜湊函式 Common Hash Functions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MD5"><span class="nav-text">MD5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SHA-256"><span class="nav-text">SHA-256</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A2%BC%E5%AD%B8-Classical-Cryptography"><span class="nav-text">古典密碼學 Classical Cryptography</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8D%E7%A8%B1%E5%BC%8F%E5%8A%A0%E5%AF%86-Symmetric-Cryptography"><span class="nav-text">對稱式加密 Symmetric Cryptography</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9D%9E%E5%B0%8D%E7%A8%B1%E5%BC%8F%E5%8A%A0%E5%AF%86-Asymmetric-Cryptography"><span class="nav-text">非對稱式加密 Asymmetric Cryptography</span></a></li></ol>
 
     </div>
 </div>

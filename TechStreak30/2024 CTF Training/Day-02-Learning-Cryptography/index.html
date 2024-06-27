@@ -17,20 +17,26 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://cx330.tw/categories/devcorner/ai/"/>
+    <link rel="canonical" href="https://cx330.tw/techstreak30/2024 ctf training/day-02-learning-cryptography/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="Hello Internet! Welcome to CX330&#39;s Universe, the place I can share my experience and leave some proof that I existed. Hope u guys enjoy my universe. GLHF! 哈囉！我是陳子雋，這是我的個人網站，會分享一些技術文章或是各種各樣的文章，歡迎參觀！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="CX330&#39;s Universe">
-<meta property="og:url" content="https://cx330.tw/categories/DevCorner/AI/">
+        <meta name="description" content="前言密碼學一直以來都是我覺得超級超級困難的東西，為了可以更好的搞清楚它，決定寫一篇筆記來給自己（和各位）當作學習的資料！我把連結放在這個地方，大家想看可以直接點過去噢！ 今日進度今天只寫完了前言以及編碼的部分。然後因為編碼的部分還算簡單，就是還沒有那麼多的數學，所以今天的知識量負擔滿輕的，不過明後天進入到數學部分（甚麼費馬小定理有的沒的）就會變超難了 XD。希望明天可以把古典密碼學那邊讀完，再來就">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Day 02] Learning Cryptography">
+<meta property="og:url" content="https://cx330.tw/TechStreak30/2024%20CTF%20Training/Day-02-Learning-Cryptography/">
 <meta property="og:site_name" content="CX330&#39;s Universe">
-<meta property="og:description" content="Hello Internet! Welcome to CX330&#39;s Universe, the place I can share my experience and leave some proof that I existed. Hope u guys enjoy my universe. GLHF! 哈囉！我是陳子雋，這是我的個人網站，會分享一些技術文章或是各種各樣的文章，歡迎參觀！">
+<meta property="og:description" content="前言密碼學一直以來都是我覺得超級超級困難的東西，為了可以更好的搞清楚它，決定寫一篇筆記來給自己（和各位）當作學習的資料！我把連結放在這個地方，大家想看可以直接點過去噢！ 今日進度今天只寫完了前言以及編碼的部分。然後因為編碼的部分還算簡單，就是還沒有那麼多的數學，所以今天的知識量負擔滿輕的，不過明後天進入到數學部分（甚麼費馬小定理有的沒的）就會變超難了 XD。希望明天可以把古典密碼學那邊讀完，再來就">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-06-27T12:05:12.000Z">
+<meta property="article:modified_time" content="2024-06-27T12:22:26.533Z">
 <meta property="article:author" content="CX330">
-<meta property="article:tag" content="CX330, 陳子雋, CX330 universe, CX330 Blog, Blog, CTF, CX330 hacker, hacker">
+<meta property="article:tag" content="CTF">
+<meta property="article:tag" content="Cryptography">
+<meta property="article:tag" content="CyberSec">
+<meta property="article:tag" content="TechStreak30">
+<meta property="article:tag" content="Crypto">
 <meta name="twitter:card" content="summary">
     
     
@@ -53,7 +59,7 @@
     
     <title>
         
-            Category: AI -
+            [Day 02] Learning Cryptography -
         
         CX330&#39;s Universe
     </title>
@@ -121,7 +127,119 @@
     
     
     
-<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="CX330's Universe" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.2.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><link rel="alternate" href="/atom.xml" title="CX330's Universe" type="application/atom+xml">
 </head>
 
 
@@ -352,7 +470,7 @@
 
                             <li class="navbar-item">
                                 <!-- Menu -->
-                                <a class="active"
+                                <a class=""
                                    href="/categories"
                                         >
                                     <i class="fa-regular fa-folder-heart fa-fw"></i>
@@ -495,7 +613,7 @@
 
                     <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
                         
-                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
                            href="/categories"
                         >
                             <span>
@@ -609,45 +727,335 @@
             <div class="main-content">
 
                 
-                    <div class="category-container">
-    <div class="category-name">
-        <i class="fa-solid fa-folder"></i>&nbsp;AI
-    </div>
-    <div class="category-post-list">
-        
-<div class="archive-list-container">
-    
-        <section class="archive-item mb-spacing-unit last:mb-0">
-            <div class="archive-item-header flex flex-row items-center mb-2">
-                <span class="archive-year font-semibold text-3xl mr-2">2024</span>
-                <span class="archive-year-post-count text-xs md:text-sm font-bold rounded-small bg-third-background-color py-[2px] px-[10px] border border-border-color">1</span>
-            </div>
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
             
-            <ul class="article-list pl-0 md:pl-8 text-lg leading-[1.5]">
+                
+                
+                <img src="/images/hacker_in_the_universe.webp" alt="[Day 02] Learning Cryptography" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75"/>
+                
+                <div class="w-full flex items-center absolute bottom-0 justify-start">
+                    <h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">[Day 02] Learning Cryptography</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/assets/favicon.ico">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">CX330</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Hacker</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-06-27 20:05:12</span>
+        <span class="mobile">2024-06-27 20:05:12</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-06-27 20:22:26</span>
+            <span class="mobile">2024-06-27 20:22:26</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
                 
                     
+                        
+                        <li>
+                            <a href="/categories/CyberSec/">CyberSec</a>&nbsp;
+                        </li>
                     
-                         <!-- Close the previous LI if not the first item -->
-                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='06-22'>
-                    
-                    <a href="/DevCorner/AI/2024-GDSC-NCKU-AI-Team/" class="block overflow-hidden w-fit">
-                        <span class="article-title my-0.5 text-2xl">2024 GDSC NCKU AI Team</span>
-                    </a>
                     
                 
-                </li> <!-- Ensure the last item is properly closed -->
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/CyberSec/CTF/">CTF</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/TechStreak30/">TechStreak30</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/TechStreak30/2024-CTF-Training/">2024 CTF Training</a>&nbsp;
+                        </li>
+                    
+                    
+                
             </ul>
-        </section>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/CTF/">CTF</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Cryptography/">Cryptography</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/CyberSec/">CyberSec</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/TechStreak30/">TechStreak30</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Crypto/">Crypto</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>224 Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
-    </div>
-</div>
-<div class="category-paginator">
-    <div class="paginator">
-    <span class="page-number current">1</span>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>密碼學一直以來都是我覺得超級超級困難的東西，為了可以更好的搞清楚它，決定寫一篇筆記來給自己（和各位）當作學習的資料！我把連結放在<a href="https://cx330.tw/CyberSec/CTF/Cryptography-Notes">這個地方</a>，大家想看可以直接點過去噢！</p>
+<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天只寫完了前言以及編碼的部分。然後因為編碼的部分還算簡單，就是還沒有那麼多的數學，所以今天的知識量負擔滿輕的，不過明後天進入到數學部分（甚麼費馬小定理有的沒的）就會變超難了 XD。希望明天可以把古典密碼學那邊讀完，再來就進入對稱和非對稱加密啦！</p>
+<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
+<li>起床時間：<code>8:30</code>但是滑手機到<code>9:05</code>才下床</li>
+<li>知識量：⭐</li>
+<li>疲勞程度：⭐⭐⭐</li>
+<li>精神狀態：⭐⭐⭐</li>
+</ul>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> [Day 02] Learning Cryptography</li>
+        <li><strong>Author:</strong> CX330</li>
+        <li><strong>Created at
+                :</strong> 2024-06-27 20:05:12</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2024-06-27 20:22:26
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://cx330.tw/TechStreak30/2024 CTF Training/Day-02-Learning-Cryptography/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
 </div>
 
+            </div>
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/CTF/">#CTF</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/Cryptography/">#Cryptography</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/CyberSec/">#CyberSec</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/TechStreak30/">#TechStreak30</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/Crypto/">#Crypto</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+  <div class="recommended-article px-2 sm:px-6 md:px-8">
+   <div class="recommended-desktop">
+    <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>Recommended Reading</span>
+    </div>
+    <div class="recommended-article-group"><a class="recommended-article-item" href="/TechStreak30/2024 CTF Training/Day-01-Grinding-PicoCTF/" title="[Day 01] Grinding PicoCTF" rel="bookmark">
+  <img src="/images/hacker_in_the_universe.webp" alt="[Day 01] Grinding PicoCTF" class="!max-w-none">
+  <span class="title">[Day 01] Grinding PicoCTF</span>
+</a><a class="recommended-article-item" href="/CyberSec/Notes/Cryptography-Notes/" title="Cryptography Notes" rel="bookmark">
+  <img src="/images/cryptography.webp" alt="Cryptography Notes" class="!max-w-none">
+  <span class="title">Cryptography Notes</span>
+</a><a class="recommended-article-item" href="/CyberSec/CTF/2024-AIS3-Pre-exam-Writeup/" title="2024 AIS3 Pre-exam Writeup" rel="bookmark">
+  <img src="https://hackmd.io/_uploads/rk2dgM3NA.jpg" alt="2024 AIS3 Pre-exam Writeup" class="!max-w-none">
+  <span class="title">2024 AIS3 Pre-exam Writeup</span>
+</a></div>
+   </div>
+   <div class="recommended-mobile">
+   <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>Recommended Reading</span>
+   </div>
+   <div class="recommended-article-group"><a class="recommended-article-item" href="/TechStreak30/2024 CTF Training/Day-01-Grinding-PicoCTF/" title="[Day 01] Grinding PicoCTF" rel="bookmark">
+  <img src="/images/hacker_in_the_universe.webp" alt="[Day 01] Grinding PicoCTF" class="!max-w-none">
+  <span class="title">[Day 01] Grinding PicoCTF</span>
+</a><a class="recommended-article-item" href="/CyberSec/Notes/Cryptography-Notes/" title="Cryptography Notes" rel="bookmark">
+  <img src="/images/cryptography.webp" alt="Cryptography Notes" class="!max-w-none">
+  <span class="title">Cryptography Notes</span>
+</a></div>
+   </div>
+  </div>
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/CyberSec/Notes/Cryptography-Notes/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">Cryptography Notes</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://comment.cx330.tw',
+          lang: 'en',
+          dark: 'body[class~="dark-mode"]',
+          reaction: ['/assets/emoji/love.png', '/assets/emoji/laugh.png', '/assets/emoji/wow.png', '/assets/emoji/cry.png', '/assets/emoji/angry.png'],
+          requiredMeta: ['nick', 'mail'],
+          emoji: ['//unpkg.com/@waline/emojis@1.2.0/weibo','//unpkg.com/@waline/emojis@1.2.0/bmoji','//unpkg.com/@waline/emojis@1.2.0/soul-emoji','//unpkg.com/@waline/emojis@1.2.0/tw-emoji'],
+          
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">[Day 02] Learning Cryptography</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%8A%E6%97%A5%E9%80%B2%E5%BA%A6"><span class="nav-text">今日進度</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%8A%E6%97%A5%E7%8B%80%E6%85%8B"><span class="nav-text">今日狀態</span></a></li></ol>
+
+    </div>
+</div>
+        </div>
+    
 </div>
 
 
@@ -743,6 +1151,27 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-side-tools-container">

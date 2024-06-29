@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>2024 Summer Intensive Training Plan</title>
-    <url>/Life%20and%20Talk/2024-Summer-Intensive-Training-Plan/</url>
+    <url>/LifeAndTalk/2024-Summer-Intensive-Training-Plan/</url>
     <content><![CDATA[<h1 id="為甚麼要修煉"><a href="#為甚麼要修煉" class="headerlink" title="為甚麼要修煉?"></a>為甚麼要修煉?</h1><p>有鑑於這次 AIS3 Pre-exam 的成績不甚理想。我決定要來在這次暑假的時候展開特訓，來這邊立個旗。以下來講講我打算怎麼修煉！</p>
 <h1 id="怎麼修煉"><a href="#怎麼修煉" class="headerlink" title="怎麼修煉?"></a>怎麼修煉?</h1><p>可能會像 IT 邦幫忙鐵人賽的感覺吧，但沒辦法到每天上傳，因為還有其他安排（專案 AND 和朋友出門）。不過我對自己的期許是至少可以上傳 30 篇 Write Up。範圍的話可能就包含 picoCTF 的題目、AIS3 Pre-exam 的題目以及各式各樣 CTF 平台的題目。對了忘記講，一個絕對要完成的目標是 picoCTF 打到 10000 分，因為我下學期要認真去 BEEF SOUP 上課了啦！然後為了加入戰隊分數得達標，下學期的目標是盡力拿個獎！</p>
 <h1 id="大家可以幫我個忙嗎！"><a href="#大家可以幫我個忙嗎！" class="headerlink" title="大家可以幫我個忙嗎！"></a>大家可以幫我個忙嗎！</h1><p>希望大家可以好好的監督我，我會開留言區，或是認識我的人也可以直接私訊我。如果我太久沒有更新文章可以來提醒我！如果我某段期間有事情、出去玩、blabla 的我應該會公告在網頁上，所以如果沒特殊狀況又沒更新就是我在偷懶，請監督我！</p>
@@ -11,7 +11,7 @@
 </blockquote>
 ]]></content>
       <categories>
-        <category>Life and Talk</category>
+        <category>LifeAndTalk</category>
       </categories>
       <tags>
         <tag>CTF</tag>
@@ -19,31 +19,8 @@
       </tags>
   </entry>
   <entry>
-    <title>Reading List</title>
-    <url>/Life%20and%20Talk/Reading-List/</url>
-    <content><![CDATA[<ol>
-<li><a class="link"   href="https://johnliutw.medium.com/list/google-4cfac4644843" >Google 的軟體工程之道 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li><a class="link"   href="https://octobug.gitbooks.io/sqlmap-wiki-zhcn/content/" >Sqlmap 文檔中文版 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>Life and Talk</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Why Do I Start Blogging</title>
-    <url>/Life%20and%20Talk/Why-Do-I-Start-Blogging/</url>
-    <content><![CDATA[<h1 id="Big-bang-宇宙的起源"><a href="#Big-bang-宇宙的起源" class="headerlink" title="Big bang! 宇宙的起源"></a>Big bang! 宇宙的起源</h1><p>我其實從很久以前就有想要架設自己的網站，上了大學後又看到更多厲害的前輩們都會有自己的網站來記錄自己的成長，於是下定決心也要來建立自己的 Blog。再加上我今年（2023 開始）剛好把 Instagram 關版了（想挑戰一年不用 Instagram），所以剛好就利用這邊來記錄我的生活和技術類文章吧！（未來可能會順便紀錄一些旅遊、和朋友的約、blablabla）</p>
-<h1 id="對自己的期許"><a href="#對自己的期許" class="headerlink" title="對自己的期許"></a>對自己的期許</h1><p>因為我是一個很懶惰的人 XD，所以希望我可以頻繁且持續的更新文章。並且期待自己可以累積到越來越多的讀者，最後也會希望自己的文章真的可以幫助到其他人！</p>
-<h1 id="對讀者們的期待"><a href="#對讀者們的期待" class="headerlink" title="對讀者們的期待"></a>對讀者們的期待</h1><p>希望大家看完我的文章後，有甚麼想法都可以在底下留言和我互動（這也是我會開留言區的原因，害羞的話按個表情也可以的）。又或是我在技術類的文章中可能有甚麼寫錯的地方，也都可以直接留言和我討論，我都會盡快地回復你。最後如果想持續的接收我最新的文章，也歡迎可以<a href="https://cx330.tw/subscribe">訂閱我的 Blog</a>！我會很感激的！</p>
-]]></content>
-      <categories>
-        <category>Life and Talk</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Cryptography Notes 密碼學任督二脈</title>
-    <url>/Notebooks/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88/</url>
+    <url>/StudyNotes/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88/</url>
     <content><![CDATA[
   <div class="note-large red">
     <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
@@ -51,7 +28,7 @@
 
     </div>
     <div class="notel-content">
-      <p>這篇文章會先發布公開，但是有內容都還在完善中，等補完內容後會把這個公告撤掉。</p>
+      <p>這篇文章會先發布公開，但是有內容都還在完善中，等補完內容後會把這個公告撤掉。同時也有在計畫在全部完成後將其發布為 GitBook，敬請期待！</p>
 
     </div>
   </div>
@@ -235,7 +212,7 @@
 <h1 id="非對稱式加密-Asymmetric-Cryptography"><a href="#非對稱式加密-Asymmetric-Cryptography" class="headerlink" title="非對稱式加密 Asymmetric Cryptography"></a>非對稱式加密 Asymmetric Cryptography</h1><p>TODO</p>
 ]]></content>
       <categories>
-        <category>Notebooks</category>
+        <category>StudyNotes</category>
       </categories>
       <tags>
         <tag>CTF</tag>
@@ -243,6 +220,29 @@
         <tag>CyberSec</tag>
         <tag>Notes</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Why Do I Start Blogging</title>
+    <url>/LifeAndTalk/Why-Do-I-Start-Blogging/</url>
+    <content><![CDATA[<h1 id="Big-bang-宇宙的起源"><a href="#Big-bang-宇宙的起源" class="headerlink" title="Big bang! 宇宙的起源"></a>Big bang! 宇宙的起源</h1><p>我其實從很久以前就有想要架設自己的網站，上了大學後又看到更多厲害的前輩們都會有自己的網站來記錄自己的成長，於是下定決心也要來建立自己的 Blog。再加上我今年（2023 開始）剛好把 Instagram 關版了（想挑戰一年不用 Instagram），所以剛好就利用這邊來記錄我的生活和技術類文章吧！（未來可能會順便紀錄一些旅遊、和朋友的約、blablabla）</p>
+<h1 id="對自己的期許"><a href="#對自己的期許" class="headerlink" title="對自己的期許"></a>對自己的期許</h1><p>因為我是一個很懶惰的人 XD，所以希望我可以頻繁且持續的更新文章。並且期待自己可以累積到越來越多的讀者，最後也會希望自己的文章真的可以幫助到其他人！</p>
+<h1 id="對讀者們的期待"><a href="#對讀者們的期待" class="headerlink" title="對讀者們的期待"></a>對讀者們的期待</h1><p>希望大家看完我的文章後，有甚麼想法都可以在底下留言和我互動（這也是我會開留言區的原因，害羞的話按個表情也可以的）。又或是我在技術類的文章中可能有甚麼寫錯的地方，也都可以直接留言和我討論，我都會盡快地回復你。最後如果想持續的接收我最新的文章，也歡迎可以<a href="https://cx330.tw/subscribe">訂閱我的 Blog</a>！我會很感激的！</p>
+]]></content>
+      <categories>
+        <category>LifeAndTalk</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Reading List</title>
+    <url>/LifeAndTalk/Reading-List/</url>
+    <content><![CDATA[<ol>
+<li><a class="link"   href="https://johnliutw.medium.com/list/google-4cfac4644843" >Google 的軟體工程之道 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://octobug.gitbooks.io/sqlmap-wiki-zhcn/content/" >Sqlmap 文檔中文版 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>LifeAndTalk</category>
+      </categories>
   </entry>
   <entry>
     <title>2024 AIS3 Pre-exam Writeup</title>
@@ -532,6 +532,36 @@
       </categories>
   </entry>
   <entry>
+    <title>[Day 01] Grinding PicoCTF</title>
+    <url>/TechStreak30/2024%20CTF%20Training/Day-01-Grinding-PicoCTF/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>因為已經有開了一篇文章，打算放上所有 picoCTF 的 writeups 了，所以就不把解題思路寫在這邊啦，如果想看的話請見<a href="https://cx330.tw/CyberSec/CTF/All-in-One%20PicoCTF-Writeups/">這邊</a>!</p>
+<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天打算先刷一點 picoCTF 的題目，因為成大資安社加入戰隊的標準是一萬分，然後我現在才六千多。但是！當我今天開始刷題目之後我發現 pico 他們的制度整個大改！現在沒有計算分數的機制了，改為把題目分成三個不同的難度（像是 Leetcode 那樣），分別是 easy, medium, hard。所以不知道到時候加戰隊的標準會是多少呢，不過以下就是我今天的進度啦！</p>
+<ol>
+<li>More SQLi</li>
+<li>Trickster</li>
+</ol>
+<p>今天進度就兩題，不過感覺多多少少是有學習到新知識的。之後可能要找一天特別來研究一下 sqlmap 的文檔，到時候再出成一篇筆記文章吧！兩題可能聽起來有點少，但畢竟剛放暑假，我還在那個耍廢狀態 XD，慢慢調整啦！</p>
+<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
+<li>起床時間：<code>8:30</code></li>
+<li>知識量：⭐⭐⭐</li>
+<li>疲勞程度：⭐⭐</li>
+<li>精神狀態：⭐⭐⭐⭐⭐</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CyberSec</category>
+        <category>TechStreak30</category>
+        <category>CTF</category>
+        <category>2024 CTF Training</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+        <tag>CyberSec</tag>
+        <tag>PicoCTF</tag>
+        <tag>TechStreak30</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2024 GDSC NCKU AI Team</title>
     <url>/DevCorner/AI/2024-GDSC-NCKU-AI-Team/</url>
     <content><![CDATA[<h1 id="Intro-—-What-is-GDSC"><a href="#Intro-—-What-is-GDSC" class="headerlink" title="Intro — What is GDSC"></a>Intro — What is GDSC</h1><p><a class="link" href="https://gdg.tw/about/gdsc/">GDSC <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>(Google Developer Student Clubs)是一個由 Google 支持的學生社群，旨在通過學生與專業開發人員聯繫，促進學生對 Google 開發人員技術的學習和應用，並為學生提供與技術專家互動和學習的機會。 GDSC 在全球有超過 100 個國家/地區的 1000 多個社群。GDSC 是學生們學習和分享技術的理想社群，並且能夠與技術行業的其他開發人員和專家建立聯繫。(以上皆是 Ctrl+c &amp; Ctrl+v)</p>
@@ -575,62 +605,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[Day 01] Grinding PicoCTF</title>
-    <url>/TechStreak30/2024%20CTF%20Training/Day-01-Grinding-PicoCTF/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>因為已經有開了一篇文章，打算放上所有 picoCTF 的 writeups 了，所以就不把解題思路寫在這邊啦，如果想看的話請見<a href="https://cx330.tw/CyberSec/CTF/All-in-One%20PicoCTF-Writeups/">這邊</a>!</p>
-<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天打算先刷一點 picoCTF 的題目，因為成大資安社加入戰隊的標準是一萬分，然後我現在才六千多。但是！當我今天開始刷題目之後我發現 pico 他們的制度整個大改！現在沒有計算分數的機制了，改為把題目分成三個不同的難度（像是 Leetcode 那樣），分別是 easy, medium, hard。所以不知道到時候加戰隊的標準會是多少呢，不過以下就是我今天的進度啦！</p>
-<ol>
-<li>More SQLi</li>
-<li>Trickster</li>
-</ol>
-<p>今天進度就兩題，不過感覺多多少少是有學習到新知識的。之後可能要找一天特別來研究一下 sqlmap 的文檔，到時候再出成一篇筆記文章吧！兩題可能聽起來有點少，但畢竟剛放暑假，我還在那個耍廢狀態 XD，慢慢調整啦！</p>
-<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
-<li>起床時間：<code>8:30</code></li>
-<li>知識量：⭐⭐⭐</li>
-<li>疲勞程度：⭐⭐</li>
-<li>精神狀態：⭐⭐⭐⭐⭐</li>
-</ul>
-]]></content>
-      <categories>
-        <category>CyberSec</category>
-        <category>CTF</category>
-        <category>TechStreak30</category>
-        <category>2024 CTF Training</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-        <tag>CyberSec</tag>
-        <tag>PicoCTF</tag>
-        <tag>TechStreak30</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Day 03] Learning Cryptography 2</title>
-    <url>/TechStreak30/2024%20CTF%20Training/Day-03-Learning-Cryptography-2/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>這是第一個 TechStreak30 系列的第三天，今天一樣繼續 work on <a href="/Notebooks/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88">我的密碼學筆記</a>，歡迎大家來看！一想到之後要進入 RSA 的部分就感覺好難 XD，但總之就加油啦！</p>
-<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天寫完了 Hash 的部分，也有寫了一半的古典密碼學。進度還行，還不錯，明天繼續努力囉！</p>
-<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
-<li>起床時間：<code>9:30</code></li>
-<li>知識量：⭐⭐⭐</li>
-<li>疲勞程度：⭐⭐⭐</li>
-<li>精神狀態：⭐⭐⭐⭐</li>
-</ul>
-]]></content>
-      <categories>
-        <category>CyberSec</category>
-        <category>CTF</category>
-        <category>TechStreak30</category>
-        <category>2024 CTF Training</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-        <tag>Cryptography</tag>
-        <tag>CyberSec</tag>
-        <tag>TechStreak30</tag>
-        <tag>Crypto</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[Day 02] Learning Cryptography</title>
     <url>/TechStreak30/2024%20CTF%20Training/Day-02-Learning-Cryptography/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>密碼學一直以來都是我覺得超級超級困難的東西，為了可以更好的搞清楚它，決定寫一篇筆記來給自己（和各位）當作學習的資料！我把連結放在<a href="/Notebooks/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88">這個地方</a>，大家想看可以直接點過去噢！</p>
@@ -644,8 +618,8 @@
 ]]></content>
       <categories>
         <category>CyberSec</category>
-        <category>CTF</category>
         <category>TechStreak30</category>
+        <category>CTF</category>
         <category>2024 CTF Training</category>
       </categories>
       <tags>
@@ -675,8 +649,8 @@
 ]]></content>
       <categories>
         <category>CyberSec</category>
-        <category>CTF</category>
         <category>TechStreak30</category>
+        <category>CTF</category>
         <category>2024 CTF Training</category>
       </categories>
       <tags>
@@ -684,6 +658,32 @@
         <tag>CyberSec</tag>
         <tag>PicoCTF</tag>
         <tag>TechStreak30</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Day 03] Learning Cryptography 2</title>
+    <url>/TechStreak30/2024%20CTF%20Training/Day-03-Learning-Cryptography-2/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>這是第一個 TechStreak30 系列的第三天，今天一樣繼續 work on <a href="/Notebooks/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88">我的密碼學筆記</a>，歡迎大家來看！一想到之後要進入 RSA 的部分就感覺好難 XD，但總之就加油啦！</p>
+<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天寫完了 Hash 的部分，也有寫了一半的古典密碼學。進度還行，還不錯，明天繼續努力囉！</p>
+<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
+<li>起床時間：<code>9:30</code></li>
+<li>知識量：⭐⭐⭐</li>
+<li>疲勞程度：⭐⭐⭐</li>
+<li>精神狀態：⭐⭐⭐⭐</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CyberSec</category>
+        <category>TechStreak30</category>
+        <category>CTF</category>
+        <category>2024 CTF Training</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+        <tag>Cryptography</tag>
+        <tag>CyberSec</tag>
+        <tag>TechStreak30</tag>
+        <tag>Crypto</tag>
       </tags>
   </entry>
 </search>

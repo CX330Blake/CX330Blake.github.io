@@ -1,47 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>2024 Summer Intensive Training Plan</title>
-    <url>/Life%20and%20Talk/2024-Summer-Intensive-Training-Plan/</url>
-    <content><![CDATA[<h1 id="為甚麼要修煉"><a href="#為甚麼要修煉" class="headerlink" title="為甚麼要修煉?"></a>為甚麼要修煉?</h1><p>有鑑於這次 AIS3 Pre-exam 的成績不甚理想。我決定要來在這次暑假的時候展開特訓，來這邊立個旗。以下來講講我打算怎麼修煉！</p>
-<h1 id="怎麼修煉"><a href="#怎麼修煉" class="headerlink" title="怎麼修煉?"></a>怎麼修煉?</h1><p>可能會像 IT 邦幫忙鐵人賽的感覺吧，但沒辦法到每天上傳，因為還有其他安排（專案 AND 和朋友出門）。不過我對自己的期許是至少可以上傳 30 篇 Write Up。範圍的話可能就包含 picoCTF 的題目、AIS3 Pre-exam 的題目以及各式各樣 CTF 平台的題目。對了忘記講，一個絕對要完成的目標是 picoCTF 打到 10000 分，因為我下學期要認真去 BEEF SOUP 上課了啦！然後為了加入戰隊分數得達標，下學期的目標是盡力拿個獎！</p>
-<h1 id="大家可以幫我個忙嗎！"><a href="#大家可以幫我個忙嗎！" class="headerlink" title="大家可以幫我個忙嗎！"></a>大家可以幫我個忙嗎！</h1><p>希望大家可以好好的監督我，我會開留言區，或是認識我的人也可以直接私訊我。如果我太久沒有更新文章可以來提醒我！如果我某段期間有事情、出去玩、blabla 的我應該會公告在網頁上，所以如果沒特殊狀況又沒更新就是我在偷懶，請監督我！</p>
-<blockquote>
-<p>“We used to look up at the sky and wonder at our place in the stars. Now we just look down, and worry about our place in the dirt.” — <strong><em>Interstellar</em></strong></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Life and Talk</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-        <tag>Security</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Why Do I Start Blogging</title>
-    <url>/Life%20and%20Talk/Why-Do-I-Start-Blogging/</url>
-    <content><![CDATA[<h1 id="Big-bang-宇宙的起源"><a href="#Big-bang-宇宙的起源" class="headerlink" title="Big bang! 宇宙的起源"></a>Big bang! 宇宙的起源</h1><p>我其實從很久以前就有想要架設自己的網站，上了大學後又看到更多厲害的前輩們都會有自己的網站來記錄自己的成長，於是下定決心也要來建立自己的 Blog。再加上我今年（2023 開始）剛好把 Instagram 關版了（想挑戰一年不用 Instagram），所以剛好就利用這邊來記錄我的生活和技術類文章吧！（未來可能會順便紀錄一些旅遊、和朋友的約、blablabla）</p>
-<h1 id="對自己的期許"><a href="#對自己的期許" class="headerlink" title="對自己的期許"></a>對自己的期許</h1><p>因為我是一個很懶惰的人 XD，所以希望我可以頻繁且持續的更新文章。並且期待自己可以累積到越來越多的讀者，最後也會希望自己的文章真的可以幫助到其他人！</p>
-<h1 id="對讀者們的期待"><a href="#對讀者們的期待" class="headerlink" title="對讀者們的期待"></a>對讀者們的期待</h1><p>希望大家看完我的文章後，有甚麼想法都可以在底下留言和我互動（這也是我會開留言區的原因，害羞的話按個表情也可以的）。又或是我在技術類的文章中可能有甚麼寫錯的地方，也都可以直接留言和我討論，我都會盡快地回復你。最後如果想持續的接收我最新的文章，也歡迎可以<a href="https://cx330.tw/subscribe">訂閱我的 Blog</a>！我會很感激的！</p>
-]]></content>
-      <categories>
-        <category>Life and Talk</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Reading List</title>
-    <url>/Life%20and%20Talk/Reading-List/</url>
-    <content><![CDATA[<ol>
-<li><a class="link"   href="https://johnliutw.medium.com/list/google-4cfac4644843" >Google 的軟體工程之道 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li><a class="link"   href="https://octobug.gitbooks.io/sqlmap-wiki-zhcn/content/" >Sqlmap 文檔中文版 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>Life and Talk</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Cryptography Notes 密碼學任督二脈</title>
     <url>/Notebooks/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88/</url>
     <content><![CDATA[
@@ -238,11 +197,52 @@
         <category>Notebooks</category>
       </categories>
       <tags>
-        <tag>CTF</tag>
         <tag>Cryptography</tag>
+        <tag>CTF</tag>
         <tag>CyberSec</tag>
         <tag>Notes</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>2024 Summer Intensive Training Plan</title>
+    <url>/Life%20and%20Talk/2024-Summer-Intensive-Training-Plan/</url>
+    <content><![CDATA[<h1 id="為甚麼要修煉"><a href="#為甚麼要修煉" class="headerlink" title="為甚麼要修煉?"></a>為甚麼要修煉?</h1><p>有鑑於這次 AIS3 Pre-exam 的成績不甚理想。我決定要來在這次暑假的時候展開特訓，來這邊立個旗。以下來講講我打算怎麼修煉！</p>
+<h1 id="怎麼修煉"><a href="#怎麼修煉" class="headerlink" title="怎麼修煉?"></a>怎麼修煉?</h1><p>可能會像 IT 邦幫忙鐵人賽的感覺吧，但沒辦法到每天上傳，因為還有其他安排（專案 AND 和朋友出門）。不過我對自己的期許是至少可以上傳 30 篇 Write Up。範圍的話可能就包含 picoCTF 的題目、AIS3 Pre-exam 的題目以及各式各樣 CTF 平台的題目。對了忘記講，一個絕對要完成的目標是 picoCTF 打到 10000 分，因為我下學期要認真去 BEEF SOUP 上課了啦！然後為了加入戰隊分數得達標，下學期的目標是盡力拿個獎！</p>
+<h1 id="大家可以幫我個忙嗎！"><a href="#大家可以幫我個忙嗎！" class="headerlink" title="大家可以幫我個忙嗎！"></a>大家可以幫我個忙嗎！</h1><p>希望大家可以好好的監督我，我會開留言區，或是認識我的人也可以直接私訊我。如果我太久沒有更新文章可以來提醒我！如果我某段期間有事情、出去玩、blabla 的我應該會公告在網頁上，所以如果沒特殊狀況又沒更新就是我在偷懶，請監督我！</p>
+<blockquote>
+<p>“We used to look up at the sky and wonder at our place in the stars. Now we just look down, and worry about our place in the dirt.” — <strong><em>Interstellar</em></strong></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Life and Talk</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+        <tag>Security</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Why Do I Start Blogging</title>
+    <url>/Life%20and%20Talk/Why-Do-I-Start-Blogging/</url>
+    <content><![CDATA[<h1 id="Big-bang-宇宙的起源"><a href="#Big-bang-宇宙的起源" class="headerlink" title="Big bang! 宇宙的起源"></a>Big bang! 宇宙的起源</h1><p>我其實從很久以前就有想要架設自己的網站，上了大學後又看到更多厲害的前輩們都會有自己的網站來記錄自己的成長，於是下定決心也要來建立自己的 Blog。再加上我今年（2023 開始）剛好把 Instagram 關版了（想挑戰一年不用 Instagram），所以剛好就利用這邊來記錄我的生活和技術類文章吧！（未來可能會順便紀錄一些旅遊、和朋友的約、blablabla）</p>
+<h1 id="對自己的期許"><a href="#對自己的期許" class="headerlink" title="對自己的期許"></a>對自己的期許</h1><p>因為我是一個很懶惰的人 XD，所以希望我可以頻繁且持續的更新文章。並且期待自己可以累積到越來越多的讀者，最後也會希望自己的文章真的可以幫助到其他人！</p>
+<h1 id="對讀者們的期待"><a href="#對讀者們的期待" class="headerlink" title="對讀者們的期待"></a>對讀者們的期待</h1><p>希望大家看完我的文章後，有甚麼想法都可以在底下留言和我互動（這也是我會開留言區的原因，害羞的話按個表情也可以的）。又或是我在技術類的文章中可能有甚麼寫錯的地方，也都可以直接留言和我討論，我都會盡快地回復你。最後如果想持續的接收我最新的文章，也歡迎可以<a href="https://cx330.tw/subscribe">訂閱我的 Blog</a>！我會很感激的！</p>
+]]></content>
+      <categories>
+        <category>Life and Talk</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Reading List</title>
+    <url>/Life%20and%20Talk/Reading-List/</url>
+    <content><![CDATA[<ol>
+<li><a class="link"   href="https://johnliutw.medium.com/list/google-4cfac4644843" >Google 的軟體工程之道 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://octobug.gitbooks.io/sqlmap-wiki-zhcn/content/" >Sqlmap 文檔中文版 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Life and Talk</category>
+      </categories>
   </entry>
   <entry>
     <title>2024 AIS3 Pre-exam Writeup</title>
@@ -622,8 +622,8 @@
         <category>2024 CTF Training</category>
       </categories>
       <tags>
-        <tag>CTF</tag>
         <tag>Cryptography</tag>
+        <tag>CTF</tag>
         <tag>CyberSec</tag>
         <tag>TechStreak30</tag>
         <tag>Crypto</tag>
@@ -648,8 +648,8 @@
         <category>2024 CTF Training</category>
       </categories>
       <tags>
-        <tag>CTF</tag>
         <tag>Cryptography</tag>
+        <tag>CTF</tag>
         <tag>CyberSec</tag>
         <tag>TechStreak30</tag>
         <tag>Crypto</tag>

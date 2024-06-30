@@ -222,18 +222,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Reading List</title>
-    <url>/LifeAndTalk/Reading-List/</url>
-    <content><![CDATA[<ol>
-<li><a class="link"   href="https://johnliutw.medium.com/list/google-4cfac4644843" >Google 的軟體工程之道 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li><a class="link"   href="https://octobug.gitbooks.io/sqlmap-wiki-zhcn/content/" >Sqlmap 文檔中文版 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>LifeAndTalk</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Why Do I Start Blogging</title>
     <url>/LifeAndTalk/Why-Do-I-Start-Blogging/</url>
     <content><![CDATA[<h1 id="Big-bang-宇宙的起源"><a href="#Big-bang-宇宙的起源" class="headerlink" title="Big bang! 宇宙的起源"></a>Big bang! 宇宙的起源</h1><p>我其實從很久以前就有想要架設自己的網站，上了大學後又看到更多厲害的前輩們都會有自己的網站來記錄自己的成長，於是下定決心也要來建立自己的 Blog。再加上我今年（2023 開始）剛好把 Instagram 關版了（想挑戰一年不用 Instagram），所以剛好就利用這邊來記錄我的生活和技術類文章吧！（未來可能會順便紀錄一些旅遊、和朋友的約、blablabla）</p>
@@ -246,47 +234,16 @@
       </categories>
   </entry>
   <entry>
-    <title>2024 GDSC NCKU AI Team</title>
-    <url>/DevCorner/AI/2024-GDSC-NCKU-AI-Team/</url>
-    <content><![CDATA[<h1 id="Intro-—-What-is-GDSC"><a href="#Intro-—-What-is-GDSC" class="headerlink" title="Intro — What is GDSC"></a>Intro — What is GDSC</h1><p><a class="link" href="https://gdg.tw/about/gdsc/">GDSC <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>(Google Developer Student Clubs)是一個由 Google 支持的學生社群，旨在通過學生與專業開發人員聯繫，促進學生對 Google 開發人員技術的學習和應用，並為學生提供與技術專家互動和學習的機會。 GDSC 在全球有超過 100 個國家/地區的 1000 多個社群。GDSC 是學生們學習和分享技術的理想社群，並且能夠與技術行業的其他開發人員和專家建立聯繫。(以上皆是 Ctrl+c &amp; Ctrl+v)</p>
-<p>那我自己在成大待了一年的 GDSC，我認為他是個甚麼東西呢？我會說他就是專案社群+課程+演講的集合。這裡集結了一群很有想法的學生聚在一起開心地做專案，然後在這一年的專案旅程中，每兩個禮拜就會有一次社團課程。有時候是幹部們輪流教學一些開發技巧，讓大家對每個領域的技術都稍有了解；有時候是會邀請業界大佬來和我們分享經驗。</p>
-<p>總之就是一個非常有想法和對技術非常有熱忱的人所組合在一起的團隊，加入 GDSC 一定可以感受到那種英雄惜英雄的感覺！接下來，我們就從面試開始講起，來紀錄一下這一年的旅程吧！</p>
-<h1 id="Interview"><a href="#Interview" class="headerlink" title="Interview"></a>Interview</h1><p>我在大一的時候(2023)加入了成大的 GDSC，當初面試了三個組別，志願序從前面到後面分別是 AI 組、Web 組、Data 組。在面試的時候主要就是會問一些你之前有沒有過相關的經驗或是一些知識性的問題。舉 AI 組的面試來說，當初幹部就有問我甚麼是 P value、我所熟悉的程式語言、然後給我一些題目問我要怎麼去找出兩者之間的相關性（具體問題有點忘記了，畢竟是一年前。但我記得我的回答跟 Linear regression 有關），再來就是可能要清楚 Correlation doesn’t imply causation 等。除了這些比較 Hard skill 的問題，也會問你如果錄取了會如何安排時間以及 GDSC 對你而言的 Priority 等等。現在回頭看也十分可以理解當初為甚麼這麼問，畢竟一整年要和大家一起做專案，中途跑掉肯定是不太好的。</p>
-<p>後來面試完，我順利地加入了第一志願的組別，AI 組。雖然當初對於 AI 的知識沒有甚麼了解，但這剛好給了我一個機會開始展開學習。</p>
-<h1 id="About-my-team"><a href="#About-my-team" class="headerlink" title="About my team"></a>About my team</h1><p>因為這次的 AI 組人有點多，所以我們又有分成了幾個小組。而我分到的這個小組中，我是唯一一個大一生。其他的成員從大三到碩班都有（AI 組也總共兩個大一的&gt;&lt;），總之我就是裡面資歷最淺的那位。但即便如此，也不會感受到被排斥的感覺，大家也不會因為我年紀比他們小而忽視掉我在團隊中的想法（大家真的很友善，很有 Google 那種多元友善包容的感覺 XD）。</p>
-<h1 id="Our-project"><a href="#Our-project" class="headerlink" title="Our project"></a>Our project</h1><p>我們在歷經將近一個學期的討論還有熟悉彼此以及熟悉這個團隊之後（具體來說是在寒假），討論出了我們的專案主題。我們想要透過 AI 模型的分析，讓我們能夠預測股票的價格走向。我們這次訓練模型是採用特斯拉的股票來作為我們的對象，並且我們除了一般的指標外，我們另外加入了推文、新聞和特斯拉財報作為我們的 Indicators。我們的整體流程如下：</p>
-<blockquote>
-<ol>
-<li>針對推特的推文、各大媒體新聞、特斯拉財報這三個不同的文本訓練出不同的 Sentiment analysis model</li>
-<li>訓練一個準備接收上述資料做預測的 LSTM</li>
-<li>利用我們的 SA 模型去 Label 每日的資料，並傳入一個 LSTM</li>
+    <title>Reading List</title>
+    <url>/LifeAndTalk/Reading-List/</url>
+    <content><![CDATA[<ol>
+<li><a class="link"   href="https://johnliutw.medium.com/list/google-4cfac4644843" >Google 的軟體工程之道 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://octobug.gitbooks.io/sqlmap-wiki-zhcn/content/" >Sqlmap 文檔中文版 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
 </ol>
-</blockquote>
-<p>最後我們每天輸入當日的三種文本的 SA 分數到我們的 LSTM 去預測隔日的股票價格，並成功得到出了還蠻精準的結果，更詳細的可以看我們的海報，如下（最下面的圖片中，右下角的指標有誤植。藍色的線為真實股價，橘色的線為我們預測的）：</p>
-<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/rJKaUHmIA.png" alt="我們的海報"><figcaption>我們的海報</figcaption></figure></p>
-<h1 id="My-role-in-the-team"><a href="#My-role-in-the-team" class="headerlink" title="My role in the team"></a>My role in the team</h1><p>我在我們這組是負責推文的部分。一開始，我是先用 Kaggle 找到的<a class="link" href="https://www.kaggle.com/datasets/omermetinn/tweets-about-the-top-companies-from-2015-to-2020/data?select=Company_Tweet.csv">這個資料集 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>以及<a class="link" href="https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment-latest">cardiffnlp/twitter-roberta-base-sentiment-latest <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>和<a class="link" href="https://huggingface.co/austinmw/distilbert-base-uncased-finetuned-tweets-sentiment">austinmw/distilbert-base-uncased-finetuned-tweets-sentiment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>這兩個 Pre-trained Model 去幫我們的資料做 Label。</p>
-<p>但是後來我們希望可以有更近期的資料，所以我寫了<a class="link" href="https://github.com/CX330Blake/X-crawler">這個爬蟲 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>來爬取 2021 到 2024 五月的推文的資料（但因為我沒有買 API，所以只能慢慢用 Selenium 滑）。在蒐集完資料後，我用了那兩個 Model 去做 Label，並且在 Label 完後抓取相同比例的 Positive、Neutral、Negative 的資料去對 BERT 做 Fine-tune，得到<a class="link" href="https://huggingface.co/CX330Blake/tweet-sentiment-analysis-for-tesla">最後的 SA 模型 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。</p>
-<h1 id="NCKU-GDSC-Forum"><a href="#NCKU-GDSC-Forum" class="headerlink" title="NCKU GDSC Forum"></a>NCKU GDSC Forum</h1><p>終於到了成果發表的當天，當天就是有很多的講座以及我們自己擺設的每個小組的攤位。我們要對每位到攤位前的觀眾做講解，跟他們說我們到底做了些甚麼，然後當天的講座也是十分有趣，會很有收穫。我在聽完了前輩們的分享後，更有了想要努力前往矽谷的衝動，有種受到矽谷召喚的感覺 XD。至於更詳細的，就看一下以下的紀錄影片吧！</p>
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/MWK4geiYARs" frameborder="0" allowfullscreen=""></iframe>
-</div>
-
-<h1 id="What-I-learned-in-this-year"><a href="#What-I-learned-in-this-year" class="headerlink" title="What I learned in this year"></a>What I learned in this year</h1><p>撇除掉一些 Hard skill（這是一定會學習到的），我比較想來談談加入 GDSC 的一些 Trade-off。加入 GDSC 後，勢必會壓縮到其他的時間，所以要更懂得如何安排自己的休閒娛樂以及讀書的時間。但同時，也確實可以在這裡獲得很多學業之外的東西。比如說拓展自己的人脈、吸取更多前輩的經驗，但我覺得最重要的，是可以找到一群志同道合夥伴們。這一來可以讓自己在自我精進的這條路上更不孤單，其次也可以增加自己對這種開發社群（或是身為「開發者」）的身分認同。</p>
-<p>結論上來說，如果你同時有很多其他的活動，或是想要好好的衝一下 GPA，或許可以慎重考慮一下要不要參加（因為畢竟做專案真的會花不少時間，還要上社課）；但如果你也和我一樣，相信比起分數有更重要的事，那就大膽地來參加吧，一定會收獲不少的！</p>
-<p>最後附上我們今年 GDSC 的口號：</p>
-<blockquote>
-<p>Code your goal, Fuel your soul! — <strong><em>2024 GDSC NCKU</em></strong></p>
-</blockquote>
-<p>如果這篇文章對你有幫助，歡迎<a href="https://cx330.tw/subscribe/">訂閱我的 Blog</a>，會在有新文章的時候通知你，十分感謝！</p>
 ]]></content>
       <categories>
-        <category>DevCorner</category>
-        <category>AI</category>
+        <category>LifeAndTalk</category>
       </categories>
-      <tags>
-        <tag>AI</tag>
-        <tag>GDSC</tag>
-      </tags>
   </entry>
   <entry>
     <title>2024 AIS3 Pre-exam Writeup</title>
@@ -308,173 +265,6 @@
         <category>CyberSec</category>
         <category>CTF</category>
       </categories>
-  </entry>
-  <entry>
-    <title>不懂就問！如何利用 Hexo + GitHub + HackMD 搭建自己的個人部落格</title>
-    <url>/DevCorner/Web/%E4%B8%8D%E6%87%82%E5%B0%B1%E5%95%8F%EF%BC%81%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8-Hexo-GitHub-HackMD-%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%80%8B%E4%BA%BA%E9%83%A8%E8%90%BD%E6%A0%BC/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>從正在打這些字的今天開始算的話，距離網站架設起來的時間也有一個月了。</p>
-<p>這段時間一直沒有好好的紀錄一下架站的過程，正好我身邊有一些朋友也想開始架自己的部落格，所以順便就來做個教學吧！</p>
-<p>如同文章的標題，這次主要使用的就是 Hexo、GitHub、HackMD，那事不宜遲，我們就開始吧！</p>
-<h1 id="Hexo-部署"><a href="#Hexo-部署" class="headerlink" title="Hexo 部署"></a>Hexo 部署</h1><p>在開始前，我們先來介紹一下 Hexo 是甚麼吧！Hexo 是一個很快速也很輕量的靜態網頁框架（大部分用來架設 Blog），它可以讓使用者利用 Markdown 寫作，Hexo 會自己幫你生成靜態文件。</p>
-<p>總之就是個很方便的框架，<strong>一天內一定可以讓你的網站順利上線</strong>！（加上一些環境問題還有其他的依賴問題，最少一個禮拜內也一定可以完成的）</p>
-<h2 id="安裝-Hexo"><a href="#安裝-Hexo" class="headerlink" title="安裝 Hexo"></a>安裝 Hexo</h2><p>在安裝前，有一些依賴環境需要先安裝，請先確保你的電腦上已經安裝了：</p>
-<ul>
-<li><a class="link" href="https://git-scm.com/">Git <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li><a class="link" href="https://nodejs.org/en">Node.js <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（官方推薦 Node.js 10.0 及其以上的版本）</li>
-</ul>
-<p>如果還沒安裝過，請先去安裝（網路上找有很多教學了，就先跳過）。確保有以上的軟體後，就可以安裝啦！Hexo 的安裝真的真的超級簡單（Mac 使用者可能會有環境問題，請看 <a class="link" href="https://hexo.io/zh-tw/docs/">官方說明文件 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）。首先，請打開你的終端機（cmd、Powershell 等），並且輸入以下的命令：</p>
-<div class="highlight-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure></div>
-
-<p>安裝完成後，輸入<code>hexo -v</code>查看版本號，有正確顯示的話就說明安裝成功啦！</p>
-<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630164342694.png" alt="hexo -v"><figcaption>hexo -v</figcaption></figure></p>
-<h2 id="建立你的-Hexo-資料"><a href="#建立你的-Hexo-資料" class="headerlink" title="建立你的 Hexo 資料"></a>建立你的 Hexo 資料</h2><p>安裝好 Hexo 的 CLI 工具後，就可以開始建立 Hexo 的資料夾了。<strong>注意，這個檔案夾就是你以後寫文章、放文章照片等等的地方了。</strong>首先，先移動到你想要放置這個檔案的路徑底下，並在這個路徑中打開終端，輸入以下的命令。</p>
-<div class="highlight-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo init &lt;資料夾名稱&gt;</span><br></pre></td></tr></table></figure></div>
-
-<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630165449041.png" alt="hexo init"><figcaption>hexo init</figcaption></figure></p>
-<p>接下來，要進入這個資料夾中，安裝這個專案所需要的依賴包。請依序的輸入以下的命令：</p>
-<div class="highlight-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;資料夾名稱&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure></div>
-
-<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630165915129.png" alt="image-20240630165915129"><figcaption>image-20240630165915129</figcaption></figure></p>
-<p>這樣就完成了初步的建立啦！建立完成後，專案資料夾下的檔案會像是以下這樣：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure></div>
-
-<p>這些檔案都有其各自的用途，分別是：</p>
-<p><strong>_config.yml</strong></p>
-<ul>
-<li>網站的配置檔案，可以設定如 URL、預設語言、站點名稱等。大部分的設置都會在這裡。</li>
-</ul>
-<p><strong>package.json</strong></p>
-<ul>
-<li>存放專案中所有需要用到的模組。</li>
-</ul>
-<p><strong>scaffolds</strong></p>
-<ul>
-<li><a class="link" href="https://hexo.io/zh-tw/docs/writing.html#%E9%B7%B9%E6%9E%B6%EF%BC%88Scaffold%EF%BC%89">鷹架 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 的資料夾，裡面會放一些鷹架的架構。</li>
-</ul>
-<p><strong>source</strong></p>
-<ul>
-<li>這裡就是存放所有網頁內容的資料夾，包含文章、圖片等。以後寫文章也基本都是在這層目錄工作。</li>
-</ul>
-<p><strong>themes</strong></p>
-<ul>
-<li>主題的資料夾。</li>
-</ul>
-<p>到了這邊，你已經大致架完了 Hexo 的環境，那接下來看看怎麼部署到 GitHub 吧。</p>
-<h2 id="Hexo-指令"><a href="#Hexo-指令" class="headerlink" title="Hexo 指令"></a>Hexo 指令</h2><p>之後寫文章一定會用到的，就是 Hexo 的指令了。我會簡單介紹幾個，想要了解更詳細請見 <a class="link" href="https://hexo.io/zh-tw/docs/commands">官方文件 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。</p>
-<h3 id="創建新文章"><a href="#創建新文章" class="headerlink" title="創建新文章"></a>創建新文章</h3><p>以下的角括號請替換為你自己的文章標題。</p>
-<div class="highlight-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo new "&lt;文章標題&gt;"</span><br></pre></td></tr></table></figure></div>
-
-<p>這個指令會生成一份<strong>markdown</strong>文件到<strong>_post</strong>資料夾中。</p>
-<h3 id="本地預覽"><a href="#本地預覽" class="headerlink" title="本地預覽"></a>本地預覽</h3><div class="highlight-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>或是也可以簡寫為</p>
-<div class="highlight-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></div>
-
-<p>這個指令會在 localhost 上面啟動伺服器，讓你先預覽網站。</p>
-<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><div class="highlight-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>也可以簡寫為</p>
-<div class="highlight-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure></div>
-
-<p>它會自動把你的<strong>source</strong>資料夾中的內容生成為靜態檔案，並且部署到你所設定的 GitHub Repo。（後面會詳細介紹實作方式）</p>
-<h3 id="刪除靜態檔案"><a href="#刪除靜態檔案" class="headerlink" title="刪除靜態檔案"></a>刪除靜態檔案</h3><div class="highlight-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure></div>
-
-<p>這個指令會幫你把你使用<code>hexo generate</code>或是<code>hexo deploy</code>所產生的靜態檔案刪除。</p>
-<h1 id="連結-GitHub-Repo"><a href="#連結-GitHub-Repo" class="headerlink" title="連結 GitHub Repo"></a>連結 GitHub Repo</h1><h2 id="創建-Repo"><a href="#創建-Repo" class="headerlink" title="創建 Repo"></a>創建 Repo</h2><p>首先，你要先建立一個 GitHub Repo，用來存放網站的靜態資料。同時，這個 GitHub Repo 也會成為到時候部署的地方（當然你也可以用其他的靜態網站託管服務，但這是免費的！）。</p>
-<p>建立 Repo 的時候，請遵循以下幾個要點：</p>
-<ol>
-<li>Repo 名稱設定為<strong>USERNAME.github.io</strong>，<strong>USERNAME</strong>記得改為你自己的使用者名稱。</li>
-<li>Repo 請設定為<strong>公開</strong></li>
-</ol>
-<p>完成後，我們就來把這個 Repo（以下簡稱為 GitHub Repo）連結到你的 Hexo 專案吧！開始前你需要先安裝一個部署的外掛。</p>
-<div class="highlight-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></div>
-
-<p>打開你的 Hexo 專案中的<code>_config.yml</code>，並加入以下的設定：</p>
-<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">    <span class="attr">repo:</span> <span class="string">&lt;你的</span> <span class="string">Repo</span> <span class="string">URL&gt;</span> <span class="comment"># https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io</span></span><br><span class="line">    <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure></div>
-
-<h2 id="建立-GitHub-Pages"><a href="#建立-GitHub-Pages" class="headerlink" title="建立 GitHub Pages"></a>建立 GitHub Pages</h2><p>進到你的 GitHub Repo 中，點選 Settings。</p>
-<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630173247120.png" alt="GitHub Repo Settings"><figcaption>GitHub Repo Settings</figcaption></figure></p>
-<p>在側邊點選 Pages。</p>
-<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630173423864.png" alt="GitHub Pages"><figcaption>GitHub Pages</figcaption></figure></p>
-<p>把<code>Branch</code>切換到<code>Main</code>，並且按下<code>Save</code>。</p>
-<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630173802148.png" alt="Set branch to main"><figcaption>Set branch to main</figcaption></figure></p>
-<p>完成後，等待個大約一到兩分鐘，上面就會顯示出你的網站部署好的 URL 啦！</p>
-<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630173922108.png" alt="Finish!"><figcaption>Finish!</figcaption></figure></p>
-<p>因為我有購買域名，所以可以設定 Custom Domain。如果你也有購買域名，並且想設置它作為你的部落格 URL，請見 <a class="link" href="https://clairechang.tw/2023/06/28/web/github-pages-with-custom-domain/">GitHub Pages 自訂域名與 HTTPS 設定（GoDaddy + Cloudflare） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。</p>
-<p>到這邊，你就已經部署完成啦！接下來只要找個喜歡的 <a class="link" href="https://hexo.io/themes/">Hexo 主題 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>、<a class="link" href="https://hexo.io/zh-tw/docs/configuration">設定配置文件 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，就可以開始寫作啦！（這邊可以去看看官方文件，選個自己喜歡的主題，並照著文檔配置就行了）</p>
-<h2 id="部署到網站上"><a href="#部署到網站上" class="headerlink" title="部署到網站上"></a>部署到網站上</h2><p>GitHub Pages 有個很方便的功能，就是當你每次有新的 Commit 的時候，它都會自動幫你更新你的網頁的內容。所以以後更新文章後，只需要使用<code>hexo deploy</code>把更新的內容提交到 GitHub 倉庫，它就會自動幫你更新網頁啦！</p>
-<h1 id="開始寫作啦！"><a href="#開始寫作啦！" class="headerlink" title="開始寫作啦！"></a>開始寫作啦！</h1><p>我自己目前的寫作方式，是使用 <a class="link" href="https://hackmd.io/">HackMD <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 來寫作的，因為它有許多優點。</p>
-<ol>
-<li><strong>免費的圖床</strong><ul>
-<li>不只免費，操作也只要複製圖片並貼上，就能自動生成圖片 URL，讓寫作更輕鬆。</li>
-</ul>
-</li>
-<li><strong>迅速且輕便</strong><ul>
-<li>以網頁為主的 HackMD，讓你只需要一個瀏覽器就可以快速打開筆記，並開始寫作。</li>
-</ul>
-</li>
-<li><strong>對 Markdown 語法的支援</strong><ul>
-<li>支援 MathJax、Mermaid 等 Markdown 擴充語法，讓寫作可以更靈活。</li>
-</ul>
-</li>
-</ol>
-<p>至於我寫作的方式，步驟如下：</p>
-<ul>
-<li>用<code>hexo new &lt;文章標題&gt;</code>先建立一篇文章在 Post 資料夾。（目的是可以生成文章創建的時間，以及文章的 <a class="link" href="https://hexo.io/zh-tw/docs/front-matter">Front Matter <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）</li>
-<li>複製貼上（包含 Front Matter）到 HackMD 編輯。</li>
-<li>編輯完後，再複製回原本的檔案。</li>
-<li>用<code>hexo deploy</code>部署。</li>
-</ul>
-<p>這樣就完成了一次的寫作啦！畢竟寫文章一定會多多少少有圖片，使用 HackMD 就可以不用擔心圖片問題，可以很方便也很迅速地完成寫作歐！</p>
-<h1 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h1><p>我覺得用這套方法<strong>便宜</strong>、<strong>方便</strong>、<strong>快速</strong>，不僅可以提升你寫作的意願，也可以讓你在一開始比較有成就感，增強你寫作的動力！真的是很不錯的方式～</p>
-<p>我自己建立部落格所需要的花費就只有</p>
-<ul>
-<li>$1468 買了兩年的域名</li>
-<li><del>花了很多的時間踩坑</del>（但是不是 Hexo 的問題，是我的主題依賴的問題）</li>
-<li><del>年輕的肝</del></li>
-</ul>
-<p>總之，就是非常喜歡自己現在的成果啦！也希望你們可以搭建成功，同時也可以加入寫作的行列歐！</p>
-<p>如果這篇文章對你有幫助，歡迎 <a href="https://cx330.tw/subscribe">訂閱我的部落格</a>，同時也非常歡迎大家在底下留言或按表情和我互動，如果我有哪裡說錯，也歡迎討論！</p>
-]]></content>
-      <categories>
-        <category>DevCorner</category>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>Blog</tag>
-        <tag>WebDev</tag>
-        <tag>Developer</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Day 01] Grinding PicoCTF</title>
-    <url>/TechStreak30/2024%20CTF%20Training/Day-01-Grinding-PicoCTF/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>因為已經有開了一篇文章，打算放上所有 picoCTF 的 writeups 了，所以就不把解題思路寫在這邊啦，如果想看的話請見<a href="https://cx330.tw/CyberSec/CTF/All-in-One%20PicoCTF-Writeups/">這邊</a>!</p>
-<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天打算先刷一點 picoCTF 的題目，因為成大資安社加入戰隊的標準是一萬分，然後我現在才六千多。但是！當我今天開始刷題目之後我發現 pico 他們的制度整個大改！現在沒有計算分數的機制了，改為把題目分成三個不同的難度（像是 Leetcode 那樣），分別是 easy, medium, hard。所以不知道到時候加戰隊的標準會是多少呢，不過以下就是我今天的進度啦！</p>
-<ol>
-<li>More SQLi</li>
-<li>Trickster</li>
-</ol>
-<p>今天進度就兩題，不過感覺多多少少是有學習到新知識的。之後可能要找一天特別來研究一下 sqlmap 的文檔，到時候再出成一篇筆記文章吧！兩題可能聽起來有點少，但畢竟剛放暑假，我還在那個耍廢狀態 XD，慢慢調整啦！</p>
-<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
-<li>起床時間：<code>8:30</code></li>
-<li>知識量：⭐⭐⭐</li>
-<li>疲勞程度：⭐⭐</li>
-<li>精神狀態：⭐⭐⭐⭐⭐</li>
-</ul>
-]]></content>
-      <categories>
-        <category>CyberSec</category>
-        <category>TechStreak30</category>
-        <category>CTF</category>
-        <category>2024 CTF Training</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-        <tag>CyberSec</tag>
-        <tag>PicoCTF</tag>
-        <tag>TechStreak30</tag>
-      </tags>
   </entry>
   <entry>
     <title>SCIST S4 資訊安全期末考 Writeup</title>
@@ -557,6 +347,49 @@
       <tags>
         <tag>CTF</tag>
         <tag>Security</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2024 GDSC NCKU AI Team</title>
+    <url>/DevCorner/AI/2024-GDSC-NCKU-AI-Team/</url>
+    <content><![CDATA[<h1 id="Intro-—-What-is-GDSC"><a href="#Intro-—-What-is-GDSC" class="headerlink" title="Intro — What is GDSC"></a>Intro — What is GDSC</h1><p><a class="link" href="https://gdg.tw/about/gdsc/">GDSC <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>(Google Developer Student Clubs)是一個由 Google 支持的學生社群，旨在通過學生與專業開發人員聯繫，促進學生對 Google 開發人員技術的學習和應用，並為學生提供與技術專家互動和學習的機會。 GDSC 在全球有超過 100 個國家/地區的 1000 多個社群。GDSC 是學生們學習和分享技術的理想社群，並且能夠與技術行業的其他開發人員和專家建立聯繫。(以上皆是 Ctrl+c &amp; Ctrl+v)</p>
+<p>那我自己在成大待了一年的 GDSC，我認為他是個甚麼東西呢？我會說他就是專案社群+課程+演講的集合。這裡集結了一群很有想法的學生聚在一起開心地做專案，然後在這一年的專案旅程中，每兩個禮拜就會有一次社團課程。有時候是幹部們輪流教學一些開發技巧，讓大家對每個領域的技術都稍有了解；有時候是會邀請業界大佬來和我們分享經驗。</p>
+<p>總之就是一個非常有想法和對技術非常有熱忱的人所組合在一起的團隊，加入 GDSC 一定可以感受到那種英雄惜英雄的感覺！接下來，我們就從面試開始講起，來紀錄一下這一年的旅程吧！</p>
+<h1 id="Interview"><a href="#Interview" class="headerlink" title="Interview"></a>Interview</h1><p>我在大一的時候(2023)加入了成大的 GDSC，當初面試了三個組別，志願序從前面到後面分別是 AI 組、Web 組、Data 組。在面試的時候主要就是會問一些你之前有沒有過相關的經驗或是一些知識性的問題。舉 AI 組的面試來說，當初幹部就有問我甚麼是 P value、我所熟悉的程式語言、然後給我一些題目問我要怎麼去找出兩者之間的相關性（具體問題有點忘記了，畢竟是一年前。但我記得我的回答跟 Linear regression 有關），再來就是可能要清楚 Correlation doesn’t imply causation 等。除了這些比較 Hard skill 的問題，也會問你如果錄取了會如何安排時間以及 GDSC 對你而言的 Priority 等等。現在回頭看也十分可以理解當初為甚麼這麼問，畢竟一整年要和大家一起做專案，中途跑掉肯定是不太好的。</p>
+<p>後來面試完，我順利地加入了第一志願的組別，AI 組。雖然當初對於 AI 的知識沒有甚麼了解，但這剛好給了我一個機會開始展開學習。</p>
+<h1 id="About-my-team"><a href="#About-my-team" class="headerlink" title="About my team"></a>About my team</h1><p>因為這次的 AI 組人有點多，所以我們又有分成了幾個小組。而我分到的這個小組中，我是唯一一個大一生。其他的成員從大三到碩班都有（AI 組也總共兩個大一的&gt;&lt;），總之我就是裡面資歷最淺的那位。但即便如此，也不會感受到被排斥的感覺，大家也不會因為我年紀比他們小而忽視掉我在團隊中的想法（大家真的很友善，很有 Google 那種多元友善包容的感覺 XD）。</p>
+<h1 id="Our-project"><a href="#Our-project" class="headerlink" title="Our project"></a>Our project</h1><p>我們在歷經將近一個學期的討論還有熟悉彼此以及熟悉這個團隊之後（具體來說是在寒假），討論出了我們的專案主題。我們想要透過 AI 模型的分析，讓我們能夠預測股票的價格走向。我們這次訓練模型是採用特斯拉的股票來作為我們的對象，並且我們除了一般的指標外，我們另外加入了推文、新聞和特斯拉財報作為我們的 Indicators。我們的整體流程如下：</p>
+<blockquote>
+<ol>
+<li>針對推特的推文、各大媒體新聞、特斯拉財報這三個不同的文本訓練出不同的 Sentiment analysis model</li>
+<li>訓練一個準備接收上述資料做預測的 LSTM</li>
+<li>利用我們的 SA 模型去 Label 每日的資料，並傳入一個 LSTM</li>
+</ol>
+</blockquote>
+<p>最後我們每天輸入當日的三種文本的 SA 分數到我們的 LSTM 去預測隔日的股票價格，並成功得到出了還蠻精準的結果，更詳細的可以看我們的海報，如下（最下面的圖片中，右下角的指標有誤植。藍色的線為真實股價，橘色的線為我們預測的）：</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/rJKaUHmIA.png" alt="我們的海報"><figcaption>我們的海報</figcaption></figure></p>
+<h1 id="My-role-in-the-team"><a href="#My-role-in-the-team" class="headerlink" title="My role in the team"></a>My role in the team</h1><p>我在我們這組是負責推文的部分。一開始，我是先用 Kaggle 找到的<a class="link" href="https://www.kaggle.com/datasets/omermetinn/tweets-about-the-top-companies-from-2015-to-2020/data?select=Company_Tweet.csv">這個資料集 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>以及<a class="link" href="https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment-latest">cardiffnlp/twitter-roberta-base-sentiment-latest <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>和<a class="link" href="https://huggingface.co/austinmw/distilbert-base-uncased-finetuned-tweets-sentiment">austinmw/distilbert-base-uncased-finetuned-tweets-sentiment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>這兩個 Pre-trained Model 去幫我們的資料做 Label。</p>
+<p>但是後來我們希望可以有更近期的資料，所以我寫了<a class="link" href="https://github.com/CX330Blake/X-crawler">這個爬蟲 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>來爬取 2021 到 2024 五月的推文的資料（但因為我沒有買 API，所以只能慢慢用 Selenium 滑）。在蒐集完資料後，我用了那兩個 Model 去做 Label，並且在 Label 完後抓取相同比例的 Positive、Neutral、Negative 的資料去對 BERT 做 Fine-tune，得到<a class="link" href="https://huggingface.co/CX330Blake/tweet-sentiment-analysis-for-tesla">最後的 SA 模型 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。</p>
+<h1 id="NCKU-GDSC-Forum"><a href="#NCKU-GDSC-Forum" class="headerlink" title="NCKU GDSC Forum"></a>NCKU GDSC Forum</h1><p>終於到了成果發表的當天，當天就是有很多的講座以及我們自己擺設的每個小組的攤位。我們要對每位到攤位前的觀眾做講解，跟他們說我們到底做了些甚麼，然後當天的講座也是十分有趣，會很有收穫。我在聽完了前輩們的分享後，更有了想要努力前往矽谷的衝動，有種受到矽谷召喚的感覺 XD。至於更詳細的，就看一下以下的紀錄影片吧！</p>
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/MWK4geiYARs" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+<h1 id="What-I-learned-in-this-year"><a href="#What-I-learned-in-this-year" class="headerlink" title="What I learned in this year"></a>What I learned in this year</h1><p>撇除掉一些 Hard skill（這是一定會學習到的），我比較想來談談加入 GDSC 的一些 Trade-off。加入 GDSC 後，勢必會壓縮到其他的時間，所以要更懂得如何安排自己的休閒娛樂以及讀書的時間。但同時，也確實可以在這裡獲得很多學業之外的東西。比如說拓展自己的人脈、吸取更多前輩的經驗，但我覺得最重要的，是可以找到一群志同道合夥伴們。這一來可以讓自己在自我精進的這條路上更不孤單，其次也可以增加自己對這種開發社群（或是身為「開發者」）的身分認同。</p>
+<p>結論上來說，如果你同時有很多其他的活動，或是想要好好的衝一下 GPA，或許可以慎重考慮一下要不要參加（因為畢竟做專案真的會花不少時間，還要上社課）；但如果你也和我一樣，相信比起分數有更重要的事，那就大膽地來參加吧，一定會收獲不少的！</p>
+<p>最後附上我們今年 GDSC 的口號：</p>
+<blockquote>
+<p>Code your goal, Fuel your soul! — <strong><em>2024 GDSC NCKU</em></strong></p>
+</blockquote>
+<p>如果這篇文章對你有幫助，歡迎<a href="https://cx330.tw/subscribe/">訂閱我的 Blog</a>，會在有新文章的時候通知你，十分感謝！</p>
+]]></content>
+      <categories>
+        <category>DevCorner</category>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+        <tag>GDSC</tag>
       </tags>
   </entry>
   <entry>
@@ -741,6 +574,173 @@
         <category>CyberSec</category>
         <category>PicoCTF</category>
       </categories>
+  </entry>
+  <entry>
+    <title>不懂就問！如何利用 Hexo + GitHub + HackMD 搭建自己的個人部落格</title>
+    <url>/DevCorner/Web/%E4%B8%8D%E6%87%82%E5%B0%B1%E5%95%8F%EF%BC%81%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8-Hexo-GitHub-HackMD-%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%80%8B%E4%BA%BA%E9%83%A8%E8%90%BD%E6%A0%BC/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>從正在打這些字的今天開始算的話，距離網站架設起來的時間也有一個月了。</p>
+<p>這段時間一直沒有好好的紀錄一下架站的過程，正好我身邊有一些朋友也想開始架自己的部落格，所以順便就來做個教學吧！</p>
+<p>如同文章的標題，這次主要使用的就是 Hexo、GitHub、HackMD，那事不宜遲，我們就開始吧！</p>
+<h1 id="Hexo-部署"><a href="#Hexo-部署" class="headerlink" title="Hexo 部署"></a>Hexo 部署</h1><p>在開始前，我們先來介紹一下 Hexo 是甚麼吧！Hexo 是一個很快速也很輕量的靜態網頁框架（大部分用來架設 Blog），它可以讓使用者利用 Markdown 寫作，Hexo 會自己幫你生成靜態文件。</p>
+<p>總之就是個很方便的框架，<strong>一天內一定可以讓你的網站順利上線</strong>！（加上一些環境問題還有其他的依賴問題，最少一個禮拜內也一定可以完成的）</p>
+<h2 id="安裝-Hexo"><a href="#安裝-Hexo" class="headerlink" title="安裝 Hexo"></a>安裝 Hexo</h2><p>在安裝前，有一些依賴環境需要先安裝，請先確保你的電腦上已經安裝了：</p>
+<ul>
+<li><a class="link" href="https://git-scm.com/">Git <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link" href="https://nodejs.org/en">Node.js <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（官方推薦 Node.js 10.0 及其以上的版本）</li>
+</ul>
+<p>如果還沒安裝過，請先去安裝（網路上找有很多教學了，就先跳過）。確保有以上的軟體後，就可以安裝啦！Hexo 的安裝真的真的超級簡單（Mac 使用者可能會有環境問題，請看 <a class="link" href="https://hexo.io/zh-tw/docs/">官方說明文件 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）。首先，請打開你的終端機（cmd、Powershell 等），並且輸入以下的命令：</p>
+<div class="highlight-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure></div>
+
+<p>安裝完成後，輸入<code>hexo -v</code>查看版本號，有正確顯示的話就說明安裝成功啦！</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630164342694.png" alt="hexo -v"><figcaption>hexo -v</figcaption></figure></p>
+<h2 id="建立你的-Hexo-資料"><a href="#建立你的-Hexo-資料" class="headerlink" title="建立你的 Hexo 資料"></a>建立你的 Hexo 資料</h2><p>安裝好 Hexo 的 CLI 工具後，就可以開始建立 Hexo 的資料夾了。<strong>注意，這個檔案夾就是你以後寫文章、放文章照片等等的地方了。</strong>首先，先移動到你想要放置這個檔案的路徑底下，並在這個路徑中打開終端，輸入以下的命令。</p>
+<div class="highlight-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo init &lt;資料夾名稱&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630165449041.png" alt="hexo init"><figcaption>hexo init</figcaption></figure></p>
+<p>接下來，要進入這個資料夾中，安裝這個專案所需要的依賴包。請依序的輸入以下的命令：</p>
+<div class="highlight-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;資料夾名稱&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure></div>
+
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630165915129.png" alt="image-20240630165915129"><figcaption>image-20240630165915129</figcaption></figure></p>
+<p>這樣就完成了初步的建立啦！建立完成後，專案資料夾下的檔案會像是以下這樣：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure></div>
+
+<p>這些檔案都有其各自的用途，分別是：</p>
+<p><strong>_config.yml</strong></p>
+<ul>
+<li>網站的配置檔案，可以設定如 URL、預設語言、站點名稱等。大部分的設置都會在這裡。</li>
+</ul>
+<p><strong>package.json</strong></p>
+<ul>
+<li>存放專案中所有需要用到的模組。</li>
+</ul>
+<p><strong>scaffolds</strong></p>
+<ul>
+<li><a class="link" href="https://hexo.io/zh-tw/docs/writing.html#%E9%B7%B9%E6%9E%B6%EF%BC%88Scaffold%EF%BC%89">鷹架 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 的資料夾，裡面會放一些鷹架的架構。</li>
+</ul>
+<p><strong>source</strong></p>
+<ul>
+<li>這裡就是存放所有網頁內容的資料夾，包含文章、圖片等。以後寫文章也基本都是在這層目錄工作。</li>
+</ul>
+<p><strong>themes</strong></p>
+<ul>
+<li>主題的資料夾。</li>
+</ul>
+<p>到了這邊，你已經大致架完了 Hexo 的環境，那接下來看看怎麼部署到 GitHub 吧。</p>
+<h2 id="Hexo-指令"><a href="#Hexo-指令" class="headerlink" title="Hexo 指令"></a>Hexo 指令</h2><p>之後寫文章一定會用到的，就是 Hexo 的指令了。我會簡單介紹幾個，想要了解更詳細請見 <a class="link" href="https://hexo.io/zh-tw/docs/commands">官方文件 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。</p>
+<h3 id="創建新文章"><a href="#創建新文章" class="headerlink" title="創建新文章"></a>創建新文章</h3><p>以下的角括號請替換為你自己的文章標題。</p>
+<div class="highlight-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo new "&lt;文章標題&gt;"</span><br></pre></td></tr></table></figure></div>
+
+<p>這個指令會生成一份<strong>markdown</strong>文件到<strong>_post</strong>資料夾中。</p>
+<h3 id="本地預覽"><a href="#本地預覽" class="headerlink" title="本地預覽"></a>本地預覽</h3><div class="highlight-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></div>
+
+<p>或是也可以簡寫為</p>
+<div class="highlight-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></div>
+
+<p>這個指令會在 localhost 上面啟動伺服器，讓你先預覽網站。</p>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><div class="highlight-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></div>
+
+<p>也可以簡寫為</p>
+<div class="highlight-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure></div>
+
+<p>它會自動把你的<strong>source</strong>資料夾中的內容生成為靜態檔案，並且部署到你所設定的 GitHub Repo。（後面會詳細介紹實作方式）</p>
+<h3 id="刪除靜態檔案"><a href="#刪除靜態檔案" class="headerlink" title="刪除靜態檔案"></a>刪除靜態檔案</h3><div class="highlight-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure></div>
+
+<p>這個指令會幫你把你使用<code>hexo generate</code>或是<code>hexo deploy</code>所產生的靜態檔案刪除。</p>
+<h1 id="連結-GitHub-Repo"><a href="#連結-GitHub-Repo" class="headerlink" title="連結 GitHub Repo"></a>連結 GitHub Repo</h1><h2 id="創建-Repo"><a href="#創建-Repo" class="headerlink" title="創建 Repo"></a>創建 Repo</h2><p>首先，你要先建立一個 GitHub Repo，用來存放網站的靜態資料。同時，這個 GitHub Repo 也會成為到時候部署的地方（當然你也可以用其他的靜態網站託管服務，但這是免費的！）。</p>
+<p>建立 Repo 的時候，請遵循以下幾個要點：</p>
+<ol>
+<li>Repo 名稱設定為<strong>USERNAME.github.io</strong>，<strong>USERNAME</strong>記得改為你自己的使用者名稱。</li>
+<li>Repo 請設定為<strong>公開</strong></li>
+</ol>
+<p>完成後，我們就來把這個 Repo（以下簡稱為 GitHub Repo）連結到你的 Hexo 專案吧！開始前你需要先安裝一個部署的外掛。</p>
+<div class="highlight-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></div>
+
+<p>打開你的 Hexo 專案中的<code>_config.yml</code>，並加入以下的設定：</p>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">    <span class="attr">repo:</span> <span class="string">&lt;你的</span> <span class="string">Repo</span> <span class="string">URL&gt;</span> <span class="comment"># https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io</span></span><br><span class="line">    <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="建立-GitHub-Pages"><a href="#建立-GitHub-Pages" class="headerlink" title="建立 GitHub Pages"></a>建立 GitHub Pages</h2><p>進到你的 GitHub Repo 中，點選 Settings。</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630173247120.png" alt="GitHub Repo Settings"><figcaption>GitHub Repo Settings</figcaption></figure></p>
+<p>在側邊點選 Pages。</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630173423864.png" alt="GitHub Pages"><figcaption>GitHub Pages</figcaption></figure></p>
+<p>把<code>Branch</code>切換到<code>Main</code>，並且按下<code>Save</code>。</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630173802148.png" alt="Set branch to main"><figcaption>Set branch to main</figcaption></figure></p>
+<p>完成後，等待個大約一到兩分鐘，上面就會顯示出你的網站部署好的 URL 啦！</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630173922108.png" alt="Finish!"><figcaption>Finish!</figcaption></figure></p>
+<p>因為我有購買域名，所以可以設定 Custom Domain。如果你也有購買域名，並且想設置它作為你的部落格 URL，請見 <a class="link" href="https://clairechang.tw/2023/06/28/web/github-pages-with-custom-domain/">GitHub Pages 自訂域名與 HTTPS 設定（GoDaddy + Cloudflare） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。</p>
+<p>到這邊，你就已經部署完成啦！接下來只要找個喜歡的 <a class="link" href="https://hexo.io/themes/">Hexo 主題 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>、<a class="link" href="https://hexo.io/zh-tw/docs/configuration">設定配置文件 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，就可以開始寫作啦！（這邊可以去看看官方文件，選個自己喜歡的主題，並照著文檔配置就行了）</p>
+<h2 id="部署到網站上"><a href="#部署到網站上" class="headerlink" title="部署到網站上"></a>部署到網站上</h2><p>GitHub Pages 有個很方便的功能，就是當你每次有新的 Commit 的時候，它都會自動幫你更新你的網頁的內容。所以以後更新文章後，只需要使用<code>hexo deploy</code>把更新的內容提交到 GitHub 倉庫，它就會自動幫你更新網頁啦！</p>
+<h1 id="開始寫作啦！"><a href="#開始寫作啦！" class="headerlink" title="開始寫作啦！"></a>開始寫作啦！</h1><p>我自己目前的寫作方式，是使用 <a class="link" href="https://hackmd.io/">HackMD <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 來寫作的，因為它有許多優點。</p>
+<ol>
+<li><strong>免費的圖床</strong><ul>
+<li>不只免費，操作也只要複製圖片並貼上，就能自動生成圖片 URL，讓寫作更輕鬆。</li>
+</ul>
+</li>
+<li><strong>迅速且輕便</strong><ul>
+<li>以網頁為主的 HackMD，讓你只需要一個瀏覽器就可以快速打開筆記，並開始寫作。</li>
+</ul>
+</li>
+<li><strong>對 Markdown 語法的支援</strong><ul>
+<li>支援 MathJax、Mermaid 等 Markdown 擴充語法，讓寫作可以更靈活。</li>
+</ul>
+</li>
+</ol>
+<p>至於我寫作的方式，步驟如下：</p>
+<ul>
+<li>用<code>hexo new &lt;文章標題&gt;</code>先建立一篇文章在 Post 資料夾。（目的是可以生成文章創建的時間，以及文章的 <a class="link" href="https://hexo.io/zh-tw/docs/front-matter">Front Matter <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）</li>
+<li>複製貼上（包含 Front Matter）到 HackMD 編輯。</li>
+<li>編輯完後，再複製回原本的檔案。</li>
+<li>用<code>hexo deploy</code>部署。</li>
+</ul>
+<p>這樣就完成了一次的寫作啦！畢竟寫文章一定會多多少少有圖片，使用 HackMD 就可以不用擔心圖片問題，可以很方便也很迅速地完成寫作歐！</p>
+<h1 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h1><p>我覺得用這套方法<strong>便宜</strong>、<strong>方便</strong>、<strong>快速</strong>，不僅可以提升你寫作的意願，也可以讓你在一開始比較有成就感，增強你寫作的動力！真的是很不錯的方式～</p>
+<p>我自己建立部落格所需要的花費就只有</p>
+<ul>
+<li>$1468 買了兩年的域名</li>
+<li><del>花了很多的時間踩坑</del>（但是不是 Hexo 的問題，是我的主題依賴的問題）</li>
+<li><del>年輕的肝</del></li>
+</ul>
+<p>總之，就是非常喜歡自己現在的成果啦！也希望你們可以搭建成功，同時也可以加入寫作的行列歐！</p>
+<p>如果這篇文章對你有幫助，歡迎 <a href="https://cx330.tw/subscribe">訂閱我的部落格</a>，同時也非常歡迎大家在底下留言或按表情和我互動，如果我有哪裡說錯，也歡迎討論！</p>
+]]></content>
+      <categories>
+        <category>DevCorner</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Blog</tag>
+        <tag>WebDev</tag>
+        <tag>Developer</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Day 01] Grinding PicoCTF</title>
+    <url>/TechStreak30/2024%20CTF%20Training/Day-01-Grinding-PicoCTF/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>因為已經有開了一篇文章，打算放上所有 picoCTF 的 writeups 了，所以就不把解題思路寫在這邊啦，如果想看的話請見<a href="https://cx330.tw/CyberSec/CTF/All-in-One%20PicoCTF-Writeups/">這邊</a>!</p>
+<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天打算先刷一點 picoCTF 的題目，因為成大資安社加入戰隊的標準是一萬分，然後我現在才六千多。但是！當我今天開始刷題目之後我發現 pico 他們的制度整個大改！現在沒有計算分數的機制了，改為把題目分成三個不同的難度（像是 Leetcode 那樣），分別是 easy, medium, hard。所以不知道到時候加戰隊的標準會是多少呢，不過以下就是我今天的進度啦！</p>
+<ol>
+<li>More SQLi</li>
+<li>Trickster</li>
+</ol>
+<p>今天進度就兩題，不過感覺多多少少是有學習到新知識的。之後可能要找一天特別來研究一下 sqlmap 的文檔，到時候再出成一篇筆記文章吧！兩題可能聽起來有點少，但畢竟剛放暑假，我還在那個耍廢狀態 XD，慢慢調整啦！</p>
+<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
+<li>起床時間：<code>8:30</code></li>
+<li>知識量：⭐⭐⭐</li>
+<li>疲勞程度：⭐⭐</li>
+<li>精神狀態：⭐⭐⭐⭐⭐</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CyberSec</category>
+        <category>TechStreak30</category>
+        <category>CTF</category>
+        <category>2024 CTF Training</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+        <tag>CyberSec</tag>
+        <tag>PicoCTF</tag>
+        <tag>TechStreak30</tag>
+      </tags>
   </entry>
   <entry>
     <title>[Day 02] Learning Cryptography</title>

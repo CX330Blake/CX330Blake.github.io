@@ -182,21 +182,14 @@
 
   
   <url>
-    <loc>https://cx330.tw/tags/CTF/</loc>
-    <lastmod>2024-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cx330.tw/tags/Security/</loc>
-    <lastmod>2024-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cx330.tw/tags/Cryptography/</loc>
+    <lastmod>2024-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/tags/CTF/</loc>
     <lastmod>2024-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -211,6 +204,13 @@
   
   <url>
     <loc>https://cx330.tw/tags/Notes/</loc>
+    <lastmod>2024-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/tags/Security/</loc>
     <lastmod>2024-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -275,14 +275,14 @@
 
   
   <url>
-    <loc>https://cx330.tw/categories/LifeAndTalk/</loc>
+    <loc>https://cx330.tw/categories/StudyNotes/</loc>
     <lastmod>2024-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/StudyNotes/</loc>
+    <loc>https://cx330.tw/categories/LifeAndTalk/</loc>
     <lastmod>2024-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -331,14 +331,14 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/CyberSec/PicoCTF/</loc>
+    <loc>https://cx330.tw/categories/TechStreak30/2024-CTF-Training/</loc>
     <lastmod>2024-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/TechStreak30/2024-CTF-Training/</loc>
+    <loc>https://cx330.tw/categories/CyberSec/PicoCTF/</loc>
     <lastmod>2024-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

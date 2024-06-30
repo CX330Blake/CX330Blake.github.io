@@ -222,24 +222,24 @@
       </tags>
   </entry>
   <entry>
-    <title>Why Do I Start Blogging</title>
-    <url>/LifeAndTalk/Why-Do-I-Start-Blogging/</url>
-    <content><![CDATA[<h1 id="Big-bang-宇宙的起源"><a href="#Big-bang-宇宙的起源" class="headerlink" title="Big bang! 宇宙的起源"></a>Big bang! 宇宙的起源</h1><p>我其實從很久以前就有想要架設自己的網站，上了大學後又看到更多厲害的前輩們都會有自己的網站來記錄自己的成長，於是下定決心也要來建立自己的 Blog。再加上我今年（2023 開始）剛好把 Instagram 關版了（想挑戰一年不用 Instagram），所以剛好就利用這邊來記錄我的生活和技術類文章吧！（未來可能會順便紀錄一些旅遊、和朋友的約、blablabla）</p>
-<p>在架站的時候也一直在想，如果我直接寫在 Medium 之類的平台是不是更方便，還能有快速的 SEO 成效。但後來想想，架在 Medium 終究是被動的，也不知道哪天 Medium 是否會像無名小站一樣倒閉，反而架在自己的站才是掌握了主控權。至於 SEO 的部分嘛，慢慢來吧！慢工出細活！</p>
-<h1 id="對自己的期許"><a href="#對自己的期許" class="headerlink" title="對自己的期許"></a>對自己的期許</h1><p>因為我是一個很懶惰的人 XD，所以希望我可以頻繁且持續的更新文章。並且期待自己可以累積到越來越多的讀者，最後也會希望自己的文章真的可以幫助到其他人！</p>
-<h1 id="對讀者們的期待"><a href="#對讀者們的期待" class="headerlink" title="對讀者們的期待"></a>對讀者們的期待</h1><p>希望大家看完我的文章後，有甚麼想法都可以在底下留言和我互動（這也是我會開留言區的原因，害羞的話按個表情也可以的）。又或是我在技術類的文章中可能有甚麼寫錯的地方，也都可以直接留言和我討論，我都會盡快地回復你。最後如果想持續的接收我最新的文章，也歡迎可以<a href="https://cx330.tw/subscribe">訂閱我的 Blog</a>！我會很感激的！</p>
-]]></content>
-      <categories>
-        <category>LifeAndTalk</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Reading List</title>
     <url>/LifeAndTalk/Reading-List/</url>
     <content><![CDATA[<ol>
 <li><a class="link"   href="https://johnliutw.medium.com/list/google-4cfac4644843" >Google 的軟體工程之道 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
 <li><a class="link"   href="https://octobug.gitbooks.io/sqlmap-wiki-zhcn/content/" >Sqlmap 文檔中文版 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
 </ol>
+]]></content>
+      <categories>
+        <category>LifeAndTalk</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Why Do I Start Blogging</title>
+    <url>/LifeAndTalk/Why-Do-I-Start-Blogging/</url>
+    <content><![CDATA[<h1 id="Big-bang-宇宙的起源"><a href="#Big-bang-宇宙的起源" class="headerlink" title="Big bang! 宇宙的起源"></a>Big bang! 宇宙的起源</h1><p>我其實從很久以前就有想要架設自己的網站，上了大學後又看到更多厲害的前輩們都會有自己的網站來記錄自己的成長，於是下定決心也要來建立自己的 Blog。再加上我今年（2023 開始）剛好把 Instagram 關版了（想挑戰一年不用 Instagram），所以剛好就利用這邊來記錄我的生活和技術類文章吧！（未來可能會順便紀錄一些旅遊、和朋友的約、blablabla）</p>
+<p>在架站的時候也一直在想，如果我直接寫在 Medium 之類的平台是不是更方便，還能有快速的 SEO 成效。但後來想想，架在 Medium 終究是被動的，也不知道哪天 Medium 是否會像無名小站一樣倒閉，反而架在自己的站才是掌握了主控權。至於 SEO 的部分嘛，慢慢來吧！慢工出細活！</p>
+<h1 id="對自己的期許"><a href="#對自己的期許" class="headerlink" title="對自己的期許"></a>對自己的期許</h1><p>因為我是一個很懶惰的人 XD，所以希望我可以頻繁且持續的更新文章。並且期待自己可以累積到越來越多的讀者，最後也會希望自己的文章真的可以幫助到其他人！</p>
+<h1 id="對讀者們的期待"><a href="#對讀者們的期待" class="headerlink" title="對讀者們的期待"></a>對讀者們的期待</h1><p>希望大家看完我的文章後，有甚麼想法都可以在底下留言和我互動（這也是我會開留言區的原因，害羞的話按個表情也可以的）。又或是我在技術類的文章中可能有甚麼寫錯的地方，也都可以直接留言和我討論，我都會盡快地回復你。最後如果想持續的接收我最新的文章，也歡迎可以<a href="https://cx330.tw/subscribe">訂閱我的 Blog</a>！我會很感激的！</p>
 ]]></content>
       <categories>
         <category>LifeAndTalk</category>
@@ -347,6 +347,36 @@
       <tags>
         <tag>CTF</tag>
         <tag>Security</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Day 01] Grinding PicoCTF</title>
+    <url>/TechStreak30/2024%20CTF%20Training/Day-01-Grinding-PicoCTF/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>因為已經有開了一篇文章，打算放上所有 picoCTF 的 writeups 了，所以就不把解題思路寫在這邊啦，如果想看的話請見<a href="https://cx330.tw/CyberSec/CTF/All-in-One%20PicoCTF-Writeups/">這邊</a>!</p>
+<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天打算先刷一點 picoCTF 的題目，因為成大資安社加入戰隊的標準是一萬分，然後我現在才六千多。但是！當我今天開始刷題目之後我發現 pico 他們的制度整個大改！現在沒有計算分數的機制了，改為把題目分成三個不同的難度（像是 Leetcode 那樣），分別是 easy, medium, hard。所以不知道到時候加戰隊的標準會是多少呢，不過以下就是我今天的進度啦！</p>
+<ol>
+<li>More SQLi</li>
+<li>Trickster</li>
+</ol>
+<p>今天進度就兩題，不過感覺多多少少是有學習到新知識的。之後可能要找一天特別來研究一下 sqlmap 的文檔，到時候再出成一篇筆記文章吧！兩題可能聽起來有點少，但畢竟剛放暑假，我還在那個耍廢狀態 XD，慢慢調整啦！</p>
+<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
+<li>起床時間：<code>8:30</code></li>
+<li>知識量：⭐⭐⭐</li>
+<li>疲勞程度：⭐⭐</li>
+<li>精神狀態：⭐⭐⭐⭐⭐</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CyberSec</category>
+        <category>TechStreak30</category>
+        <category>CTF</category>
+        <category>2024 CTF Training</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+        <tag>CyberSec</tag>
+        <tag>PicoCTF</tag>
+        <tag>TechStreak30</tag>
       </tags>
   </entry>
   <entry>
@@ -533,46 +563,85 @@
       </categories>
   </entry>
   <entry>
-    <title>2024 GDSC NCKU AI Team</title>
-    <url>/DevCorner/AI/2024-GDSC-NCKU-AI-Team/</url>
-    <content><![CDATA[<h1 id="Intro-—-What-is-GDSC"><a href="#Intro-—-What-is-GDSC" class="headerlink" title="Intro — What is GDSC"></a>Intro — What is GDSC</h1><p><a class="link" href="https://gdg.tw/about/gdsc/">GDSC <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>(Google Developer Student Clubs)是一個由 Google 支持的學生社群，旨在通過學生與專業開發人員聯繫，促進學生對 Google 開發人員技術的學習和應用，並為學生提供與技術專家互動和學習的機會。 GDSC 在全球有超過 100 個國家/地區的 1000 多個社群。GDSC 是學生們學習和分享技術的理想社群，並且能夠與技術行業的其他開發人員和專家建立聯繫。(以上皆是 Ctrl+c &amp; Ctrl+v)</p>
-<p>那我自己在成大待了一年的 GDSC，我認為他是個甚麼東西呢？我會說他就是專案社群+課程+演講的集合。這裡集結了一群很有想法的學生聚在一起開心地做專案，然後在這一年的專案旅程中，每兩個禮拜就會有一次社團課程。有時候是幹部們輪流教學一些開發技巧，讓大家對每個領域的技術都稍有了解；有時候是會邀請業界大佬來和我們分享經驗。</p>
-<p>總之就是一個非常有想法和對技術非常有熱忱的人所組合在一起的團隊，加入 GDSC 一定可以感受到那種英雄惜英雄的感覺！接下來，我們就從面試開始講起，來紀錄一下這一年的旅程吧！</p>
-<h1 id="Interview"><a href="#Interview" class="headerlink" title="Interview"></a>Interview</h1><p>我在大一的時候(2023)加入了成大的 GDSC，當初面試了三個組別，志願序從前面到後面分別是 AI 組、Web 組、Data 組。在面試的時候主要就是會問一些你之前有沒有過相關的經驗或是一些知識性的問題。舉 AI 組的面試來說，當初幹部就有問我甚麼是 P value、我所熟悉的程式語言、然後給我一些題目問我要怎麼去找出兩者之間的相關性（具體問題有點忘記了，畢竟是一年前。但我記得我的回答跟 Linear regression 有關），再來就是可能要清楚 Correlation doesn’t imply causation 等。除了這些比較 Hard skill 的問題，也會問你如果錄取了會如何安排時間以及 GDSC 對你而言的 Priority 等等。現在回頭看也十分可以理解當初為甚麼這麼問，畢竟一整年要和大家一起做專案，中途跑掉肯定是不太好的。</p>
-<p>後來面試完，我順利地加入了第一志願的組別，AI 組。雖然當初對於 AI 的知識沒有甚麼了解，但這剛好給了我一個機會開始展開學習。</p>
-<h1 id="About-my-team"><a href="#About-my-team" class="headerlink" title="About my team"></a>About my team</h1><p>因為這次的 AI 組人有點多，所以我們又有分成了幾個小組。而我分到的這個小組中，我是唯一一個大一生。其他的成員從大三到碩班都有（AI 組也總共兩個大一的&gt;&lt;），總之我就是裡面資歷最淺的那位。但即便如此，也不會感受到被排斥的感覺，大家也不會因為我年紀比他們小而忽視掉我在團隊中的想法（大家真的很友善，很有 Google 那種多元友善包容的感覺 XD）。</p>
-<h1 id="Our-project"><a href="#Our-project" class="headerlink" title="Our project"></a>Our project</h1><p>我們在歷經將近一個學期的討論還有熟悉彼此以及熟悉這個團隊之後（具體來說是在寒假），討論出了我們的專案主題。我們想要透過 AI 模型的分析，讓我們能夠預測股票的價格走向。我們這次訓練模型是採用特斯拉的股票來作為我們的對象，並且我們除了一般的指標外，我們另外加入了推文、新聞和特斯拉財報作為我們的 Indicators。我們的整體流程如下：</p>
-<blockquote>
-<ol>
-<li>針對推特的推文、各大媒體新聞、特斯拉財報這三個不同的文本訓練出不同的 Sentiment analysis model</li>
-<li>訓練一個準備接收上述資料做預測的 LSTM</li>
-<li>利用我們的 SA 模型去 Label 每日的資料，並傳入一個 LSTM</li>
-</ol>
-</blockquote>
-<p>最後我們每天輸入當日的三種文本的 SA 分數到我們的 LSTM 去預測隔日的股票價格，並成功得到出了還蠻精準的結果，更詳細的可以看我們的海報，如下（最下面的圖片中，右下角的指標有誤植。藍色的線為真實股價，橘色的線為我們預測的）：</p>
-<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/rJKaUHmIA.png" alt="我們的海報"><figcaption>我們的海報</figcaption></figure></p>
-<h1 id="My-role-in-the-team"><a href="#My-role-in-the-team" class="headerlink" title="My role in the team"></a>My role in the team</h1><p>我在我們這組是負責推文的部分。一開始，我是先用 Kaggle 找到的<a class="link" href="https://www.kaggle.com/datasets/omermetinn/tweets-about-the-top-companies-from-2015-to-2020/data?select=Company_Tweet.csv">這個資料集 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>以及<a class="link" href="https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment-latest">cardiffnlp/twitter-roberta-base-sentiment-latest <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>和<a class="link" href="https://huggingface.co/austinmw/distilbert-base-uncased-finetuned-tweets-sentiment">austinmw/distilbert-base-uncased-finetuned-tweets-sentiment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>這兩個 Pre-trained Model 去幫我們的資料做 Label。</p>
-<p>但是後來我們希望可以有更近期的資料，所以我寫了<a class="link" href="https://github.com/CX330Blake/X-crawler">這個爬蟲 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>來爬取 2021 到 2024 五月的推文的資料（但因為我沒有買 API，所以只能慢慢用 Selenium 滑）。在蒐集完資料後，我用了那兩個 Model 去做 Label，並且在 Label 完後抓取相同比例的 Positive、Neutral、Negative 的資料去對 BERT 做 Fine-tune，得到<a class="link" href="https://huggingface.co/CX330Blake/tweet-sentiment-analysis-for-tesla">最後的 SA 模型 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。</p>
-<h1 id="NCKU-GDSC-Forum"><a href="#NCKU-GDSC-Forum" class="headerlink" title="NCKU GDSC Forum"></a>NCKU GDSC Forum</h1><p>終於到了成果發表的當天，當天就是有很多的講座以及我們自己擺設的每個小組的攤位。我們要對每位到攤位前的觀眾做講解，跟他們說我們到底做了些甚麼，然後當天的講座也是十分有趣，會很有收穫。我在聽完了前輩們的分享後，更有了想要努力前往矽谷的衝動，有種受到矽谷召喚的感覺 XD。至於更詳細的，就看一下以下的紀錄影片吧！</p>
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/MWK4geiYARs" frameborder="0" allowfullscreen=""></iframe>
-</div>
-
-<h1 id="What-I-learned-in-this-year"><a href="#What-I-learned-in-this-year" class="headerlink" title="What I learned in this year"></a>What I learned in this year</h1><p>撇除掉一些 Hard skill（這是一定會學習到的），我比較想來談談加入 GDSC 的一些 Trade-off。加入 GDSC 後，勢必會壓縮到其他的時間，所以要更懂得如何安排自己的休閒娛樂以及讀書的時間。但同時，也確實可以在這裡獲得很多學業之外的東西。比如說拓展自己的人脈、吸取更多前輩的經驗，但我覺得最重要的，是可以找到一群志同道合夥伴們。這一來可以讓自己在自我精進的這條路上更不孤單，其次也可以增加自己對這種開發社群（或是身為「開發者」）的身分認同。</p>
-<p>結論上來說，如果你同時有很多其他的活動，或是想要好好的衝一下 GPA，或許可以慎重考慮一下要不要參加（因為畢竟做專案真的會花不少時間，還要上社課）；但如果你也和我一樣，相信比起分數有更重要的事，那就大膽地來參加吧，一定會收獲不少的！</p>
-<p>最後附上我們今年 GDSC 的口號：</p>
-<blockquote>
-<p>Code your goal, Fuel your soul! — <strong><em>2024 GDSC NCKU</em></strong></p>
-</blockquote>
-<p>如果這篇文章對你有幫助，歡迎<a href="https://cx330.tw/subscribe/">訂閱我的 Blog</a>，會在有新文章的時候通知你，十分感謝！</p>
+    <title>[Day 02] Learning Cryptography</title>
+    <url>/TechStreak30/2024%20CTF%20Training/Day-02-Learning-Cryptography/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>密碼學一直以來都是我覺得超級超級困難的東西，為了可以更好的搞清楚它，決定寫一篇筆記來給自己（和各位）當作學習的資料！我把連結放在<a href="/Notebooks/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88">這個地方</a>，大家想看可以直接點過去噢！</p>
+<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天只寫完了前言以及編碼的部分。然後因為編碼的部分還算簡單，就是還沒有那麼多的數學，所以今天的知識量負擔滿輕的，不過明後天進入到數學部分（甚麼費馬小定理有的沒的）就會變超難了 XD。希望明天可以把古典密碼學那邊讀完，再來就進入對稱和非對稱加密啦！</p>
+<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
+<li>起床時間：<code>8:30</code>但是滑手機到<code>9:05</code>才下床</li>
+<li>知識量：⭐</li>
+<li>疲勞程度：⭐⭐⭐</li>
+<li>精神狀態：⭐⭐⭐</li>
+</ul>
 ]]></content>
       <categories>
-        <category>DevCorner</category>
-        <category>AI</category>
+        <category>CyberSec</category>
+        <category>TechStreak30</category>
+        <category>CTF</category>
+        <category>2024 CTF Training</category>
       </categories>
       <tags>
-        <tag>AI</tag>
-        <tag>GDSC</tag>
+        <tag>Cryptography</tag>
+        <tag>CTF</tag>
+        <tag>CyberSec</tag>
+        <tag>TechStreak30</tag>
+        <tag>Crypto</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Day 03] Learning Cryptography 2</title>
+    <url>/TechStreak30/2024%20CTF%20Training/Day-03-Learning-Cryptography-2/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>這是第一個 TechStreak30 系列的第三天，今天一樣繼續 work on <a href="/Notebooks/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88">我的密碼學筆記</a>，歡迎大家來看！一想到之後要進入 RSA 的部分就感覺好難 XD，但總之就加油啦！</p>
+<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天寫完了 Hash 的部分，也有寫了一半的古典密碼學。進度還行，還不錯，明天繼續努力囉！</p>
+<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
+<li>起床時間：<code>9:30</code></li>
+<li>知識量：⭐⭐⭐</li>
+<li>疲勞程度：⭐⭐⭐</li>
+<li>精神狀態：⭐⭐⭐⭐</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CyberSec</category>
+        <category>TechStreak30</category>
+        <category>CTF</category>
+        <category>2024 CTF Training</category>
+      </categories>
+      <tags>
+        <tag>Cryptography</tag>
+        <tag>CTF</tag>
+        <tag>CyberSec</tag>
+        <tag>TechStreak30</tag>
+        <tag>Crypto</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Day 04] Grinding PicoCTF 2</title>
+    <url>/TechStreak30/2024%20CTF%20Training/Day-04-Grinding-PicoCTF-2/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>家人們家人們！有鑑於昨日收到的兩個消息，第一是 7/10 到 7/12 有 SCIST 資安課的 CTF 季後賽要打，第二是我錄取了 AIS3 暑期資安課程的備取，所以我決定先來好好地刷些題目。所以<a href="/Notebooks/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88">這個密碼學任督二脈</a>我就先緩緩，之後比賽結束了再將它給補上！！！</p>
+<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天下午寫了三題，Misc, Crypto, Forensics 各寫了一題，還算學到滿多新知識的！真的是越學越有趣了，我愛學習！學習使我快樂！深深的體會了知識所能帶給我的愉悅，是更深層次的快樂。</p>
+<ol>
+<li>binhexa</li>
+<li>Custom encryption</li>
+<li>MSB</li>
+</ol>
+<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
+<li>起床時間：<code>9:30</code>，假日睡晚一點 XD</li>
+<li>知識量：⭐⭐⭐</li>
+<li>疲勞程度：⭐⭐</li>
+<li>精神狀態：⭐⭐⭐⭐⭐</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CyberSec</category>
+        <category>TechStreak30</category>
+        <category>CTF</category>
+        <category>2024 CTF Training</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+        <tag>CyberSec</tag>
+        <tag>PicoCTF</tag>
+        <tag>TechStreak30</tag>
       </tags>
   </entry>
   <entry>
@@ -713,115 +782,46 @@
       </tags>
   </entry>
   <entry>
-    <title>[Day 01] Grinding PicoCTF</title>
-    <url>/TechStreak30/2024%20CTF%20Training/Day-01-Grinding-PicoCTF/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>因為已經有開了一篇文章，打算放上所有 picoCTF 的 writeups 了，所以就不把解題思路寫在這邊啦，如果想看的話請見<a href="https://cx330.tw/CyberSec/CTF/All-in-One%20PicoCTF-Writeups/">這邊</a>!</p>
-<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天打算先刷一點 picoCTF 的題目，因為成大資安社加入戰隊的標準是一萬分，然後我現在才六千多。但是！當我今天開始刷題目之後我發現 pico 他們的制度整個大改！現在沒有計算分數的機制了，改為把題目分成三個不同的難度（像是 Leetcode 那樣），分別是 easy, medium, hard。所以不知道到時候加戰隊的標準會是多少呢，不過以下就是我今天的進度啦！</p>
+    <title>2024 GDSC NCKU AI Team</title>
+    <url>/DevCorner/AI/2024-GDSC-NCKU-AI-Team/</url>
+    <content><![CDATA[<h1 id="Intro-—-What-is-GDSC"><a href="#Intro-—-What-is-GDSC" class="headerlink" title="Intro — What is GDSC"></a>Intro — What is GDSC</h1><p><a class="link" href="https://gdg.tw/about/gdsc/">GDSC <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>(Google Developer Student Clubs)是一個由 Google 支持的學生社群，旨在通過學生與專業開發人員聯繫，促進學生對 Google 開發人員技術的學習和應用，並為學生提供與技術專家互動和學習的機會。 GDSC 在全球有超過 100 個國家/地區的 1000 多個社群。GDSC 是學生們學習和分享技術的理想社群，並且能夠與技術行業的其他開發人員和專家建立聯繫。(以上皆是 Ctrl+c &amp; Ctrl+v)</p>
+<p>那我自己在成大待了一年的 GDSC，我認為他是個甚麼東西呢？我會說他就是專案社群+課程+演講的集合。這裡集結了一群很有想法的學生聚在一起開心地做專案，然後在這一年的專案旅程中，每兩個禮拜就會有一次社團課程。有時候是幹部們輪流教學一些開發技巧，讓大家對每個領域的技術都稍有了解；有時候是會邀請業界大佬來和我們分享經驗。</p>
+<p>總之就是一個非常有想法和對技術非常有熱忱的人所組合在一起的團隊，加入 GDSC 一定可以感受到那種英雄惜英雄的感覺！接下來，我們就從面試開始講起，來紀錄一下這一年的旅程吧！</p>
+<h1 id="Interview"><a href="#Interview" class="headerlink" title="Interview"></a>Interview</h1><p>我在大一的時候(2023)加入了成大的 GDSC，當初面試了三個組別，志願序從前面到後面分別是 AI 組、Web 組、Data 組。在面試的時候主要就是會問一些你之前有沒有過相關的經驗或是一些知識性的問題。舉 AI 組的面試來說，當初幹部就有問我甚麼是 P value、我所熟悉的程式語言、然後給我一些題目問我要怎麼去找出兩者之間的相關性（具體問題有點忘記了，畢竟是一年前。但我記得我的回答跟 Linear regression 有關），再來就是可能要清楚 Correlation doesn’t imply causation 等。除了這些比較 Hard skill 的問題，也會問你如果錄取了會如何安排時間以及 GDSC 對你而言的 Priority 等等。現在回頭看也十分可以理解當初為甚麼這麼問，畢竟一整年要和大家一起做專案，中途跑掉肯定是不太好的。</p>
+<p>後來面試完，我順利地加入了第一志願的組別，AI 組。雖然當初對於 AI 的知識沒有甚麼了解，但這剛好給了我一個機會開始展開學習。</p>
+<h1 id="About-my-team"><a href="#About-my-team" class="headerlink" title="About my team"></a>About my team</h1><p>因為這次的 AI 組人有點多，所以我們又有分成了幾個小組。而我分到的這個小組中，我是唯一一個大一生。其他的成員從大三到碩班都有（AI 組也總共兩個大一的&gt;&lt;），總之我就是裡面資歷最淺的那位。但即便如此，也不會感受到被排斥的感覺，大家也不會因為我年紀比他們小而忽視掉我在團隊中的想法（大家真的很友善，很有 Google 那種多元友善包容的感覺 XD）。</p>
+<h1 id="Our-project"><a href="#Our-project" class="headerlink" title="Our project"></a>Our project</h1><p>我們在歷經將近一個學期的討論還有熟悉彼此以及熟悉這個團隊之後（具體來說是在寒假），討論出了我們的專案主題。我們想要透過 AI 模型的分析，讓我們能夠預測股票的價格走向。我們這次訓練模型是採用特斯拉的股票來作為我們的對象，並且我們除了一般的指標外，我們另外加入了推文、新聞和特斯拉財報作為我們的 Indicators。我們的整體流程如下：</p>
+<blockquote>
 <ol>
-<li>More SQLi</li>
-<li>Trickster</li>
+<li>針對推特的推文、各大媒體新聞、特斯拉財報這三個不同的文本訓練出不同的 Sentiment analysis model</li>
+<li>訓練一個準備接收上述資料做預測的 LSTM</li>
+<li>利用我們的 SA 模型去 Label 每日的資料，並傳入一個 LSTM</li>
 </ol>
-<p>今天進度就兩題，不過感覺多多少少是有學習到新知識的。之後可能要找一天特別來研究一下 sqlmap 的文檔，到時候再出成一篇筆記文章吧！兩題可能聽起來有點少，但畢竟剛放暑假，我還在那個耍廢狀態 XD，慢慢調整啦！</p>
-<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
-<li>起床時間：<code>8:30</code></li>
-<li>知識量：⭐⭐⭐</li>
-<li>疲勞程度：⭐⭐</li>
-<li>精神狀態：⭐⭐⭐⭐⭐</li>
-</ul>
+</blockquote>
+<p>最後我們每天輸入當日的三種文本的 SA 分數到我們的 LSTM 去預測隔日的股票價格，並成功得到出了還蠻精準的結果，更詳細的可以看我們的海報，如下（最下面的圖片中，右下角的指標有誤植。藍色的線為真實股價，橘色的線為我們預測的）：</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/rJKaUHmIA.png" alt="我們的海報"><figcaption>我們的海報</figcaption></figure></p>
+<h1 id="My-role-in-the-team"><a href="#My-role-in-the-team" class="headerlink" title="My role in the team"></a>My role in the team</h1><p>我在我們這組是負責推文的部分。一開始，我是先用 Kaggle 找到的<a class="link" href="https://www.kaggle.com/datasets/omermetinn/tweets-about-the-top-companies-from-2015-to-2020/data?select=Company_Tweet.csv">這個資料集 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>以及<a class="link" href="https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment-latest">cardiffnlp/twitter-roberta-base-sentiment-latest <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>和<a class="link" href="https://huggingface.co/austinmw/distilbert-base-uncased-finetuned-tweets-sentiment">austinmw/distilbert-base-uncased-finetuned-tweets-sentiment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>這兩個 Pre-trained Model 去幫我們的資料做 Label。</p>
+<p>但是後來我們希望可以有更近期的資料，所以我寫了<a class="link" href="https://github.com/CX330Blake/X-crawler">這個爬蟲 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>來爬取 2021 到 2024 五月的推文的資料（但因為我沒有買 API，所以只能慢慢用 Selenium 滑）。在蒐集完資料後，我用了那兩個 Model 去做 Label，並且在 Label 完後抓取相同比例的 Positive、Neutral、Negative 的資料去對 BERT 做 Fine-tune，得到<a class="link" href="https://huggingface.co/CX330Blake/tweet-sentiment-analysis-for-tesla">最後的 SA 模型 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。</p>
+<h1 id="NCKU-GDSC-Forum"><a href="#NCKU-GDSC-Forum" class="headerlink" title="NCKU GDSC Forum"></a>NCKU GDSC Forum</h1><p>終於到了成果發表的當天，當天就是有很多的講座以及我們自己擺設的每個小組的攤位。我們要對每位到攤位前的觀眾做講解，跟他們說我們到底做了些甚麼，然後當天的講座也是十分有趣，會很有收穫。我在聽完了前輩們的分享後，更有了想要努力前往矽谷的衝動，有種受到矽谷召喚的感覺 XD。至於更詳細的，就看一下以下的紀錄影片吧！</p>
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/MWK4geiYARs" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+<h1 id="What-I-learned-in-this-year"><a href="#What-I-learned-in-this-year" class="headerlink" title="What I learned in this year"></a>What I learned in this year</h1><p>撇除掉一些 Hard skill（這是一定會學習到的），我比較想來談談加入 GDSC 的一些 Trade-off。加入 GDSC 後，勢必會壓縮到其他的時間，所以要更懂得如何安排自己的休閒娛樂以及讀書的時間。但同時，也確實可以在這裡獲得很多學業之外的東西。比如說拓展自己的人脈、吸取更多前輩的經驗，但我覺得最重要的，是可以找到一群志同道合夥伴們。這一來可以讓自己在自我精進的這條路上更不孤單，其次也可以增加自己對這種開發社群（或是身為「開發者」）的身分認同。</p>
+<p>結論上來說，如果你同時有很多其他的活動，或是想要好好的衝一下 GPA，或許可以慎重考慮一下要不要參加（因為畢竟做專案真的會花不少時間，還要上社課）；但如果你也和我一樣，相信比起分數有更重要的事，那就大膽地來參加吧，一定會收獲不少的！</p>
+<p>最後附上我們今年 GDSC 的口號：</p>
+<blockquote>
+<p>Code your goal, Fuel your soul! — <strong><em>2024 GDSC NCKU</em></strong></p>
+</blockquote>
+<p>如果這篇文章對你有幫助，歡迎<a href="https://cx330.tw/subscribe/">訂閱我的 Blog</a>，會在有新文章的時候通知你，十分感謝！</p>
 ]]></content>
       <categories>
-        <category>CyberSec</category>
-        <category>TechStreak30</category>
-        <category>CTF</category>
-        <category>2024 CTF Training</category>
+        <category>DevCorner</category>
+        <category>AI</category>
       </categories>
       <tags>
-        <tag>CTF</tag>
-        <tag>CyberSec</tag>
-        <tag>PicoCTF</tag>
-        <tag>TechStreak30</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Day 02] Learning Cryptography</title>
-    <url>/TechStreak30/2024%20CTF%20Training/Day-02-Learning-Cryptography/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>密碼學一直以來都是我覺得超級超級困難的東西，為了可以更好的搞清楚它，決定寫一篇筆記來給自己（和各位）當作學習的資料！我把連結放在<a href="/Notebooks/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88">這個地方</a>，大家想看可以直接點過去噢！</p>
-<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天只寫完了前言以及編碼的部分。然後因為編碼的部分還算簡單，就是還沒有那麼多的數學，所以今天的知識量負擔滿輕的，不過明後天進入到數學部分（甚麼費馬小定理有的沒的）就會變超難了 XD。希望明天可以把古典密碼學那邊讀完，再來就進入對稱和非對稱加密啦！</p>
-<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
-<li>起床時間：<code>8:30</code>但是滑手機到<code>9:05</code>才下床</li>
-<li>知識量：⭐</li>
-<li>疲勞程度：⭐⭐⭐</li>
-<li>精神狀態：⭐⭐⭐</li>
-</ul>
-]]></content>
-      <categories>
-        <category>CyberSec</category>
-        <category>TechStreak30</category>
-        <category>CTF</category>
-        <category>2024 CTF Training</category>
-      </categories>
-      <tags>
-        <tag>Cryptography</tag>
-        <tag>CTF</tag>
-        <tag>CyberSec</tag>
-        <tag>TechStreak30</tag>
-        <tag>Crypto</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Day 03] Learning Cryptography 2</title>
-    <url>/TechStreak30/2024%20CTF%20Training/Day-03-Learning-Cryptography-2/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>這是第一個 TechStreak30 系列的第三天，今天一樣繼續 work on <a href="/Notebooks/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88">我的密碼學筆記</a>，歡迎大家來看！一想到之後要進入 RSA 的部分就感覺好難 XD，但總之就加油啦！</p>
-<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天寫完了 Hash 的部分，也有寫了一半的古典密碼學。進度還行，還不錯，明天繼續努力囉！</p>
-<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
-<li>起床時間：<code>9:30</code></li>
-<li>知識量：⭐⭐⭐</li>
-<li>疲勞程度：⭐⭐⭐</li>
-<li>精神狀態：⭐⭐⭐⭐</li>
-</ul>
-]]></content>
-      <categories>
-        <category>CyberSec</category>
-        <category>TechStreak30</category>
-        <category>CTF</category>
-        <category>2024 CTF Training</category>
-      </categories>
-      <tags>
-        <tag>Cryptography</tag>
-        <tag>CTF</tag>
-        <tag>CyberSec</tag>
-        <tag>TechStreak30</tag>
-        <tag>Crypto</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Day 04] Grinding PicoCTF 2</title>
-    <url>/TechStreak30/2024%20CTF%20Training/Day-04-Grinding-PicoCTF-2/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>家人們家人們！有鑑於昨日收到的兩個消息，第一是 7/10 到 7/12 有 SCIST 資安課的 CTF 季後賽要打，第二是我錄取了 AIS3 暑期資安課程的備取，所以我決定先來好好地刷些題目。所以<a href="/Notebooks/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88">這個密碼學任督二脈</a>我就先緩緩，之後比賽結束了再將它給補上！！！</p>
-<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天下午寫了三題，Misc, Crypto, Forensics 各寫了一題，還算學到滿多新知識的！真的是越學越有趣了，我愛學習！學習使我快樂！深深的體會了知識所能帶給我的愉悅，是更深層次的快樂。</p>
-<ol>
-<li>binhexa</li>
-<li>Custom encryption</li>
-<li>MSB</li>
-</ol>
-<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
-<li>起床時間：<code>9:30</code>，假日睡晚一點 XD</li>
-<li>知識量：⭐⭐⭐</li>
-<li>疲勞程度：⭐⭐</li>
-<li>精神狀態：⭐⭐⭐⭐⭐</li>
-</ul>
-]]></content>
-      <categories>
-        <category>CyberSec</category>
-        <category>TechStreak30</category>
-        <category>CTF</category>
-        <category>2024 CTF Training</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-        <tag>CyberSec</tag>
-        <tag>PicoCTF</tag>
-        <tag>TechStreak30</tag>
+        <tag>AI</tag>
+        <tag>GDSC</tag>
       </tags>
   </entry>
 </search>

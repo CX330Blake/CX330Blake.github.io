@@ -146,6 +146,15 @@
   </url>
   
   <url>
+    <loc>https://cx330.tw/links/</loc>
+    
+    <lastmod>2024-06-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://cx330.tw/categories/</loc>
     
     <lastmod>2024-06-02</lastmod>
@@ -156,15 +165,6 @@
   
   <url>
     <loc>https://cx330.tw/tags/</loc>
-    
-    <lastmod>2024-06-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://cx330.tw/links/</loc>
     
     <lastmod>2024-06-02</lastmod>
     
@@ -252,7 +252,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/tags/Crypto/</loc>
+    <loc>https://cx330.tw/tags/PicoCTF/</loc>
     <lastmod>2024-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -266,7 +266,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/tags/PicoCTF/</loc>
+    <loc>https://cx330.tw/tags/Crypto/</loc>
     <lastmod>2024-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -317,14 +317,14 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/DevCorner/AI/</loc>
+    <loc>https://cx330.tw/categories/CyberSec/PicoCTF/</loc>
     <lastmod>2024-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/CyberSec/PicoCTF/</loc>
+    <loc>https://cx330.tw/categories/DevCorner/AI/</loc>
     <lastmod>2024-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

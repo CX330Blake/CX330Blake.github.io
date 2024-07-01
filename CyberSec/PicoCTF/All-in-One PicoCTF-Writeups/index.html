@@ -25,7 +25,13 @@
 <meta property="og:site_name" content="CX330&#39;s Universe">
 <meta property="og:description" content="公告                  目前尚未有所有的題目，陸續完善中           前言其實好像也沒什麼好講前言的，但就是不想要一開始就是題目分類，所以還是放了個前言 XD。 自己在刷 PicoCTF 的時候常常發現，幾乎所有的 writeup 都是英文的居多，所以想說來寫個完整一點的中文版！總之呢這裡就是會盡量彙整所有的 picoCTF 的題目在這邊（但是">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701091116470.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701091535175.png">
 <meta property="og:image" content="https://hackmd.io/_uploads/SJB9S0p70.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701092406670.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701092632509.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701093002857.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701093133835.png">
 <meta property="og:image" content="https://hackmd.io/_uploads/BySNOmYUC.png">
 <meta property="og:image" content="https://hackmd.io/_uploads/r1wnu7KIR.png">
 <meta property="og:image" content="https://hackmd.io/_uploads/rJjw6XYUC.png">
@@ -37,11 +43,11 @@
 <meta property="og:image" content="https://hackmd.io/_uploads/SyahqSYLR.png">
 <meta property="og:image" content="https://hackmd.io/_uploads/HJW1sBtI0.png">
 <meta property="article:published_time" content="2024-06-01T02:27:03.000Z">
-<meta property="article:modified_time" content="2024-06-29T15:22:12.709Z">
+<meta property="article:modified_time" content="2024-07-01T01:32:51.131Z">
 <meta property="article:author" content="CX330">
 <meta property="article:tag" content="CX330, 陳子雋, CX330 universe, CX330 Blog, Blog, CTF, CX330 hacker, hacker">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://hackmd.io/_uploads/SJB9S0p70.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701091116470.png">
     
     
         <!-- Google tag (gtag.js) -->
@@ -787,8 +793,8 @@ mjx-container[display="true"] + br {
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-06-29 23:22:12</span>
-            <span class="mobile">2024-06-29 23:22:12</span>
+            <span class="desktop">2024-07-01 09:32:51</span>
+            <span class="mobile">2024-07-01 09:32:51</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -825,12 +831,12 @@ mjx-container[display="true"] + br {
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>5.2k Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>5.5k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>24 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>25 Mins</span>
         </span>
     
     
@@ -863,11 +869,30 @@ mjx-container[display="true"] + br {
 
 <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>其實好像也沒什麼好講前言的，但就是不想要一開始就是題目分類，所以還是放了個前言 XD。</p>
 <p>自己在刷 PicoCTF 的時候常常發現，幾乎所有的 writeup 都是英文的居多，所以想說來寫個完整一點的中文版！總之呢這裡就是會盡量彙整所有的 picoCTF 的題目在這邊（但是因為已經寫了 60 題左右才開始打算來寫 writeup，所以可能前面的部分會等其他都寫完再來補），如果有需要就可以直接來這邊看所有的 writeup，就這樣啦！希望能幫忙到你。</p>
-<h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><h2 id="picobrowser"><a href="#picobrowser" class="headerlink" title="picobrowser"></a>picobrowser</h2><p>這題我們點進 URL 後會看到一個 FLAG 的按鈕，按下去會發現我們不能得到 FLAG。<figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/SJB9S0p70.png" alt="image"><figcaption>image</figcaption></figure><br>他說我們應該要是 picobrowser，所以我就寫了一個 selenium 的 Python 腳本來運行，看看能不能拿到 flag。</p>
+<h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><h2 id="unminify"><a href="#unminify" class="headerlink" title="unminify"></a>unminify</h2><p>先看題目，點開後他會說如果你打開了這個網頁，代表你的瀏覽器已經收到了 flag，只是他不知道要怎麼讀取它。</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701091116470.png" alt="題目"><figcaption>題目</figcaption></figure></p>
+<p>既然他說了我們瀏覽器已經收到 flag 了，就打開 F12 看一下網頁代碼吧！點開開發者工具後，直接在 Element 的 Tab 裡面用<code>Ctrl+F</code>搜尋<code>picoCTF</code>字串，結果就直接找到了 XD。欸不是這題也太水了吧！</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701091535175.png" alt="利用開發者工具搜尋flag"><figcaption>利用開發者工具搜尋flag</figcaption></figure></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">picoCTF{pr3tty_c0d3_dbe259ce}</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="picobrowser"><a href="#picobrowser" class="headerlink" title="picobrowser"></a>picobrowser</h2><p>這題我們點進 URL 後會看到一個 FLAG 的按鈕，按下去會發現我們不能得到 FLAG。<figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/SJB9S0p70.png" alt="image"><figcaption>image</figcaption></figure><br>他說我們應該要是 picobrowser，所以我就寫了一個 selenium 的 Python 腳本來運行，看看能不能拿到 flag。</p>
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.chrome.service <span class="keyword">import</span> Service</span><br><span class="line"><span class="keyword">from</span> webdriver_manager.chrome <span class="keyword">import</span> ChromeDriverManager</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">my_user_agent = <span class="string">"picobrowser"</span> <span class="comment"># 這裡把agent改為picobrowser</span></span><br><span class="line">chrome_options = webdriver.ChromeOptions()</span><br><span class="line">chrome_options.add_argument(<span class="string">f"--user-agent=<span class="subst">{my_user_agent}</span>"</span>)</span><br><span class="line">service = Service(executable_path=ChromeDriverManager().install())</span><br><span class="line">driver = webdriver.Chrome(service=service, options=chrome_options)</span><br><span class="line"></span><br><span class="line">url = <span class="string">"https://jupiter.challenges.picoctf.org/problem/28921/flag"</span></span><br><span class="line"></span><br><span class="line">driver.get(url)</span><br><span class="line">time.sleep(<span class="number">1337</span>)</span><br></pre></td></tr></table></figure></div>
 
 <p>這樣就得到 flag 了！</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">picoCTF{p1c0_s3cr3t_ag3nt_84f9c865}</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="SQLiLite"><a href="#SQLiLite" class="headerlink" title="SQLiLite"></a>SQLiLite</h2><p>題目是一個登入頁面。</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701092406670.png" alt="題目"><figcaption>題目</figcaption></figure></p>
+<p>我們先嘗試用<code>admin, admin</code>登入看看。</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701092632509.png" alt="Login as admin"><figcaption>Login as admin</figcaption></figure></p>
+<p>它會說 Login failed，但是我們可以看到它的 SQL 查詢語句是</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM users WHERE name='admin' AND password='admin'</span><br></pre></td></tr></table></figure></div>
+
+<p>所以我們就可以很輕鬆的用 SQL Injection 啦！這邊使用帳號<code>' OR 1=1--</code>登入就可以啦，密碼不用輸入，或是隨便輸入也行。</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701093002857.png" alt="Logged in"><figcaption>Logged in</figcaption></figure></p>
+<p>但是他說 flag 在 plainsight 裡面所以我們看不見，那就打開開發者工具用<code>Ctrl+F</code>搜尋吧！</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701093133835.png" alt="flag"><figcaption>flag</figcaption></figure></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">picoCTF{L00k5_l1k3_y0u_solv3d_it_d3c660ac}</span><br></pre></td></tr></table></figure></div>
 
 <h2 id="More-SQLi"><a href="#More-SQLi" class="headerlink" title="More SQLi"></a>More SQLi</h2><p>把題目 launch 了之後會進入到一個登入頁面，如下圖。</p>
 <p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/BySNOmYUC.png" alt="題目"><figcaption>題目</figcaption></figure></p>
@@ -1037,7 +1062,7 @@ mjx-container[display="true"] + br {
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-06-29 23:22:12
+                    :</strong> 2024-07-01 09:32:51
             </li>
         
         <li>
@@ -1182,7 +1207,7 @@ mjx-container[display="true"] + br {
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">All-in-One PicoCTF Writeups</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Web"><span class="nav-text">Web</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#picobrowser"><span class="nav-text">picobrowser</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#More-SQLi"><span class="nav-text">More SQLi</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Trickster"><span class="nav-text">Trickster</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Crypto"><span class="nav-text">Crypto</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Easy1"><span class="nav-text">Easy1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Caesar"><span class="nav-text">Caesar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#New-Caesar"><span class="nav-text">New Caesar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mind-your-Ps-and-Qs"><span class="nav-text">Mind your Ps and Qs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#No-padding-no-problem"><span class="nav-text">No padding, no problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Easy-peasy"><span class="nav-text">Easy peasy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Custom-encryption"><span class="nav-text">Custom encryption</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Pwn-Binary-Exploitation"><span class="nav-text">Pwn (Binary Exploitation)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Forensics"><span class="nav-text">Forensics</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MSB"><span class="nav-text">MSB</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reverse"><span class="nav-text">Reverse</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Misc-General-Skills"><span class="nav-text">Misc (General Skills)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#binhexa"><span class="nav-text">binhexa</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Web"><span class="nav-text">Web</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#unminify"><span class="nav-text">unminify</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#picobrowser"><span class="nav-text">picobrowser</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQLiLite"><span class="nav-text">SQLiLite</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#More-SQLi"><span class="nav-text">More SQLi</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Trickster"><span class="nav-text">Trickster</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Crypto"><span class="nav-text">Crypto</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Easy1"><span class="nav-text">Easy1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Caesar"><span class="nav-text">Caesar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#New-Caesar"><span class="nav-text">New Caesar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mind-your-Ps-and-Qs"><span class="nav-text">Mind your Ps and Qs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#No-padding-no-problem"><span class="nav-text">No padding, no problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Easy-peasy"><span class="nav-text">Easy peasy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Custom-encryption"><span class="nav-text">Custom encryption</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Pwn-Binary-Exploitation"><span class="nav-text">Pwn (Binary Exploitation)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Forensics"><span class="nav-text">Forensics</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MSB"><span class="nav-text">MSB</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reverse"><span class="nav-text">Reverse</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Misc-General-Skills"><span class="nav-text">Misc (General Skills)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#binhexa"><span class="nav-text">binhexa</span></a></li></ol></li></ol>
 
     </div>
 </div>
@@ -1221,7 +1246,7 @@ mjx-container[display="true"] + br {
                     </span>
                     
                         <span>
-                            21.8k words in total
+                            22k words in total
                         </span>
                     
                 </p>

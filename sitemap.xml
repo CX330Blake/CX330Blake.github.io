@@ -240,27 +240,6 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/tags/PicoCTF/</loc>
-    <lastmod>2024-07-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cx330.tw/tags/TechStreak30/</loc>
-    <lastmod>2024-07-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cx330.tw/tags/Crypto/</loc>
-    <lastmod>2024-07-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cx330.tw/tags/Blog/</loc>
     <lastmod>2024-07-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -276,6 +255,27 @@
   
   <url>
     <loc>https://cx330.tw/tags/Developer/</loc>
+    <lastmod>2024-07-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/tags/PicoCTF/</loc>
+    <lastmod>2024-07-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/tags/TechStreak30/</loc>
+    <lastmod>2024-07-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/tags/Crypto/</loc>
     <lastmod>2024-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -326,13 +326,6 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/DevCorner/AI/</loc>
-    <lastmod>2024-07-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cx330.tw/categories/CyberSec/PicoCTF/</loc>
     <lastmod>2024-07-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -340,7 +333,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/TechStreak30/2024-CTF-Training/</loc>
+    <loc>https://cx330.tw/categories/DevCorner/AI/</loc>
     <lastmod>2024-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -348,6 +341,13 @@
   
   <url>
     <loc>https://cx330.tw/categories/DevCorner/Web/</loc>
+    <lastmod>2024-07-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/categories/TechStreak30/2024-CTF-Training/</loc>
     <lastmod>2024-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

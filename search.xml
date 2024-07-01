@@ -1,48 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>2024 Summer Intensive Training Plan</title>
-    <url>/LifeAndTalk/2024-Summer-Intensive-Training-Plan/</url>
-    <content><![CDATA[<h1 id="為甚麼要修煉"><a href="#為甚麼要修煉" class="headerlink" title="為甚麼要修煉?"></a>為甚麼要修煉?</h1><p>有鑑於這次 AIS3 Pre-exam 的成績不甚理想。我決定要來在這次暑假的時候展開特訓，來這邊立個旗。以下來講講我打算怎麼修煉！</p>
-<h1 id="怎麼修煉"><a href="#怎麼修煉" class="headerlink" title="怎麼修煉?"></a>怎麼修煉?</h1><p>可能會像 IT 邦幫忙鐵人賽的感覺吧，但沒辦法到每天上傳，因為還有其他安排（專案 AND 和朋友出門）。不過我對自己的期許是至少可以上傳 30 篇 Write Up。範圍的話可能就包含 picoCTF 的題目、AIS3 Pre-exam 的題目以及各式各樣 CTF 平台的題目。對了忘記講，一個絕對要完成的目標是 picoCTF 打到 10000 分，因為我下學期要認真去 BEEF SOUP 上課了啦！然後為了加入戰隊分數得達標，下學期的目標是盡力拿個獎！</p>
-<h1 id="大家可以幫我個忙嗎！"><a href="#大家可以幫我個忙嗎！" class="headerlink" title="大家可以幫我個忙嗎！"></a>大家可以幫我個忙嗎！</h1><p>希望大家可以好好的監督我，我會開留言區，或是認識我的人也可以直接私訊我。如果我太久沒有更新文章可以來提醒我！如果我某段期間有事情、出去玩、blabla 的我應該會公告在網頁上，所以如果沒特殊狀況又沒更新就是我在偷懶，請監督我！</p>
-<blockquote>
-<p>“We used to look up at the sky and wonder at our place in the stars. Now we just look down, and worry about our place in the dirt.” — <strong><em>Interstellar</em></strong></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>LifeAndTalk</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-        <tag>Security</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Reading List</title>
-    <url>/LifeAndTalk/Reading-List/</url>
-    <content><![CDATA[<ol>
-<li><a class="link"   href="https://johnliutw.medium.com/list/google-4cfac4644843" >Google 的軟體工程之道 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li><a class="link"   href="https://octobug.gitbooks.io/sqlmap-wiki-zhcn/content/" >Sqlmap 文檔中文版 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>LifeAndTalk</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Why Do I Start Blogging</title>
-    <url>/LifeAndTalk/Why-Do-I-Start-Blogging/</url>
-    <content><![CDATA[<h1 id="Big-bang-宇宙的起源"><a href="#Big-bang-宇宙的起源" class="headerlink" title="Big bang! 宇宙的起源"></a>Big bang! 宇宙的起源</h1><p>我其實從很久以前就有想要架設自己的網站，上了大學後又看到更多厲害的前輩們都會有自己的網站來記錄自己的成長，於是下定決心也要來建立自己的 Blog。再加上我今年（2023 開始）剛好把 Instagram 關版了（想挑戰一年不用 Instagram），所以剛好就利用這邊來記錄我的生活和技術類文章吧！（未來可能會順便紀錄一些旅遊、和朋友的約、blablabla）</p>
-<p>在架站的時候也一直在想，如果我直接寫在 Medium 之類的平台是不是更方便，還能有快速的 SEO 成效。但後來想想，架在 Medium 終究是被動的，也不知道哪天 Medium 是否會像無名小站一樣倒閉，反而架在自己的站才是掌握了主控權。至於 SEO 的部分嘛，慢慢來吧！慢工出細活！</p>
-<h1 id="對自己的期許"><a href="#對自己的期許" class="headerlink" title="對自己的期許"></a>對自己的期許</h1><p>因為我是一個很懶惰的人 XD，所以希望我可以頻繁且持續的更新文章。並且期待自己可以累積到越來越多的讀者，最後也會希望自己的文章真的可以幫助到其他人！</p>
-<h1 id="對讀者們的期待"><a href="#對讀者們的期待" class="headerlink" title="對讀者們的期待"></a>對讀者們的期待</h1><p>希望大家看完我的文章後，有甚麼想法都可以在底下留言和我互動（這也是我會開留言區的原因，害羞的話按個表情也可以的）。又或是我在技術類的文章中可能有甚麼寫錯的地方，也都可以直接留言和我討論，我都會盡快地回復你。最後如果想持續的接收我最新的文章，也歡迎可以<a href="https://cx330.tw/subscribe">訂閱我的 Blog</a>！我會很感激的！</p>
-]]></content>
-      <categories>
-        <category>LifeAndTalk</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Cryptography Notes 密碼學任督二脈</title>
     <url>/StudyNotes/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88/</url>
     <content><![CDATA[
@@ -239,11 +197,53 @@
         <category>StudyNotes</category>
       </categories>
       <tags>
-        <tag>CTF</tag>
         <tag>Cryptography</tag>
+        <tag>CTF</tag>
         <tag>CyberSec</tag>
         <tag>Notes</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>2024 Summer Intensive Training Plan</title>
+    <url>/LifeAndTalk/2024-Summer-Intensive-Training-Plan/</url>
+    <content><![CDATA[<h1 id="為甚麼要修煉"><a href="#為甚麼要修煉" class="headerlink" title="為甚麼要修煉?"></a>為甚麼要修煉?</h1><p>有鑑於這次 AIS3 Pre-exam 的成績不甚理想。我決定要來在這次暑假的時候展開特訓，來這邊立個旗。以下來講講我打算怎麼修煉！</p>
+<h1 id="怎麼修煉"><a href="#怎麼修煉" class="headerlink" title="怎麼修煉?"></a>怎麼修煉?</h1><p>可能會像 IT 邦幫忙鐵人賽的感覺吧，但沒辦法到每天上傳，因為還有其他安排（專案 AND 和朋友出門）。不過我對自己的期許是至少可以上傳 30 篇 Write Up。範圍的話可能就包含 picoCTF 的題目、AIS3 Pre-exam 的題目以及各式各樣 CTF 平台的題目。對了忘記講，一個絕對要完成的目標是 picoCTF 打到 10000 分，因為我下學期要認真去 BEEF SOUP 上課了啦！然後為了加入戰隊分數得達標，下學期的目標是盡力拿個獎！</p>
+<h1 id="大家可以幫我個忙嗎！"><a href="#大家可以幫我個忙嗎！" class="headerlink" title="大家可以幫我個忙嗎！"></a>大家可以幫我個忙嗎！</h1><p>希望大家可以好好的監督我，我會開留言區，或是認識我的人也可以直接私訊我。如果我太久沒有更新文章可以來提醒我！如果我某段期間有事情、出去玩、blabla 的我應該會公告在網頁上，所以如果沒特殊狀況又沒更新就是我在偷懶，請監督我！</p>
+<blockquote>
+<p>“We used to look up at the sky and wonder at our place in the stars. Now we just look down, and worry about our place in the dirt.” — <strong><em>Interstellar</em></strong></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>LifeAndTalk</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+        <tag>Security</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reading List</title>
+    <url>/LifeAndTalk/Reading-List/</url>
+    <content><![CDATA[<ol>
+<li><a class="link"   href="https://johnliutw.medium.com/list/google-4cfac4644843" >Google 的軟體工程之道 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://octobug.gitbooks.io/sqlmap-wiki-zhcn/content/" >Sqlmap 文檔中文版 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>LifeAndTalk</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Why Do I Start Blogging</title>
+    <url>/LifeAndTalk/Why-Do-I-Start-Blogging/</url>
+    <content><![CDATA[<h1 id="Big-bang-宇宙的起源"><a href="#Big-bang-宇宙的起源" class="headerlink" title="Big bang! 宇宙的起源"></a>Big bang! 宇宙的起源</h1><p>我其實從很久以前就有想要架設自己的網站，上了大學後又看到更多厲害的前輩們都會有自己的網站來記錄自己的成長，於是下定決心也要來建立自己的 Blog。再加上我今年（2023 開始）剛好把 Instagram 關版了（想挑戰一年不用 Instagram），所以剛好就利用這邊來記錄我的生活和技術類文章吧！（未來可能會順便紀錄一些旅遊、和朋友的約、blablabla）</p>
+<p>在架站的時候也一直在想，如果我直接寫在 Medium 之類的平台是不是更方便，還能有快速的 SEO 成效。但後來想想，架在 Medium 終究是被動的，也不知道哪天 Medium 是否會像無名小站一樣倒閉，反而架在自己的站才是掌握了主控權。至於 SEO 的部分嘛，慢慢來吧！慢工出細活！</p>
+<h1 id="對自己的期許"><a href="#對自己的期許" class="headerlink" title="對自己的期許"></a>對自己的期許</h1><p>因為我是一個很懶惰的人 XD，所以希望我可以頻繁且持續的更新文章。並且期待自己可以累積到越來越多的讀者，最後也會希望自己的文章真的可以幫助到其他人！</p>
+<h1 id="對讀者們的期待"><a href="#對讀者們的期待" class="headerlink" title="對讀者們的期待"></a>對讀者們的期待</h1><p>希望大家看完我的文章後，有甚麼想法都可以在底下留言和我互動（這也是我會開留言區的原因，害羞的話按個表情也可以的）。又或是我在技術類的文章中可能有甚麼寫錯的地方，也都可以直接留言和我討論，我都會盡快地回復你。最後如果想持續的接收我最新的文章，也歡迎可以<a href="https://cx330.tw/subscribe">訂閱我的 Blog</a>！我會很感激的！</p>
+]]></content>
+      <categories>
+        <category>LifeAndTalk</category>
+      </categories>
   </entry>
   <entry>
     <title>2024 AIS3 Pre-exam Writeup</title>
@@ -666,23 +666,23 @@
 
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">picoCTF{custom_d2cr0pt6d_dc499538}</span><br></pre></td></tr></table></figure></div>
 
-<h1 id="Pwn-Binary-Exploitation"><a href="#Pwn-Binary-Exploitation" class="headerlink" title="Pwn (Binary Exploitation)"></a>Pwn (Binary Exploitation)</h1><h2 id="Local-Target"><a href="#Local-Target" class="headerlink" title="Local Target"></a>Local Target</h2><p>這題給了一個可執行的檔案和C語言的代碼，先來分析一下他的代碼吧。</p>
+<h1 id="Pwn-Binary-Exploitation"><a href="#Pwn-Binary-Exploitation" class="headerlink" title="Pwn (Binary Exploitation)"></a>Pwn (Binary Exploitation)</h1><h2 id="Local-Target"><a href="#Local-Target" class="headerlink" title="Local Target"></a>Local Target</h2><p>這題給了一個可執行的檔案和 C 語言的代碼，先來分析一下他的代碼吧。</p>
 <div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">  FILE *fptr;</span><br><span class="line">  <span class="type">char</span> c;</span><br><span class="line"></span><br><span class="line">  <span class="type">char</span> input[<span class="number">16</span>];</span><br><span class="line">  <span class="type">int</span> num = <span class="number">64</span>;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Enter a string: "</span>);</span><br><span class="line">  fflush(<span class="built_in">stdout</span>);</span><br><span class="line">  gets(input);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line"></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"num is %d\n"</span>, num);</span><br><span class="line">  fflush(<span class="built_in">stdout</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (num == <span class="number">65</span>)</span><br><span class="line">  {</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"You win!\n"</span>);</span><br><span class="line">    fflush(<span class="built_in">stdout</span>);</span><br><span class="line">    <span class="comment">// Open file</span></span><br><span class="line">    fptr = fopen(<span class="string">"flag.txt"</span>, <span class="string">"r"</span>);</span><br><span class="line">    <span class="keyword">if</span> (fptr == <span class="literal">NULL</span>)</span><br><span class="line">    {</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">"Cannot open file.\n"</span>);</span><br><span class="line">      fflush(<span class="built_in">stdout</span>);</span><br><span class="line">      <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Read contents from file</span></span><br><span class="line">    c = fgetc(fptr);</span><br><span class="line">    <span class="keyword">while</span> (c != EOF)</span><br><span class="line">    {</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">"%c"</span>, c);</span><br><span class="line">      c = fgetc(fptr);</span><br><span class="line">    }</span><br><span class="line">    fflush(<span class="built_in">stdout</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">    fflush(<span class="built_in">stdout</span>);</span><br><span class="line">    fclose(fptr);</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">  }</span><br><span class="line"></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Bye!\n"</span>);</span><br><span class="line">  fflush(<span class="built_in">stdout</span>);</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
 
-<p>當使用Netcat連線到題目的時候，會如同下面一般。</p>
+<p>當使用 Netcat 連線到題目的時候，會如同下面一般。</p>
 <p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701161031231.png" alt="題目"><figcaption>題目</figcaption></figure></p>
 <p><strong>分析代碼</strong></p>
 <ol>
-<li><code>char input[16];</code>宣告了一個長度為16的字元陣列，儲存使用者輸入。</li>
-<li><code>get(input);</code>獲取使用者輸入，由於<code>get</code>函數不檢查輸入的長度，使用者可以輸入超過16個字元。（<a class="link" href="https://blog.csdn.net/qq_40907279/article/details/89046366">危险函数gets()几种完美的替代方法 你可能还不知道的 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）</li>
+<li><code>char input[16];</code>宣告了一個長度為 16 的字元陣列，儲存使用者輸入。</li>
+<li><code>get(input);</code>獲取使用者輸入，由於<code>get</code>函數不檢查輸入的長度，使用者可以輸入超過 16 個字元。（<a class="link" href="https://blog.csdn.net/qq_40907279/article/details/89046366">危险函数 gets()几种完美的替代方法 你可能还不知道的 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）</li>
 <li><code>int num = 64;</code>宣告並初始化變數<code>num</code>。</li>
-<li>拿到flag的條件是要讓num的值為65。</li>
+<li>拿到 flag 的條件是要讓 num 的值為 65。</li>
 </ol>
-<p><strong>BOF攻擊</strong></p>
+<p><strong>BOF 攻擊</strong></p>
 <p>首先，先檢查一下他有沒有任何保護機制。</p>
 <p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701171059944.png" alt="Checksec from pwntools"><figcaption>Checksec from pwntools</figcaption></figure></p>
-<p>他沒有 <a class="link" href="https://ctf-wiki.org/pwn/linux/user-mode/mitigation/canary/">Canary <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 也沒有 <a class="link" href="https://ithelp.ithome.com.tw/articles/10336777">PIE <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，就正常做BOF就可以了。</p>
-<p>因為<code>input</code>和<code>num</code>都是區域變數，所以會存在Stack中。並且因為是先宣告<code>input</code>緊接著宣告<code>num</code>，所以在Stack中會像下面這樣：</p>
+<p>他沒有 <a class="link" href="https://ctf-wiki.org/pwn/linux/user-mode/mitigation/canary/">Canary <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 也沒有 <a class="link" href="https://ithelp.ithome.com.tw/articles/10336777">PIE <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，就正常做 BOF 就可以了。</p>
+<p>因為<code>input</code>和<code>num</code>都是區域變數，所以會存在 Stack 中。並且因為是先宣告<code>input</code>緊接著宣告<code>num</code>，所以在 Stack 中會像下面這樣：</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">High Address</span><br><span class="line">|</span><br><span class="line">|---------------------|</span><br><span class="line">|  Return Address     | &lt;-- top</span><br><span class="line">|---------------------|</span><br><span class="line">|  Frame Pointer      |</span><br><span class="line">|---------------------|</span><br><span class="line">|  int num            | &lt;-- 4 Bytes</span><br><span class="line">|---------------------|</span><br><span class="line">|  char input[16]     | &lt;-- 16 Bytes</span><br><span class="line">|---------------------|</span><br><span class="line">|</span><br><span class="line">Low Address</span><br></pre></td></tr></table></figure></div>
 
 <p>// TODO</p>
@@ -693,7 +693,41 @@
 
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">picoCTF{15_y0ur_que57_qu1x071c_0r_h3r01c_ea7deb4c}</span><br></pre></td></tr></table></figure></div>
 
-<h1 id="Reverse"><a href="#Reverse" class="headerlink" title="Reverse"></a>Reverse</h1><h1 id="Misc-General-Skills"><a href="#Misc-General-Skills" class="headerlink" title="Misc (General Skills)"></a>Misc (General Skills)</h1><h2 id="binhexa"><a href="#binhexa" class="headerlink" title="binhexa"></a>binhexa</h2><p>這題比較簡單，就是一些基礎的 Binary operations 和最後把 bin 轉為 hexadecimal 就行了，它主要有六題的邏輯運算和一題 bin to hexadecimal。我是直接使用 picoCTF 提供的 Webshell 進行 nc 連接，然後用<a class="link" href="https://www.rapidtables.com/calc/math/binary-calculator.html">這個線上工具 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>運算。題目如下。</p>
+<h1 id="Reverse"><a href="#Reverse" class="headerlink" title="Reverse"></a>Reverse</h1><h2 id="GDB-Test-Drive"><a href="#GDB-Test-Drive" class="headerlink" title="GDB Test Drive"></a>GDB Test Drive</h2><p>這題的話先用<code>wget</code>把題目這個二進制檔案抓下來。</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701212911463.png" alt="Wget"><figcaption>Wget</figcaption></figure></p>
+<p>然後後面的步驟基本上就照著題目給的指令一步一步來就可以了。</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701213346170.png" alt="Instructions"><figcaption>Instructions</figcaption></figure></p>
+<p>這邊來稍微解釋一下每個指令的意義，他到底是做了哪些事情呢？</p>
+<ul>
+<li><code>chmod +x gdbme</code><ul>
+<li>修改 gdbme 檔案的權限，新增執行權限（x）</li>
+</ul>
+</li>
+<li><code>gdb gdbme</code><ul>
+<li>使用 gdb（GNU Debugger）打開 gdbme 這個可執行檔案。</li>
+</ul>
+</li>
+<li><code>layout asm</code><ul>
+<li>啟用組合語言（Assembly, ASM）視圖</li>
+</ul>
+</li>
+<li><code>break *(main+99)</code><ul>
+<li>在 main 函數開始偏移 99 的位元組的地方設置斷點（Breakpoint）。</li>
+</ul>
+</li>
+<li><code>jump *(main+104)</code><ul>
+<li>跳到 main 函數開始偏移 104 位元組的地方繼續執行。</li>
+</ul>
+</li>
+</ul>
+<p>至於這邊為甚麼要在 main+99 的地方設定斷點，是因為這裡他調用了一個函式叫做<code>sleep</code>，所以當我們直接執行 gdbme 的時候會進入到<strong>sleep</strong>的狀態，讓我們以為這個程式沒有做任何事。</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="C:\Users\陳子雋\AppData\Roaming\Typora\typora-user-images\image-20240701220205264.png" alt="Sleep function"><figcaption>Sleep function</figcaption></figure></p>
+<p>所以在這邊我們才要把斷點設在 main+99，讓他執行到這邊的時候暫停一下，然後我們直接使用 jump 叫到下面一個地方，也就是 main+104 繼續執行。</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701213211218.png" alt="Flag"><figcaption>Flag</figcaption></figure></p>
+<p>這樣就得到 flag 啦。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">picoCTF{d3bugg3r_dr1v3_72bd8355}</span><br></pre></td></tr></table></figure></div>
+
+<h1 id="Misc-General-Skills"><a href="#Misc-General-Skills" class="headerlink" title="Misc (General Skills)"></a>Misc (General Skills)</h1><h2 id="binhexa"><a href="#binhexa" class="headerlink" title="binhexa"></a>binhexa</h2><p>這題比較簡單，就是一些基礎的 Binary operations 和最後把 bin 轉為 hexadecimal 就行了，它主要有六題的邏輯運算和一題 bin to hexadecimal。我是直接使用 picoCTF 提供的 Webshell 進行 nc 連接，然後用<a class="link" href="https://www.rapidtables.com/calc/math/binary-calculator.html">這個線上工具 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>運算。題目如下。</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">Binary Number 1: 00101010</span><br><span class="line">Binary Number 2: 00101011</span><br><span class="line"></span><br><span class="line">Question 1/6:</span><br><span class="line">Operation 1: '&amp;'</span><br><span class="line">Perform the operation on Binary Number 1&amp;2.</span><br><span class="line">Enter the binary result: 00101010</span><br><span class="line">Correct!</span><br><span class="line"></span><br><span class="line">Question 2/6:</span><br><span class="line">Operation 2: '*'</span><br><span class="line">Perform the operation on Binary Number 1&amp;2.</span><br><span class="line">Enter the binary result: 11100001110</span><br><span class="line">Correct!</span><br><span class="line"></span><br><span class="line">Question 3/6:</span><br><span class="line">Operation 3: '&lt;&lt;'</span><br><span class="line">Perform a left shift of Binary Number 1 by 1 bits.</span><br><span class="line">Enter the binary result: 1010100</span><br><span class="line">Correct!</span><br><span class="line"></span><br><span class="line">Question 4/6:</span><br><span class="line">Operation 4: '+'</span><br><span class="line">Perform the operation on Binary Number 1&amp;2.</span><br><span class="line">Enter the binary result: 1010101</span><br><span class="line">Correct!</span><br><span class="line"></span><br><span class="line">Question 5/6:</span><br><span class="line">Operation 5: '|'</span><br><span class="line">Perform the operation on Binary Number 1&amp;2.</span><br><span class="line">Enter the binary result: 00101011</span><br><span class="line">Correct!</span><br><span class="line"></span><br><span class="line">Question 6/6:</span><br><span class="line">Operation 6: '&gt;&gt;'</span><br><span class="line">Perform a right shift of Binary Number 2 by 1 bits.</span><br><span class="line">Enter the binary result: 10101</span><br><span class="line">Correct!</span><br><span class="line"></span><br><span class="line">Enter the results of the last operation in hexadecimal: 15</span><br><span class="line"></span><br><span class="line">Correct answer!</span><br><span class="line">The flag is: picoCTF{b1tw^3se_0p3eR@tI0n_su33essFuL_d6f8047e}</span><br></pre></td></tr></table></figure></div>
 
 <p>這樣就得到 flag 啦！Easy peasy。</p>
@@ -744,6 +778,150 @@
       <tags>
         <tag>AI</tag>
         <tag>GDSC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Day 02] Learning Cryptography</title>
+    <url>/TechStreak30/2024%20CTF%20Training/Day-02-Learning-Cryptography/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>密碼學一直以來都是我覺得超級超級困難的東西，為了可以更好的搞清楚它，決定寫一篇筆記來給自己（和各位）當作學習的資料！我把連結放在<a href="/Notebooks/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88">這個地方</a>，大家想看可以直接點過去噢！</p>
+<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天只寫完了前言以及編碼的部分。然後因為編碼的部分還算簡單，就是還沒有那麼多的數學，所以今天的知識量負擔滿輕的，不過明後天進入到數學部分（甚麼費馬小定理有的沒的）就會變超難了 XD。希望明天可以把古典密碼學那邊讀完，再來就進入對稱和非對稱加密啦！</p>
+<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
+<li>起床時間：<code>8:30</code>但是滑手機到<code>9:05</code>才下床</li>
+<li>知識量：⭐</li>
+<li>疲勞程度：⭐⭐⭐</li>
+<li>精神狀態：⭐⭐⭐</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CyberSec</category>
+        <category>TechStreak30</category>
+        <category>CTF</category>
+        <category>2024 CTF Training</category>
+      </categories>
+      <tags>
+        <tag>Cryptography</tag>
+        <tag>CTF</tag>
+        <tag>CyberSec</tag>
+        <tag>Crypto</tag>
+        <tag>TechStreak30</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Day 01] Grinding PicoCTF</title>
+    <url>/TechStreak30/2024%20CTF%20Training/Day-01-Grinding-PicoCTF/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>因為已經有開了一篇文章，打算放上所有 picoCTF 的 writeups 了，所以就不把解題思路寫在這邊啦，如果想看的話請見<a href="https://cx330.tw/CyberSec/CTF/All-in-One%20PicoCTF-Writeups/">這邊</a>!</p>
+<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天打算先刷一點 picoCTF 的題目，因為成大資安社加入戰隊的標準是一萬分，然後我現在才六千多。但是！當我今天開始刷題目之後我發現 pico 他們的制度整個大改！現在沒有計算分數的機制了，改為把題目分成三個不同的難度（像是 Leetcode 那樣），分別是 easy, medium, hard。所以不知道到時候加戰隊的標準會是多少呢，不過以下就是我今天的進度啦！</p>
+<ol>
+<li>More SQLi</li>
+<li>Trickster</li>
+</ol>
+<p>今天進度就兩題，不過感覺多多少少是有學習到新知識的。之後可能要找一天特別來研究一下 sqlmap 的文檔，到時候再出成一篇筆記文章吧！兩題可能聽起來有點少，但畢竟剛放暑假，我還在那個耍廢狀態 XD，慢慢調整啦！</p>
+<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
+<li>起床時間：<code>8:30</code></li>
+<li>知識量：⭐⭐⭐</li>
+<li>疲勞程度：⭐⭐</li>
+<li>精神狀態：⭐⭐⭐⭐⭐</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CyberSec</category>
+        <category>TechStreak30</category>
+        <category>CTF</category>
+        <category>2024 CTF Training</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+        <tag>CyberSec</tag>
+        <tag>TechStreak30</tag>
+        <tag>PicoCTF</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Day 03] Learning Cryptography 2</title>
+    <url>/TechStreak30/2024%20CTF%20Training/Day-03-Learning-Cryptography-2/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>這是第一個 TechStreak30 系列的第三天，今天一樣繼續 work on <a href="/Notebooks/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88">我的密碼學筆記</a>，歡迎大家來看！一想到之後要進入 RSA 的部分就感覺好難 XD，但總之就加油啦！</p>
+<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天寫完了 Hash 的部分，也有寫了一半的古典密碼學。進度還行，還不錯，明天繼續努力囉！</p>
+<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
+<li>起床時間：<code>9:30</code></li>
+<li>知識量：⭐⭐⭐</li>
+<li>疲勞程度：⭐⭐⭐</li>
+<li>精神狀態：⭐⭐⭐⭐</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CyberSec</category>
+        <category>TechStreak30</category>
+        <category>CTF</category>
+        <category>2024 CTF Training</category>
+      </categories>
+      <tags>
+        <tag>Cryptography</tag>
+        <tag>CTF</tag>
+        <tag>CyberSec</tag>
+        <tag>Crypto</tag>
+        <tag>TechStreak30</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Day 04] Grinding PicoCTF 2</title>
+    <url>/TechStreak30/2024%20CTF%20Training/Day-04-Grinding-PicoCTF-2/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>家人們家人們！有鑑於昨日收到的兩個消息，第一是 7/10 到 7/12 有 SCIST 資安課的 CTF 季後賽要打，第二是我錄取了 AIS3 暑期資安課程的備取，所以我決定先來好好地刷些題目。所以<a href="/Notebooks/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88">這個密碼學任督二脈</a>我就先緩緩，之後比賽結束了再將它給補上！！！</p>
+<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天下午寫了三題，Misc, Crypto, Forensics 各寫了一題，還算學到滿多新知識的！真的是越學越有趣了，我愛學習！學習使我快樂！深深的體會了知識所能帶給我的愉悅，是更深層次的快樂。</p>
+<ol>
+<li>binhexa</li>
+<li>Custom encryption</li>
+<li>MSB</li>
+</ol>
+<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
+<li>起床時間：<code>9:30</code>，假日睡晚一點 XD</li>
+<li>知識量：⭐⭐⭐</li>
+<li>疲勞程度：⭐⭐</li>
+<li>精神狀態：⭐⭐⭐⭐⭐</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CyberSec</category>
+        <category>TechStreak30</category>
+        <category>CTF</category>
+        <category>2024 CTF Training</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+        <tag>CyberSec</tag>
+        <tag>TechStreak30</tag>
+        <tag>PicoCTF</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Day 05] Grinding PicoCTF 3</title>
+    <url>/TechStreak30/2024%20CTF%20Training/Day-05-Grinding-PicoCTF-3/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>今天還跑到台南去領租屋處的鑰匙和小搬家，下午才跑去星巴克開始今日的 CTF 訓練。</p>
+<p>不得不說台南真的太熱了。🥲🥲🥲</p>
+<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>Pwn 真的太難了，Local Target 我已經找到 flag 了只是還沒有很理解他的原理，先標記為做一半明天繼續。</p>
+<ol>
+<li>unminify</li>
+<li>SQLiLite</li>
+<li>GDB Test Drive</li>
+<li>Local Target 做到一半</li>
+</ol>
+<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
+<li>起床時間：<code>7：30</code></li>
+<li>知識量：⭐⭐⭐⭐</li>
+<li>疲勞程度：⭐⭐⭐⭐⭐</li>
+<li>精神狀態：⭐</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CyberSec</category>
+        <category>TechStreak30</category>
+        <category>CTF</category>
+        <category>2024 CTF Training</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+        <tag>CyberSec</tag>
+        <tag>TechStreak30</tag>
+        <tag>PicoCTF</tag>
       </tags>
   </entry>
   <entry>
@@ -881,118 +1059,6 @@
         <tag>Blog</tag>
         <tag>WebDev</tag>
         <tag>Developer</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Day 01] Grinding PicoCTF</title>
-    <url>/TechStreak30/2024%20CTF%20Training/Day-01-Grinding-PicoCTF/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>因為已經有開了一篇文章，打算放上所有 picoCTF 的 writeups 了，所以就不把解題思路寫在這邊啦，如果想看的話請見<a href="https://cx330.tw/CyberSec/CTF/All-in-One%20PicoCTF-Writeups/">這邊</a>!</p>
-<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天打算先刷一點 picoCTF 的題目，因為成大資安社加入戰隊的標準是一萬分，然後我現在才六千多。但是！當我今天開始刷題目之後我發現 pico 他們的制度整個大改！現在沒有計算分數的機制了，改為把題目分成三個不同的難度（像是 Leetcode 那樣），分別是 easy, medium, hard。所以不知道到時候加戰隊的標準會是多少呢，不過以下就是我今天的進度啦！</p>
-<ol>
-<li>More SQLi</li>
-<li>Trickster</li>
-</ol>
-<p>今天進度就兩題，不過感覺多多少少是有學習到新知識的。之後可能要找一天特別來研究一下 sqlmap 的文檔，到時候再出成一篇筆記文章吧！兩題可能聽起來有點少，但畢竟剛放暑假，我還在那個耍廢狀態 XD，慢慢調整啦！</p>
-<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
-<li>起床時間：<code>8:30</code></li>
-<li>知識量：⭐⭐⭐</li>
-<li>疲勞程度：⭐⭐</li>
-<li>精神狀態：⭐⭐⭐⭐⭐</li>
-</ul>
-]]></content>
-      <categories>
-        <category>CyberSec</category>
-        <category>TechStreak30</category>
-        <category>CTF</category>
-        <category>2024 CTF Training</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-        <tag>CyberSec</tag>
-        <tag>PicoCTF</tag>
-        <tag>TechStreak30</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Day 02] Learning Cryptography</title>
-    <url>/TechStreak30/2024%20CTF%20Training/Day-02-Learning-Cryptography/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>密碼學一直以來都是我覺得超級超級困難的東西，為了可以更好的搞清楚它，決定寫一篇筆記來給自己（和各位）當作學習的資料！我把連結放在<a href="/Notebooks/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88">這個地方</a>，大家想看可以直接點過去噢！</p>
-<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天只寫完了前言以及編碼的部分。然後因為編碼的部分還算簡單，就是還沒有那麼多的數學，所以今天的知識量負擔滿輕的，不過明後天進入到數學部分（甚麼費馬小定理有的沒的）就會變超難了 XD。希望明天可以把古典密碼學那邊讀完，再來就進入對稱和非對稱加密啦！</p>
-<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
-<li>起床時間：<code>8:30</code>但是滑手機到<code>9:05</code>才下床</li>
-<li>知識量：⭐</li>
-<li>疲勞程度：⭐⭐⭐</li>
-<li>精神狀態：⭐⭐⭐</li>
-</ul>
-]]></content>
-      <categories>
-        <category>CyberSec</category>
-        <category>TechStreak30</category>
-        <category>CTF</category>
-        <category>2024 CTF Training</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-        <tag>Cryptography</tag>
-        <tag>CyberSec</tag>
-        <tag>TechStreak30</tag>
-        <tag>Crypto</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Day 03] Learning Cryptography 2</title>
-    <url>/TechStreak30/2024%20CTF%20Training/Day-03-Learning-Cryptography-2/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>這是第一個 TechStreak30 系列的第三天，今天一樣繼續 work on <a href="/Notebooks/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88">我的密碼學筆記</a>，歡迎大家來看！一想到之後要進入 RSA 的部分就感覺好難 XD，但總之就加油啦！</p>
-<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天寫完了 Hash 的部分，也有寫了一半的古典密碼學。進度還行，還不錯，明天繼續努力囉！</p>
-<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
-<li>起床時間：<code>9:30</code></li>
-<li>知識量：⭐⭐⭐</li>
-<li>疲勞程度：⭐⭐⭐</li>
-<li>精神狀態：⭐⭐⭐⭐</li>
-</ul>
-]]></content>
-      <categories>
-        <category>CyberSec</category>
-        <category>TechStreak30</category>
-        <category>CTF</category>
-        <category>2024 CTF Training</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-        <tag>Cryptography</tag>
-        <tag>CyberSec</tag>
-        <tag>TechStreak30</tag>
-        <tag>Crypto</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Day 04] Grinding PicoCTF 2</title>
-    <url>/TechStreak30/2024%20CTF%20Training/Day-04-Grinding-PicoCTF-2/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>家人們家人們！有鑑於昨日收到的兩個消息，第一是 7/10 到 7/12 有 SCIST 資安課的 CTF 季後賽要打，第二是我錄取了 AIS3 暑期資安課程的備取，所以我決定先來好好地刷些題目。所以<a href="/Notebooks/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88">這個密碼學任督二脈</a>我就先緩緩，之後比賽結束了再將它給補上！！！</p>
-<h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天下午寫了三題，Misc, Crypto, Forensics 各寫了一題，還算學到滿多新知識的！真的是越學越有趣了，我愛學習！學習使我快樂！深深的體會了知識所能帶給我的愉悅，是更深層次的快樂。</p>
-<ol>
-<li>binhexa</li>
-<li>Custom encryption</li>
-<li>MSB</li>
-</ol>
-<h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul>
-<li>起床時間：<code>9:30</code>，假日睡晚一點 XD</li>
-<li>知識量：⭐⭐⭐</li>
-<li>疲勞程度：⭐⭐</li>
-<li>精神狀態：⭐⭐⭐⭐⭐</li>
-</ul>
-]]></content>
-      <categories>
-        <category>CyberSec</category>
-        <category>TechStreak30</category>
-        <category>CTF</category>
-        <category>2024 CTF Training</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-        <tag>CyberSec</tag>
-        <tag>PicoCTF</tag>
-        <tag>TechStreak30</tag>
       </tags>
   </entry>
 </search>

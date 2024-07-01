@@ -48,8 +48,12 @@
 <meta property="og:image" content="https://hackmd.io/_uploads/HJW1sBtI0.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701161031231.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701171059944.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701212911463.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701213346170.png">
+<meta property="og:image" content="c:\Users\%E9%99%B3%E5%AD%90%E9%9B%8B\AppData\Roaming\Typora\typora-user-images\image-20240701220205264.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701213211218.png">
 <meta property="article:published_time" content="2024-06-01T02:27:03.000Z">
-<meta property="article:modified_time" content="2024-07-01T09:23:56.105Z">
+<meta property="article:modified_time" content="2024-07-01T14:16:37.293Z">
 <meta property="article:author" content="CX330">
 <meta property="article:tag" content="CX330, 陳子雋, CX330 universe, CX330 Blog, Blog, CTF, CX330 hacker, hacker">
 <meta name="twitter:card" content="summary">
@@ -723,7 +727,7 @@ mjx-container[display="true"] + br {
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">13</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">14</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -781,8 +785,8 @@ mjx-container[display="true"] + br {
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-07-01 17:23:56</span>
-            <span class="mobile">2024-07-01 17:23:56</span>
+            <span class="desktop">2024-07-01 22:16:37</span>
+            <span class="mobile">2024-07-01 22:16:37</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -819,12 +823,12 @@ mjx-container[display="true"] + br {
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>5.8k Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>6.2k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>26 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>28 Mins</span>
         </span>
     
     
@@ -1025,23 +1029,23 @@ mjx-container[display="true"] + br {
 
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">picoCTF{custom_d2cr0pt6d_dc499538}</span><br></pre></td></tr></table></figure></div>
 
-<h1 id="Pwn-Binary-Exploitation"><a href="#Pwn-Binary-Exploitation" class="headerlink" title="Pwn (Binary Exploitation)"></a>Pwn (Binary Exploitation)</h1><h2 id="Local-Target"><a href="#Local-Target" class="headerlink" title="Local Target"></a>Local Target</h2><p>這題給了一個可執行的檔案和C語言的代碼，先來分析一下他的代碼吧。</p>
+<h1 id="Pwn-Binary-Exploitation"><a href="#Pwn-Binary-Exploitation" class="headerlink" title="Pwn (Binary Exploitation)"></a>Pwn (Binary Exploitation)</h1><h2 id="Local-Target"><a href="#Local-Target" class="headerlink" title="Local Target"></a>Local Target</h2><p>這題給了一個可執行的檔案和 C 語言的代碼，先來分析一下他的代碼吧。</p>
 <div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">{</span><br><span class="line">  FILE *fptr;</span><br><span class="line">  <span class="type">char</span> c;</span><br><span class="line"></span><br><span class="line">  <span class="type">char</span> input[<span class="number">16</span>];</span><br><span class="line">  <span class="type">int</span> num = <span class="number">64</span>;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Enter a string: "</span>);</span><br><span class="line">  fflush(<span class="built_in">stdout</span>);</span><br><span class="line">  gets(input);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line"></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"num is %d\n"</span>, num);</span><br><span class="line">  fflush(<span class="built_in">stdout</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (num == <span class="number">65</span>)</span><br><span class="line">  {</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"You win!\n"</span>);</span><br><span class="line">    fflush(<span class="built_in">stdout</span>);</span><br><span class="line">    <span class="comment">// Open file</span></span><br><span class="line">    fptr = fopen(<span class="string">"flag.txt"</span>, <span class="string">"r"</span>);</span><br><span class="line">    <span class="keyword">if</span> (fptr == <span class="literal">NULL</span>)</span><br><span class="line">    {</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">"Cannot open file.\n"</span>);</span><br><span class="line">      fflush(<span class="built_in">stdout</span>);</span><br><span class="line">      <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Read contents from file</span></span><br><span class="line">    c = fgetc(fptr);</span><br><span class="line">    <span class="keyword">while</span> (c != EOF)</span><br><span class="line">    {</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">"%c"</span>, c);</span><br><span class="line">      c = fgetc(fptr);</span><br><span class="line">    }</span><br><span class="line">    fflush(<span class="built_in">stdout</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">    fflush(<span class="built_in">stdout</span>);</span><br><span class="line">    fclose(fptr);</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">  }</span><br><span class="line"></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Bye!\n"</span>);</span><br><span class="line">  fflush(<span class="built_in">stdout</span>);</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
 
-<p>當使用Netcat連線到題目的時候，會如同下面一般。</p>
+<p>當使用 Netcat 連線到題目的時候，會如同下面一般。</p>
 <p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701161031231.png" alt="題目"><figcaption>題目</figcaption></figure></p>
 <p><strong>分析代碼</strong></p>
 <ol>
-<li><code>char input[16];</code>宣告了一個長度為16的字元陣列，儲存使用者輸入。</li>
-<li><code>get(input);</code>獲取使用者輸入，由於<code>get</code>函數不檢查輸入的長度，使用者可以輸入超過16個字元。（<a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40907279/article/details/89046366">危险函数gets()几种完美的替代方法 你可能还不知道的 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）</li>
+<li><code>char input[16];</code>宣告了一個長度為 16 的字元陣列，儲存使用者輸入。</li>
+<li><code>get(input);</code>獲取使用者輸入，由於<code>get</code>函數不檢查輸入的長度，使用者可以輸入超過 16 個字元。（<a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40907279/article/details/89046366">危险函数 gets()几种完美的替代方法 你可能还不知道的 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）</li>
 <li><code>int num = 64;</code>宣告並初始化變數<code>num</code>。</li>
-<li>拿到flag的條件是要讓num的值為65。</li>
+<li>拿到 flag 的條件是要讓 num 的值為 65。</li>
 </ol>
-<p><strong>BOF攻擊</strong></p>
+<p><strong>BOF 攻擊</strong></p>
 <p>首先，先檢查一下他有沒有任何保護機制。</p>
 <p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701171059944.png" alt="Checksec from pwntools"><figcaption>Checksec from pwntools</figcaption></figure></p>
-<p>他沒有 <a class="link" target="_blank" rel="noopener" href="https://ctf-wiki.org/pwn/linux/user-mode/mitigation/canary/">Canary <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 也沒有 <a class="link" target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10336777">PIE <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，就正常做BOF就可以了。</p>
-<p>因為<code>input</code>和<code>num</code>都是區域變數，所以會存在Stack中。並且因為是先宣告<code>input</code>緊接著宣告<code>num</code>，所以在Stack中會像下面這樣：</p>
+<p>他沒有 <a class="link" target="_blank" rel="noopener" href="https://ctf-wiki.org/pwn/linux/user-mode/mitigation/canary/">Canary <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 也沒有 <a class="link" target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10336777">PIE <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，就正常做 BOF 就可以了。</p>
+<p>因為<code>input</code>和<code>num</code>都是區域變數，所以會存在 Stack 中。並且因為是先宣告<code>input</code>緊接著宣告<code>num</code>，所以在 Stack 中會像下面這樣：</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">High Address</span><br><span class="line">|</span><br><span class="line">|---------------------|</span><br><span class="line">|  Return Address     | &lt;-- top</span><br><span class="line">|---------------------|</span><br><span class="line">|  Frame Pointer      |</span><br><span class="line">|---------------------|</span><br><span class="line">|  int num            | &lt;-- 4 Bytes</span><br><span class="line">|---------------------|</span><br><span class="line">|  char input[16]     | &lt;-- 16 Bytes</span><br><span class="line">|---------------------|</span><br><span class="line">|</span><br><span class="line">Low Address</span><br></pre></td></tr></table></figure></div>
 
 <p>// TODO</p>
@@ -1052,7 +1056,41 @@ mjx-container[display="true"] + br {
 
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">picoCTF{15_y0ur_que57_qu1x071c_0r_h3r01c_ea7deb4c}</span><br></pre></td></tr></table></figure></div>
 
-<h1 id="Reverse"><a href="#Reverse" class="headerlink" title="Reverse"></a>Reverse</h1><h1 id="Misc-General-Skills"><a href="#Misc-General-Skills" class="headerlink" title="Misc (General Skills)"></a>Misc (General Skills)</h1><h2 id="binhexa"><a href="#binhexa" class="headerlink" title="binhexa"></a>binhexa</h2><p>這題比較簡單，就是一些基礎的 Binary operations 和最後把 bin 轉為 hexadecimal 就行了，它主要有六題的邏輯運算和一題 bin to hexadecimal。我是直接使用 picoCTF 提供的 Webshell 進行 nc 連接，然後用<a class="link" target="_blank" rel="noopener" href="https://www.rapidtables.com/calc/math/binary-calculator.html">這個線上工具 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>運算。題目如下。</p>
+<h1 id="Reverse"><a href="#Reverse" class="headerlink" title="Reverse"></a>Reverse</h1><h2 id="GDB-Test-Drive"><a href="#GDB-Test-Drive" class="headerlink" title="GDB Test Drive"></a>GDB Test Drive</h2><p>這題的話先用<code>wget</code>把題目這個二進制檔案抓下來。</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701212911463.png" alt="Wget"><figcaption>Wget</figcaption></figure></p>
+<p>然後後面的步驟基本上就照著題目給的指令一步一步來就可以了。</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701213346170.png" alt="Instructions"><figcaption>Instructions</figcaption></figure></p>
+<p>這邊來稍微解釋一下每個指令的意義，他到底是做了哪些事情呢？</p>
+<ul>
+<li><code>chmod +x gdbme</code><ul>
+<li>修改 gdbme 檔案的權限，新增執行權限（x）</li>
+</ul>
+</li>
+<li><code>gdb gdbme</code><ul>
+<li>使用 gdb（GNU Debugger）打開 gdbme 這個可執行檔案。</li>
+</ul>
+</li>
+<li><code>layout asm</code><ul>
+<li>啟用組合語言（Assembly, ASM）視圖</li>
+</ul>
+</li>
+<li><code>break *(main+99)</code><ul>
+<li>在 main 函數開始偏移 99 的位元組的地方設置斷點（Breakpoint）。</li>
+</ul>
+</li>
+<li><code>jump *(main+104)</code><ul>
+<li>跳到 main 函數開始偏移 104 位元組的地方繼續執行。</li>
+</ul>
+</li>
+</ul>
+<p>至於這邊為甚麼要在 main+99 的地方設定斷點，是因為這裡他調用了一個函式叫做<code>sleep</code>，所以當我們直接執行 gdbme 的時候會進入到<strong>sleep</strong>的狀態，讓我們以為這個程式沒有做任何事。</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="C:\Users\陳子雋\AppData\Roaming\Typora\typora-user-images\image-20240701220205264.png" alt="Sleep function"><figcaption>Sleep function</figcaption></figure></p>
+<p>所以在這邊我們才要把斷點設在 main+99，讓他執行到這邊的時候暫停一下，然後我們直接使用 jump 叫到下面一個地方，也就是 main+104 繼續執行。</p>
+<p><figure class="image-caption"><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240701213211218.png" alt="Flag"><figcaption>Flag</figcaption></figure></p>
+<p>這樣就得到 flag 啦。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">picoCTF{d3bugg3r_dr1v3_72bd8355}</span><br></pre></td></tr></table></figure></div>
+
+<h1 id="Misc-General-Skills"><a href="#Misc-General-Skills" class="headerlink" title="Misc (General Skills)"></a>Misc (General Skills)</h1><h2 id="binhexa"><a href="#binhexa" class="headerlink" title="binhexa"></a>binhexa</h2><p>這題比較簡單，就是一些基礎的 Binary operations 和最後把 bin 轉為 hexadecimal 就行了，它主要有六題的邏輯運算和一題 bin to hexadecimal。我是直接使用 picoCTF 提供的 Webshell 進行 nc 連接，然後用<a class="link" target="_blank" rel="noopener" href="https://www.rapidtables.com/calc/math/binary-calculator.html">這個線上工具 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>運算。題目如下。</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">Binary Number 1: 00101010</span><br><span class="line">Binary Number 2: 00101011</span><br><span class="line"></span><br><span class="line">Question 1/6:</span><br><span class="line">Operation 1: '&amp;'</span><br><span class="line">Perform the operation on Binary Number 1&amp;2.</span><br><span class="line">Enter the binary result: 00101010</span><br><span class="line">Correct!</span><br><span class="line"></span><br><span class="line">Question 2/6:</span><br><span class="line">Operation 2: '*'</span><br><span class="line">Perform the operation on Binary Number 1&amp;2.</span><br><span class="line">Enter the binary result: 11100001110</span><br><span class="line">Correct!</span><br><span class="line"></span><br><span class="line">Question 3/6:</span><br><span class="line">Operation 3: '&lt;&lt;'</span><br><span class="line">Perform a left shift of Binary Number 1 by 1 bits.</span><br><span class="line">Enter the binary result: 1010100</span><br><span class="line">Correct!</span><br><span class="line"></span><br><span class="line">Question 4/6:</span><br><span class="line">Operation 4: '+'</span><br><span class="line">Perform the operation on Binary Number 1&amp;2.</span><br><span class="line">Enter the binary result: 1010101</span><br><span class="line">Correct!</span><br><span class="line"></span><br><span class="line">Question 5/6:</span><br><span class="line">Operation 5: '|'</span><br><span class="line">Perform the operation on Binary Number 1&amp;2.</span><br><span class="line">Enter the binary result: 00101011</span><br><span class="line">Correct!</span><br><span class="line"></span><br><span class="line">Question 6/6:</span><br><span class="line">Operation 6: '&gt;&gt;'</span><br><span class="line">Perform a right shift of Binary Number 2 by 1 bits.</span><br><span class="line">Enter the binary result: 10101</span><br><span class="line">Correct!</span><br><span class="line"></span><br><span class="line">Enter the results of the last operation in hexadecimal: 15</span><br><span class="line"></span><br><span class="line">Correct answer!</span><br><span class="line">The flag is: picoCTF{b1tw^3se_0p3eR@tI0n_su33essFuL_d6f8047e}</span><br></pre></td></tr></table></figure></div>
 
 <p>這樣就得到 flag 啦！Easy peasy。</p>
@@ -1070,7 +1108,7 @@ mjx-container[display="true"] + br {
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-07-01 17:23:56
+                    :</strong> 2024-07-01 22:16:37
             </li>
         
         <li>
@@ -1215,7 +1253,7 @@ mjx-container[display="true"] + br {
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">All-in-One PicoCTF Writeups</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Web"><span class="nav-text">Web</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#unminify"><span class="nav-text">unminify</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#picobrowser"><span class="nav-text">picobrowser</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQLiLite"><span class="nav-text">SQLiLite</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#More-SQLi"><span class="nav-text">More SQLi</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Trickster"><span class="nav-text">Trickster</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Crypto"><span class="nav-text">Crypto</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Easy1"><span class="nav-text">Easy1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Caesar"><span class="nav-text">Caesar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#New-Caesar"><span class="nav-text">New Caesar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mind-your-Ps-and-Qs"><span class="nav-text">Mind your Ps and Qs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#No-padding-no-problem"><span class="nav-text">No padding, no problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Easy-peasy"><span class="nav-text">Easy peasy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Custom-encryption"><span class="nav-text">Custom encryption</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Pwn-Binary-Exploitation"><span class="nav-text">Pwn (Binary Exploitation)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Local-Target"><span class="nav-text">Local Target</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Forensics"><span class="nav-text">Forensics</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MSB"><span class="nav-text">MSB</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reverse"><span class="nav-text">Reverse</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Misc-General-Skills"><span class="nav-text">Misc (General Skills)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#binhexa"><span class="nav-text">binhexa</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Web"><span class="nav-text">Web</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#unminify"><span class="nav-text">unminify</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#picobrowser"><span class="nav-text">picobrowser</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQLiLite"><span class="nav-text">SQLiLite</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#More-SQLi"><span class="nav-text">More SQLi</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Trickster"><span class="nav-text">Trickster</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Crypto"><span class="nav-text">Crypto</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Easy1"><span class="nav-text">Easy1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Caesar"><span class="nav-text">Caesar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#New-Caesar"><span class="nav-text">New Caesar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mind-your-Ps-and-Qs"><span class="nav-text">Mind your Ps and Qs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#No-padding-no-problem"><span class="nav-text">No padding, no problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Easy-peasy"><span class="nav-text">Easy peasy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Custom-encryption"><span class="nav-text">Custom encryption</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Pwn-Binary-Exploitation"><span class="nav-text">Pwn (Binary Exploitation)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Local-Target"><span class="nav-text">Local Target</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Forensics"><span class="nav-text">Forensics</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MSB"><span class="nav-text">MSB</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reverse"><span class="nav-text">Reverse</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#GDB-Test-Drive"><span class="nav-text">GDB Test Drive</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Misc-General-Skills"><span class="nav-text">Misc (General Skills)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#binhexa"><span class="nav-text">binhexa</span></a></li></ol></li></ol>
 
     </div>
 </div>
@@ -1250,11 +1288,11 @@ mjx-container[display="true"] + br {
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        13 posts in total
+                        14 posts in total
                     </span>
                     
                         <span>
-                            22.4k words in total
+                            22.8k words in total
                         </span>
                     
                 </p>

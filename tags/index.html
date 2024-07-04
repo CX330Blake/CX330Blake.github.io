@@ -188,7 +188,8 @@
         }
       }
       detectApple()
-    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="/assets/me.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="CX330" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="/assets/me.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
   endLoading: () => {
     document.getElementById('loading-box').classList.add("loaded");
   },
@@ -238,6 +239,21 @@ if (true) {
         <span class="tagsPageCount">2</span>
       </a>
     
+      <a href="/tags/AIS3/" id="/tags/AIS3/">
+        <span class="tags-punctuation">#</span>AIS3
+        <span class="tagsPageCount">1</span>
+      </a>
+    
+      <a href="/tags/SCIST/" id="/tags/SCIST/">
+        <span class="tags-punctuation">#</span>SCIST
+        <span class="tagsPageCount">1</span>
+      </a>
+    
+      <a href="/tags/Security/" id="/tags/Security/">
+        <span class="tags-punctuation">#</span>Security
+        <span class="tagsPageCount">1</span>
+      </a>
+    
       <a href="/tags/AI/" id="/tags/AI/">
         <span class="tags-punctuation">#</span>AI
         <span class="tagsPageCount">1</span>
@@ -255,21 +271,6 @@ if (true) {
     
       <a href="/tags/網頁開發/" id="/tags/網頁開發/">
         <span class="tags-punctuation">#</span>網頁開發
-        <span class="tagsPageCount">1</span>
-      </a>
-    
-      <a href="/tags/AIS3/" id="/tags/AIS3/">
-        <span class="tags-punctuation">#</span>AIS3
-        <span class="tagsPageCount">1</span>
-      </a>
-    
-      <a href="/tags/Security/" id="/tags/Security/">
-        <span class="tags-punctuation">#</span>Security
-        <span class="tagsPageCount">1</span>
-      </a>
-    
-      <a href="/tags/SCIST/" id="/tags/SCIST/">
-        <span class="tags-punctuation">#</span>SCIST
         <span class="tagsPageCount">1</span>
       </a>
     
@@ -436,7 +437,43 @@ queueMicrotask(() => {
   MathJax.startup.document.state(0)
   MathJax.texReset()
   MathJax.typesetPromise()
-}</script><input type="hidden" name="page-type" id="page-type" value="tags"></div><script>window.addEventListener('load', () => {
+}</script><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.cbd.int/mermaid@10.2.4/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  anzhiyu.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><input type="hidden" name="page-type" id="page-type" value="tags"></div><script>window.addEventListener('load', () => {
   const changeContent = content => {
     if (content === '') return content
 

@@ -2910,7 +2910,7 @@ hr:before {
   left: 5%;
   z-index: 1;
   color: var(--hr-before-color);
-  content: '\f0c4';
+  content: '\f197';
   font-size: 16px;
   line-height: 1;
   -webkit-transition: all 1s ease-in-out;
@@ -2974,7 +2974,7 @@ a:hover {
 #site-name,
 #aside-content .author-info__name,
 #aside-content .author-info__description {
-  font-family: PingFang SC, 'Hiragino Sans GB', 'Microsoft JhengHei', 'Microsoft YaHei', sans-serif;
+  font-family: Orbitron, 'sans-serif';
 }
 .is-center {
   text-align: center;
@@ -3704,7 +3704,7 @@ figure.highlight pre .javascript .function {
   height: 100%;
   vertical-align: top;
   text-align: center;
-  font-family: PingFang SC, 'Hiragino Sans GB', 'Microsoft JhengHei', 'Microsoft YaHei', sans-serif;
+  font-family: Orbitron, 'sans-serif';
 }
 @media screen and (max-width: 768px) {
   .error404 #error-wrap .error-content .error-info {

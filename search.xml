@@ -128,7 +128,7 @@
       <link href="/2024%20CTF%20Training/Day-04-Grinding-PicoCTF-2/"/>
       <url>/2024%20CTF%20Training/Day-04-Grinding-PicoCTF-2/</url>
       
-        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>家人們家人們！有鑑於昨日收到的兩個消息，第一是 7&#x2F;10 到 7&#x2F;12 有 SCIST 資安課的 CTF 季後賽要打，第二是我錄取了 AIS3 暑期資安課程的備取，所以我決定先來好好地刷些題目。所以<a href="/Notebooks/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88">這個密碼學任督二脈</a>我就先緩緩，之後比賽結束了再將它給補上！！！</p><h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天下午寫了三題，Misc, Crypto, Forensics 各寫了一題，還算學到滿多新知識的！真的是越學越有趣了，我愛學習！學習使我快樂！深深的體會了知識所能帶給我的愉悅，是更深層次的快樂。</p><ol><li>binhexa</li><li>Custom encryption</li><li>MSB</li></ol><h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul><li>起床時間：<code>9:30</code>，假日睡晚一點 XD</li><li>知識量：⭐⭐⭐</li><li>疲勞程度：⭐⭐</li><li>精神狀態：⭐⭐⭐⭐⭐</li></ul>]]></content>
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>家人們家人們！有鑑於昨日收到的兩個消息，第一是 7&#x2F;10 到 7&#x2F;12 有 SCIST 資安課的 CTF 季後賽要打，第二是我錄取了 AIS3 暑期資安課程的備取，所以我決定先來好好地刷些題目。所以<a href="/StudyNotes/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88/">這個密碼學任督二脈</a>我就先緩緩，之後比賽結束了再將它給補上！！！</p><h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天下午寫了三題，Misc, Crypto, Forensics 各寫了一題，還算學到滿多新知識的！真的是越學越有趣了，我愛學習！學習使我快樂！深深的體會了知識所能帶給我的愉悅，是更深層次的快樂。</p><ol><li>binhexa</li><li>Custom encryption</li><li>MSB</li></ol><h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul><li>起床時間：<code>9:30</code>，假日睡晚一點 XD</li><li>知識量：⭐⭐⭐</li><li>疲勞程度：⭐⭐</li><li>精神狀態：⭐⭐⭐⭐⭐</li></ul>]]></content>
       
       
       <categories>
@@ -159,7 +159,7 @@
       <link href="/2024%20CTF%20Training/Day-03-Learning-Cryptography-2/"/>
       <url>/2024%20CTF%20Training/Day-03-Learning-Cryptography-2/</url>
       
-        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>這是第一個 TechStreak30 系列的第三天，今天一樣繼續 work on <a href="/Notebooks/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88">我的密碼學筆記</a>，歡迎大家來看！一想到之後要進入 RSA 的部分就感覺好難 XD，但總之就加油啦！</p><h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天寫完了 Hash 的部分，也有寫了一半的古典密碼學。進度還行，還不錯，明天繼續努力囉！</p><h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul><li>起床時間：<code>9:30</code></li><li>知識量：⭐⭐⭐</li><li>疲勞程度：⭐⭐⭐</li><li>精神狀態：⭐⭐⭐⭐</li></ul>]]></content>
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>這是第一個 TechStreak30 系列的第三天，今天一樣繼續 work on <a href="/StudyNotes/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88/">我的密碼學筆記</a>，歡迎大家來看！一想到之後要進入 RSA 的部分就感覺好難 XD，但總之就加油啦！</p><h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天寫完了 Hash 的部分，也有寫了一半的古典密碼學。進度還行，還不錯，明天繼續努力囉！</p><h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul><li>起床時間：<code>9:30</code></li><li>知識量：⭐⭐⭐</li><li>疲勞程度：⭐⭐⭐</li><li>精神狀態：⭐⭐⭐⭐</li></ul>]]></content>
       
       
       <categories>
@@ -192,7 +192,7 @@
       <link href="/2024%20CTF%20Training/Day-02-Learning-Cryptography/"/>
       <url>/2024%20CTF%20Training/Day-02-Learning-Cryptography/</url>
       
-        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>密碼學一直以來都是我覺得超級超級困難的東西，為了可以更好的搞清楚它，決定寫一篇筆記來給自己（和各位）當作學習的資料！我把連結放在<a href="/Notebooks/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88">這個地方</a>，大家想看可以直接點過去噢！</p><h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天只寫完了前言以及編碼的部分。然後因為編碼的部分還算簡單，就是還沒有那麼多的數學，所以今天的知識量負擔滿輕的，不過明後天進入到數學部分（甚麼費馬小定理有的沒的）就會變超難了 XD。希望明天可以把古典密碼學那邊讀完，再來就進入對稱和非對稱加密啦！</p><h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul><li>起床時間：<code>8:30</code>但是滑手機到<code>9:05</code>才下床</li><li>知識量：⭐</li><li>疲勞程度：⭐⭐⭐</li><li>精神狀態：⭐⭐⭐</li></ul>]]></content>
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>密碼學一直以來都是我覺得超級超級困難的東西，為了可以更好的搞清楚它，決定寫一篇筆記來給自己（和各位）當作學習的資料！我把連結放在<a href="/StudyNotes/Cryptography-Notebook-%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%BB%BB%E7%9D%A3%E4%BA%8C%E8%84%88/">這個地方</a>，大家想看可以直接點過去噢！</p><h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天只寫完了前言以及編碼的部分。然後因為編碼的部分還算簡單，就是還沒有那麼多的數學，所以今天的知識量負擔滿輕的，不過明後天進入到數學部分（甚麼費馬小定理有的沒的）就會變超難了 XD。希望明天可以把古典密碼學那邊讀完，再來就進入對稱和非對稱加密啦！</p><h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul><li>起床時間：<code>8:30</code>但是滑手機到<code>9:05</code>才下床</li><li>知識量：⭐</li><li>疲勞程度：⭐⭐⭐</li><li>精神狀態：⭐⭐⭐</li></ul>]]></content>
       
       
       <categories>
@@ -258,7 +258,7 @@
       <link href="/2024%20CTF%20Training/Day-01-Grinding-PicoCTF/"/>
       <url>/2024%20CTF%20Training/Day-01-Grinding-PicoCTF/</url>
       
-        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>因為已經有開了一篇文章，打算放上所有 picoCTF 的 writeups 了，所以就不把解題思路寫在這邊啦，如果想看的話請見<a href="https://cx330.tw/CyberSec/CTF/All-in-One%20PicoCTF-Writeups/">這邊</a>！</p><h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天打算先刷一點 picoCTF 的題目，因為成大資安社加入戰隊的標準是一萬分，然後我現在才六千多。但是！當我今天開始刷題目之後我發現 pico 他們的制度整個大改！現在沒有計算分數的機制了，改為把題目分成三個不同的難度（像是 Leetcode 那樣），分別是 easy, medium, hard。所以不知道到時候加戰隊的標準會是多少呢，不過以下就是我今天的進度啦！</p><ol><li>More SQLi</li><li>Trickster</li></ol><p>今天進度就兩題，不過感覺多多少少是有學習到新知識的。之後可能要找一天特別來研究一下 sqlmap 的文檔，到時候再出成一篇筆記文章吧！兩題可能聽起來有點少，但畢竟剛放暑假，我還在那個耍廢狀態 XD，慢慢調整啦！</p><h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul><li>起床時間：<code>8:30</code></li><li>知識量：⭐⭐⭐</li><li>疲勞程度：⭐⭐</li><li>精神狀態：⭐⭐⭐⭐⭐</li></ul>]]></content>
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>因為已經有開了一篇文章，打算放上所有 picoCTF 的 writeups 了，所以就不把解題思路寫在這邊啦，如果想看的話請見<a href="/CTF/All-in-One%20PicoCTF-Writeups/">這邊</a>！</p><h1 id="今日進度"><a href="#今日進度" class="headerlink" title="今日進度"></a>今日進度</h1><p>今天打算先刷一點 picoCTF 的題目，因為成大資安社加入戰隊的標準是一萬分，然後我現在才六千多。但是！當我今天開始刷題目之後我發現 pico 他們的制度整個大改！現在沒有計算分數的機制了，改為把題目分成三個不同的難度（像是 Leetcode 那樣），分別是 easy, medium, hard。所以不知道到時候加戰隊的標準會是多少呢，不過以下就是我今天的進度啦！</p><ol><li>More SQLi</li><li>Trickster</li></ol><p>今天進度就兩題，不過感覺多多少少是有學習到新知識的。之後可能要找一天特別來研究一下 sqlmap 的文檔，到時候再出成一篇筆記文章吧！兩題可能聽起來有點少，但畢竟剛放暑假，我還在那個耍廢狀態 XD，慢慢調整啦！</p><h1 id="今日狀態"><a href="#今日狀態" class="headerlink" title="今日狀態"></a>今日狀態</h1><ul><li>起床時間：<code>8:30</code></li><li>知識量：⭐⭐⭐</li><li>疲勞程度：⭐⭐</li><li>精神狀態：⭐⭐⭐⭐⭐</li></ul>]]></content>
       
       
       <categories>

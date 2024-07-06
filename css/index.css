@@ -12887,7 +12887,7 @@ h1.page-title + .tag-cloud-list {
     -o-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
-    content: "回到顶部";
+    content: "回到頂部";
     -webkit-transition: 0.2s;
     -moz-transition: 0.2s;
     -o-transition: 0.2s;
@@ -20155,7 +20155,7 @@ a
   content: "收到回覆將會發送到您的信箱📧";
 }
 .el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(3):before {
-  content: "可以通過點擊暱稱訪問您的網站🔗";
+  content: "可以通過點擊暱稱連結到您的網站🔗";
 }
 .el-input.el-input--small.el-input-group.el-input-group--prepend:focus-within::before {
   display: block;

@@ -4,19 +4,19 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-/* 滚动条轨道样式 */
+/* 滾動條軌道樣式 */
 ::-webkit-scrollbar-track {
   background-color: transparent;
 }
 
-/* 滚动条滑块样式 */
+/* 滾動條滑塊樣式 */
 ::-webkit-scrollbar-thumb {
   background-color: #888;
   opacity: 1;
   transition: opacity 0.5s;
 }
 
-/* 滚动条消失动画 */
+/* 滾動條消失動畫 */
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -26,7 +26,7 @@ html {
   }
 }
 
-/* 在滚动容器上应用动画 */
+/* 在滾動容器上應用動畫 */
 html:hover::-webkit-scrollbar-thumb {
   animation: fadeOut 1s 1s forwards;
 }
@@ -20696,7 +20696,7 @@ a
     transform: translateY(0);
   }
 }
-/* 处理单页背景 */
+/* 處理單頁背景 */
 body[data-type="album_detail"] #web_bg {
   background: var(--anzhiyu-background);
 }
@@ -20710,7 +20710,7 @@ body[data-type="album_detail"] #page .page-title {
   display: none;
 }
 
-/* 处理页面样式 */
+/* 處理頁面樣式 */
 #album_detail .album-container-img {
   display: flex;
   align-items: center;
@@ -20959,7 +20959,7 @@ body[data-type="album_detail"] #page .author-content-item .card-content .banner-
   border-radius: 20px !important;
 }
 
-/* 响应式 */
+/* 響應式 */
 @media screen and (max-width: 1200px) {
   #album_detail .timeline ul li.album-item {
     width: 49%;
@@ -21006,7 +21006,7 @@ body[data-type="album_detail"] #page .author-content-item .card-content .banner-
   user-select: none;
 }
 
-/* 处理单页背景 */
+/* 處理單頁背景 */
 body[data-type="album"] #web_bg {
   background: var(--anzhiyu-background);
 }
@@ -21020,7 +21020,7 @@ body[data-type="album"] #page .page-title {
   display: none;
 }
 
-/* 变量定义 */
+/* 變量定義 */
 :root {
   --album-background-dark: #2d3548;
   --album-text-light: rgba(255, 255, 255, 0.6);
@@ -21032,7 +21032,7 @@ body[data-type="album"] #page .page-title {
   --album-spacing-xxl: 64px;
 }
 
-/* 卡片样式 */
+/* 卡片樣式 */
 #album .card-album {
   width: 100%;
   display: flex;
@@ -21135,17 +21135,17 @@ h1#site-title {
 .iconfont {
   font-family: "iconfont" !important;
   font-size: 3em;
-  /* 可以定义图标大小 */
+  /* 可以定義圖標大小 */
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* 时间轴生肖icon */
+/* 時間軸生肖icon */
 svg.icon {
   width: 1em;
   height: 1em;
-  /* width和height定义图标的默认宽度和高度*/
+  /* width和height定義圖標的默認寬度和高度*/
   vertical-align: -0.15em;
   fill: currentColor;
   overflow: hidden;
@@ -21155,45 +21155,45 @@ svg.icon {
   color: #f7c768;
 }
 
-/* 解决artitalk的图标问题 */
+/* 解決artitalk的圖標問題 */
 #uploadSource > svg {
   width: 1.19em;
   height: 1.5em;
 }
 
-/*top-img黑色透明玻璃效果移除，不建议加，除非你执着于完全一图流或者背景图对比色明显 */
+/*top-img黑色透明玻璃效果移除，不建議加，除非你執着於完全一圖流或者背景圖對比色明顯 */
 /* #page-header:not(.not-top-img):before {
   background-color: transparent !important;
 } */
 
-/* 文章页面正文背景 */
+/* 文章頁面正文背景 */
 div#post {
   background: rgba(255, 255, 255, 0.9);
 }
 #recent-posts > .recent-post-item:not(:first-child):active {
   transform: scale(0.97);
 }
-/* 分页页面 */
+/* 分頁頁面 */
 div#page {
   background: rgba(255, 255, 255, 0.9);
 }
 
-/* 归档页面 */
+/* 歸檔頁面 */
 div#archive {
   background: rgba(255, 255, 255, 0.9);
 }
 
-/* 标签页面 */
+/* 標籤頁面 */
 div#tag {
   background: rgba(255, 255, 255, 0.9);
 }
 
-/* 分类页面 */
+/* 分類頁面 */
 div#category {
   background: rgba(255, 255, 255, 0.9);
 }
 
-/*夜间模式伪类遮罩层透明*/
+/*夜間模式僞類遮罩層透明*/
 [data-theme="dark"] #recent-posts > .recent-post-item {
   background: #121212;
 }
@@ -21226,7 +21226,7 @@ div#category {
   background: transparent !important;
 }
 
-/* md网站下划线 */
+/* md網站下劃線 */
 #article-container a:hover {
   text-decoration: none !important;
 }
@@ -21235,7 +21235,7 @@ div#category {
   display: inline;
 }
 
-/* 宽屏适配 */
+/* 寬屏適配 */
 .page .layout,
 .post .layout {
   max-width: 1400px;
@@ -21271,13 +21271,13 @@ html.hide-aside .layout > div:first-child {
   width: 100%;
 }
 
-/* 动画wowjs兼容调整 */
+/* 動畫wowjs兼容調整 */
 .animate__animated {
   -webkit-animation-fill-mode: backwards !important;
   animation-fill-mode: backwards !important;
 }
 
-/* 文章hover边框 */
+/* 文章hover邊框 */
 #recent-posts .recent-post-item:hover {
   border: var(--style-border-hover);
 }
@@ -21293,13 +21293,13 @@ html.hide-aside .layout > div:first-child {
   box-shadow: var(--anzhiyu-shadow-border);
   user-select: none;
 }
-/* 移动端容器padding */
+/* 移動端容器padding */
 @media screen and (max-width: 768px) {
   #body-wrap .layout #page {
     padding: 20px 15px !important;
   }
 }
-/* 首页文章宽度 */
+/* 首頁文章寬度 */
 @media screen and (max-width: 1200px) {
   .layout > div:first-child {
     width: 100% !important;
@@ -21335,7 +21335,7 @@ html.hide-aside .layout > div:first-child {
   }
 }
 
-/* 元素透明度改变 */
+/* 元素透明度改變 */
 @keyframes slide-in-op {
   from {
     opacity: 0;
@@ -21399,7 +21399,7 @@ html.hide-aside .layout > div:first-child {
   transform: rotateY(180deg);
 }
 
-/* 分类目录条、标签目录条 */
+/* 分類目錄條、標籤目錄條 */
 #catalog-bar {
   border-radius: var(--anzhiyu-border-radius);
   display: flex;
@@ -21418,7 +21418,7 @@ html.hide-aside .layout > div:first-child {
 }
 
 #catalog-list {
-  /* 分类/标签较少时，可以选择不设置 width，居中显示 catalog-list-item */
+  /* 分類/標籤較少時，可以選擇不設置 width，居中顯示 catalog-list-item */
   display: flex;
   white-space: nowrap;
   overflow-x: scroll;
@@ -21567,7 +21567,7 @@ a.catalog-more:hover {
   }
 }
 
-/*和风天气 */
+/*和風天氣 */
 #he-plugin-simple {
   z-index: 92;
   transition: 0.3s;
@@ -21775,7 +21775,7 @@ body:has(.post-bg) #he-plugin-simple .s-sticker div {
   padding: 0.2em 0.2em 0.2em 1.8em;
 }
 
-/* 代码框主题 */
+/* 代碼框主題 */
 #article-container figure.highlight {
   border-radius: 10px;
 }
@@ -21997,7 +21997,7 @@ details .content > *:nth-child(1) {
   margin: 8px 0 !important;
 }
 
-/* 中控台 */
+/* 中控臺 */
 #console {
   display: flex;
   position: fixed;
@@ -22322,7 +22322,7 @@ details .content > *:nth-child(1) {
   color: var(--anzhiyu-white);
 }
 
-/* 控制台音乐css */
+/* 控制檯音樂css */
 body:has(#console.show)
   #nav-music
   .aplayer
@@ -22522,7 +22522,7 @@ body:has(#console.show) #nav-music .aplayer .aplayer-lrc .aplayer-lrc-contents {
   }
 }
 
-/* 赞赏部分控制台css */
+/* 讚賞部分控制檯css */
 .console-card-group-reward {
   opacity: 0;
   display: none;
@@ -22549,7 +22549,7 @@ body:has(#console.show) #nav-music .aplayer .aplayer-lrc .aplayer-lrc-contents {
 }
 
 @media screen and (max-width: 1200px) {
-  /* 移动端音乐列表 */
+  /* 移動端音樂列表 */
   body:has(#console.show) #nav-music .aplayer-list {
     display: block;
     position: absolute;
@@ -22611,7 +22611,7 @@ body:has(#console.show) #nav-music .aplayer .aplayer-lrc .aplayer-lrc-contents {
   body:has(#console.show) ol > li.aplayer-list-light span.aplayer-list-author {
     right: 15px;
   }
-  /* 移动端音乐 */
+  /* 移動端音樂 */
   body:has(#console.show) meting-js {
     position: relative;
   }
@@ -22963,7 +22963,7 @@ body:has(#console.show) #nav-music .aplayer .aplayer-lrc .aplayer-lrc-contents {
     display: none;
   }
 }
-/* 歌词超出文本滚动动画 */
+/* 歌詞超出文本滾動動畫 */
 @keyframes an-text-roll {
   from {
     margin-left: 0;
@@ -23021,7 +23021,7 @@ body[data-type="essay"] #web_bg {
   max-height: 100%;
 }
 #bber .bber-content-video::after {
-  content: "视频";
+  content: "視頻";
   display: inline-block;
   padding: 1px 6px;
   background: var(--anzhiyu-black-op);
@@ -23245,7 +23245,7 @@ body[data-type="essay"] #web_bg {
   position: initial;
 }
 
-/* 顶部样式 */
+/* 頂部樣式 */
 .author-content.author-content-item.essayPage {
   height: 19rem;
   color: var(--anzhiyu-white);
@@ -23257,7 +23257,7 @@ body[data-type="essay"] #page .author-content-item .card-content .banner-button-
   border-radius: 20px !important;
 }
 
-/* 响应式 */
+/* 響應式 */
 @media screen and (max-width: 1200px) {
   #bber .timeline ul li.bber-item {
     width: 49%;
@@ -23364,7 +23364,7 @@ i.bber-gotobb {
   box-shadow: var(--anzhiyu-shadow-main);
 }
 
-/* 文章页H1-H6图标样式效果 */
+/* 文章頁H1-H6圖標樣式效果 */
 @-webkit-keyframes rotate {
   0% {
     -webkit-transform: rotate(0deg);
@@ -23386,7 +23386,7 @@ i.bber-gotobb {
   }
 }
 
-/* 音乐播放器 */
+/* 音樂播放器 */
 
 .aplayer.aplayer-narrow .aplayer-body,
 .aplayer.aplayer-narrow .aplayer-pic {
@@ -23394,7 +23394,7 @@ i.bber-gotobb {
   width: 66px;
 }
 
-/* 导航栏音乐 */
+/* 導航欄音樂 */
 @media screen and (max-width: 1200px) {
   #nav-music {
     display: none !important;
@@ -23669,7 +23669,7 @@ i.bber-gotobb {
   }
 }
 
-/* 歌词 */
+/* 歌詞 */
 #nav-music .aplayer.aplayer-withlrc .aplayer-lrc {
   width: 0;
   opacity: 0;
@@ -23710,7 +23710,7 @@ i.bber-gotobb {
   pointer-events: all;
 }
 
-/* bilibli番剧插件 */
+/* bilibli番劇插件 */
 #page #article-container .bangumi-tab.bangumi-active {
   background: var(--anzhiyu-theme);
   color: var(--anzhiyu-ahoverbg);
@@ -23757,7 +23757,7 @@ svg.icon.faa-tada {
   color: #f2b94b;
 }
 
-/*哔哩哔哩视频适配*/
+/*嗶哩嗶哩視頻適配*/
 .aspect-ratio {
   position: relative;
   width: 100%;
@@ -23797,7 +23797,7 @@ svg.icon.faa-tada {
   background-color: transparent;
 }
 
-/* 留言板样式补丁 */
+/* 留言板樣式補丁 */
 #maincontent #form-wrap .formmain .comments-main h3.title3 {
   justify-content: center;
 }
@@ -23866,12 +23866,12 @@ body[data-type="link"] main #page {
   padding: 0;
 }
 
-/* 修复时间轴wowjs超出盒子 */
+/* 修復時間軸wowjs超出盒子 */
 div#archive {
   overflow: hidden;
   padding: 22px;
 }
-/* 修复加载时图片太大超出范围 */
+/* 修復加載時圖片太大超出範圍 */
 .aplayer.aplayer-fixed {
   overflow: hidden;
 }
@@ -23886,12 +23886,12 @@ div#archive {
   border-radius: var(--anzhiyu-border-radius);
 }
 
-/* 侧边栏按钮圆角 */
+/* 側邊欄按鈕圓角 */
 #rightside > div > button {
   border-radius: 5px;
 }
 
-/* site-card样式修复 */
+/* site-card樣式修復 */
 #article-container .site-card-group a {
   padding: 0;
   border-bottom: 0;
@@ -23941,7 +23941,7 @@ div#archive {
   }
 }
 
-/* 顶部样式 */
+/* 頂部樣式 */
 .fcircle_page .author-content.fcirclePage {
   height: 19rem;
   color: var(--anzhiyu-white);
@@ -23973,7 +23973,7 @@ body[data-type="fcircle"] #page {
   background: none !important;
   color: var(--anzhiyu-fontcolor) !important;
 }
-/* 随机文章样式 */
+/* 隨機文章樣式 */
 
 .title-h2-a {
   display: flex;
@@ -24071,7 +24071,7 @@ body[data-type="fcircle"] #page {
   top: 0;
 }
 
-/* 首页分类框展示 */
+/* 首頁分類框展示 */
 .categoryGroup {
   display: flex;
   flex-direction: row;
@@ -24317,7 +24317,7 @@ div#bannerGroup {
 div#swiper_container {
   transition: 0.3s;
 }
-/* 防止轮播图css未加载完时的超度横行滚动条 */
+/* 防止輪播圖css未加載完時的超度橫行滾動條 */
 #swiper_container {
   overflow: hidden !important;
 }

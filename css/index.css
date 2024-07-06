@@ -20155,7 +20155,7 @@ a
   content: "收到回覆將會發送到您的信箱📧";
 }
 .el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(3):before {
-  content: "可以通過點擊暱稱連結到您的網站🔗";
+  content: "可以通過點擊暱稱訪問您的網站🔗";
 }
 .el-input.el-input--small.el-input-group.el-input-group--prepend:focus-within::before {
   display: block;

@@ -296,27 +296,6 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/tags/%E8%B3%87%E5%AE%89/</loc>
-    <lastmod>2024-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cx330.tw/tags/AIS3/</loc>
-    <lastmod>2024-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cx330.tw/tags/SCIST/</loc>
-    <lastmod>2024-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cx330.tw/tags/AI/</loc>
     <lastmod>2024-07-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -339,6 +318,27 @@
   
   <url>
     <loc>https://cx330.tw/tags/%E7%B6%B2%E9%A0%81%E9%96%8B%E7%99%BC/</loc>
+    <lastmod>2024-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/tags/%E8%B3%87%E5%AE%89/</loc>
+    <lastmod>2024-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/tags/AIS3/</loc>
+    <lastmod>2024-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/tags/SCIST/</loc>
     <lastmod>2024-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -389,14 +389,14 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/CTF/</loc>
+    <loc>https://cx330.tw/categories/%E9%96%8B%E7%99%BC%E8%A7%92/</loc>
     <lastmod>2024-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/%E9%96%8B%E7%99%BC%E8%A7%92/</loc>
+    <loc>https://cx330.tw/categories/CTF/</loc>
     <lastmod>2024-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

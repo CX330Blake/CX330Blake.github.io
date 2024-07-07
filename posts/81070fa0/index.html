@@ -1,0 +1,659 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>不懂就問！如何利用 Hexo + GitHub + HackMD 搭建自己的個人部落格 | CX330</title><meta name="keywords" content="Blog,網頁開發"><meta name="author" content="CX330"><meta name="copyright" content="CX330"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="不懂就問！如何利用 Hexo + GitHub + HackMD 搭建自己的個人部落格"><meta name="application-name" content="不懂就問！如何利用 Hexo + GitHub + HackMD 搭建自己的個人部落格"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="不懂就問！如何利用 Hexo + GitHub + HackMD 搭建自己的個人部落格"><meta property="og:url" content="https://cx330.tw/posts/81070fa0/index.html"><meta property="og:site_name" content="CX330"><meta property="og:description" content="前言從正在打這些字的今天開始算的話，距離網站架設起來的時間也有一個月了。 這段時間一直沒有好好的紀錄一下架站的過程，正好我身邊有一些朋友也想開始架自己的部落格，所以順便就來做個教學吧！ 如同文章的標題，這次主要使用的就是 Hexo、GitHub、HackMD，那事不宜遲，我們就開始吧！ Hexo 部"><meta property="og:locale" content="zh-TW"><meta property="og:image" content="https://cx330.tw/images/hackers_blog.jpg"><meta property="article:author" content="CX330"><meta property="article:tag" content="CX330, 陳子雋, CX330 universe, CX330 Blog, Blog, CTF, CX330 hacker, hacker, 資安, 駭客, 黑客, 程式設計, 程式設計師, 程式設計博客, 程式設計部落格, 程式設計日誌, 程式設計師日誌, 程式設計部落格日誌"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://cx330.tw/images/hackers_blog.jpg"><meta name="description" content="前言從正在打這些字的今天開始算的話，距離網站架設起來的時間也有一個月了。 這段時間一直沒有好好的紀錄一下架站的過程，正好我身邊有一些朋友也想開始架自己的部落格，所以順便就來做個教學吧！ 如同文章的標題，這次主要使用的就是 Hexo、GitHub、HackMD，那事不宜遲，我們就開始吧！ Hexo 部"><link rel="shortcut icon" href="/assets/favicon.ico"><link rel="canonical" href="https://cx330.tw/posts/81070fa0/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-PM5RRNPNEB"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-PM5RRNPNEB');
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: undefined,
+  postHeadAiDescription: {"enable":true,"gptName":"CX330","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: undefined,
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: 'https://comments.cx330.tw/',
+  commentBarrageConfig:{"enable":true,"maxBarrage":1,"barrageTime":8000,"accessToken":"8e5a0f02d2d6b6604e700a856bf586e7","mailMd5":"25de757f9696b310771b584e7bf5b238"},
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: {"mode":"api","api":"https://img2color.cx330.tw/api?img=","cover_change":true},
+  authorStatus: {"skills":["Hacker","CTFer","Developer","Programmer",1337]},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查詢的內容：${query}"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"轉為繁體","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: CX330","link":"連結: ","source":"來源: CX330","info":"著作權歸作者所有。商業轉載請聯絡作者獲得授權，非商業轉載請註明出處。","copySuccess":"複製成功，複製和轉載請標注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切換為繁體","cht_to_chs":"你已切換為簡體","day_to_night":"你已切換為深色模式","night_to_day":"你已切換為淺色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2.1.2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'CX330',
+  title: '不懂就問！如何利用 Hexo + GitHub + HackMD 搭建自己的個人部落格',
+  postAI: '',
+  pageFillDescription: '前言, Hexo 部署, 安裝 Hexo, 建立你的 Hexo 資料, Hexo 指令, 創建新文章, 本地預覽, 部署, 刪除靜態檔案, 連結 GitHub Repo, 創建 Repo, 建立 GitHub Pages, 修改 Hexo 配置文件, 部署到網站上, 開始寫作啦！, 後記前言從正在打這些字的今天開始算的話距離網站架設起來的時間也有一個月了這段時間一直沒有好好的紀錄一下架站的過程正好我身邊有一些朋友也想開始架自己的部落格所以順便就來做個教學吧如同文章的標題這次主要使用的就是那事不宜遲我們就開始吧部署在開始前我們先來介紹一下是甚麼吧是一個很快速也很輕量的靜態網頁框架大部分用來架設它可以讓使用者利用寫作會自己幫你生成靜態文件總之就是個很方便的框架一天內一定可以讓你的網站順利上線加上一些環境問題還有其他的依賴問題最少一個禮拜內也一定可以完成的安裝在安裝前有一些依賴環境需要先安裝請先確保你的電腦上已經安裝了官方推薦及其以上的版本如果還沒安裝過請先去安裝網路上找有很多教學了就先跳過確保有以上的軟體後就可以安裝啦的安裝真的真的超級簡單使用者可能會有環境問題請看官方說明文件首先請打開你的終端機等並且輸入以下的命令安裝完成後輸入查看版本號有正確顯示的話就說明安裝成功啦建立你的資料安裝好的工具後就可以開始建立的資料夾了注意這個檔案夾就是你以後寫文章放文章照片等等的地方了首先先移動到你想要放置這個檔案的路徑底下並在這個路徑中打開終端輸入以下的命令資料夾名稱接下來要進入這個資料夾中安裝這個專案所需要的依賴包請依序的輸入以下的命令資料夾名稱這樣就完成了初步的建立啦建立完成後專案資料夾下的檔案會像是以下這樣這些檔案都有其各自的用途分別是網站的配置檔案可以設定如預設語言站點名稱等大部分的設置都會在這裡存放專案中所有需要用到的模組鷹架的資料夾裡面會放一些鷹架的架構這裡就是存放所有網頁內容的資料夾包含文章圖片等以後寫文章也基本都是在這層目錄工作主題的資料夾到了這邊你已經大致架完了的環境那接下來看看怎麼部署到吧指令之後寫文章一定會用到的就是的指令了我會簡單介紹幾個想要了解更詳細請見官方文件創建新文章以下的角括號請替換為你自己的文章標題文章標題這個指令會生成一份文件到資料夾中本地預覽或是也可以簡寫為這個指令會在上面啟動伺服器讓你先預覽網站部署也可以簡寫為它會自動把你的資料夾中的內容生成為靜態檔案並且部署到你所設定的後面會詳細介紹實作方式刪除靜態檔案這個指令會幫你把你使用或是所產生的靜態檔案刪除連結創建首先你要先建立一個用來存放網站的靜態資料同時這個也會成為到時候部署的地方當然你也可以用其他的靜態網站託管服務但這是免費的建立的時候請遵循以下幾個要點名稱設定為記得改為你自己的使用者名稱請設定為公開完成後我們就來把這個以下簡稱為連結到你的專案吧開始前你需要先安裝一個部署的外掛打開你的專案中的並加入以下的設定你的建立進到你的中點選在側邊點選把切換到並且按下完成後等待個大約一到兩分鐘上面就會顯示出你的網站部署好的啦因為我有購買域名所以可以設定如果你也有購買域名並且想設置它作為你的部落格請見自訂域名與設定修改配置文件創建好後你需要打開專案資料夾裡面的的文件注意這邊是指配置文件並不是主題配置文件新增以下內容詳見官方文檔你的專案連結舉例通常為修改完後還需要去安裝一個套件這個套件可以幫助你自動部署你使用時產生的靜態文件到你設定的安裝方式如下打開你的專案資料夾有的那個資料夾在這層目錄中打開終端輸入大功告成如果你有使用的擴充套件儲存過使用者就可以直接用部署你的文章啦如果沒有的話也沒關係只需要在的時候提供使用者名稱和密碼就行了到這邊你就已經大致完成啦接下來只要找個喜歡的主題設定配置文件就可以開始寫作囉這邊可以去看看官方文件選個自己喜歡的主題並照著文檔配置就行了部署到網站上有個很方便的功能就是當你每次有新的的時候它都會自動幫你更新你的網頁的內容所以以後更新文章後只需要使用把更新的內容提交到倉庫它就會自動幫你更新網頁啦開始寫作啦我自己目前的寫作方式是使用來寫作的因為它有許多優點免費的圖床不只免費操作也只要複製圖片並貼上就能自動生成圖片讓寫作更輕鬆迅速且輕便以網頁為主的讓你只需要一個瀏覽器就可以快速打開筆記並開始寫作對語法的支援支援等擴充語法讓寫作可以更靈活至於我寫作的方式步驟如下用文章標題先建立一篇文章在資料夾目的是可以生成文章創建的時間以及文章的複製貼上包含到編輯編輯完後再複製回原本的檔案用部署這樣就完成了一次的寫作啦畢竟寫文章一定會多多少少有圖片使用就可以不用擔心圖片問題可以很方便也很迅速地完成寫作歐後記我覺得用這套方法便宜方便快速不僅可以提升你寫作的意願也可以讓你在一開始比較有成就感增強你寫作的動力真的是很不錯的方式我自己建立部落格所需要的花費就只有買了兩年的域名花了很多的時間踩坑但是不是的問題是我的主題依賴的問題年輕的肝總之就是非常喜歡自己現在的成果啦也希望你們可以搭建成功同時也可以加入寫作的行列歐如果這篇文章對你有幫助歡迎訂閱我的部落格同時也非常歡迎大家在底下留言或按表情和我互動如果我有哪裡說錯也歡迎討論',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-07-08 02:15:54',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="cx330" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="CX330" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加載頭像" src="/assets/me.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.min.css"/><script async="async" src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">CX330</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-list-ul faa-tada" style="font-size: 0.9em;"></i><span> 總覽</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分類</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 標籤</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-dice faa-tada" style="font-size: 0.9em;"></i><span> 抽一篇</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 社交中心</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友站</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-message faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/?id=7032963191&amp;server=netease"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音樂吧</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 生活碎片</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-book faa-tada" style="font-size: 0.9em;"></i><span> Chasing</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相簿</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 關於</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 我是誰</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/subscribe/"><i class="anzhiyufont anzhiyu-icon-rss faa-tada" style="font-size: 0.9em;"></i><span> 訂閱</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="隨機前往一個文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜尋</span></a></div><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://buymeacoffee.com/cx330" target="_blank"><img class="post-qr-code-img" alt="Buy Me a Coffee" src="/assets/buymeacoffee.png"/></a><div class="post-qr-code-desc">Buy Me a Coffee</div></li><li class="reward-item"><a href="https://cx330.tw" target="_blank"><img class="post-qr-code-img" alt="CX330" src="/assets/me.jpg"/></a><div class="post-qr-code-desc">CX330</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互動</div><span class="author-content-item-title"> 最新評論</span></div><div class="aside-list"><span>正在載入中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">音樂</div><span class="author-content-item-title">靈魂的碰撞💥</span></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>總覽</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">七月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">6</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">六月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">10</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/05/"><span class="card-archive-list-date">五月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="顯示模式切換" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="邊欄顯示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="anzhiyu.switchCommentBarrage()" title="熱評開關"><a class="commentBarrage"><i class="anzhiyufont anzhiyu-icon-message"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音樂開關"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切換"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原創</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%96%8B%E7%99%BC%E8%A7%92/" itemprop="url">開發角</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/Blog/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Blog</span></a><a class="article-meta__tags" href="/tags/%E7%B6%B2%E9%A0%81%E9%96%8B%E7%99%BC/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>網頁開發</span></a></span></div></div><h1 class="post-title" itemprop="name headline">不懂就問！如何利用 Hexo + GitHub + HackMD 搭建自己的個人部落格</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-06-29T18:39:53.000Z" title="發表於 2024-06-30 02:39:53">2024-06-30</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-07-07T18:15:54.290Z" title="更新於 2024-07-08 02:15:54">2024-07-08</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字數"></i><span class="post-meta-label" title="文章字數">字數總計:</span><span class="word-count" title="文章字數">2.2k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="閱讀時長"></i><span class="post-meta-label" title="閱讀時長">閱讀時長:</span><span>7分鐘</span></span><span class="post-meta-separator"></span><span id="" data-flag-title="不懂就問！如何利用 Hexo + GitHub + HackMD 搭建自己的個人部落格"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="閱讀量">閱讀量:</span><span id="twikoo_visitors" title="訪問量"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP屬地爲Taiwan"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>Taiwan</span><span class="post-meta-separator"></span><span class="post-meta-commentcount"><i class="anzhiyufont anzhiyu-icon-comments post-meta-icon"></i><span class="post-meta-label">評論數:</span><a href="/posts/81070fa0/#post-comment" tabindex="-1"><span id="twikoo-count"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></a></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="/images/hackers_blog.jpg"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://cx330.tw/posts/81070fa0/"><header><a class="post-meta-categories" href="/categories/%E9%96%8B%E7%99%BC%E8%A7%92/" itemprop="url">開發角</a><a href="/tags/Blog/" tabindex="-1" itemprop="url">Blog</a><a href="/tags/%E7%B6%B2%E9%A0%81%E9%96%8B%E7%99%BC/" tabindex="-1" itemprop="url">網頁開發</a><h1 id="CrawlerTitle" itemprop="name headline">不懂就問！如何利用 Hexo + GitHub + HackMD 搭建自己的個人部落格</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">CX330</span><time itemprop="dateCreated datePublished" datetime="2024-06-29T18:39:53.000Z" title="發表於 2024-06-30 02:39:53">2024-06-30</time><time itemprop="dateCreated datePublished" datetime="2024-07-07T18:15:54.290Z" title="更新於 2024-07-08 02:15:54">2024-07-08</time></header><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>從正在打這些字的今天開始算的話，距離網站架設起來的時間也有一個月了。</p>
+<p>這段時間一直沒有好好的紀錄一下架站的過程，正好我身邊有一些朋友也想開始架自己的部落格，所以順便就來做個教學吧！</p>
+<p>如同文章的標題，這次主要使用的就是 Hexo、GitHub、HackMD，那事不宜遲，我們就開始吧！</p>
+<h1 id="Hexo-部署"><a href="#Hexo-部署" class="headerlink" title="Hexo 部署"></a>Hexo 部署</h1><p>在開始前，我們先來介紹一下 Hexo 是甚麼吧！Hexo 是一個很快速也很輕量的靜態網頁框架（大部分用來架設 Blog），它可以讓使用者利用 Markdown 寫作，Hexo 會自己幫你生成靜態文件。</p>
+<p>總之就是個很方便的框架，<strong>一天內一定可以讓你的網站順利上線</strong>！（加上一些環境問題還有其他的依賴問題，最少一個禮拜內也一定可以完成的）</p>
+<h2 id="安裝-Hexo"><a href="#安裝-Hexo" class="headerlink" title="安裝 Hexo"></a>安裝 Hexo</h2><p>在安裝前，有一些依賴環境需要先安裝，請先確保你的電腦上已經安裝了：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a></li>
+<li><a target="_blank" rel="noopener" href="https://nodejs.org/en">Node.js</a>（官方推薦 Node.js 10.0 及其以上的版本）</li>
+</ul>
+<p>如果還沒安裝過，請先去安裝（網路上找有很多教學了，就先跳過）。確保有以上的軟體後，就可以安裝啦！Hexo 的安裝真的真的超級簡單（Mac 使用者可能會有環境問題，請看 <a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/">官方說明文件</a>）。首先，請打開你的終端機（cmd、Powershell 等），並且輸入以下的命令：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+
+<p>安裝完成後，輸入<code>hexo -v</code>查看版本號，有正確顯示的話就說明安裝成功啦！</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630164342694.png" alt="hexo -v"></p>
+<h2 id="建立你的-Hexo-資料"><a href="#建立你的-Hexo-資料" class="headerlink" title="建立你的 Hexo 資料"></a>建立你的 Hexo 資料</h2><p>安裝好 Hexo 的 CLI 工具後，就可以開始建立 Hexo 的資料夾了。<strong>注意，這個檔案夾就是你以後寫文章、放文章照片等等的地方了。</strong>首先，先移動到你想要放置這個檔案的路徑底下，並在這個路徑中打開終端，輸入以下的命令。</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;資料夾名稱&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630165449041.png" alt="hexo init"></p>
+<p>接下來，要進入這個資料夾中，安裝這個專案所需要的依賴包。請依序的輸入以下的命令：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;資料夾名稱&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630165915129.png" alt="image-20240630165915129"></p>
+<p>這樣就完成了初步的建立啦！建立完成後，專案資料夾下的檔案會像是以下這樣：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+
+<p>這些檔案都有其各自的用途，分別是：</p>
+<p><strong>_config.yml</strong></p>
+<ul>
+<li>網站的配置檔案，可以設定如 URL、預設語言、站點名稱等。大部分的設置都會在這裡。</li>
+</ul>
+<p><strong>package.json</strong></p>
+<ul>
+<li>存放專案中所有需要用到的模組。</li>
+</ul>
+<p><strong>scaffolds</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/writing.html#%E9%B7%B9%E6%9E%B6%EF%BC%88Scaffold%EF%BC%89">鷹架</a> 的資料夾，裡面會放一些鷹架的架構。</li>
+</ul>
+<p><strong>source</strong></p>
+<ul>
+<li>這裡就是存放所有網頁內容的資料夾，包含文章、圖片等。以後寫文章也基本都是在這層目錄工作。</li>
+</ul>
+<p><strong>themes</strong></p>
+<ul>
+<li>主題的資料夾。</li>
+</ul>
+<p>到了這邊，你已經大致架完了 Hexo 的環境，那接下來看看怎麼部署到 GitHub 吧。</p>
+<h2 id="Hexo-指令"><a href="#Hexo-指令" class="headerlink" title="Hexo 指令"></a>Hexo 指令</h2><p>之後寫文章一定會用到的，就是 Hexo 的指令了。我會簡單介紹幾個，想要了解更詳細請見 <a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/commands">官方文件</a>。</p>
+<h3 id="創建新文章"><a href="#創建新文章" class="headerlink" title="創建新文章"></a>創建新文章</h3><p>以下的角括號請替換為你自己的文章標題。</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;&lt;文章標題&gt;&quot;</span><br></pre></td></tr></table></figure>
+
+<p>這個指令會生成一份<strong>markdown</strong>文件到<strong>_post</strong>資料夾中。</p>
+<h3 id="本地預覽"><a href="#本地預覽" class="headerlink" title="本地預覽"></a>本地預覽</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>或是也可以簡寫為</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>這個指令會在 localhost 上面啟動伺服器，讓你先預覽網站。</p>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>也可以簡寫為</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>它會自動把你的<strong>source</strong>資料夾中的內容生成為靜態檔案，並且部署到你所設定的 GitHub Repo。（後面會詳細介紹實作方式）</p>
+<h3 id="刪除靜態檔案"><a href="#刪除靜態檔案" class="headerlink" title="刪除靜態檔案"></a>刪除靜態檔案</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+
+<p>這個指令會幫你把你使用<code>hexo generate</code>或是<code>hexo deploy</code>所產生的靜態檔案刪除。</p>
+<h1 id="連結-GitHub-Repo"><a href="#連結-GitHub-Repo" class="headerlink" title="連結 GitHub Repo"></a>連結 GitHub Repo</h1><h2 id="創建-Repo"><a href="#創建-Repo" class="headerlink" title="創建 Repo"></a>創建 Repo</h2><p>首先，你要先建立一個 GitHub Repo，用來存放網站的靜態資料。同時，這個 GitHub Repo 也會成為到時候部署的地方（當然你也可以用其他的靜態網站託管服務，但這是免費的！）。</p>
+<p>建立 Repo 的時候，請遵循以下幾個要點：</p>
+<ol>
+<li>Repo 名稱設定為<strong>USERNAME.github.io</strong>，<strong>USERNAME</strong>記得改為你自己的使用者名稱。</li>
+<li>Repo 請設定為<strong>公開</strong></li>
+</ol>
+<p>完成後，我們就來把這個 Repo（以下簡稱為 GitHub Repo）連結到你的 Hexo 專案吧！開始前你需要先安裝一個部署的外掛。</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>打開你的 Hexo 專案中的<code>_config.yml</code>，並加入以下的設定：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">    <span class="attr">repo:</span> <span class="string">&lt;你的</span> <span class="string">Repo</span> <span class="string">URL&gt;</span> <span class="comment"># https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io</span></span><br><span class="line">    <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="建立-GitHub-Pages"><a href="#建立-GitHub-Pages" class="headerlink" title="建立 GitHub Pages"></a>建立 GitHub Pages</h2><p>進到你的 GitHub Repo 中，點選 Settings。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630173247120.png" alt="GitHub Repo Settings"></p>
+<p>在側邊點選 Pages。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630173423864.png" alt="GitHub Pages"></p>
+<p>把<code>Branch</code>切換到<code>Main</code>，並且按下<code>Save</code>。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630173802148.png" alt="Set branch to main"></p>
+<p>完成後，等待個大約一到兩分鐘，上面就會顯示出你的網站部署好的 URL 啦！</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630173922108.png" alt="Finish!"></p>
+<p>因為我有購買域名，所以可以設定 Custom Domain。如果你也有購買域名，並且想設置它作為你的部落格 URL，請見 <a target="_blank" rel="noopener" href="https://clairechang.tw/2023/06/28/web/github-pages-with-custom-domain/">GitHub Pages 自訂域名與 HTTPS 設定（GoDaddy + Cloudflare）</a>。</p>
+<h2 id="修改-Hexo-配置文件"><a href="#修改-Hexo-配置文件" class="headerlink" title="修改 Hexo 配置文件"></a>修改 Hexo 配置文件</h2><p>創建好 Repo 後，你需要打開 Hexo 專案資料夾裡面的的<code>_config.yml</code>文件（<strong>注意，這邊是指 Hexo 配置文件，並不是主題配置文件</strong>），新增以下內容。（詳見 <a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/one-command-deployment">官方文檔</a>）</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">    <span class="attr">repo:</span> <span class="string">你的專案連結</span> <span class="comment">#舉例：https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io</span></span><br><span class="line">    <span class="attr">branch:</span> [<span class="string">branch</span>] <span class="comment"># 通常為main</span></span><br></pre></td></tr></table></figure>
+
+<p>修改完後，還需要去安裝一個套件。這個套件可以幫助你自動部署你使用<code>hexo d</code>時產生的靜態文件到你設定的 Repo。安裝方式如下：</p>
+<ol>
+<li>打開你的 Hexo 專案資料夾（有<code>package.json</code>的那個資料夾）。</li>
+<li>在這層目錄中打開終端。</li>
+<li>輸入<code>npm install hexo-deployer-git --save</code>。</li>
+<li>大功告成。</li>
+</ol>
+<p>如果你有使用 Vscode 的 GitHub 擴充套件儲存過使用者 token，就可以直接用<code>hexo d</code>部署你的文章啦！如果沒有的話也沒關係，只需要在<code>hexo d</code>的時候提供使用者名稱和密碼就行了。</p>
+<p>到這邊，你就已經大致完成啦！接下來只要找個喜歡的 <a target="_blank" rel="noopener" href="https://hexo.io/themes/">Hexo 主題</a>、<a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/configuration">設定配置文件</a>，就可以開始寫作囉！（這邊可以去看看官方文件，選個自己喜歡的主題，並照著文檔配置就行了）</p>
+<h2 id="部署到網站上"><a href="#部署到網站上" class="headerlink" title="部署到網站上"></a>部署到網站上</h2><p>GitHub Pages 有個很方便的功能，就是當你每次有新的 Commit 的時候，它都會自動幫你更新你的網頁的內容。所以以後更新文章後，只需要使用<code>hexo deploy</code>把更新的內容提交到 GitHub 倉庫，它就會自動幫你更新網頁啦！</p>
+<h1 id="開始寫作啦！"><a href="#開始寫作啦！" class="headerlink" title="開始寫作啦！"></a>開始寫作啦！</h1><p>我自己目前的寫作方式，是使用 <a target="_blank" rel="noopener" href="https://hackmd.io/">HackMD</a> 來寫作的，因為它有許多優點。</p>
+<ol>
+<li><strong>免費的圖床</strong><ul>
+<li>不只免費，操作也只要複製圖片並貼上，就能自動生成圖片 URL，讓寫作更輕鬆。</li>
+</ul>
+</li>
+<li><strong>迅速且輕便</strong><ul>
+<li>以網頁為主的 HackMD，讓你只需要一個瀏覽器就可以快速打開筆記，並開始寫作。</li>
+</ul>
+</li>
+<li><strong>對 Markdown 語法的支援</strong><ul>
+<li>支援 MathJax、Mermaid 等 Markdown 擴充語法，讓寫作可以更靈活。</li>
+</ul>
+</li>
+</ol>
+<p>至於我寫作的方式，步驟如下：</p>
+<ul>
+<li>用<code>hexo new &lt;文章標題&gt;</code>先建立一篇文章在 Post 資料夾。（目的是可以生成文章創建的時間，以及文章的 <a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/front-matter">Front Matter</a>）</li>
+<li>複製貼上（包含 Front Matter）到 HackMD 編輯。</li>
+<li>編輯完後，再複製回原本的檔案。</li>
+<li>用<code>hexo deploy</code>部署。</li>
+</ul>
+<p>這樣就完成了一次的寫作啦！畢竟寫文章一定會多多少少有圖片，使用 HackMD 就可以不用擔心圖片問題，可以很方便也很迅速地完成寫作歐！</p>
+<h1 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h1><p>我覺得用這套方法<strong>便宜</strong>、<strong>方便</strong>、<strong>快速</strong>，不僅可以提升你寫作的意願，也可以讓你在一開始比較有成就感，增強你寫作的動力！真的是很不錯的方式～</p>
+<p>我自己建立部落格所需要的花費就只有</p>
+<ul>
+<li>$1468 買了兩年的域名</li>
+<li><del>花了很多的時間踩坑</del>（但是不是 Hexo 的問題，是我的主題依賴的問題）</li>
+<li><del>年輕的肝</del></li>
+</ul>
+<p>總之，就是非常喜歡自己現在的成果啦！也希望你們可以搭建成功，同時也可以加入寫作的行列歐！</p>
+<p>如果這篇文章對你有幫助，歡迎 <a href="https://cx330.tw/subscribe">訂閱我的部落格</a>，同時也非常歡迎大家在底下留言或按表情和我互動，如果我有哪裡說錯，也歡迎討論！</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="頭像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/assets/me.jpg" title="頭像" alt="頭像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/assets/me.jpg" title="頭像" alt="頭像"></a><div class="post-copyright__author_name">CX330</div><div class="post-copyright__author_desc">Hack the planet!</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="該文章爲原創文章，注意版權協議" href="https://cx330.tw/posts/81070fa0/">原創</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://cx330.tw/posts/81070fa0/')">不懂就問！如何利用 Hexo + GitHub + HackMD 搭建自己的個人部落格</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="讚賞作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打賞作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感謝你賜予我前進的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://buymeacoffee.com/cx330" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/assets/buymeacoffee.png" alt="Buy Me a Coffee"/></a><div class="post-qr-code-desc">Buy Me a Coffee</div></li><li class="reward-item"><a href="https://cx330.tw" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/assets/me.jpg" alt="CX330"/></a><div class="post-qr-code-desc">CX330</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">讚賞者名單</div><div class="reward-dec">因爲你們的支持讓我意識到寫文章的價值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="複製鏈接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="https://cx330.tw" target="_blank">CX330</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/Blog/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Blog<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/tags/%E7%B6%B2%E9%A0%81%E9%96%8B%E7%99%BC/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>網頁開發<span class="tagsPageCount">1</span></a></div></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/4c6f99b3/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/hacker_in_the_universe.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">[Day 04] Grinding PicoCTF 2</div></div></a></div><div class="next-post pull-right"><a href="/posts/a4b22abb/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/hacker_in_the_universe.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">[Day 05] Grinding PicoCTF 3</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 評論</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)" style="display: none">匿名評論</a><a href="/privacy" style="margin-left: 4px">隱私政策</a></div><div class="comment-tips" id="comment-tips"><span>✅ 你無需刪除空行，直接評論以獲取最佳展示效果</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/assets/me.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/assets/sunglasses.png" alt="status"/></div></div><div class="author-info__description">這裡是CX330的部落格，記載了有關於CTF、資安、開發、程式設計等等的文章，也會記錄我個人的生活。相信你會在這邊找到有用的東西。</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">CX330</h1><div class="author-info__desc">Hack the planet!</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/CX330Blake" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://www.facebook.com/profile.php?id=100011698690769" target="_blank" title="Facebook"><i class="fa-brands fa-facebook faa-tada"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">English site at <a target="_blank" rel="noopener" href="https://en.cx330.tw" style="color:#f5a524;text-decoration:underline;font-weight:bold;">HERE</a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目錄</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo-%E9%83%A8%E7%BD%B2"><span class="toc-number">2.</span> <span class="toc-text">Hexo 部署</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%9D-Hexo"><span class="toc-number">2.1.</span> <span class="toc-text">安裝 Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%BA%E7%AB%8B%E4%BD%A0%E7%9A%84-Hexo-%E8%B3%87%E6%96%99"><span class="toc-number">2.2.</span> <span class="toc-text">建立你的 Hexo 資料</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo-%E6%8C%87%E4%BB%A4"><span class="toc-number">2.3.</span> <span class="toc-text">Hexo 指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%B5%E5%BB%BA%E6%96%B0%E6%96%87%E7%AB%A0"><span class="toc-number">2.3.1.</span> <span class="toc-text">創建新文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E9%A0%90%E8%A6%BD"><span class="toc-number">2.3.2.</span> <span class="toc-text">本地預覽</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2"><span class="toc-number">2.3.3.</span> <span class="toc-text">部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%AA%E9%99%A4%E9%9D%9C%E6%85%8B%E6%AA%94%E6%A1%88"><span class="toc-number">2.3.4.</span> <span class="toc-text">刪除靜態檔案</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%A3%E7%B5%90-GitHub-Repo"><span class="toc-number">3.</span> <span class="toc-text">連結 GitHub Repo</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%B5%E5%BB%BA-Repo"><span class="toc-number">3.1.</span> <span class="toc-text">創建 Repo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%BA%E7%AB%8B-GitHub-Pages"><span class="toc-number">3.2.</span> <span class="toc-text">建立 GitHub Pages</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9-Hexo-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">3.3.</span> <span class="toc-text">修改 Hexo 配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0%E7%B6%B2%E7%AB%99%E4%B8%8A"><span class="toc-number">3.4.</span> <span class="toc-text">部署到網站上</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%96%8B%E5%A7%8B%E5%AF%AB%E4%BD%9C%E5%95%A6%EF%BC%81"><span class="toc-number">4.</span> <span class="toc-text">開始寫作啦！</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BE%8C%E8%A8%98"><span class="toc-number">5.</span> <span class="toc-text">後記</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近發佈</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/5ed2c20/" title="Hacker's Manifesto《駭客宣言》"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/hacker_manifesto.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hacker's Manifesto《駭客宣言》"/></a><div class="content"><a class="title" href="/posts/5ed2c20/" title="Hacker's Manifesto《駭客宣言》">Hacker's Manifesto《駭客宣言》</a><time datetime="2024-07-07T10:11:39.000Z" title="發表於 2024-07-07 18:11:39">2024-07-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/94d4e36f/" title="[Day 09] Grinding PicoCTF 7"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/hacker_in_the_universe.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="[Day 09] Grinding PicoCTF 7"/></a><div class="content"><a class="title" href="/posts/94d4e36f/" title="[Day 09] Grinding PicoCTF 7">[Day 09] Grinding PicoCTF 7</a><time datetime="2024-07-07T08:13:43.000Z" title="發表於 2024-07-07 16:13:43">2024-07-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/7c095067/" title="[Day 08] Grinding PicoCTF 6"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/hacker_in_the_universe.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="[Day 08] Grinding PicoCTF 6"/></a><div class="content"><a class="title" href="/posts/7c095067/" title="[Day 08] Grinding PicoCTF 6">[Day 08] Grinding PicoCTF 6</a><time datetime="2024-07-06T09:24:11.000Z" title="發表於 2024-07-06 17:24:11">2024-07-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/a9158ef3/" title="[Day 07] Grinding PicoCTF 5"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/hacker_in_the_universe.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="[Day 07] Grinding PicoCTF 5"/></a><div class="content"><a class="title" href="/posts/a9158ef3/" title="[Day 07] Grinding PicoCTF 5">[Day 07] Grinding PicoCTF 5</a><time datetime="2024-07-04T13:31:01.000Z" title="發表於 2024-07-04 21:31:01">2024-07-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/41c83dfb/" title="[Day 06] Grinding PicoCTF 4"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/hacker_in_the_universe.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="[Day 06] Grinding PicoCTF 4"/></a><div class="content"><a class="title" href="/posts/41c83dfb/" title="[Day 06] Grinding PicoCTF 4">[Day 06] Grinding PicoCTF 4</a><time datetime="2024-07-02T08:24:10.000Z" title="發表於 2024-07-02 16:24:10">2024-07-02</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/CX330Blake" title="GitHub"><i class="fa-brands fa-github"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100011698690769" title="Facebook"><i class="fa-brands fa-facebook"></i></a><a class="deal_link" href="mailto:timchen975@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a><img class="footer_mini_logo" title="返回頂部" alt="返回頂部" onclick="anzhiyu.scrollToDest(0, 500)" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/assets/me.jpg" size="50px"/><a class="deal_link" target="_blank" rel="noopener" href="https://www.linkedin.com/in/%E5%AD%90%E9%9B%8B-%E9%99%B3-11087825b/" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://discord.com/users/718263896187732049" title="Discord"><i class="fa-brands fa-discord"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en" title="CC"><i class="fa-regular fa-copyright"></i></a></div><div id="anzhiyu-footer"><div class="footer-group"><div class="footer-title">文章導航</div><div class="footer-links"><a class="footer-item" title="總覽" href="/archives/">總覽</a><a class="footer-item" title="分類" href="/categories/">分類</a><a class="footer-item" title="標籤" href="/tags/">標籤</a></div></div><div class="footer-group"><div class="footer-title">社交中心</div><div class="footer-links"><a class="footer-item" title="友站" href="/link/">友站</a><a class="footer-item" title="留言板" href="/comments/">留言板</a></div></div><div class="footer-group"><div class="footer-title">我的</div><div class="footer-links"><a class="footer-item" title="音樂吧" href="/music/?id=7032963191&amp;server=netease">音樂吧</a><a class="footer-item" title="生活碎片" href="/essay/">生活碎片</a><a class="footer-item" title="書架" href="/notyet/">書架</a><a class="footer-item" title="相簿" href="/notyet/">相簿</a></div></div><div class="footer-group"><div class="footer-title">關於</div><div class="footer-links"><a class="footer-item" title="我是誰" href="/about/">我是誰</a><a class="footer-item" title="訂閱" href="/subscribe/">訂閱</a><a class="footer-item" title="支持我" target="_blank" rel="noopener" href="https://buymeacoffee.com/cx330">支持我</a></div></div><div class="footer-group"><div class="footer-title-group"><div class="footer-title">友站</div><a class="random-friends-btn" id="footer-random-friends-btn" href="javascript:addFriendLinksInFooter();" title="換一批友情鏈接"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right"></i></a></div><div class="footer-links" id="friend-links-in-footer"></div></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2024 By <a class="footer-bar-link" href="/" title="CX330" target="_blank">CX330</a></div></div><div id="footer-type-tips"></div><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    window.typed = new Typed("#footer-type-tips", {
+      strings: ["Yes, I am a criminal. My crime is that of curiosity.","Build the universe with me","Hack the planet!","Happy hacking"],
+      startDelay: 300,
+      typeSpeed: 200,
+      loop: true,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("footer-type-tips").innerHTML = 'Yes, I am a criminal. My crime is that of curiosity.'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}</script></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="Theme">Theme</a><a class="footer-bar-link cc" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en" title="cc協議"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-by-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nc-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nd-line"></i></a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">19</div></a><a href="/tags/" title="tag"><div class="headline">標籤</div><div class="length-num">18</div></a><a href="/categories/" title="category"><div class="headline">分類</div><div class="length-num">6</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="顯示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>顯示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">聯絡</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100011698690769" title="Facebook"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/assets/fb.png" alt="Facebook"/><span class="back-menu-item-text">Facebook</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.linkedin.com/in/%E5%AD%90%E9%9B%8B-%E9%99%B3-11087825b/" title="LinkedIn"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/assets/linkedin.png" alt="LinkedIn"/><span class="back-menu-item-text">LinkedIn</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">English site</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://en.cx330.tw" title="CX330's Universe"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/assets/me.jpg" alt="CX330's Universe"/><span class="back-menu-item-text">CX330's Universe</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-list-ul faa-tada" style="font-size: 0.9em;"></i><span> 總覽</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分類</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 標籤</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-dice faa-tada" style="font-size: 0.9em;"></i><span> 抽一篇</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 社交中心</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友站</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-message faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/?id=7032963191&amp;server=netease"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音樂吧</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 生活碎片</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-book faa-tada" style="font-size: 0.9em;"></i><span> Chasing</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相簿</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 關於</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 我是誰</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/subscribe/"><i class="anzhiyufont anzhiyu-icon-rss faa-tada" style="font-size: 0.9em;"></i><span> 訂閱</span></a></li></ul></div></div><span class="sidebar-menu-item-title">標籤</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/30%E5%A4%A9%E8%A8%88%E7%95%AB/" style="font-size: 0.88rem;">30天計畫<sup>9</sup></a><a href="/tags/AI/" style="font-size: 0.88rem;">AI<sup>1</sup></a><a href="/tags/AIS3/" style="font-size: 0.88rem;">AIS3<sup>1</sup></a><a href="/tags/Blog/" style="font-size: 0.88rem;">Blog<sup>1</sup></a><a href="/tags/CTF/" style="font-size: 0.88rem;">CTF<sup>11</sup></a><a href="/tags/Crypto/" style="font-size: 0.88rem;">Crypto<sup>3</sup></a><a href="/tags/Cryptography/" style="font-size: 0.88rem;">Cryptography<sup>2</sup></a><a href="/tags/CyberSec/" style="font-size: 0.88rem;">CyberSec<sup>9</sup></a><a href="/tags/GDSC/" style="font-size: 0.88rem;">GDSC<sup>1</sup></a><a href="/tags/Hacker/" style="font-size: 0.88rem;">Hacker<sup>1</sup></a><a href="/tags/PicoCTF/" style="font-size: 0.88rem;">PicoCTF<sup>8</sup></a><a href="/tags/SCIST/" style="font-size: 0.88rem;">SCIST<sup>1</sup></a><a href="/tags/Security/" style="font-size: 0.88rem;">Security<sup>1</sup></a><a href="/tags/%E5%AF%86%E7%A2%BC%E5%AD%B8/" style="font-size: 0.88rem;">密碼學<sup>1</sup></a><a href="/tags/%E7%AD%86%E8%A8%98/" style="font-size: 0.88rem;">筆記<sup>1</sup></a><a href="/tags/%E7%B6%B2%E9%A0%81%E9%96%8B%E7%99%BC/" style="font-size: 0.88rem;">網頁開發<sup>1</sup></a><a href="/tags/%E8%B3%87%E5%AE%89/" style="font-size: 0.88rem;">資安<sup>5</sup></a><a href="/tags/%E9%A7%AD%E5%AE%A2/" style="font-size: 0.88rem;">駭客<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="簡繁轉換">简</button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="設定"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目錄"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直達評論"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><a id="switch-commentBarrage" href="javascript:anzhiyu.switchCommentBarrage();" title="開關彈幕"><i class="anzhiyufont anzhiyu-icon-danmu"></i></a><button id="go-up" type="button" title="回到頂部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音樂</a><div id="console-music-bg"></div><meting-js id="7032963191" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜尋</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  資料庫載入中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜尋文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>複製選中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘貼文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到評論</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打開</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>複製鏈接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>複製此圖片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下載此圖片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打開圖片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站內搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音樂</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切換到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切換到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://music.163.com/playlist?id=7032963191&amp;userid=6279304773&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>複製歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>隨便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分類</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章標籤</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>複製地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">關閉熱評</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>转为简体</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script async src="/anzhiyu/random.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid@10.2.4/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  anzhiyu.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://comments.cx330.tw/',
+      region: '',
+      onCommentLoaded: () => {
+        anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(runFn,0)
+    else getScript('https://cdn.jsdelivr.net/npm/twikoo@1.6.25/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://comments.cx330.tw/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const runFn = () => {
+    init();
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) anzhiyu.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"><script async src="/js/anzhiyu/comment_barrage.js"></script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[圖片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[連結]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[程式碼]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://comments.cx330.tw/',
+        region: '',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.textContent= "無法獲取評論，請確認相關配置是否正確"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo@1.6.25/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'><div class='name'><span>${array[i].nick} </span></div></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <time datetime="${array[i].date}">${anzhiyu.diffDate(array[i].date, true)}</time></div>
+        </div>`
+      }
+    } else {
+      result += '沒有評論'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom && ($dom.innerHTML= result)
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script async data-pjax src="https://cdn.jsdelivr.net/npm/anzhiyu-theme-static@1.0.0/waterfall/waterfall.min.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:type\"]","meta[property=\"og:site_name\"]","meta[property=\"og:description\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: true,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', 'G-PM5RRNPNEB', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>

@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-07-07T08:13:43.649Z</updated>
+  <updated>2024-07-07T10:13:19.058Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hacker&#39;s Manifesto《駭客宣言》</title>
+    <link href="https://cx330.tw/Hacking/Hacker-s-Manifesto-%E3%80%8A%E9%A7%AD%E5%AE%A2%E5%AE%A3%E8%A8%80%E3%80%8B/"/>
+    <id>https://cx330.tw/Hacking/Hacker-s-Manifesto-%E3%80%8A%E9%A7%AD%E5%AE%A2%E5%AE%A3%E8%A8%80%E3%80%8B/</id>
+    <published>2024-07-07T10:11:39.000Z</published>
+    <updated>2024-07-07T10:13:19.058Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;本文章是在 1986 年 1 月 8 日，由 The Mentor (Loyd Blankenship)</summary>
+        
+      
+    
+    
+    
+    <category term="Hacking" scheme="https://cx330.tw/categories/Hacking/"/>
+    
+    
+    <category term="資安" scheme="https://cx330.tw/tags/%E8%B3%87%E5%AE%89/"/>
+    
+    <category term="駭客" scheme="https://cx330.tw/tags/%E9%A7%AD%E5%AE%A2/"/>
+    
+    <category term="Hacker" scheme="https://cx330.tw/tags/Hacker/"/>
+    
+  </entry>
   
   <entry>
     <title>[Day 09] Grinding PicoCTF 7</title>
@@ -466,7 +495,7 @@
     <link href="https://cx330.tw/LifeAndTalk/Why-Do-I-Start-Blogging/"/>
     <id>https://cx330.tw/LifeAndTalk/Why-Do-I-Start-Blogging/</id>
     <published>2024-05-29T18:47:09.000Z</published>
-    <updated>2024-07-04T05:57:16.170Z</updated>
+    <updated>2024-07-07T10:13:26.687Z</updated>
     
     
       

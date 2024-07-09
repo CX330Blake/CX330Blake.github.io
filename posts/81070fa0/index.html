@@ -219,20 +219,16 @@ if (true) {
 </ul>
 <p>如果還沒安裝過，請先去安裝（網路上找有很多教學了，就先跳過）。確保有以上的軟體後，就可以安裝啦！Hexo 的安裝真的真的超級簡單（Mac 使用者可能會有環境問題，請看 <a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/">官方說明文件</a>）。首先，請打開你的終端機（cmd、Powershell 等），並且輸入以下的命令：</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-
 <p>安裝完成後，輸入<code>hexo -v</code>查看版本號，有正確顯示的話就說明安裝成功啦！</p>
 <p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630164342694.png" alt="hexo -v"></p>
 <h2 id="建立你的-Hexo-資料"><a href="#建立你的-Hexo-資料" class="headerlink" title="建立你的 Hexo 資料"></a>建立你的 Hexo 資料</h2><p>安裝好 Hexo 的 CLI 工具後，就可以開始建立 Hexo 的資料夾了。<strong>注意，這個檔案夾就是你以後寫文章、放文章照片等等的地方了。</strong>首先，先移動到你想要放置這個檔案的路徑底下，並在這個路徑中打開終端，輸入以下的命令。</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;資料夾名稱&gt;</span><br></pre></td></tr></table></figure>
-
 <p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630165449041.png" alt="hexo init"></p>
 <p>接下來，要進入這個資料夾中，安裝這個專案所需要的依賴包。請依序的輸入以下的命令：</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;資料夾名稱&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
 <p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630165915129.png" alt="image-20240630165915129"></p>
 <p>這樣就完成了初步的建立啦！建立完成後，專案資料夾下的檔案會像是以下這樣：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
-
 <p>這些檔案都有其各自的用途，分別是：</p>
 <p><strong>_config.yml</strong></p>
 <ul>
@@ -258,22 +254,16 @@ if (true) {
 <h2 id="Hexo-指令"><a href="#Hexo-指令" class="headerlink" title="Hexo 指令"></a>Hexo 指令</h2><p>之後寫文章一定會用到的，就是 Hexo 的指令了。我會簡單介紹幾個，想要了解更詳細請見 <a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/commands">官方文件</a>。</p>
 <h3 id="創建新文章"><a href="#創建新文章" class="headerlink" title="創建新文章"></a>創建新文章</h3><p>以下的角括號請替換為你自己的文章標題。</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;&lt;文章標題&gt;&quot;</span><br></pre></td></tr></table></figure>
-
 <p>這個指令會生成一份<strong>markdown</strong>文件到<strong>_post</strong>資料夾中。</p>
 <h3 id="本地預覽"><a href="#本地預覽" class="headerlink" title="本地預覽"></a>本地預覽</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
 <p>或是也可以簡寫為</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
 <p>這個指令會在 localhost 上面啟動伺服器，讓你先預覽網站。</p>
 <h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
 <p>也可以簡寫為</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
 <p>它會自動把你的<strong>source</strong>資料夾中的內容生成為靜態檔案，並且部署到你所設定的 GitHub Repo。（後面會詳細介紹實作方式）</p>
 <h3 id="刪除靜態檔案"><a href="#刪除靜態檔案" class="headerlink" title="刪除靜態檔案"></a>刪除靜態檔案</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
-
 <p>這個指令會幫你把你使用<code>hexo generate</code>或是<code>hexo deploy</code>所產生的靜態檔案刪除。</p>
 <h1 id="連結-GitHub-Repo"><a href="#連結-GitHub-Repo" class="headerlink" title="連結 GitHub Repo"></a>連結 GitHub Repo</h1><h2 id="創建-Repo"><a href="#創建-Repo" class="headerlink" title="創建 Repo"></a>創建 Repo</h2><p>首先，你要先建立一個 GitHub Repo，用來存放網站的靜態資料。同時，這個 GitHub Repo 也會成為到時候部署的地方（當然你也可以用其他的靜態網站託管服務，但這是免費的！）。</p>
 <p>建立 Repo 的時候，請遵循以下幾個要點：</p>
@@ -283,10 +273,8 @@ if (true) {
 </ol>
 <p>完成後，我們就來把這個 Repo（以下簡稱為 GitHub Repo）連結到你的 Hexo 專案吧！開始前你需要先安裝一個部署的外掛。</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
 <p>打開你的 Hexo 專案中的<code>_config.yml</code>，並加入以下的設定：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">    <span class="attr">repo:</span> <span class="string">&lt;你的</span> <span class="string">Repo</span> <span class="string">URL&gt;</span> <span class="comment"># https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io</span></span><br><span class="line">    <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
-
 <h2 id="建立-GitHub-Pages"><a href="#建立-GitHub-Pages" class="headerlink" title="建立 GitHub Pages"></a>建立 GitHub Pages</h2><p>進到你的 GitHub Repo 中，點選 Settings。</p>
 <p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240630173247120.png" alt="GitHub Repo Settings"></p>
 <p>在側邊點選 Pages。</p>
@@ -298,7 +286,6 @@ if (true) {
 <p>因為我有購買域名，所以可以設定 Custom Domain。如果你也有購買域名，並且想設置它作為你的部落格 URL，請見 <a target="_blank" rel="noopener" href="https://clairechang.tw/2023/06/28/web/github-pages-with-custom-domain/">GitHub Pages 自訂域名與 HTTPS 設定（GoDaddy + Cloudflare）</a>。</p>
 <h2 id="修改-Hexo-配置文件"><a href="#修改-Hexo-配置文件" class="headerlink" title="修改 Hexo 配置文件"></a>修改 Hexo 配置文件</h2><p>創建好 Repo 後，你需要打開 Hexo 專案資料夾裡面的的<code>_config.yml</code>文件（<strong>注意，這邊是指 Hexo 配置文件，並不是主題配置文件</strong>），新增以下內容。（詳見 <a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/one-command-deployment">官方文檔</a>）</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">    <span class="attr">repo:</span> <span class="string">你的專案連結</span> <span class="comment">#舉例：https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io</span></span><br><span class="line">    <span class="attr">branch:</span> [<span class="string">branch</span>] <span class="comment"># 通常為main</span></span><br></pre></td></tr></table></figure>
-
 <p>修改完後，還需要去安裝一個套件。這個套件可以幫助你自動部署你使用<code>hexo d</code>時產生的靜態文件到你設定的 Repo。安裝方式如下：</p>
 <ol>
 <li>打開你的 Hexo 專案資料夾（有<code>package.json</code>的那個資料夾）。</li>

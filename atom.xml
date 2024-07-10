@@ -28,7 +28,7 @@
       
         
         
-    <summary type="html">&lt;h1&gt;前言&lt;/h1&gt;
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
 &lt;p&gt;本文章是在 1986 年 1 月 8 日，由 The Mentor (Loyd Blankenship) 在被逮捕後，發布在地下駭客電子雜誌 Phrack</summary>
         
       
@@ -58,7 +58,7 @@
       
         
         
-    <summary type="html">&lt;h1&gt;前言&lt;/h1&gt;
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
 &lt;p&gt;明天（2024.07.08）早上十點 SCIST 的季後賽就開始了，希望這次能打得比上次好！雖然這學期 SCIST</summary>
         
       
@@ -90,9 +90,9 @@
       
         
         
-    <summary type="html">&lt;h1&gt;前言&lt;/h1&gt;
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
 &lt;p&gt;今天到第八天了，也算是正式踏入了將近整個計畫的四分之一。目前到現在覺得收穫還是挺多的，不管是新學到的技術或是之前很多沒有很扎實的基礎觀念，都有在這個計畫中被慢慢補足。&lt;/p&gt;
-&lt;p&gt;希望自己接下來的四分之三可以繼續努力！一些 Writeup</summary>
+&lt;p&gt;希望自己接下來的四分之三可以繼續努力！一些</summary>
         
       
     
@@ -123,7 +123,7 @@
       
         
         
-    <summary type="html">&lt;h1&gt;前言&lt;/h1&gt;
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
 &lt;p&gt;昨天斷更了一天，因為打算把中文站點和英文站點分開，所以對網站做了一些重構。&lt;/p&gt;
 &lt;p&gt;總之現在中文的站點在 &lt;a href=&quot;https://cx330.tw&quot;&gt;https://cx330.tw&lt;/a&gt;；而英文的站點在 &lt;a</summary>
         
@@ -156,10 +156,9 @@
       
         
         
-    <summary type="html">&lt;h1&gt;前言&lt;/h1&gt;
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
 &lt;p&gt;今天九點多起來後吃了早餐，結果又跑回去睡覺睡到 13 點多，到底是個甚麼意思哦。為甚麼可以那麼累阿昨天明明也沒有很晚睡。每次晚起床都會有罪惡感，要被自己氣死。&lt;/p&gt;
-&lt;h1&gt;今日進度&lt;/h1&gt;
-&lt;p&gt;今天寫了兩題，一題 Pwn，一題</summary>
+&lt;h1</summary>
         
       
     
@@ -190,11 +189,11 @@
       
         
         
-    <summary type="html">&lt;h1&gt;前言&lt;/h1&gt;
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
 &lt;p&gt;今天還跑到台南去領租屋處的鑰匙和小搬家，下午才跑去星巴克開始今日的 CTF 訓練。&lt;/p&gt;
 &lt;p&gt;不得不說台南真的太熱了。🥲🥲🥲&lt;/p&gt;
-&lt;h1&gt;今日進度&lt;/h1&gt;
-&lt;p&gt;Pwn 真的太難了，Local Target 我已經找到 flag</summary>
+&lt;h1 id=&quot;今日進度&quot;&gt;今日進度&lt;/h1&gt;
+&lt;p&gt;Pwn 真的太難了，Local</summary>
         
       
     
@@ -225,10 +224,7 @@
       
         
         
-    <summary type="html">&lt;h1&gt;前言&lt;/h1&gt;
-&lt;p&gt;從正在打這些字的今天開始算的話，距離網站架設起來的時間也有一個月了。&lt;/p&gt;
-&lt;p&gt;這段時間一直沒有好好的紀錄一下架站的過程，正好我身邊有一些朋友也想開始架自己的部落格，所以順便就來做個教學吧！&lt;/p&gt;
-&lt;p&gt;如同文章的標題，這次主要使用的就是</summary>
+    <summary type="html">&lt;h1</summary>
         
       
     
@@ -255,7 +251,7 @@
       
         
         
-    <summary type="html">&lt;h1&gt;前言&lt;/h1&gt;
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
 &lt;p&gt;家人們家人們！有鑑於昨日收到的兩個消息，第一是 7/10 到 7/12 有 SCIST 資安課的 CTF 季後賽要打，第二是我錄取了 AIS3 暑期資安課程的備取，所以我決定先來好好地刷些題目。所以&lt;a</summary>
         
       
@@ -287,7 +283,7 @@
       
         
         
-    <summary type="html">&lt;h1&gt;前言&lt;/h1&gt;
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
 &lt;p&gt;這是第一個 TechStreak30 系列的第三天，今天一樣繼續 work on &lt;a</summary>
         
       
@@ -321,7 +317,7 @@
       
         
         
-    <summary type="html">&lt;h1&gt;前言&lt;/h1&gt;
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
 &lt;p&gt;密碼學一直以來都是我覺得超級超級困難的東西，為了可以更好的搞清楚它，決定寫一篇筆記來給自己（和各位）當作學習的資料！我把連結放在&lt;a</summary>
         
       
@@ -355,9 +351,7 @@
       
         
         
-    <summary type="html">&lt;h1&gt;前言&lt;/h1&gt;
-&lt;h2 id=&quot;為甚麼會想寫這篇文&quot;&gt;為甚麼會想寫這篇文&lt;/h2&gt;
-&lt;p&gt;因為自己在學習的時候一直覺得密碼學是個很困難的領域，所以決定自己把一些筆記給記錄下來。一來是幫助自己以後可以回來翻，其次也希望可以幫助到正在學習密碼學的人！加油啦！&lt;/p&gt;
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
 &lt;h2</summary>
         
       
@@ -391,7 +385,7 @@
       
         
         
-    <summary type="html">&lt;h1&gt;前言&lt;/h1&gt;
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
 &lt;p&gt;因為已經有開了一篇文章，打算放上所有 picoCTF 的 writeups 了，所以就不把解題思路寫在這邊啦，如果想看的話請見&lt;a</summary>
         
       
@@ -469,7 +463,7 @@
       
         
         
-    <summary type="html">&lt;h1&gt;Intro&lt;/h1&gt;
+    <summary type="html">&lt;h1 id=&quot;Intro&quot;&gt;Intro&lt;/h1&gt;
 &lt;p&gt;請容我先自我介紹一下！我今年大一，在高中的時候並不是理工背景的學生，相反，我原本是打算去唸法律系的。但是在高三下的時候意外接觸到了 CTF</summary>
         
       
@@ -497,7 +491,7 @@
       
         
         
-    <summary type="html">&lt;h1&gt;前言&lt;/h1&gt;
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
 &lt;p&gt;其實好像也沒什麼好講前言的，但就是不想要一開始就是題目分類，所以還是放了個前言 XD。&lt;/p&gt;
 &lt;p&gt;自己在刷 PicoCTF 的時候常常發現，幾乎所有的 writeup</summary>
         
@@ -526,8 +520,8 @@
       
         
         
-    <summary type="html">&lt;h1&gt;Big bang! 宇宙的起源&lt;/h1&gt;
-&lt;p&gt;我其實從很久以前就有想要架設自己的網站，上了大學後又看到更多厲害的前輩們都會有自己的網站來記錄自己的成長，於是下定決心也要來建立自己的 Blog。再加上我今年（2023 開始）剛好把 Instagram</summary>
+    <summary type="html">&lt;h1 id=&quot;Big-bang-宇宙的起源&quot;&gt;Big bang! 宇宙的起源&lt;/h1&gt;
+&lt;p&gt;我其實從很久以前就有想要架設自己的網站，上了大學後又看到更多厲害的前輩們都會有自己的網站來記錄自己的成長，於是下定決心也要來建立自己的 Blog。再加上我今年（2023 開始）剛好把</summary>
         
       
     
@@ -550,9 +544,9 @@
       
         
         
-    <summary type="html">&lt;h1&gt;為甚麼要修煉?&lt;/h1&gt;
+    <summary type="html">&lt;h1 id=&quot;為甚麼要修煉&quot;&gt;為甚麼要修煉?&lt;/h1&gt;
 &lt;p&gt;有鑑於這次 AIS3 Pre-exam 的成績不甚理想。我決定要來在這次暑假的時候展開特訓，來這邊立個旗。以下來講講我打算怎麼修煉！&lt;/p&gt;
-&lt;h1&gt;怎麼修煉?&lt;/h1&gt;
+&lt;h1 id=&quot;怎麼修煉&quot;&gt;怎麼修煉?&lt;/h1&gt;
 &lt;p&gt;可能會像 IT</summary>
         
       

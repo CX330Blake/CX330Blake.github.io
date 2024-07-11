@@ -361,11 +361,11 @@
     <category term="StudyNotes" scheme="https://cx330.tw/categories/StudyNotes/"/>
     
     
+    <category term="資安" scheme="https://cx330.tw/tags/%E8%B3%87%E5%AE%89/"/>
+    
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
     <category term="Crypto" scheme="https://cx330.tw/tags/Crypto/"/>
-    
-    <category term="資安" scheme="https://cx330.tw/tags/%E8%B3%87%E5%AE%89/"/>
     
     <category term="密碼學" scheme="https://cx330.tw/tags/%E5%AF%86%E7%A2%BC%E5%AD%B8/"/>
     
@@ -502,9 +502,9 @@
     <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
     
     
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
     <category term="資安" scheme="https://cx330.tw/tags/%E8%B3%87%E5%AE%89/"/>
+    
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
   </entry>
   

@@ -12887,7 +12887,7 @@ h1.page-title + .tag-cloud-list {
     -o-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
-    content: "回到頂部";
+    content: "Back to top";
     -webkit-transition: 0.2s;
     -moz-transition: 0.2s;
     -o-transition: 0.2s;
@@ -20146,13 +20146,13 @@ a
   overflow: visible;
 }
 .el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(1):before {
-  content: "顯示在留言區的暱稱";
+  content: "This will be displayed in the comment section";
 }
 .el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(2):before {
-  content: "收到回覆將會發送到您的信箱📧";
+  content: "Replies will be sent to your email📧";
 }
 .el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(3):before {
-  content: "可以通過點擊暱稱連結到您的網站🔗";
+  content: "Others can link to your website by clicking on your display name🔗";
 }
 .el-input.el-input--small.el-input-group.el-input-group--prepend:focus-within::before {
   display: block;

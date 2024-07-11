@@ -42,20 +42,20 @@
       
       <categories>
           
-          <category> 2024 CTF 修煉計畫 </category>
+          <category> 2024 CTF Training </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
-            <tag> 30天計畫 </tag>
+            <tag> TechStreak30 </tag>
             
         </tags>
       
@@ -73,20 +73,20 @@
       
       <categories>
           
-          <category> 2024 CTF 修煉計畫 </category>
+          <category> 2024 CTF Training </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
-            <tag> 30天計畫 </tag>
+            <tag> TechStreak30 </tag>
             
         </tags>
       
@@ -104,20 +104,20 @@
       
       <categories>
           
-          <category> 2024 CTF 修煉計畫 </category>
+          <category> 2024 CTF Training </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
-            <tag> 30天計畫 </tag>
+            <tag> TechStreak30 </tag>
             
         </tags>
       
@@ -135,20 +135,20 @@
       
       <categories>
           
-          <category> 2024 CTF 修煉計畫 </category>
+          <category> 2024 CTF Training </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
-            <tag> 30天計畫 </tag>
+            <tag> TechStreak30 </tag>
             
         </tags>
       
@@ -166,20 +166,20 @@
       
       <categories>
           
-          <category> 2024 CTF 修煉計畫 </category>
+          <category> 2024 CTF Training </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
-            <tag> 30天計畫 </tag>
+            <tag> TechStreak30 </tag>
             
         </tags>
       
@@ -197,7 +197,7 @@
       
       <categories>
           
-          <category> 開發角 </category>
+          <category> DevCorner </category>
           
       </categories>
       
@@ -224,20 +224,20 @@
       
       <categories>
           
-          <category> 2024 CTF 修煉計畫 </category>
+          <category> 2024 CTF Training </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
-            <tag> 30天計畫 </tag>
+            <tag> TechStreak30 </tag>
             
         </tags>
       
@@ -255,7 +255,7 @@
       
       <categories>
           
-          <category> 2024 CTF 修煉計畫 </category>
+          <category> 2024 CTF Training </category>
           
       </categories>
       
@@ -264,13 +264,13 @@
             
             <tag> CTF </tag>
             
+            <tag> CyberSec </tag>
+            
+            <tag> TechStreak30 </tag>
+            
             <tag> Crypto </tag>
             
             <tag> Cryptography </tag>
-            
-            <tag> CyberSec </tag>
-            
-            <tag> 30天計畫 </tag>
             
         </tags>
       
@@ -288,7 +288,7 @@
       
       <categories>
           
-          <category> 2024 CTF 修煉計畫 </category>
+          <category> 2024 CTF Training </category>
           
       </categories>
       
@@ -297,13 +297,13 @@
             
             <tag> CTF </tag>
             
+            <tag> CyberSec </tag>
+            
+            <tag> TechStreak30 </tag>
+            
             <tag> Crypto </tag>
             
             <tag> Cryptography </tag>
-            
-            <tag> CyberSec </tag>
-            
-            <tag> 30天計畫 </tag>
             
         </tags>
       
@@ -321,18 +321,18 @@
       
       <categories>
           
-          <category> 學習筆記 </category>
+          <category> StudyNotes </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 資安 </tag>
-            
             <tag> CTF </tag>
             
             <tag> Crypto </tag>
+            
+            <tag> 資安 </tag>
             
             <tag> 密碼學 </tag>
             
@@ -354,20 +354,20 @@
       
       <categories>
           
-          <category> 2024 CTF 修煉計畫 </category>
+          <category> 2024 CTF Training </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
-            <tag> 30天計畫 </tag>
+            <tag> TechStreak30 </tag>
             
         </tags>
       
@@ -385,7 +385,7 @@
       
       <categories>
           
-          <category> 開發角 </category>
+          <category> DevCorner </category>
           
       </categories>
       
@@ -465,9 +465,9 @@
       
         <tags>
             
-            <tag> 資安 </tag>
-            
             <tag> PicoCTF </tag>
+            
+            <tag> 資安 </tag>
             
         </tags>
       

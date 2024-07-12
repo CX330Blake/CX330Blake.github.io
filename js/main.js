@@ -1108,7 +1108,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const handleCopy = (e) => {
             if (copy) {
-                anzhiyu.snackbarShow(languages.copySuccess);
+                anzhiyu.snackbarShow(languages.copySuccess, !1, 5000);
             }
             if (copyrightEbable) {
                 e.preventDefault();

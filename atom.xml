@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-07-12T08:00:05.291Z</updated>
+  <updated>2024-07-12T12:37:52.521Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>[HTB] racecar writeup 🏎️</title>
+    <title>[HTB] Racecar Writeup 🏎️</title>
     <link href="https://cx330.tw/posts/331a6b46/"/>
     <id>https://cx330.tw/posts/331a6b46/</id>
     <published>2024-07-12T07:44:21.000Z</published>
-    <updated>2024-07-12T08:00:05.291Z</updated>
+    <updated>2024-07-12T12:37:52.521Z</updated>
     
     
       
@@ -98,13 +98,13 @@
     <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
     <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
+    
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
   </entry>
   
@@ -131,13 +131,13 @@
     <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
     <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
+    
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
   </entry>
   
@@ -164,13 +164,13 @@
     <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
     <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
+    
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
   </entry>
   
@@ -197,13 +197,13 @@
     <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
     <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
+    
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
   </entry>
   
@@ -232,13 +232,13 @@
     <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
     <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
+    
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
   </entry>
   
@@ -291,13 +291,13 @@
     <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
     <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
+    
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
   </entry>
   
@@ -391,11 +391,11 @@
     <category term="StudyNotes" scheme="https://cx330.tw/categories/StudyNotes/"/>
     
     
-    <category term="資安" scheme="https://cx330.tw/tags/%E8%B3%87%E5%AE%89/"/>
-    
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
     <category term="Crypto" scheme="https://cx330.tw/tags/Crypto/"/>
+    
+    <category term="資安" scheme="https://cx330.tw/tags/%E8%B3%87%E5%AE%89/"/>
     
     <category term="密碼學" scheme="https://cx330.tw/tags/%E5%AF%86%E7%A2%BC%E5%AD%B8/"/>
     
@@ -425,13 +425,13 @@
     <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
     <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
+    
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
   </entry>
   
@@ -532,9 +532,9 @@
     <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
     
     
-    <category term="資安" scheme="https://cx330.tw/tags/%E8%B3%87%E5%AE%89/"/>
-    
     <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
+    
+    <category term="資安" scheme="https://cx330.tw/tags/%E8%B3%87%E5%AE%89/"/>
     
   </entry>
   

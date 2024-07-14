@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-07-12T13:00:27.541Z</updated>
+  <updated>2024-07-14T15:13:06.864Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SCIST S4 資訊安全季後賽 Writeup</title>
+    <link href="https://cx330.tw/posts/9deb0a60/"/>
+    <id>https://cx330.tw/posts/9deb0a60/</id>
+    <published>2024-07-14T14:59:31.000Z</published>
+    <updated>2024-07-14T15:13:06.864Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;0X00-前言&quot;&gt;0X00 前言&lt;/h1&gt;
+&lt;p&gt;終於到了 SCIST</summary>
+        
+      
+    
+    
+    
+    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
+    
+    
+    <category term="資安" scheme="https://cx330.tw/tags/%E8%B3%87%E5%AE%89/"/>
+    
+    <category term="SCIST" scheme="https://cx330.tw/tags/SCIST/"/>
+    
+  </entry>
   
   <entry>
     <title>[Day 10] 關於打完SCIST期末後決定增加難度這件事</title>
@@ -38,11 +66,11 @@
     <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
-    
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    
+    <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
     
   </entry>
   
@@ -128,9 +156,9 @@
     <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
@@ -161,9 +189,9 @@
     <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
@@ -194,9 +222,9 @@
     <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
@@ -227,9 +255,9 @@
     <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
@@ -262,9 +290,9 @@
     <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
@@ -321,9 +349,9 @@
     <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
@@ -421,11 +449,11 @@
     <category term="StudyNotes" scheme="https://cx330.tw/categories/StudyNotes/"/>
     
     
-    <category term="資安" scheme="https://cx330.tw/tags/%E8%B3%87%E5%AE%89/"/>
-    
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
     <category term="Crypto" scheme="https://cx330.tw/tags/Crypto/"/>
+    
+    <category term="資安" scheme="https://cx330.tw/tags/%E8%B3%87%E5%AE%89/"/>
     
     <category term="密碼學" scheme="https://cx330.tw/tags/%E5%AF%86%E7%A2%BC%E5%AD%B8/"/>
     
@@ -455,9 +483,9 @@
     <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
@@ -562,9 +590,9 @@
     <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
     
     
-    <category term="資安" scheme="https://cx330.tw/tags/%E8%B3%87%E5%AE%89/"/>
-    
     <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
+    
+    <category term="資安" scheme="https://cx330.tw/tags/%E8%B3%87%E5%AE%89/"/>
     
   </entry>
   
@@ -589,36 +617,6 @@
     
     <category term="LifeAndTalk" scheme="https://cx330.tw/categories/LifeAndTalk/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>2024 Summer Intensive Training Plan</title>
-    <link href="https://cx330.tw/posts/1bd6c34a/"/>
-    <id>https://cx330.tw/posts/1bd6c34a/</id>
-    <published>2024-05-28T14:18:12.000Z</published>
-    <updated>2024-07-12T12:56:02.330Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;為甚麼要修煉&quot;&gt;為甚麼要修煉?&lt;/h1&gt;
-&lt;p&gt;有鑑於這次 AIS3 Pre-exam 的成績不甚理想。我決定要來在這次暑假的時候展開特訓，來這邊立個旗。以下來講講我打算怎麼修煉！&lt;/p&gt;
-&lt;h1 id=&quot;怎麼修煉&quot;&gt;怎麼修煉?&lt;/h1&gt;
-&lt;p&gt;可能會像 IT</summary>
-        
-      
-    
-    
-    
-    <category term="LifeAndTalk" scheme="https://cx330.tw/categories/LifeAndTalk/"/>
-    
-    
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
-    
-    <category term="Security" scheme="https://cx330.tw/tags/Security/"/>
     
   </entry>
   

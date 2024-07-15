@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-07-15T07:59:39.738Z</updated>
+  <updated>2024-07-15T18:35:11.336Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[HTB] The Last Dance Writeup 💃</title>
+    <link href="https://cx330.tw/posts/acba6120/"/>
+    <id>https://cx330.tw/posts/acba6120/</id>
+    <published>2024-07-15T17:30:34.000Z</published>
+    <updated>2024-07-15T18:35:11.336Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;0x00-Challenge-Info&quot;&gt;0x00 Challenge Info&lt;/h1&gt;
+&lt;p&gt;Hello hackers. Let’s see the encrypted message.&lt;/p&gt;
+&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
+    
+    
+    <category term="Crypto" scheme="https://cx330.tw/tags/Crypto/"/>
+    
+    <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
+    
+    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
+    
+  </entry>
   
   <entry>
     <title>[Day 11] 把SCIST季後賽的writeup整理了下</title>
@@ -52,14 +83,14 @@
     <link href="https://cx330.tw/posts/9deb0a60/"/>
     <id>https://cx330.tw/posts/9deb0a60/</id>
     <published>2024-07-14T14:59:31.000Z</published>
-    <updated>2024-07-15T07:53:29.231Z</updated>
+    <updated>2024-07-15T17:33:45.743Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;0X00-前言&quot;&gt;0X00 前言&lt;/h1&gt;
+    <summary type="html">&lt;h1 id=&quot;0x00-前言&quot;&gt;0x00 前言&lt;/h1&gt;
 &lt;p&gt;終於到了 SCIST</summary>
         
       
@@ -110,14 +141,14 @@
     <link href="https://cx330.tw/posts/331a6b46/"/>
     <id>https://cx330.tw/posts/331a6b46/</id>
     <published>2024-07-12T07:44:21.000Z</published>
-    <updated>2024-07-15T09:19:51.008Z</updated>
+    <updated>2024-07-15T18:32:11.649Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;0X00-Challenge-Info&quot;&gt;0X00 Challenge Info&lt;/h1&gt;
+    <summary type="html">&lt;h1 id=&quot;0x00-Challenge-Info&quot;&gt;0x00 Challenge Info&lt;/h1&gt;
 &lt;p&gt;This challenge gives us an executable file, which is a binary file. And the</summary>
         
       
@@ -595,35 +626,6 @@
     <category term="資安" scheme="https://cx330.tw/tags/%E8%B3%87%E5%AE%89/"/>
     
     <category term="AIS3" scheme="https://cx330.tw/tags/AIS3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>All-in-One PicoCTF Writeups</title>
-    <link href="https://cx330.tw/posts/4f98706e/"/>
-    <id>https://cx330.tw/posts/4f98706e/</id>
-    <published>2024-06-01T02:27:03.000Z</published>
-    <updated>2024-07-12T12:56:02.325Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
-&lt;p&gt;其實好像也沒什麼好講前言的，但就是不想要一開始就是題目分類，所以還是放了個前言 XD。&lt;/p&gt;
-&lt;p&gt;自己在刷 PicoCTF 的時候常常發現，幾乎所有的 writeup</summary>
-        
-      
-    
-    
-    
-    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
-    
-    
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
-    <category term="資安" scheme="https://cx330.tw/tags/%E8%B3%87%E5%AE%89/"/>
     
   </entry>
   

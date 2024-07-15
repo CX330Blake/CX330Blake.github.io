@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-07-14T15:13:06.864Z</updated>
+  <updated>2024-07-15T07:53:29.231Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://cx330.tw/posts/9deb0a60/"/>
     <id>https://cx330.tw/posts/9deb0a60/</id>
     <published>2024-07-14T14:59:31.000Z</published>
-    <updated>2024-07-14T15:13:06.864Z</updated>
+    <updated>2024-07-15T07:53:29.231Z</updated>
     
     
       
@@ -449,11 +449,11 @@
     <category term="StudyNotes" scheme="https://cx330.tw/categories/StudyNotes/"/>
     
     
+    <category term="資安" scheme="https://cx330.tw/tags/%E8%B3%87%E5%AE%89/"/>
+    
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
     <category term="Crypto" scheme="https://cx330.tw/tags/Crypto/"/>
-    
-    <category term="資安" scheme="https://cx330.tw/tags/%E8%B3%87%E5%AE%89/"/>
     
     <category term="密碼學" scheme="https://cx330.tw/tags/%E5%AF%86%E7%A2%BC%E5%AD%B8/"/>
     
@@ -590,9 +590,9 @@
     <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
     
     
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
     <category term="資安" scheme="https://cx330.tw/tags/%E8%B3%87%E5%AE%89/"/>
+    
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
   </entry>
   

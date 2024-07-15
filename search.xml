@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>[Day 11] 把SCIST季後賽的writeup整理了下</title>
+      <link href="/posts/b5f171c7/"/>
+      <url>/posts/b5f171c7/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>這幾天把 SCIST 季後賽的 writeup 整理了下，17 號前要繳交。整理完之後還是一直很愧疚+自我懷疑。不知道是不是自己沒有這個天分還是努力的方向錯誤了。不過沒關係我還是會繼續保持熱愛，努力加油的！</p><h1 id="今日進度">今日進度</h1><ol><li><a href="https://cx330.tw/posts/9deb0a60/">SCIST S4 資訊安全季後賽 Writeup</a></li></ol><h1 id="今日狀態">今日狀態</h1><ul><li><p>起床時間：<code>11：00</code></p></li><li><p>知識量：⭐</p></li><li><p>疲勞程度：⭐⭐</p></li><li><p>精神狀態：⭐⭐⭐</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 2024 CTF Training </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CTF </tag>
+            
+            <tag> CyberSec </tag>
+            
+            <tag> HTB </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SCIST S4 資訊安全季後賽 Writeup</title>
       <link href="/posts/9deb0a60/"/>
       <url>/posts/9deb0a60/</url>
@@ -413,11 +442,11 @@
       
         <tags>
             
-            <tag> 資安 </tag>
-            
             <tag> CTF </tag>
             
             <tag> Crypto </tag>
+            
+            <tag> 資安 </tag>
             
             <tag> 密碼學 </tag>
             
@@ -550,9 +579,9 @@
       
         <tags>
             
-            <tag> 資安 </tag>
-            
             <tag> PicoCTF </tag>
+            
+            <tag> 資安 </tag>
             
         </tags>
       

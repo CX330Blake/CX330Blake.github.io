@@ -119,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/posts/b01f9394/</loc>
+    <loc>https://cx330.tw/posts/1bd6c34a/</loc>
     
     <lastmod>2024-07-12</lastmod>
     
@@ -128,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/posts/1bd6c34a/</loc>
+    <loc>https://cx330.tw/posts/b01f9394/</loc>
     
     <lastmod>2024-07-12</lastmod>
     
@@ -459,13 +459,6 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/tags/Security/</loc>
-    <lastmod>2024-07-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cx330.tw/tags/%E5%AF%86%E7%A2%BC%E5%AD%B8/</loc>
     <lastmod>2024-07-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -474,6 +467,13 @@
   
   <url>
     <loc>https://cx330.tw/tags/%E7%AD%86%E8%A8%98/</loc>
+    <lastmod>2024-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/tags/Security/</loc>
     <lastmod>2024-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -510,14 +510,14 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/LifeAndTalk/</loc>
+    <loc>https://cx330.tw/categories/StudyNotes/</loc>
     <lastmod>2024-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/StudyNotes/</loc>
+    <loc>https://cx330.tw/categories/LifeAndTalk/</loc>
     <lastmod>2024-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

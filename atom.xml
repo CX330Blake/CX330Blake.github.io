@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-07-16T13:55:58.925Z</updated>
+  <updated>2024-07-16T16:04:30.642Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[Day 12] 繼續刷HTB的題目！</title>
+    <link href="https://cx330.tw/posts/11af25ee/"/>
+    <id>https://cx330.tw/posts/11af25ee/</id>
+    <published>2024-07-16T15:56:11.000Z</published>
+    <updated>2024-07-16T16:04:30.642Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
+&lt;p&gt;今天繼續刷了 HTB 的題目，覺得真的他們的題目很不錯（包括題目的描述也是挺有趣的）。然後我 19 號要和家裡面一起回澎湖個幾天！可能會暫停更新個幾天。旅遊回來之後繼續努力學習！&lt;/p&gt;
+&lt;h1</summary>
+        
+      
+    
+    
+    
+    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
+    
+    
+    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    
+    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    
+    <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[HTB] Insomnia Writeup 💤</title>
     <link href="https://cx330.tw/posts/cab519b8/"/>
     <id>https://cx330.tw/posts/cab519b8/</id>
     <published>2024-07-16T09:49:39.000Z</published>
-    <updated>2024-07-16T13:55:58.925Z</updated>
+    <updated>2024-07-16T13:57:58.627Z</updated>
     
     
       
@@ -40,9 +71,9 @@
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
     
-    <category term="Web" scheme="https://cx330.tw/tags/Web/"/>
-    
     <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
+    
+    <category term="Web" scheme="https://cx330.tw/tags/Web/"/>
     
   </entry>
   
@@ -190,9 +221,9 @@
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
     
-    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
-    
     <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
+    
+    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
     
   </entry>
   
@@ -603,31 +634,6 @@
     <category term="AI" scheme="https://cx330.tw/tags/AI/"/>
     
     <category term="GDSC" scheme="https://cx330.tw/tags/GDSC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Reading List</title>
-    <link href="https://cx330.tw/posts/b01f9394/"/>
-    <id>https://cx330.tw/posts/b01f9394/</id>
-    <published>2024-06-11T04:09:43.000Z</published>
-    <updated>2024-07-12T12:56:02.330Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;https://johnliutw.medium.com/list/google-4cfac4644843&quot;&gt;Google 的軟體工程之道&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="LifeAndTalk" scheme="https://cx330.tw/categories/LifeAndTalk/"/>
-    
     
   </entry>
   

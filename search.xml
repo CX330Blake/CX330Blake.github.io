@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>[Day 12] 繼續刷HTB的題目！</title>
+      <link href="/posts/11af25ee/"/>
+      <url>/posts/11af25ee/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>今天繼續刷了 HTB 的題目，覺得真的他們的題目很不錯（包括題目的描述也是挺有趣的）。然後我 19 號要和家裡面一起回澎湖個幾天！可能會暫停更新個幾天。旅遊回來之後繼續努力學習！</p><h1 id="今日進度">今日進度</h1><ol><li><a href="https://cx330.tw/posts/acba6120/">[HTB] The Last Dance Writeup 💃</a></li><li><a href="https://cx330.tw/posts/cab519b8/">[HTB] Insomnia Writeup 💤</a></li></ol><h1 id="今日狀態">今日狀態</h1><ul><li><p>起床時間：<code>10：00</code></p></li><li><p>知識量：⭐⭐</p></li><li><p>疲勞程度：⭐⭐</p></li><li><p>精神狀態：⭐⭐⭐⭐</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 2024 CTF Training </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CTF </tag>
+            
+            <tag> CyberSec </tag>
+            
+            <tag> HTB </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[HTB] Insomnia Writeup 💤</title>
       <link href="/posts/cab519b8/"/>
       <url>/posts/cab519b8/</url>
@@ -22,9 +51,9 @@
             
             <tag> HTB </tag>
             
-            <tag> Web </tag>
-            
             <tag> HackTheBox </tag>
+            
+            <tag> Web </tag>
             
         </tags>
       
@@ -165,9 +194,9 @@
             
             <tag> HTB </tag>
             
-            <tag> HackTheBox </tag>
-            
             <tag> Pwn </tag>
+            
+            <tag> HackTheBox </tag>
             
         </tags>
       

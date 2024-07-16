@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-07-15T18:35:11.336Z</updated>
+  <updated>2024-07-16T13:55:58.925Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[HTB] Insomnia Writeup 💤</title>
+    <link href="https://cx330.tw/posts/cab519b8/"/>
+    <id>https://cx330.tw/posts/cab519b8/</id>
+    <published>2024-07-16T09:49:39.000Z</published>
+    <updated>2024-07-16T13:55:58.925Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;0x00-Challeng-Info&quot;&gt;0x00 Challeng Info&lt;/h1&gt;
+&lt;p&gt;It’s a web challenge, so it gives us a website and the source code for us to</summary>
+        
+      
+    
+    
+    
+    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
+    
+    
+    <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
+    
+    <category term="Web" scheme="https://cx330.tw/tags/Web/"/>
+    
+    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
+    
+  </entry>
   
   <entry>
     <title>[HTB] The Last Dance Writeup 💃</title>
@@ -141,7 +171,7 @@
     <link href="https://cx330.tw/posts/331a6b46/"/>
     <id>https://cx330.tw/posts/331a6b46/</id>
     <published>2024-07-12T07:44:21.000Z</published>
-    <updated>2024-07-15T18:32:11.649Z</updated>
+    <updated>2024-07-16T09:50:49.276Z</updated>
     
     
       
@@ -160,9 +190,9 @@
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
     
-    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
-    
     <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
+    
+    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
     
   </entry>
   
@@ -598,34 +628,6 @@
     
     <category term="LifeAndTalk" scheme="https://cx330.tw/categories/LifeAndTalk/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>2024 AIS3 Pre-exam Writeup</title>
-    <link href="https://cx330.tw/posts/d01f5ccf/"/>
-    <id>https://cx330.tw/posts/d01f5ccf/</id>
-    <published>2024-06-02T13:42:41.000Z</published>
-    <updated>2024-07-12T12:56:02.325Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Intro&quot;&gt;Intro&lt;/h1&gt;
-&lt;p&gt;請容我先自我介紹一下！我今年大一，在高中的時候並不是理工背景的學生，相反，我原本是打算去唸法律系的。但是在高三下的時候意外接觸到了 CTF</summary>
-        
-      
-    
-    
-    
-    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
-    
-    
-    <category term="資安" scheme="https://cx330.tw/tags/%E8%B3%87%E5%AE%89/"/>
-    
-    <category term="AIS3" scheme="https://cx330.tw/tags/AIS3/"/>
     
   </entry>
   

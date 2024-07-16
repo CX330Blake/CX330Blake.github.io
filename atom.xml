@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-07-16T16:04:30.642Z</updated>
+  <updated>2024-07-16T16:04:56.182Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://cx330.tw/posts/11af25ee/"/>
     <id>https://cx330.tw/posts/11af25ee/</id>
     <published>2024-07-16T15:56:11.000Z</published>
-    <updated>2024-07-16T16:04:30.642Z</updated>
+    <updated>2024-07-16T16:04:56.182Z</updated>
     
     
       
@@ -71,9 +71,9 @@
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
     
-    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
-    
     <category term="Web" scheme="https://cx330.tw/tags/Web/"/>
+    
+    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
     
   </entry>
   
@@ -221,9 +221,9 @@
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
     
-    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
-    
     <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
+    
+    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
     
   </entry>
   
@@ -572,11 +572,11 @@
     <category term="StudyNotes" scheme="https://cx330.tw/categories/StudyNotes/"/>
     
     
+    <category term="資安" scheme="https://cx330.tw/tags/%E8%B3%87%E5%AE%89/"/>
+    
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
     <category term="Crypto" scheme="https://cx330.tw/tags/Crypto/"/>
-    
-    <category term="資安" scheme="https://cx330.tw/tags/%E8%B3%87%E5%AE%89/"/>
     
     <category term="密碼學" scheme="https://cx330.tw/tags/%E5%AF%86%E7%A2%BC%E5%AD%B8/"/>
     

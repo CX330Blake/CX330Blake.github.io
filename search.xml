@@ -20,11 +20,11 @@
       
         <tags>
             
-            <tag> HTB </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
+            
+            <tag> HTB </tag>
             
         </tags>
       
@@ -43,6 +43,8 @@
       <categories>
           
           <category> CTF </category>
+          
+          <category> HackTheBox </category>
           
       </categories>
       
@@ -73,16 +75,18 @@
           
           <category> CTF </category>
           
+          <category> HackTheBox </category>
+          
       </categories>
       
       
         <tags>
             
+            <tag> Crypto </tag>
+            
             <tag> HTB </tag>
             
             <tag> HackTheBox </tag>
-            
-            <tag> Crypto </tag>
             
         </tags>
       
@@ -107,11 +111,11 @@
       
         <tags>
             
-            <tag> HTB </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
+            
+            <tag> HTB </tag>
             
         </tags>
       
@@ -163,11 +167,11 @@
       
         <tags>
             
-            <tag> HTB </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
+            
+            <tag> HTB </tag>
             
         </tags>
       
@@ -186,6 +190,8 @@
       <categories>
           
           <category> CTF </category>
+          
+          <category> HackTheBox </category>
           
       </categories>
       
@@ -250,9 +256,9 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -281,9 +287,9 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -312,9 +318,9 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -343,9 +349,9 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -374,9 +380,9 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -432,9 +438,9 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -463,13 +469,13 @@
       
         <tags>
             
-            <tag> Crypto </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> Crypto </tag>
             
             <tag> Cryptography </tag>
             
@@ -496,13 +502,13 @@
       
         <tags>
             
-            <tag> Crypto </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> Crypto </tag>
             
             <tag> Cryptography </tag>
             
@@ -529,11 +535,11 @@
       
         <tags>
             
-            <tag> 資安 </tag>
+            <tag> CTF </tag>
             
             <tag> Crypto </tag>
             
-            <tag> CTF </tag>
+            <tag> 資安 </tag>
             
             <tag> 密碼學 </tag>
             
@@ -562,9 +568,9 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -666,9 +672,9 @@
       
         <tags>
             
-            <tag> 資安 </tag>
-            
             <tag> PicoCTF </tag>
+            
+            <tag> 資安 </tag>
             
         </tags>
       

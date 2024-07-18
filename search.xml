@@ -8,7 +8,7 @@
       <link href="/posts/98fc7fc6/"/>
       <url>/posts/98fc7fc6/</url>
       
-        <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>今天起來後去看了一下 HTB 的一題 Pwn 題，做了一下不太會，決定找 Writeup。結果 Writeup 也看不太懂，我才發現自己 Pwn 的基礎好像不是很扎實，這樣下去也是看一題做一題，所以決定要先從基礎開始學習。使用的資源是用 Yuawn 大佬的課程影片，我會把影片放在下面。希望暑假結束前可以變強！</p><h1 id="今日進度">今日進度</h1><p>這些學習資源是練習 Pwn 基礎非常好的資料。看完 Yuawn 的影片之後去用 HTB 的 Room 做練習，收穫頗多。</p><ul><li><a href="https://www.youtube.com/watch?v=U8N6aE-Nq-Q&amp;t=128s">Binary Exploitation (Pwn) - Basic</a></li><li><a href="https://tryhackme.com/r/room/introtopwntools">Intro To Pwntools</a></li></ul><h1 id="今日狀態">今日狀態</h1><ul><li><p>起床時間：<code>12：00</code></p></li><li><p>知識量：⭐⭐⭐⭐</p></li><li><p>疲勞程度：⭐⭐⭐⭐</p></li><li><p>精神狀態：⭐⭐</p></li></ul>]]></content>
+        <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>今天起來後去看了一下 HTB 的一題 Pwn 題，做了一下不太會，決定找 Writeup。結果 Writeup 也看不太懂，我才發現自己 Pwn 的基礎好像不是很扎實，這樣下去也是看一題做一題，所以決定要先從基礎開始學習。使用的資源是用 Yuawn 大佬的課程影片，我會把影片放在下面。希望暑假結束前可以變強！</p><h1 id="今日進度">今日進度</h1><p>這些學習資源是練習 Pwn 基礎非常好的資料。看完 Yuawn 的影片之後去用 TryHackMe 的 Room 做練習，收穫頗多。</p><ul><li><a href="https://www.youtube.com/watch?v=U8N6aE-Nq-Q&amp;t=128s">Binary Exploitation (Pwn) - Basic</a></li><li><a href="https://tryhackme.com/r/room/introtopwntools">Intro To Pwntools</a></li></ul><h1 id="今日狀態">今日狀態</h1><ul><li><p>起床時間：<code>12：00</code></p></li><li><p>知識量：⭐⭐⭐⭐</p></li><li><p>疲勞程度：⭐⭐⭐⭐</p></li><li><p>精神狀態：⭐⭐</p></li></ul>]]></content>
       
       
       <categories>

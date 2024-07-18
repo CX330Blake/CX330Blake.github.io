@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-07-16T16:04:56.182Z</updated>
+  <updated>2024-07-18T12:43:09.521Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[Day 13] 今天，從0開始學Pwn</title>
+    <link href="https://cx330.tw/posts/98fc7fc6/"/>
+    <id>https://cx330.tw/posts/98fc7fc6/</id>
+    <published>2024-07-18T12:39:09.000Z</published>
+    <updated>2024-07-18T12:43:09.521Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
+&lt;p&gt;今天起來後去看了一下 HTB 的一題 Pwn 題，做了一下不太會，決定找 Writeup。結果 Writeup 也看不太懂，我才發現自己 Pwn</summary>
+        
+      
+    
+    
+    
+    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
+    
+    
+    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    
+    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    
+    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[Day 12] 繼續刷HTB的題目！</title>
     <link href="https://cx330.tw/posts/11af25ee/"/>
     <id>https://cx330.tw/posts/11af25ee/</id>
     <published>2024-07-16T15:56:11.000Z</published>
-    <updated>2024-07-16T16:04:56.182Z</updated>
+    <updated>2024-07-18T12:39:57.121Z</updated>
     
     
       
@@ -227,9 +257,9 @@
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
     
-    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
-    
     <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
+    
+    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
     
   </entry>
   
@@ -619,27 +649,6 @@
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
     <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2024 GDSC NCKU AI Team</title>
-    <link href="https://cx330.tw/posts/23950b86/"/>
-    <id>https://cx330.tw/posts/23950b86/</id>
-    <published>2024-06-21T19:33:41.000Z</published>
-    <updated>2024-07-12T12:56:02.327Z</updated>
-    
-    
-    <summary type="html">Sharing the experience of being a member of 2024 GDSC NCKU AI Team.</summary>
-    
-    
-    
-    <category term="DevCorner" scheme="https://cx330.tw/categories/DevCorner/"/>
-    
-    
-    <category term="AI" scheme="https://cx330.tw/tags/AI/"/>
-    
-    <category term="GDSC" scheme="https://cx330.tw/tags/GDSC/"/>
     
   </entry>
   

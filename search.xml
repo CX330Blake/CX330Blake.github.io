@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>[Day 14] 用THM+影片繼續學Pwn</title>
+      <link href="/posts/e58d0fa3/"/>
+      <url>/posts/e58d0fa3/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>今天下來嘉義了，明天準備坐船去澎湖。今天白天就是繼續看 Yuawn 的影片，搭配 TryHackMe 的練習，希望能夠更加熟悉 Pwn 的基礎！</p><h1 id="今日進度">今日進度</h1><ul><li><a href="https://www.youtube.com/watch?v=U8N6aE-Nq-Q&amp;t=128s">Binary Exploitation (Pwn) - Basic</a></li><li><a href="https://tryhackme.com/r/room/introtopwntools">Intro To Pwntools</a></li></ul><h1 id="今日狀態">今日狀態</h1><ul><li><p>起床時間：<code>09：30</code></p></li><li><p>知識量：⭐⭐⭐</p></li><li><p>疲勞程度：⭐⭐⭐</p></li><li><p>精神狀態：⭐⭐</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 2024 CTF Training </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CTF </tag>
+            
+            <tag> CyberSec </tag>
+            
+            <tag> Pwn </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Differences Between Byte Code, Assembly Code, and Machine Code</title>
       <link href="/posts/61fb2d5c/"/>
       <url>/posts/61fb2d5c/</url>
@@ -314,9 +343,9 @@
       
         <tags>
             
-            <tag> CTF </tag>
-            
             <tag> PicoCTF </tag>
+            
+            <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -345,9 +374,9 @@
       
         <tags>
             
-            <tag> CTF </tag>
-            
             <tag> PicoCTF </tag>
+            
+            <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -376,9 +405,9 @@
       
         <tags>
             
-            <tag> CTF </tag>
-            
             <tag> PicoCTF </tag>
+            
+            <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -407,9 +436,9 @@
       
         <tags>
             
-            <tag> CTF </tag>
-            
             <tag> PicoCTF </tag>
+            
+            <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -438,9 +467,9 @@
       
         <tags>
             
-            <tag> CTF </tag>
-            
             <tag> PicoCTF </tag>
+            
+            <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -496,9 +525,9 @@
       
         <tags>
             
-            <tag> CTF </tag>
-            
             <tag> PicoCTF </tag>
+            
+            <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -593,11 +622,11 @@
       
         <tags>
             
+            <tag> 資安 </tag>
+            
             <tag> CTF </tag>
             
             <tag> Crypto </tag>
-            
-            <tag> 資安 </tag>
             
             <tag> 密碼學 </tag>
             
@@ -626,9 +655,9 @@
       
         <tags>
             
-            <tag> CTF </tag>
-            
             <tag> PicoCTF </tag>
+            
+            <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -730,9 +759,9 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> 資安 </tag>
+            
+            <tag> PicoCTF </tag>
             
         </tags>
       

@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-07-18T18:33:53.284Z</updated>
+  <updated>2024-07-19T07:13:30.194Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Differences Between Byte Code, Assembly Code, and Machine Code</title>
+    <link href="https://cx330.tw/posts/61fb2d5c/"/>
+    <id>https://cx330.tw/posts/61fb2d5c/</id>
+    <published>2024-07-19T06:47:41.000Z</published>
+    <updated>2024-07-19T07:13:30.194Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Byte-Code&quot;&gt;Byte Code&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Definition&lt;/strong&gt;: Byte code is an intermediate code form that is closer to machine</summary>
+        
+      
+    
+    
+    
+    <category term="StudyNotes" scheme="https://cx330.tw/categories/StudyNotes/"/>
+    
+    
+    <category term="Byte Code" scheme="https://cx330.tw/tags/Byte-Code/"/>
+    
+    <category term="Assembly Code" scheme="https://cx330.tw/tags/Assembly-Code/"/>
+    
+    <category term="Machine Code" scheme="https://cx330.tw/tags/Machine-Code/"/>
+    
+  </entry>
   
   <entry>
     <title>[Day 13] 今天，從0開始學Pwn</title>
@@ -96,9 +127,9 @@
     
     
     
-    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
-    
     <category term="HackTheBox" scheme="https://cx330.tw/categories/HackTheBox/"/>
+    
+    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
     
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
@@ -129,9 +160,9 @@
     
     
     
-    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
-    
     <category term="HackTheBox" scheme="https://cx330.tw/categories/HackTheBox/"/>
+    
+    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
     
     
     <category term="Crypto" scheme="https://cx330.tw/tags/Crypto/"/>
@@ -250,9 +281,9 @@
     
     
     
-    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
-    
     <category term="HackTheBox" scheme="https://cx330.tw/categories/HackTheBox/"/>
+    
+    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
     
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
@@ -317,11 +348,11 @@
     
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
+    
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
     <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
-    
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
   </entry>
   
@@ -350,11 +381,11 @@
     
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
+    
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
     <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
-    
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
   </entry>
   
@@ -383,11 +414,11 @@
     
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
+    
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
     <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
-    
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
   </entry>
   
@@ -416,11 +447,11 @@
     
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
+    
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
     <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
-    
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
   </entry>
   
@@ -451,11 +482,11 @@
     
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
+    
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
     <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
-    
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
   </entry>
   
@@ -510,11 +541,11 @@
     
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
+    
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
     <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
-    
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
   </entry>
   
@@ -542,13 +573,13 @@
     
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
-    <category term="Crypto" scheme="https://cx330.tw/tags/Crypto/"/>
-    
-    <category term="Cryptography" scheme="https://cx330.tw/tags/Cryptography/"/>
-    
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
     <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
+    
+    <category term="Crypto" scheme="https://cx330.tw/tags/Crypto/"/>
+    
+    <category term="Cryptography" scheme="https://cx330.tw/tags/Cryptography/"/>
     
   </entry>
   
@@ -576,13 +607,13 @@
     
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
-    <category term="Crypto" scheme="https://cx330.tw/tags/Crypto/"/>
-    
-    <category term="Cryptography" scheme="https://cx330.tw/tags/Cryptography/"/>
-    
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
     <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
+    
+    <category term="Crypto" scheme="https://cx330.tw/tags/Crypto/"/>
+    
+    <category term="Cryptography" scheme="https://cx330.tw/tags/Cryptography/"/>
     
   </entry>
   
@@ -617,38 +648,6 @@
     <category term="密碼學" scheme="https://cx330.tw/tags/%E5%AF%86%E7%A2%BC%E5%AD%B8/"/>
     
     <category term="筆記" scheme="https://cx330.tw/tags/%E7%AD%86%E8%A8%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Day 01] Grinding PicoCTF</title>
-    <link href="https://cx330.tw/posts/6431e3b0/"/>
-    <id>https://cx330.tw/posts/6431e3b0/</id>
-    <published>2024-06-26T08:42:14.000Z</published>
-    <updated>2024-07-12T12:48:12.806Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
-&lt;p&gt;因為已經有開了一篇文章，打算放上所有 picoCTF 的 writeups 了，所以就不把解題思路寫在這邊啦，如果想看的話請見&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
-    
-    
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
-    
-    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
-    
-    <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
-    
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
   </entry>
   

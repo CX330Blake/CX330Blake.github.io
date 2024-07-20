@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-07-19T12:29:02.201Z</updated>
+  <updated>2024-07-20T06:50:14.998Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[THM] Pwn101 Writeup</title>
+    <link href="https://cx330.tw/posts/83b7f1b/"/>
+    <id>https://cx330.tw/posts/83b7f1b/</id>
+    <published>2024-07-20T05:53:43.000Z</published>
+    <updated>2024-07-20T06:50:14.998Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Challenge-1-pwn101&quot;&gt;Challenge 1 - pwn101&lt;/h1&gt;
+&lt;p&gt;First, we use IDA to decompile the binary it gave us. We can see that the program</summary>
+        
+      
+    
+    
+    
+    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
+    
+    <category term="TryHackMe" scheme="https://cx330.tw/categories/TryHackMe/"/>
+    
+    
+    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    
+    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
+    
+    <category term="Hacking" scheme="https://cx330.tw/tags/Hacking/"/>
+    
+  </entry>
   
   <entry>
     <title>[Day 14] 用THM+影片繼續學Pwn</title>
@@ -166,9 +198,9 @@
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
     
-    <category term="Web" scheme="https://cx330.tw/tags/Web/"/>
-    
     <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
+    
+    <category term="Web" scheme="https://cx330.tw/tags/Web/"/>
     
   </entry>
   
@@ -595,40 +627,6 @@
         
     <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
 &lt;p&gt;這是第一個 TechStreak30 系列的第三天，今天一樣繼續 work on &lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
-    
-    
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
-    
-    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
-    
-    <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
-    
-    <category term="Crypto" scheme="https://cx330.tw/tags/Crypto/"/>
-    
-    <category term="Cryptography" scheme="https://cx330.tw/tags/Cryptography/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Day 02] Learning Cryptography</title>
-    <link href="https://cx330.tw/posts/b40c06ed/"/>
-    <id>https://cx330.tw/posts/b40c06ed/</id>
-    <published>2024-06-27T12:05:12.000Z</published>
-    <updated>2024-07-12T12:48:09.235Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
-&lt;p&gt;密碼學一直以來都是我覺得超級超級困難的東西，為了可以更好的搞清楚它，決定寫一篇筆記來給自己（和各位）當作學習的資料！我把連結放在&lt;a</summary>
         
       
     

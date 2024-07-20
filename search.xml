@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>[Day 15] 我在澎湖刷THM的Pwn題目</title>
+      <link href="/posts/9071560f/"/>
+      <url>/posts/9071560f/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>雖然今天在澎湖了，但是還是抽空寫了些題目！其實我一直很嚮往在各處旅行的途中寫 Code，我覺得對我來說是一件很浪漫的事情 XD。(期待之後某日能成為 Digital nomad)</p><h1 id="今日進度">今日進度</h1><p>今天寫了兩題，他是一個 Room，裡面共有十題。都是簡單的 BOF，所以說也沒花太多時間，</p><ol><li><a href="https://cx330.tw/posts/83b7f1b/">[THM] Pwn101 Writeup</a></li></ol><h1 id="今日狀態">今日狀態</h1><ul><li><p>起床時間：<code>09：00</code></p></li><li><p>知識量：⭐⭐⭐</p></li><li><p>疲勞程度：⭐⭐⭐</p></li><li><p>精神狀態：⭐⭐⭐⭐</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 2024 CTF Training </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CTF </tag>
+            
+            <tag> CyberSec </tag>
+            
+            <tag> Pwn </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[THM] Pwn101 Writeup</title>
       <link href="/posts/83b7f1b/"/>
       <url>/posts/83b7f1b/</url>
@@ -171,9 +200,9 @@
             
             <tag> HTB </tag>
             
-            <tag> HackTheBox </tag>
-            
             <tag> Web </tag>
+            
+            <tag> HackTheBox </tag>
             
         </tags>
       
@@ -374,9 +403,9 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -405,9 +434,9 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -436,9 +465,9 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -467,9 +496,9 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -498,9 +527,9 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -556,9 +585,9 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -637,7 +666,7 @@
     
     
     <entry>
-      <title>Cryptography Notes 密碼學任督二脈</title>
+      <title>Cryptography for Muggles 密碼學任督二脈</title>
       <link href="/posts/39694de9/"/>
       <url>/posts/39694de9/</url>
       
@@ -653,11 +682,11 @@
       
         <tags>
             
-            <tag> 資安 </tag>
-            
             <tag> CTF </tag>
             
             <tag> Crypto </tag>
+            
+            <tag> 資安 </tag>
             
             <tag> 密碼學 </tag>
             
@@ -686,9 +715,9 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -790,9 +819,9 @@
       
         <tags>
             
-            <tag> 資安 </tag>
-            
             <tag> PicoCTF </tag>
+            
+            <tag> 資安 </tag>
             
         </tags>
       

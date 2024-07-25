@@ -441,6 +441,13 @@
   </url>
   
   <url>
+    <loc>https://cx330.tw/tags/SCIST/</loc>
+    <lastmod>2024-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://cx330.tw/tags/AI/</loc>
     <lastmod>2024-07-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -449,13 +456,6 @@
   
   <url>
     <loc>https://cx330.tw/tags/GDSC/</loc>
-    <lastmod>2024-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cx330.tw/tags/SCIST/</loc>
     <lastmod>2024-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -504,6 +504,20 @@
   </url>
   
   <url>
+    <loc>https://cx330.tw/tags/Security/</loc>
+    <lastmod>2024-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/tags/Hacking/</loc>
+    <lastmod>2024-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://cx330.tw/tags/%E5%AF%86%E7%A2%BC%E5%AD%B8/</loc>
     <lastmod>2024-07-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -533,20 +547,6 @@
   
   <url>
     <loc>https://cx330.tw/tags/Machine-Code/</loc>
-    <lastmod>2024-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cx330.tw/tags/Security/</loc>
-    <lastmod>2024-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cx330.tw/tags/Hacking/</loc>
     <lastmod>2024-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -590,13 +590,6 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/StudyNotes/</loc>
-    <lastmod>2024-07-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cx330.tw/categories/LifeAndTalk/</loc>
     <lastmod>2024-07-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -605,6 +598,13 @@
   
   <url>
     <loc>https://cx330.tw/categories/TryHackMe/</loc>
+    <lastmod>2024-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/categories/StudyNotes/</loc>
     <lastmod>2024-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

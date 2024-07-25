@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>[Day 16] 計畫的一半！</title>
+      <link href="/posts/86a224b6/"/>
+      <url>/posts/86a224b6/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>從澎湖回來之後好懷念待在澎湖的日子，澎湖那種很慢的生活真的很令人嚮往欸。今天起床後就覺得澎湖真的很好就是東西有點小貴，而且澎湖的海真的是很漂亮。</p><h1 id="今日進度">今日進度</h1><p>今天寫了題 Pwn 題，然後中間遇到了些 MOVAPS 的問題所以卡了一些時間，上網找了影片和 Writeup 才寫出來的，總之挺坎坷。不過也是學到挺多的。反正今天是寫到了 Pwn101 裡面的 Pwn103 啦。</p><ol><li><a href="https://cx330.tw/posts/83b7f1b/">[THM] Pwn101 Writeup</a></li></ol><h1 id="今日狀態">今日狀態</h1><ul><li><p>起床時間：<code>12：00</code></p></li><li><p>知識量：⭐⭐⭐</p></li><li><p>疲勞程度：⭐⭐⭐⭐</p></li><li><p>精神狀態：⭐⭐⭐</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 2024 CTF Training </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CTF </tag>
+            
+            <tag> CyberSec </tag>
+            
+            <tag> Pwn </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[Day 15] 我在澎湖刷THM的Pwn題目</title>
       <link href="/posts/9071560f/"/>
       <url>/posts/9071560f/</url>
@@ -200,9 +229,9 @@
             
             <tag> HTB </tag>
             
-            <tag> Web </tag>
-            
             <tag> HackTheBox </tag>
+            
+            <tag> Web </tag>
             
         </tags>
       

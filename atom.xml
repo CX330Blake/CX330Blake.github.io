@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-07-20T16:01:46.822Z</updated>
+  <updated>2024-07-25T15:40:46.912Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -17,11 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[Day 16] 計畫的一半！</title>
+    <link href="https://cx330.tw/posts/86a224b6/"/>
+    <id>https://cx330.tw/posts/86a224b6/</id>
+    <published>2024-07-25T15:36:41.000Z</published>
+    <updated>2024-07-25T15:40:46.912Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
+&lt;p&gt;從澎湖回來之後好懷念待在澎湖的日子，澎湖那種很慢的生活真的很令人嚮往欸。今天起床後就覺得澎湖真的很好就是東西有點小貴，而且澎湖的海真的是很漂亮。&lt;/p&gt;
+&lt;h1 id=&quot;今日進度&quot;&gt;今日進度&lt;/h1&gt;
+&lt;p&gt;今天寫了題 Pwn</summary>
+        
+      
+    
+    
+    
+    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
+    
+    
+    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    
+    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    
+    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[Day 15] 我在澎湖刷THM的Pwn題目</title>
     <link href="https://cx330.tw/posts/9071560f/"/>
     <id>https://cx330.tw/posts/9071560f/</id>
     <published>2024-07-20T15:38:54.000Z</published>
-    <updated>2024-07-20T16:01:46.822Z</updated>
+    <updated>2024-07-25T15:40:57.354Z</updated>
     
     
       
@@ -229,9 +261,9 @@
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
     
-    <category term="Web" scheme="https://cx330.tw/tags/Web/"/>
-    
     <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
+    
+    <category term="Web" scheme="https://cx330.tw/tags/Web/"/>
     
   </entry>
   
@@ -609,38 +641,6 @@
     <category term="Blog" scheme="https://cx330.tw/tags/Blog/"/>
     
     <category term="網頁開發" scheme="https://cx330.tw/tags/%E7%B6%B2%E9%A0%81%E9%96%8B%E7%99%BC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Day 04] Grinding PicoCTF 2</title>
-    <link href="https://cx330.tw/posts/4c6f99b3/"/>
-    <id>https://cx330.tw/posts/4c6f99b3/</id>
-    <published>2024-06-29T08:44:33.000Z</published>
-    <updated>2024-07-12T12:55:56.518Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
-&lt;p&gt;家人們家人們！有鑑於昨日收到的兩個消息，第一是 7/10 到 7/12 有 SCIST 資安課的 CTF 季後賽要打，第二是我錄取了 AIS3 暑期資安課程的備取，所以我決定先來好好地刷些題目。所以&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
-    
-    
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
-    
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
-    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
-    
-    <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
     
   </entry>
   

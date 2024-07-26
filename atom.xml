@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-07-25T15:40:46.912Z</updated>
+  <updated>2024-07-26T06:56:30.821Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>成大不分系轉系經驗分享</title>
+    <link href="https://cx330.tw/posts/baaabc06/"/>
+    <id>https://cx330.tw/posts/baaabc06/</id>
+    <published>2024-07-26T06:46:51.000Z</published>
+    <updated>2024-07-26T06:56:30.821Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1</summary>
+        
+      
+    
+    
+    
+    <category term="LifeAndTalk" scheme="https://cx330.tw/categories/LifeAndTalk/"/>
+    
+    
+    <category term="NCKU" scheme="https://cx330.tw/tags/NCKU/"/>
+    
+    <category term="CCEP" scheme="https://cx330.tw/tags/CCEP/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[Day 16] 計畫的一半！</title>
     <link href="https://cx330.tw/posts/86a224b6/"/>
     <id>https://cx330.tw/posts/86a224b6/</id>
     <published>2024-07-25T15:36:41.000Z</published>
-    <updated>2024-07-25T15:40:46.912Z</updated>
+    <updated>2024-07-25T15:41:17.366Z</updated>
     
     
       
@@ -261,9 +288,9 @@
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
     
-    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
-    
     <category term="Web" scheme="https://cx330.tw/tags/Web/"/>
+    
+    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
     
   </entry>
   
@@ -473,9 +500,9 @@
     <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
-    
     <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
+    
+    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
@@ -506,9 +533,9 @@
     <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
-    
     <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
+    
+    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
@@ -539,9 +566,9 @@
     <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
-    
     <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
+    
+    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
@@ -572,9 +599,9 @@
     <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
-    
     <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
+    
+    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
@@ -607,40 +634,13 @@
     <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
-    
     <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
+    
+    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
     <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>不懂就問！如何利用 Hexo + GitHub + HackMD 搭建自己的個人部落格</title>
-    <link href="https://cx330.tw/posts/81070fa0/"/>
-    <id>https://cx330.tw/posts/81070fa0/</id>
-    <published>2024-06-29T18:39:53.000Z</published>
-    <updated>2024-07-12T12:56:02.327Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1</summary>
-        
-      
-    
-    
-    
-    <category term="DevCorner" scheme="https://cx330.tw/categories/DevCorner/"/>
-    
-    
-    <category term="Blog" scheme="https://cx330.tw/tags/Blog/"/>
-    
-    <category term="網頁開發" scheme="https://cx330.tw/tags/%E7%B6%B2%E9%A0%81%E9%96%8B%E7%99%BC/"/>
     
   </entry>
   

@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-07-27T18:12:47.129Z</updated>
+  <updated>2024-07-27T18:54:28.587Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>[Day 17] HTB和THM幫助我學Pwn</title>
     <link href="https://cx330.tw/posts/0/"/>
     <id>https://cx330.tw/posts/0/</id>
     <published>2024-07-27T18:07:05.000Z</published>
-    <updated>2024-07-27T18:12:47.129Z</updated>
+    <updated>2024-07-27T18:54:28.587Z</updated>
     
     
       
@@ -29,11 +29,9 @@
         
         
     <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
-&lt;p&gt;雖然已經過了12點，但我還是趕緊來補一下。&lt;/p&gt;
-&lt;p&gt;今天跟高中朋友們出去了！一起去了咖啡廳工作了一下午！效率還不錯，而且真的很需要咖啡XD。&lt;/p&gt;
-&lt;h1 id=&quot;今日進度&quot;&gt;今日進度&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;HTB</summary>
+&lt;p&gt;雖然已經過了 12 點，但我還是趕緊來補一下。&lt;/p&gt;
+&lt;p&gt;今天跟高中朋友們出去了！一起去了咖啡廳工作了一下午！效率還不錯，而且真的很需要咖啡 XD。&lt;/p&gt;
+&lt;h1</summary>
         
       
     
@@ -315,16 +313,16 @@
     
     
     
-    <category term="HackTheBox" scheme="https://cx330.tw/categories/HackTheBox/"/>
-    
     <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
+    
+    <category term="HackTheBox" scheme="https://cx330.tw/categories/HackTheBox/"/>
     
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
     
-    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
-    
     <category term="Web" scheme="https://cx330.tw/tags/Web/"/>
+    
+    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
     
   </entry>
   
@@ -348,9 +346,9 @@
     
     
     
-    <category term="HackTheBox" scheme="https://cx330.tw/categories/HackTheBox/"/>
-    
     <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
+    
+    <category term="HackTheBox" scheme="https://cx330.tw/categories/HackTheBox/"/>
     
     
     <category term="Crypto" scheme="https://cx330.tw/tags/Crypto/"/>
@@ -469,9 +467,9 @@
     
     
     
-    <category term="HackTheBox" scheme="https://cx330.tw/categories/HackTheBox/"/>
-    
     <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
+    
+    <category term="HackTheBox" scheme="https://cx330.tw/categories/HackTheBox/"/>
     
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
@@ -536,11 +534,11 @@
     
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
     <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
+    
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
   </entry>
   
@@ -569,11 +567,11 @@
     
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
     <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
+    
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
   </entry>
   
@@ -602,11 +600,11 @@
     
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
     <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
+    
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
   </entry>
   
@@ -635,11 +633,11 @@
     
     <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
     
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
     <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
+    
+    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
     
   </entry>
   

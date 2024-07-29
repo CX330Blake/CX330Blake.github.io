@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-07-29T18:22:57.059Z</updated>
+  <updated>2024-07-29T18:23:18.488Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://cx330.tw/posts/289c779a/"/>
     <id>https://cx330.tw/posts/289c779a/</id>
     <published>2024-07-29T18:19:31.000Z</published>
-    <updated>2024-07-29T18:22:57.059Z</updated>
+    <updated>2024-07-29T18:23:18.488Z</updated>
     
     
       
@@ -384,9 +384,9 @@
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
     
-    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
-    
     <category term="Web" scheme="https://cx330.tw/tags/Web/"/>
+    
+    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
     
   </entry>
   

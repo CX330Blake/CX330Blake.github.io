@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-07-28T15:45:14.839Z</updated>
+  <updated>2024-07-29T18:22:57.059Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -17,11 +17,44 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[Day 19] 上完Yuawn的Pwn第一堂課！</title>
+    <link href="https://cx330.tw/posts/289c779a/"/>
+    <id>https://cx330.tw/posts/289c779a/</id>
+    <published>2024-07-29T18:19:31.000Z</published>
+    <updated>2024-07-29T18:22:57.059Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
+&lt;p&gt;今天把 Yuawn 的第一堂課上完了，明天來看看第二堂。然後今天沒有寫題目，不小心有點小偷懶了。明天趕緊繼續加油！&lt;/p&gt;
+&lt;h1 id=&quot;今日進度&quot;&gt;今日進度&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Yuawn 的 Binary</summary>
+        
+      
+    
+    
+    
+    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
+    
+    
+    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    
+    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    
+    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[Day 18] Yuawn的課真的上的不錯，大推大推</title>
     <link href="https://cx330.tw/posts/dfbc9f18/"/>
     <id>https://cx330.tw/posts/dfbc9f18/</id>
     <published>2024-07-28T15:42:12.000Z</published>
-    <updated>2024-07-28T15:45:14.839Z</updated>
+    <updated>2024-07-29T18:20:31.424Z</updated>
     
     
       
@@ -351,9 +384,9 @@
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
     
-    <category term="Web" scheme="https://cx330.tw/tags/Web/"/>
-    
     <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
+    
+    <category term="Web" scheme="https://cx330.tw/tags/Web/"/>
     
   </entry>
   
@@ -588,39 +621,6 @@
     <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
 &lt;p&gt;今天到第八天了，也算是正式踏入了將近整個計畫的四分之一。目前到現在覺得收穫還是挺多的，不管是新學到的技術或是之前很多沒有很扎實的基礎觀念，都有在這個計畫中被慢慢補足。&lt;/p&gt;
 &lt;p&gt;希望自己接下來的四分之三可以繼續努力！一些</summary>
-        
-      
-    
-    
-    
-    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
-    
-    
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
-    
-    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
-    
-    <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Day 07] Grinding PicoCTF 5</title>
-    <link href="https://cx330.tw/posts/a9158ef3/"/>
-    <id>https://cx330.tw/posts/a9158ef3/</id>
-    <published>2024-07-04T13:31:01.000Z</published>
-    <updated>2024-07-26T15:21:01.076Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
-&lt;p&gt;昨天斷更了一天，因為打算把中文站點和英文站點分開，所以對網站做了一些重構。&lt;/p&gt;
-&lt;p&gt;總之現在中文的站點在 &lt;a href=&quot;https://cx330.tw&quot;&gt;https://cx330.tw&lt;/a&gt;；而英文的站點在 &lt;a</summary>
         
       
     

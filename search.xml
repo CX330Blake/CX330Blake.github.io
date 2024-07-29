@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>[Day 19] 上完Yuawn的Pwn第一堂課！</title>
+      <link href="/posts/289c779a/"/>
+      <url>/posts/289c779a/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>今天把 Yuawn 的第一堂課上完了，明天來看看第二堂。然後今天沒有寫題目，不小心有點小偷懶了。明天趕緊繼續加油！</p><h1 id="今日進度">今日進度</h1><ol><li>Yuawn 的 Binary Exploitation (Pwn) - Basic</li></ol><h1 id="今日狀態">今日狀態</h1><ul><li><p>起床時間：<code>11：00</code></p></li><li><p>知識量：⭐⭐⭐</p></li><li><p>疲勞程度：⭐⭐</p></li><li><p>精神狀態：⭐⭐⭐⭐</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 2024 CTF Training </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CTF </tag>
+            
+            <tag> CyberSec </tag>
+            
+            <tag> Pwn </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[Day 18] Yuawn的課真的上的不錯，大推大推</title>
       <link href="/posts/dfbc9f18/"/>
       <url>/posts/dfbc9f18/</url>
@@ -314,9 +343,9 @@
             
             <tag> HTB </tag>
             
-            <tag> Web </tag>
-            
             <tag> HackTheBox </tag>
+            
+            <tag> Web </tag>
             
         </tags>
       

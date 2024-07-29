@@ -446,7 +446,7 @@ const anzhiyu = {
         if (commentBarrage) {
             if (window.getComputedStyle(commentBarrage).display === "flex") {
                 commentBarrage.style.display = "none";
-                anzhiyu.snackbarShow("✨ 已關閉評論彈幕");
+                anzhiyu.snackbarShow("✨ Bullet screen is off");
                 document.querySelector(
                     ".menu-commentBarrage-text"
                 ).textContent = "顯示熱評";
@@ -462,7 +462,7 @@ const anzhiyu = {
                 document
                     .querySelector("#consoleCommentBarrage")
                     .classList.add("on");
-                anzhiyu.snackbarShow("✨ 已開啓評論彈幕");
+                anzhiyu.snackbarShow("✨ Bullet screen is on");
                 localStorage.removeItem("commentBarrageSwitch");
             }
         }

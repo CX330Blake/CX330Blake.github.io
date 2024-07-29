@@ -8250,6 +8250,9 @@ body:has(#console.show) #nav-music {
   -webkit-justify-content: flex-end;
   justify-content: flex-end;
 }
+#anMusic-page meting-js .aplayer .aplayer-body .aplayer-info .aplayer-controller .aplayer-time .aplayer-volume-wrap {
+  display: none;
+}
 #anMusic-page meting-js .aplayer .aplayer-body .aplayer-info .aplayer-controller .aplayer-time .aplayer-volume-wrap .aplayer-volume-bar-wrap {
   bottom: 0;
   right: -5px;

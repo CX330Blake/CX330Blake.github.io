@@ -7953,6 +7953,9 @@ body[data-type="post"] #popup-window.popup-hide {
 body[data-type="music"] {
   background: #0d0d0d;
 }
+body[data-type="music"] #bmc-wbtn {
+  display: none;
+}
 body[data-type="music"] #body-wrap {
   -webkit-box-pack: start;
   -moz-box-pack: start;
@@ -8466,6 +8469,11 @@ body:has(#console.show) #nav-music {
     right: 25px;
     top: -90px;
   }
+}
+#anMusic-page #anMusicRefreshBtn,
+#anMusic-page #anMusicBtnGetSong,
+#anMusic-page #anMusicSwitching {
+  display: none;
 }
 .reward #con {
   width: 350px;

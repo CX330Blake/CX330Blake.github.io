@@ -463,6 +463,20 @@
   </url>
   
   <url>
+    <loc>https://cx330.tw/tags/%E8%B3%87%E5%AE%89/</loc>
+    <lastmod>2024-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/tags/AIS3/</loc>
+    <lastmod>2024-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://cx330.tw/tags/AI/</loc>
     <lastmod>2024-07-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -477,14 +491,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/tags/%E8%B3%87%E5%AE%89/</loc>
-    <lastmod>2024-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cx330.tw/tags/AIS3/</loc>
+    <loc>https://cx330.tw/tags/SCIST/</loc>
     <lastmod>2024-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -505,27 +512,6 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/tags/SCIST/</loc>
-    <lastmod>2024-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cx330.tw/tags/HackTheBox/</loc>
-    <lastmod>2024-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cx330.tw/tags/Web/</loc>
-    <lastmod>2024-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cx330.tw/tags/%E9%A7%AD%E5%AE%A2/</loc>
     <lastmod>2024-07-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -540,7 +526,28 @@
   </url>
   
   <url>
+    <loc>https://cx330.tw/tags/Web/</loc>
+    <lastmod>2024-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/tags/HackTheBox/</loc>
+    <lastmod>2024-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://cx330.tw/tags/Security/</loc>
+    <lastmod>2024-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cx330.tw/tags/Hacking/</loc>
     <lastmod>2024-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -595,24 +602,10 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>https://cx330.tw/tags/Hacking/</loc>
-    <lastmod>2024-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
   
   <url>
     <loc>https://cx330.tw/categories/2024-CTF-Training/</loc>
-    <lastmod>2024-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cx330.tw/categories/DevCorner/</loc>
     <lastmod>2024-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -626,7 +619,7 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/HackTheBox/</loc>
+    <loc>https://cx330.tw/categories/DevCorner/</loc>
     <lastmod>2024-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -640,6 +633,13 @@
   </url>
   
   <url>
+    <loc>https://cx330.tw/categories/HackTheBox/</loc>
+    <lastmod>2024-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://cx330.tw/categories/LifeAndTalk/</loc>
     <lastmod>2024-07-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -647,14 +647,14 @@
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/StudyNotes/</loc>
+    <loc>https://cx330.tw/categories/TryHackMe/</loc>
     <lastmod>2024-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://cx330.tw/categories/TryHackMe/</loc>
+    <loc>https://cx330.tw/categories/StudyNotes/</loc>
     <lastmod>2024-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

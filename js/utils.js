@@ -754,11 +754,16 @@ const anzhiyu = {
 
     //獲取音樂中的名稱
     musicGetName: function () {
-        var x = document.querySelector(".aplayer-title");
+        // 使用querySelectorAll选择类名为"aplayer-title"的所有元素
+        var elements = document.querySelectorAll(".aplayer-title");
+        // 初始化一个数组来存储音乐标题
         var arr = [];
-        for (var i = x.length - 1; i >= 0; i--) {
-            arr[i] = x[i].innerText;
+        // 遍历所有找到的元素
+        for (var i = 0; i < elements.length; i++) {
+            // 将每个元素的innerText添加到数组中
+            arr[i] = elements[i].innerText;
         }
+        // 返回数组中的第一个元素作为默认的音乐名称
         return arr[0];
     },
 

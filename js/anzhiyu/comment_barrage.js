@@ -202,12 +202,10 @@ if (document.querySelector(".comment-barrage")) {
 
     if (localStorage.getItem("commentBarrageSwitch") !== "false") {
         document.querySelector(".comment-barrage").style.display = "flex";
-        document.querySelector(".menu-commentBarrage-text").textContent =
-            "關閉熱評";
+        document.querySelector(".menu-commentBarrage-text").textContent = "Hot";
     } else {
         document.querySelector(".comment-barrage").style.display = "none";
-        document.querySelector(".menu-commentBarrage-text").textContent =
-            "顯示熱評";
+        document.querySelector(".menu-commentBarrage-text").textContent = "Hot";
     }
 
     document.addEventListener("pjax:send", function () {

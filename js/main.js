@@ -922,9 +922,9 @@ document.addEventListener("DOMContentLoaded", function () {
             ".menu-darkmode-text"
         );
         if (mode === "light") {
-            menuDarkmodeText.textContent = "深色模式";
+            menuDarkmodeText.textContent = "Dark mode";
         } else {
-            menuDarkmodeText.textContent = "淺色模式";
+            menuDarkmodeText.textContent = "Light mode";
         }
 
         if (!GLOBAL_CONFIG_SITE.isPost) {

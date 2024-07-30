@@ -449,7 +449,7 @@ const anzhiyu = {
                 anzhiyu.snackbarShow("✨ Bullet screen is off");
                 document.querySelector(
                     ".menu-commentBarrage-text"
-                ).textContent = "顯示熱評";
+                ).textContent = "Hot";
                 document
                     .querySelector("#consoleCommentBarrage")
                     .classList.remove("on");
@@ -458,7 +458,7 @@ const anzhiyu = {
                 commentBarrage.style.display = "flex";
                 document.querySelector(
                     ".menu-commentBarrage-text"
-                ).textContent = "關閉熱評";
+                ).textContent = "Hot";
                 document
                     .querySelector("#consoleCommentBarrage")
                     .classList.add("on");
@@ -924,7 +924,7 @@ const anzhiyu = {
             return;
         }
         const urlParams = new URLSearchParams(window.location.search);
-        const userId = "7032963191";
+        const userId = "12295857597";
         const userServer = "netease";
         const anMusicPageMeting = document.getElementById(
             "anMusic-page-meting"

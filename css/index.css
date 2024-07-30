@@ -3545,7 +3545,7 @@ figure.highlight pre .javascript .function {
   -ms-animation: 1.2s ease 0s infinite normal none running code-expand-key;
   animation: 1.2s ease 0s infinite normal none running code-expand-key;
 }
-#article-container .code-expand-btn.expand-done {
+#article-container .code-expand-btn.expand-done i.anzhiyufont.anzhiyu-icon-angle-double-down {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -o-transform: rotate(180deg);

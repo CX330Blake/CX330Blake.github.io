@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-07-29T18:23:18.488Z</updated>
+  <updated>2024-07-30T07:57:35.884Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Intro to CPU Registers</title>
+    <link href="https://cx330.tw/posts/1d65dc6/"/>
+    <id>https://cx330.tw/posts/1d65dc6/</id>
+    <published>2024-07-30T05:53:37.000Z</published>
+    <updated>2024-07-30T07:57:35.884Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Discalimer-⚠️&quot;&gt;Discalimer ⚠️&lt;/h1&gt;
+&lt;p&gt;The resources for this article are from &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="StudyNotes" scheme="https://cx330.tw/categories/StudyNotes/"/>
+    
+    
+    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
+    
+    <category term="Registers" scheme="https://cx330.tw/tags/Registers/"/>
+    
+  </entry>
   
   <entry>
     <title>[Day 19] 上完Yuawn的Pwn第一堂課！</title>
@@ -384,9 +412,9 @@
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
     
-    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
-    
     <category term="Web" scheme="https://cx330.tw/tags/Web/"/>
+    
+    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
     
   </entry>
   
@@ -588,39 +616,6 @@
         
     <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
 &lt;p&gt;明天（2024.07.08）早上十點 SCIST 的季後賽就開始了，希望這次能打得比上次好！雖然這學期 SCIST</summary>
-        
-      
-    
-    
-    
-    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
-    
-    
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
-    
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
-    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
-    
-    <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Day 08] Grinding PicoCTF 6</title>
-    <link href="https://cx330.tw/posts/7c095067/"/>
-    <id>https://cx330.tw/posts/7c095067/</id>
-    <published>2024-07-06T09:24:11.000Z</published>
-    <updated>2024-07-26T15:21:01.034Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
-&lt;p&gt;今天到第八天了，也算是正式踏入了將近整個計畫的四分之一。目前到現在覺得收穫還是挺多的，不管是新學到的技術或是之前很多沒有很扎實的基礎觀念，都有在這個計畫中被慢慢補足。&lt;/p&gt;
-&lt;p&gt;希望自己接下來的四分之三可以繼續努力！一些</summary>
         
       
     

@@ -536,7 +536,7 @@ function addRightMenuClickEvent() {
         .getElementById("menu-music-copyMusicName")
         .addEventListener("click", function () {
             rm.rightmenuCopyText(anzhiyu.musicGetName());
-            anzhiyu.snackbarShow("複製歌曲名稱成功", false, 3000);
+            anzhiyu.snackbarShow("The song name is copied!", false, 3000);
         });
 }
 

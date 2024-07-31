@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-07-31T06:52:21.617Z</updated>
+  <updated>2024-07-31T09:13:23.536Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -17,11 +17,45 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[HTB] You know 0xDiablos Writeup</title>
+    <link href="https://cx330.tw/posts/ca279614/"/>
+    <id>https://cx330.tw/posts/ca279614/</id>
+    <published>2024-07-31T07:52:37.000Z</published>
+    <updated>2024-07-31T09:13:23.536Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;0x00-Challenge-Info&quot;&gt;0x00 Challenge Info&lt;/h1&gt;
+&lt;p&gt;As usual, let’s see the challenge desciption first.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I missed</summary>
+        
+      
+    
+    
+    
+    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
+    
+    <category term="HackTheBox" scheme="https://cx330.tw/categories/HackTheBox/"/>
+    
+    
+    <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
+    
+    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
+    
+    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[Day 20] HTB Academy - Stack-Based Buffer Overflows on Linux x86</title>
     <link href="https://cx330.tw/posts/4e5b6228/"/>
     <id>https://cx330.tw/posts/4e5b6228/</id>
     <published>2024-07-31T06:48:54.000Z</published>
-    <updated>2024-07-31T06:52:21.617Z</updated>
+    <updated>2024-07-31T06:52:42.332Z</updated>
     
     
       
@@ -442,9 +476,9 @@
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
     
-    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
-    
     <category term="Web" scheme="https://cx330.tw/tags/Web/"/>
+    
+    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
     
   </entry>
   
@@ -599,36 +633,6 @@
     <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
     
     <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hacker&#39;s Manifesto《駭客宣言》</title>
-    <link href="https://cx330.tw/posts/5ed2c20/"/>
-    <id>https://cx330.tw/posts/5ed2c20/</id>
-    <published>2024-07-07T10:11:39.000Z</published>
-    <updated>2024-07-30T17:24:13.613Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
-&lt;p&gt;本文章是在 1986 年 1 月 8 日，由 The Mentor (Loyd Blankenship) 在被逮捕後，發布在地下駭客電子雜誌 Phrack</summary>
-        
-      
-    
-    
-    
-    <category term="Hacking" scheme="https://cx330.tw/categories/Hacking/"/>
-    
-    
-    <category term="資安" scheme="https://cx330.tw/tags/%E8%B3%87%E5%AE%89/"/>
-    
-    <category term="駭客" scheme="https://cx330.tw/tags/%E9%A7%AD%E5%AE%A2/"/>
-    
-    <category term="Hacker" scheme="https://cx330.tw/tags/Hacker/"/>
     
   </entry>
   

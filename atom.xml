@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-07-31T17:56:55.985Z</updated>
+  <updated>2024-07-31T18:01:44.860Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[Day 21] Pwn好難...但我會加油的</title>
+    <link href="https://cx330.tw/posts/ab8b10a3/"/>
+    <id>https://cx330.tw/posts/ab8b10a3/</id>
+    <published>2024-07-31T17:58:02.000Z</published>
+    <updated>2024-07-31T18:01:44.860Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
+&lt;p&gt;今天寫題目的時候儘管找了近十篇的 writeups，還是有個原理一直沒有理解徹底，可能就是稍微知道個大概半很不貫徹，下次問問看學長能不能給點幫助好了。總之覺得 CTF</summary>
+        
+      
+    
+    
+    
+    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
+    
+    
+    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    
+    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    
+    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
+    
+  </entry>
   
   <entry>
     <title>[HTB] You know 0xDiablos Writeup</title>
@@ -37,9 +67,9 @@
     
     
     
-    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
-    
     <category term="HackTheBox" scheme="https://cx330.tw/categories/HackTheBox/"/>
+    
+    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
     
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
@@ -469,9 +499,9 @@
     
     
     
-    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
-    
     <category term="HackTheBox" scheme="https://cx330.tw/categories/HackTheBox/"/>
+    
+    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
     
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
@@ -502,9 +532,9 @@
     
     
     
-    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
-    
     <category term="HackTheBox" scheme="https://cx330.tw/categories/HackTheBox/"/>
+    
+    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
     
     
     <category term="Crypto" scheme="https://cx330.tw/tags/Crypto/"/>
@@ -601,38 +631,6 @@
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[HTB] Racecar Writeup 🏎️</title>
-    <link href="https://cx330.tw/posts/331a6b46/"/>
-    <id>https://cx330.tw/posts/331a6b46/</id>
-    <published>2024-07-12T07:44:21.000Z</published>
-    <updated>2024-07-30T17:24:13.613Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;0x00-Challenge-Info&quot;&gt;0x00 Challenge Info&lt;/h1&gt;
-&lt;p&gt;This challenge gives us an executable file, which is a binary file. And the</summary>
-        
-      
-    
-    
-    
-    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
-    
-    <category term="HackTheBox" scheme="https://cx330.tw/categories/HackTheBox/"/>
-    
-    
-    <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
-    
-    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
-    
-    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
     
   </entry>
   

@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>[Day 21] Pwn好難...但我會加油的</title>
+      <link href="/posts/ab8b10a3/"/>
+      <url>/posts/ab8b10a3/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>今天寫題目的時候儘管找了近十篇的 writeups，還是有個原理一直沒有理解徹底，可能就是稍微知道個大概半很不貫徹，下次問問看學長能不能給點幫助好了。總之覺得 CTF 真的好難啊啊啊啊啊啊！但是我會加油的，因為我想要變強，也因為我很喜歡。</p><h1 id="今日進度">今日進度</h1><ol><li><a href="https://cx330.tw/posts/ca279614/">[HTB] You know 0xDiablos Writeup</a></li></ol><h1 id="今日狀態">今日狀態</h1><ul><li><p>起床時間：<code>07：45</code></p></li><li><p>知識量：⭐⭐⭐⭐⭐</p></li><li><p>疲勞程度：⭐⭐⭐⭐</p></li><li><p>精神狀態：⭐⭐⭐</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 2024 CTF Training </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CTF </tag>
+            
+            <tag> CyberSec </tag>
+            
+            <tag> Pwn </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[HTB] You know 0xDiablos Writeup</title>
       <link href="/posts/ca279614/"/>
       <url>/posts/ca279614/</url>
@@ -13,9 +42,9 @@
       
       <categories>
           
-          <category> CTF </category>
-          
           <category> HackTheBox </category>
+          
+          <category> CTF </category>
           
       </categories>
       
@@ -419,9 +448,9 @@
       
       <categories>
           
-          <category> CTF </category>
-          
           <category> HackTheBox </category>
+          
+          <category> CTF </category>
           
       </categories>
       
@@ -450,9 +479,9 @@
       
       <categories>
           
-          <category> CTF </category>
-          
           <category> HackTheBox </category>
+          
+          <category> CTF </category>
           
       </categories>
       
@@ -566,9 +595,9 @@
       
       <categories>
           
-          <category> CTF </category>
-          
           <category> HackTheBox </category>
+          
+          <category> CTF </category>
           
       </categories>
       
@@ -635,11 +664,11 @@
             
             <tag> CTF </tag>
             
+            <tag> PicoCTF </tag>
+            
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
-            
-            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -666,11 +695,11 @@
             
             <tag> CTF </tag>
             
+            <tag> PicoCTF </tag>
+            
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
-            
-            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -697,11 +726,11 @@
             
             <tag> CTF </tag>
             
+            <tag> PicoCTF </tag>
+            
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
-            
-            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -728,11 +757,11 @@
             
             <tag> CTF </tag>
             
+            <tag> PicoCTF </tag>
+            
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
-            
-            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -759,11 +788,11 @@
             
             <tag> CTF </tag>
             
+            <tag> PicoCTF </tag>
+            
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
-            
-            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -817,11 +846,11 @@
             
             <tag> CTF </tag>
             
+            <tag> PicoCTF </tag>
+            
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
-            
-            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -848,13 +877,13 @@
             
             <tag> CTF </tag>
             
-            <tag> Crypto </tag>
-            
-            <tag> Cryptography </tag>
-            
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> Crypto </tag>
+            
+            <tag> Cryptography </tag>
             
         </tags>
       
@@ -881,13 +910,13 @@
             
             <tag> CTF </tag>
             
-            <tag> Crypto </tag>
-            
-            <tag> Cryptography </tag>
-            
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> Crypto </tag>
+            
+            <tag> Cryptography </tag>
             
         </tags>
       
@@ -947,11 +976,11 @@
             
             <tag> CTF </tag>
             
+            <tag> PicoCTF </tag>
+            
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
-            
-            <tag> PicoCTF </tag>
             
         </tags>
       

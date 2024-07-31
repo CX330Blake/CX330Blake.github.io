@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>[Day 20] HTB Academy - Stack-Based Buffer Overflows on Linux x86</title>
+      <link href="/posts/4e5b6228/"/>
+      <url>/posts/4e5b6228/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>補一下昨天的進度，昨天看了看 HTB Academy 的 Stack-Based Buffer Overflows on Linux x86 這堂課。把原本對於 Pwn 的一些基礎知識補起來，也重新再了解一次各個 Register 的功能。總之這個課程還不錯滿推薦的。</p><h1 id="今日進度">今日進度</h1><ol><li><a href="https://academy.hackthebox.com/course/preview/stack-based-buffer-overflows-on-linux-x86">Stack-Based Buffer Overflows on Linux x86</a></li></ol><h1 id="今日狀態">今日狀態</h1><ul><li><p>起床時間：<code>09：45</code></p></li><li><p>知識量：⭐⭐⭐</p></li><li><p>疲勞程度：⭐⭐</p></li><li><p>精神狀態：⭐⭐⭐⭐</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 2024 CTF Training </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CTF </tag>
+            
+            <tag> CyberSec </tag>
+            
+            <tag> Pwn </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Intro to CPU Registers</title>
       <link href="/posts/1d65dc6/"/>
       <url>/posts/1d65dc6/</url>
@@ -370,9 +399,9 @@
             
             <tag> HTB </tag>
             
-            <tag> Web </tag>
-            
             <tag> HackTheBox </tag>
+            
+            <tag> Web </tag>
             
         </tags>
       
@@ -573,9 +602,9 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -604,9 +633,9 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -635,9 +664,9 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -666,9 +695,9 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -697,9 +726,9 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -755,9 +784,9 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -852,11 +881,11 @@
       
         <tags>
             
-            <tag> 資安 </tag>
-            
             <tag> CTF </tag>
             
             <tag> Crypto </tag>
+            
+            <tag> 資安 </tag>
             
             <tag> 密碼學 </tag>
             
@@ -885,9 +914,9 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> PicoCTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -989,9 +1018,9 @@
       
         <tags>
             
-            <tag> 資安 </tag>
-            
             <tag> PicoCTF </tag>
+            
+            <tag> 資安 </tag>
             
         </tags>
       

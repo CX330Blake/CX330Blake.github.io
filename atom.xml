@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-07-30T17:24:13.617Z</updated>
+  <updated>2024-07-31T06:52:21.617Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[Day 20] HTB Academy - Stack-Based Buffer Overflows on Linux x86</title>
+    <link href="https://cx330.tw/posts/4e5b6228/"/>
+    <id>https://cx330.tw/posts/4e5b6228/</id>
+    <published>2024-07-31T06:48:54.000Z</published>
+    <updated>2024-07-31T06:52:21.617Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
+&lt;p&gt;補一下昨天的進度，昨天看了看 HTB Academy 的 Stack-Based Buffer Overflows on Linux x86 這堂課。把原本對於 Pwn 的一些基礎知識補起來，也重新再了解一次各個 Register</summary>
+        
+      
+    
+    
+    
+    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
+    
+    
+    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    
+    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    
+    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
+    
+  </entry>
   
   <entry>
     <title>Intro to CPU Registers</title>
@@ -412,9 +442,9 @@
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
     
-    <category term="Web" scheme="https://cx330.tw/tags/Web/"/>
-    
     <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
+    
+    <category term="Web" scheme="https://cx330.tw/tags/Web/"/>
     
   </entry>
   
@@ -599,38 +629,6 @@
     <category term="駭客" scheme="https://cx330.tw/tags/%E9%A7%AD%E5%AE%A2/"/>
     
     <category term="Hacker" scheme="https://cx330.tw/tags/Hacker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Day 09] Grinding PicoCTF 7</title>
-    <link href="https://cx330.tw/posts/94d4e36f/"/>
-    <id>https://cx330.tw/posts/94d4e36f/</id>
-    <published>2024-07-07T08:13:43.000Z</published>
-    <updated>2024-07-30T17:24:13.603Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
-&lt;p&gt;明天（2024.07.08）早上十點 SCIST 的季後賽就開始了，希望這次能打得比上次好！雖然這學期 SCIST</summary>
-        
-      
-    
-    
-    
-    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
-    
-    
-    <category term="PicoCTF" scheme="https://cx330.tw/tags/PicoCTF/"/>
-    
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
-    
-    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
-    
-    <category term="TechStreak30" scheme="https://cx330.tw/tags/TechStreak30/"/>
     
   </entry>
   

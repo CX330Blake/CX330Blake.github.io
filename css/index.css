@@ -16486,6 +16486,13 @@ li.card-category-list-item {
 #body-wrap.open #anMusic-page-meting .aplayer.aplayer-withlist .aplayer-list {
   display: none;
 }
+.fa,
+.fa-solid,
+.fab,
+.far,
+.fas {
+  line-height: inherit !important;
+}
 #vcomment {
   font-size: 1.1em;
 }

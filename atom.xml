@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-07-31T18:02:11.142Z</updated>
+  <updated>2024-08-02T15:21:10.953Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[Day 22] 今天嘗試了自己做出Pwn107！</title>
+    <link href="https://cx330.tw/posts/26c65734/"/>
+    <id>https://cx330.tw/posts/26c65734/</id>
+    <published>2024-08-02T15:17:54.000Z</published>
+    <updated>2024-08-02T15:21:10.953Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
+&lt;p&gt;今天嘗試了自己不要看 Writeup 寫 Pwn107，模擬比賽的時候的感覺。結果真的做出來了！十分有成就感，所有的努力或許就是為了這樣一個一個的瞬間吧！繼續加油！&lt;/p&gt;
+&lt;h1</summary>
+        
+      
+    
+    
+    
+    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
+    
+    
+    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    
+    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    
+    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[Day 21] Pwn好難...但我會加油的</title>
     <link href="https://cx330.tw/posts/ab8b10a3/"/>
     <id>https://cx330.tw/posts/ab8b10a3/</id>
     <published>2024-07-31T17:58:02.000Z</published>
-    <updated>2024-07-31T18:02:11.142Z</updated>
+    <updated>2024-08-02T15:21:32.328Z</updated>
     
     
       
@@ -329,7 +360,7 @@
     <link href="https://cx330.tw/posts/83b7f1b/"/>
     <id>https://cx330.tw/posts/83b7f1b/</id>
     <published>2024-07-20T05:53:43.000Z</published>
-    <updated>2024-08-02T09:02:55.486Z</updated>
+    <updated>2024-08-02T15:05:58.293Z</updated>
     
     
       
@@ -506,9 +537,9 @@
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
     
-    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
-    
     <category term="Web" scheme="https://cx330.tw/tags/Web/"/>
+    
+    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
     
   </entry>
   
@@ -601,36 +632,6 @@
     <category term="資安" scheme="https://cx330.tw/tags/%E8%B3%87%E5%AE%89/"/>
     
     <category term="SCIST" scheme="https://cx330.tw/tags/SCIST/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Day 10] 關於打完SCIST期末後決定增加難度這件事</title>
-    <link href="https://cx330.tw/posts/5ed8ca9a/"/>
-    <id>https://cx330.tw/posts/5ed8ca9a/</id>
-    <published>2024-07-12T12:40:10.000Z</published>
-    <updated>2024-07-30T17:24:13.603Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
-&lt;p&gt;在這次 SCIST 的期末考結束之後，我發現我平常刷的題目的難度和真實比賽的難度好像有點落差。（PicoCTF 可能大部分題目本來就是比較練習+新手導向）雖然每次刷完 Pico</summary>
-        
-      
-    
-    
-    
-    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
-    
-    
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
-    
-    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
-    
-    <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
     
   </entry>
   

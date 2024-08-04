@@ -16486,11 +16486,11 @@ li.card-category-list-item {
 #body-wrap.open #anMusic-page-meting .aplayer.aplayer-withlist .aplayer-list {
   display: none;
 }
-.fa,
-.fa-solid,
-.fab,
-.far,
-.fas {
+.site-page.child.faa-parent.animated-hover .fa,
+.site-page.child.faa-parent.animated-hover .fa-solid,
+.site-page.child.faa-parent.animated-hover .fab,
+.site-page.child.faa-parent.animated-hover .far,
+.site-page.child.faa-parent.animated-hover .fas {
   line-height: inherit !important;
 }
 #vcomment {

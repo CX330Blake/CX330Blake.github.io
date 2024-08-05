@@ -287,7 +287,11 @@ rm.copyPageUrl = function (url) {
         url = window.location.href;
     }
     rm.copyUrl(url);
-    anzhiyu.snackbarShow("複製鏈接地址成功", false, 2000);
+    anzhiyu.snackbarShow(
+        "URL copied successfully, now go share it!",
+        false,
+        3000
+    );
     rm.hideRightMenu();
 };
 
@@ -391,7 +395,7 @@ rm.searchBaidu = function () {
 //分享鏈接
 rm.copyLink = function () {
     rm.rightmenuCopyText(domhref);
-    anzhiyu.snackbarShow("已複製鏈接地址");
+    anzhiyu.snackbarShow("URL is copied");
 };
 
 function addRightMenuClickEvent() {

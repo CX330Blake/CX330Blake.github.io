@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-08-02T15:21:46.509Z</updated>
+  <updated>2024-08-07T13:45:42.182Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>[Day 22] 今天嘗試了自己做出Pwn107！</title>
+    <title>[Day 22] 今天嘗試了自己做出 Pwn107！</title>
     <link href="https://cx330.tw/posts/26c65734/"/>
     <id>https://cx330.tw/posts/26c65734/</id>
     <published>2024-08-02T15:17:54.000Z</published>
-    <updated>2024-08-02T15:21:46.509Z</updated>
+    <updated>2024-08-07T13:45:42.182Z</updated>
     
     
       
@@ -48,11 +48,11 @@
   </entry>
   
   <entry>
-    <title>[Day 21] Pwn好難...但我會加油的</title>
+    <title>[Day 21] Pwn 好難...但我會加油的</title>
     <link href="https://cx330.tw/posts/ab8b10a3/"/>
     <id>https://cx330.tw/posts/ab8b10a3/</id>
     <published>2024-07-31T17:58:02.000Z</published>
-    <updated>2024-08-02T15:21:32.328Z</updated>
+    <updated>2024-08-07T13:45:36.838Z</updated>
     
     
       
@@ -170,11 +170,11 @@
   </entry>
   
   <entry>
-    <title>[Day 19] 上完Yuawn的Pwn第一堂課！</title>
+    <title>[Day 19] 上完 Yuawn 的 Pwn 第一堂課！</title>
     <link href="https://cx330.tw/posts/289c779a/"/>
     <id>https://cx330.tw/posts/289c779a/</id>
     <published>2024-07-29T18:19:31.000Z</published>
-    <updated>2024-07-30T17:24:13.606Z</updated>
+    <updated>2024-08-07T13:45:24.989Z</updated>
     
     
       
@@ -203,11 +203,11 @@
   </entry>
   
   <entry>
-    <title>[Day 18] Yuawn的課真的上的不錯，大推大推</title>
+    <title>[Day 18] Yuawn 的課真的上的不錯，大推大推</title>
     <link href="https://cx330.tw/posts/dfbc9f18/"/>
     <id>https://cx330.tw/posts/dfbc9f18/</id>
     <published>2024-07-28T15:42:12.000Z</published>
-    <updated>2024-07-30T17:24:13.606Z</updated>
+    <updated>2024-08-07T13:45:15.285Z</updated>
     
     
       
@@ -234,11 +234,11 @@
   </entry>
   
   <entry>
-    <title>[Day 17] HTB和THM幫助我學Pwn</title>
+    <title>[Day 17] HTB 和 THM 幫助我學 Pwn</title>
     <link href="https://cx330.tw/posts/db00a960/"/>
     <id>https://cx330.tw/posts/db00a960/</id>
     <published>2024-07-27T18:07:05.000Z</published>
-    <updated>2024-07-30T17:24:13.606Z</updated>
+    <updated>2024-08-07T13:45:10.874Z</updated>
     
     
       
@@ -325,11 +325,11 @@
   </entry>
   
   <entry>
-    <title>[Day 15] 我在澎湖刷THM的Pwn題目</title>
+    <title>[Day 15] 我在澎湖刷 THM 的 Pwn 題目</title>
     <link href="https://cx330.tw/posts/9071560f/"/>
     <id>https://cx330.tw/posts/9071560f/</id>
     <published>2024-07-20T15:38:54.000Z</published>
-    <updated>2024-07-30T17:24:13.606Z</updated>
+    <updated>2024-08-07T13:45:00.906Z</updated>
     
     
       
@@ -388,11 +388,11 @@
   </entry>
   
   <entry>
-    <title>[Day 14] 用THM+影片繼續學Pwn</title>
+    <title>[Day 14] 用 THM + 影片繼續學 Pwn</title>
     <link href="https://cx330.tw/posts/e58d0fa3/"/>
     <id>https://cx330.tw/posts/e58d0fa3/</id>
     <published>2024-07-19T12:25:13.000Z</published>
-    <updated>2024-07-30T17:24:13.606Z</updated>
+    <updated>2024-08-07T13:44:53.255Z</updated>
     
     
       
@@ -451,11 +451,11 @@
   </entry>
   
   <entry>
-    <title>[Day 13] 今天，從0開始學Pwn</title>
+    <title>[Day 13] 今天，從 0 開始學 Pwn</title>
     <link href="https://cx330.tw/posts/98fc7fc6/"/>
     <id>https://cx330.tw/posts/98fc7fc6/</id>
     <published>2024-07-18T12:39:09.000Z</published>
-    <updated>2024-07-30T17:24:13.603Z</updated>
+    <updated>2024-08-07T13:44:44.360Z</updated>
     
     
       
@@ -481,11 +481,11 @@
   </entry>
   
   <entry>
-    <title>[Day 12] 繼續刷HTB的題目！</title>
+    <title>[Day 12] 繼續刷 HTB 的題目！</title>
     <link href="https://cx330.tw/posts/11af25ee/"/>
     <id>https://cx330.tw/posts/11af25ee/</id>
     <published>2024-07-16T15:56:11.000Z</published>
-    <updated>2024-07-30T17:24:13.603Z</updated>
+    <updated>2024-08-07T13:44:35.140Z</updated>
     
     
       
@@ -577,11 +577,11 @@
   </entry>
   
   <entry>
-    <title>[Day 11] 把SCIST季後賽的writeup整理了下</title>
+    <title>[Day 11] 把 SCIST 季後賽的 writeup 整理了下</title>
     <link href="https://cx330.tw/posts/b5f171c7/"/>
     <id>https://cx330.tw/posts/b5f171c7/</id>
     <published>2024-07-15T07:55:47.000Z</published>
-    <updated>2024-07-30T17:24:13.603Z</updated>
+    <updated>2024-08-07T13:44:28.386Z</updated>
     
     
       

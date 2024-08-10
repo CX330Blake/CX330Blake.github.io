@@ -33,11 +33,11 @@
     
     
     <entry>
-      <title>[Day 22] 今天嘗試了自己做出 Pwn107！</title>
+      <title>[Day 22] 今天嘗試了自己做出 Pwn106！</title>
       <link href="/posts/26c65734/"/>
       <url>/posts/26c65734/</url>
       
-        <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>今天嘗試了自己不要看 Writeup 寫 Pwn107，模擬比賽的時候的感覺。結果真的做出來了！十分有成就感，所有的努力或許就是為了這樣一個一個的瞬間吧！繼續加油！</p><h1 id="今日進度">今日進度</h1><ol><li><a href="https://cx330.tw/posts/83b7f1b/">THM 的 Pwn101 的 Pwn107</a></li></ol><h1 id="今日狀態">今日狀態</h1><ul><li><p>起床時間：<code>09：00</code></p></li><li><p>知識量：⭐⭐⭐</p></li><li><p>疲勞程度：⭐⭐⭐</p></li><li><p>精神狀態：⭐⭐⭐⭐⭐</p></li></ul>]]></content>
+        <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>今天嘗試了自己不要看 Writeup 寫 Pwn106，模擬比賽的時候的感覺。結果真的做出來了！十分有成就感，所有的努力或許就是為了這樣一個一個的瞬間吧！繼續加油！</p><h1 id="今日進度">今日進度</h1><ol><li><a href="https://cx330.tw/posts/83b7f1b/">THM 的 Pwn101 的 Pwn106</a></li></ol><h1 id="今日狀態">今日狀態</h1><ul><li><p>起床時間：<code>09：00</code></p></li><li><p>知識量：⭐⭐⭐</p></li><li><p>疲勞程度：⭐⭐⭐</p></li><li><p>精神狀態：⭐⭐⭐⭐⭐</p></li></ul>]]></content>
       
       
       <categories>
@@ -999,11 +999,11 @@
       
         <tags>
             
-            <tag> 資安 </tag>
-            
             <tag> CTF </tag>
             
             <tag> Crypto </tag>
+            
+            <tag> 資安 </tag>
             
             <tag> 密碼學 </tag>
             
@@ -1136,9 +1136,9 @@
       
         <tags>
             
-            <tag> 資安 </tag>
-            
             <tag> PicoCTF </tag>
+            
+            <tag> 資安 </tag>
             
         </tags>
       

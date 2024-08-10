@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-08-07T13:45:42.182Z</updated>
+  <updated>2024-08-10T07:09:37.449Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -17,11 +17,45 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[Day 23] 刷一些 PicoCTF 的 Pwn 題</title>
+    <link href="https://cx330.tw/posts/51f13f41/"/>
+    <id>https://cx330.tw/posts/51f13f41/</id>
+    <published>2024-08-10T06:49:33.000Z</published>
+    <updated>2024-08-10T07:09:37.449Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
+&lt;p&gt;前幾天去馬祖了，暫停學習了一下下。回來後先刷刷 Pico 的題目練練手！從馬祖回來之後變好累 XD&lt;/p&gt;
+&lt;h1 id=&quot;今日進度&quot;&gt;今日進度&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;two-sum&lt;/li&gt;
+&lt;li&gt;buffer</summary>
+        
+      
+    
+    
+    
+    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
+    
+    
+    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    
+    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    
+    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[Day 22] 今天嘗試了自己做出 Pwn107！</title>
     <link href="https://cx330.tw/posts/26c65734/"/>
     <id>https://cx330.tw/posts/26c65734/</id>
     <published>2024-08-02T15:17:54.000Z</published>
-    <updated>2024-08-07T13:45:42.182Z</updated>
+    <updated>2024-08-10T06:51:53.575Z</updated>
     
     
       
@@ -604,34 +638,6 @@
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SCIST S4 資訊安全季後賽 Writeup</title>
-    <link href="https://cx330.tw/posts/9deb0a60/"/>
-    <id>https://cx330.tw/posts/9deb0a60/</id>
-    <published>2024-07-14T14:59:31.000Z</published>
-    <updated>2024-07-30T17:24:13.608Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;0x00-前言&quot;&gt;0x00 前言&lt;/h1&gt;
-&lt;p&gt;終於到了 SCIST</summary>
-        
-      
-    
-    
-    
-    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
-    
-    
-    <category term="資安" scheme="https://cx330.tw/tags/%E8%B3%87%E5%AE%89/"/>
-    
-    <category term="SCIST" scheme="https://cx330.tw/tags/SCIST/"/>
     
   </entry>
   

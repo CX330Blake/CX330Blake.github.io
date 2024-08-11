@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>[HTB] BabyEncryption Writeup</title>
+      <link href="/posts/3df19469/"/>
+      <url>/posts/3df19469/</url>
+      
+        <content type="html"><![CDATA[<h1 id="0x00-Challenge-Info">0x00 Challenge Info</h1><blockquote><p>You are after an organised crime group which is responsible for the illegal weapon market in your country. As a secret agent, you have infiltrated the group enough to be included in meetings with clients. During the last negotiation, you found one of the confidential messages for the customer. It contains crucial information about the delivery. Do you think you can decrypt it?</p></blockquote><p>This is the description of the challenge, let’s see the encrypting script and try to decrypt it!</p><h1 id="0x01-Analyze">0x01 Analyze</h1><p>The following is the encrypting script given by the challenge.</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> string</span><br><span class="line"><span class="keyword">from</span> secret <span class="keyword">import</span> MSG</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">encryption</span>(<span class="params">msg</span>):</span><br><span class="line">    ct = []</span><br><span class="line">    <span class="keyword">for</span> char <span class="keyword">in</span> msg:</span><br><span class="line">        ct.append((<span class="number">123</span> * char + <span class="number">18</span>) % <span class="number">256</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">bytes</span>(ct)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ct = encryption(MSG)</span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">&quot;./msg.enc&quot;</span>, <span class="string">&quot;w&quot;</span>)</span><br><span class="line">f.write(ct.<span class="built_in">hex</span>())</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure><p>We can see the program do the following things.</p><ol><li>Get the ascii value of each char.</li><li>Times it with 123.</li><li>Plus it with 18.</li><li>Mod 256 to make sure the final value is between 0 to 255.</li><li>Add this value to ct.</li></ol><p>To know more details of ASCII, we can see this table below.</p><p><img src="https://raw.githubusercontent.com/CX330Blake/MyBlogPhotos/main/image/ASCII-Table.png" alt="ASCII Table from GeeksforGeeks"></p><p>Since the possible character for the flag on the ASCII table is from 33 to 126, we can brute force it to know the flag.</p><h1 id="Exploit">Exploit</h1><p>Now we can write the exploit to brute force it.</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">CT = <span class="string">&quot;6e0a9372ec49a3f6930ed8723f9df6f6720ed8d89dc4937222ec7214d89d1e0e352ce0aa6ec82bf622227bb70e7fb7352249b7d893c493d8539dec8fb7935d490e7f9d22ec89b7a322ec8fd80e7f8921&quot;</span></span><br><span class="line">CT = <span class="built_in">bytes</span>.fromhex(CT)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">decrypt</span>(<span class="params">cipher_text: <span class="built_in">bytes</span></span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">    plaintext = <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> char <span class="keyword">in</span> cipher_text:</span><br><span class="line">        <span class="comment"># Since the possible char on ascii table is from 33 to 126</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">33</span>, <span class="number">126</span>):</span><br><span class="line">            <span class="keyword">if</span> (<span class="number">123</span> * i + <span class="number">18</span>) % <span class="number">256</span> == char:</span><br><span class="line">                plaintext += <span class="built_in">chr</span>(i)</span><br><span class="line">    <span class="keyword">return</span> plaintext</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(decrypt(CT))</span><br></pre></td></tr></table></figure><h1 id="Pwned">Pwned</h1><p>By running the exploit, we can get the flag easily.</p><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HTB&#123;l00k_47_y0u_r3v3rs1ng_3qu4710n5_c0ngr475&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> CTF </category>
+          
+          <category> HackTheBox </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Crypto </tag>
+            
+            <tag> HTB </tag>
+            
+            <tag> HackTheBox </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[Day 23] 刷一些 PicoCTF 的 Pwn 題</title>
       <link href="/posts/51f13f41/"/>
       <url>/posts/51f13f41/</url>
@@ -517,9 +548,9 @@
             
             <tag> HTB </tag>
             
-            <tag> Web </tag>
-            
             <tag> HackTheBox </tag>
+            
+            <tag> Web </tag>
             
         </tags>
       
@@ -720,9 +751,9 @@
       
         <tags>
             
-            <tag> CTF </tag>
-            
             <tag> PicoCTF </tag>
+            
+            <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -751,9 +782,9 @@
       
         <tags>
             
-            <tag> CTF </tag>
-            
             <tag> PicoCTF </tag>
+            
+            <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -782,9 +813,9 @@
       
         <tags>
             
-            <tag> CTF </tag>
-            
             <tag> PicoCTF </tag>
+            
+            <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -813,9 +844,9 @@
       
         <tags>
             
-            <tag> CTF </tag>
-            
             <tag> PicoCTF </tag>
+            
+            <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -844,9 +875,9 @@
       
         <tags>
             
-            <tag> CTF </tag>
-            
             <tag> PicoCTF </tag>
+            
+            <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -902,9 +933,9 @@
       
         <tags>
             
-            <tag> CTF </tag>
-            
             <tag> PicoCTF </tag>
+            
+            <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -999,11 +1030,11 @@
       
         <tags>
             
+            <tag> 資安 </tag>
+            
             <tag> CTF </tag>
             
             <tag> Crypto </tag>
-            
-            <tag> 資安 </tag>
             
             <tag> 密碼學 </tag>
             
@@ -1032,9 +1063,9 @@
       
         <tags>
             
-            <tag> CTF </tag>
-            
             <tag> PicoCTF </tag>
+            
+            <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
@@ -1136,9 +1167,9 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> 資安 </tag>
+            
+            <tag> PicoCTF </tag>
             
         </tags>
       

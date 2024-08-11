@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-08-10T07:35:10.877Z</updated>
+  <updated>2024-08-11T09:58:06.761Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[HTB] BabyEncryption Writeup</title>
+    <link href="https://cx330.tw/posts/3df19469/"/>
+    <id>https://cx330.tw/posts/3df19469/</id>
+    <published>2024-08-11T09:41:48.000Z</published>
+    <updated>2024-08-11T09:58:06.761Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;0x00-Challenge-Info&quot;&gt;0x00 Challenge Info&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You are after an organised crime group which is responsible for the</summary>
+        
+      
+    
+    
+    
+    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
+    
+    <category term="HackTheBox" scheme="https://cx330.tw/categories/HackTheBox/"/>
+    
+    
+    <category term="Crypto" scheme="https://cx330.tw/tags/Crypto/"/>
+    
+    <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
+    
+    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
+    
+  </entry>
   
   <entry>
     <title>[Day 23] 刷一些 PicoCTF 的 Pwn 題</title>
@@ -571,9 +604,9 @@
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
     
-    <category term="Web" scheme="https://cx330.tw/tags/Web/"/>
-    
     <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
+    
+    <category term="Web" scheme="https://cx330.tw/tags/Web/"/>
     
   </entry>
   
@@ -607,37 +640,6 @@
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
     
     <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Day 11] 把 SCIST 季後賽的 writeup 整理了下</title>
-    <link href="https://cx330.tw/posts/b5f171c7/"/>
-    <id>https://cx330.tw/posts/b5f171c7/</id>
-    <published>2024-07-15T07:55:47.000Z</published>
-    <updated>2024-08-07T13:44:28.386Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
-&lt;p&gt;這幾天把 SCIST 季後賽的 writeup 整理了下，17 號前要繳交。整理完之後還是一直很愧疚+自我懷疑。不知道是不是自己沒有這個天分還是努力的方向錯誤了。不過沒關係我還是會繼續保持熱愛，努力加油的！&lt;/p&gt;
-&lt;h1</summary>
-        
-      
-    
-    
-    
-    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
-    
-    
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
-    
-    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
-    
-    <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
     
   </entry>
   

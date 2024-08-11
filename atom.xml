@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-08-11T09:59:20.549Z</updated>
+  <updated>2024-08-11T15:38:13.803Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[Day 24] 解個 Pwn 以外的題目</title>
+    <link href="https://cx330.tw/posts/726c0654/"/>
+    <id>https://cx330.tw/posts/726c0654/</id>
+    <published>2024-08-11T15:34:37.000Z</published>
+    <updated>2024-08-11T15:38:13.803Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
+&lt;p&gt;這陣子都在學 Pwn，剛好遇到要繞過 Canary 的題目不會寫，所以就想說先暫時讓 Pwn 的知識沉澱一下，先寫些別的類別的題目，過陣子再來回頭看看他。總之今天是寫了 HTB 的一題密碼學的題目。&lt;/p&gt;
+&lt;h1</summary>
+        
+      
+    
+    
+    
+    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
+    
+    
+    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    
+    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    
+  </entry>
   
   <entry>
     <title>[HTB] BabyEncryption Writeup</title>
@@ -607,39 +636,6 @@
     <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
     
     <category term="Web" scheme="https://cx330.tw/tags/Web/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[HTB] The Last Dance Writeup 💃</title>
-    <link href="https://cx330.tw/posts/acba6120/"/>
-    <id>https://cx330.tw/posts/acba6120/</id>
-    <published>2024-07-15T17:30:34.000Z</published>
-    <updated>2024-07-30T17:24:13.613Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;0x00-Challenge-Info&quot;&gt;0x00 Challenge Info&lt;/h1&gt;
-&lt;p&gt;Hello hackers. Let’s see the encrypted message.&lt;/p&gt;
-&lt;figure class=&quot;highlight</summary>
-        
-      
-    
-    
-    
-    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
-    
-    <category term="HackTheBox" scheme="https://cx330.tw/categories/HackTheBox/"/>
-    
-    
-    <category term="Crypto" scheme="https://cx330.tw/tags/Crypto/"/>
-    
-    <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
-    
-    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
     
   </entry>
   

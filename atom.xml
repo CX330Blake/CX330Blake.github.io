@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-08-12T10:23:02.954Z</updated>
+  <updated>2024-08-12T10:28:33.314Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://cx330.tw/posts/97052569/"/>
     <id>https://cx330.tw/posts/97052569/</id>
     <published>2024-08-12T10:23:02.000Z</published>
-    <updated>2024-08-12T10:23:02.954Z</updated>
+    <updated>2024-08-12T10:28:33.314Z</updated>
     
     
       
@@ -93,9 +93,9 @@
     
     
     
-    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
-    
     <category term="HackTheBox" scheme="https://cx330.tw/categories/HackTheBox/"/>
+    
+    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
     
     
     <category term="Crypto" scheme="https://cx330.tw/tags/Crypto/"/>
@@ -222,9 +222,9 @@
     
     
     
-    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
-    
     <category term="HackTheBox" scheme="https://cx330.tw/categories/HackTheBox/"/>
+    
+    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
     
     
     <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>

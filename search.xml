@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>[Day 25] 把SQLMap的文檔整理了一下！</title>
+      <link href="/posts/6c120880/"/>
+      <url>/posts/6c120880/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>今天把之前一直說要看的 SQLMap 的文檔是大致看過了一遍，也把它整理成了我自己比較好查詢的筆記模式！同時也去 THM 練了一下 <a href="https://tryhackme.com/r/room/sqlmap">SQLMap 的 Lab</a>。然後今天跟朋友一起出門去咖啡廳，真開心！</p><h1 id="今日進度">今日進度</h1><ol><li><a href="https://cx330.tw/posts/97052569/">SQLMap Spellbook: Basic Usage of SQLMap</a></li></ol><h1 id="今日狀態">今日狀態</h1><ul><li><p>起床時間：<code>10：00</code></p></li><li><p>知識量：⭐⭐⭐⭐</p></li><li><p>疲勞程度：⭐⭐⭐</p></li><li><p>精神狀態：⭐⭐⭐⭐</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 2024 CTF Training </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CTF </tag>
+            
+            <tag> CyberSec </tag>
+            
+            <tag> Web </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SQLMap Spellbook: Basic Usage of SQLMap</title>
       <link href="/posts/97052569/"/>
       <url>/posts/97052569/</url>
@@ -602,9 +631,9 @@
             
             <tag> HTB </tag>
             
-            <tag> HackTheBox </tag>
-            
             <tag> Web </tag>
+            
+            <tag> HackTheBox </tag>
             
         </tags>
       

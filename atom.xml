@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-08-12T11:16:42.215Z</updated>
+  <updated>2024-08-12T17:08:31.018Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[Day 25] 把SQLMap的文檔整理了一下！</title>
+    <link href="https://cx330.tw/posts/6c120880/"/>
+    <id>https://cx330.tw/posts/6c120880/</id>
+    <published>2024-08-12T17:04:30.000Z</published>
+    <updated>2024-08-12T17:08:31.018Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
+&lt;p&gt;今天把之前一直說要看的 SQLMap 的文檔是大致看過了一遍，也把它整理成了我自己比較好查詢的筆記模式！同時也去 THM 練了一下 &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
+    
+    
+    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    
+    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    
+    <category term="Web" scheme="https://cx330.tw/tags/Web/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SQLMap Spellbook: Basic Usage of SQLMap</title>
     <link href="https://cx330.tw/posts/97052569/"/>
     <id>https://cx330.tw/posts/97052569/</id>
     <published>2024-08-12T10:23:02.000Z</published>
-    <updated>2024-08-12T11:16:42.215Z</updated>
+    <updated>2024-08-12T16:50:26.656Z</updated>
     
     
       
@@ -601,37 +631,6 @@
     <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
     
     <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Day 12] 繼續刷 HTB 的題目！</title>
-    <link href="https://cx330.tw/posts/11af25ee/"/>
-    <id>https://cx330.tw/posts/11af25ee/</id>
-    <published>2024-07-16T15:56:11.000Z</published>
-    <updated>2024-08-07T13:44:35.140Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
-&lt;p&gt;今天繼續刷了 HTB 的題目，覺得真的他們的題目很不錯（包括題目的描述也是挺有趣的）。然後我 19 號要和家裡面一起回澎湖個幾天！可能會暫停更新個幾天。旅遊回來之後繼續努力學習！&lt;/p&gt;
-&lt;h1</summary>
-        
-      
-    
-    
-    
-    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
-    
-    
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
-    
-    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
-    
-    <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
     
   </entry>
   

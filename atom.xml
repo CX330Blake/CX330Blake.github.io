@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-08-12T17:15:40.461Z</updated>
+  <updated>2024-08-16T12:40:01.005Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Intro to Chinese Remainder Theorem</title>
+    <link href="https://cx330.tw/posts/72a59deb/"/>
+    <id>https://cx330.tw/posts/72a59deb/</id>
+    <published>2024-08-13T08:39:01.000Z</published>
+    <updated>2024-08-16T12:40:01.005Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Prologue&quot;&gt;Prologue&lt;/h1&gt;
+&lt;p&gt;Chinese Remainder Theorem (CRT) is also known as Sun zi’s Theorem. It first appear on the Chinese book</summary>
+        
+      
+    
+    
+    
+    <category term="StudyNotes" scheme="https://cx330.tw/categories/StudyNotes/"/>
+    
+    
+    <category term="CRT" scheme="https://cx330.tw/tags/CRT/"/>
+    
+  </entry>
   
   <entry>
     <title>[Day 25] 把 SQLMap 的文檔整理了一下！</title>
@@ -601,36 +627,6 @@
     <category term="Assembly Code" scheme="https://cx330.tw/tags/Assembly-Code/"/>
     
     <category term="Machine Code" scheme="https://cx330.tw/tags/Machine-Code/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Day 13] 今天，從 0 開始學 Pwn</title>
-    <link href="https://cx330.tw/posts/98fc7fc6/"/>
-    <id>https://cx330.tw/posts/98fc7fc6/</id>
-    <published>2024-07-18T12:39:09.000Z</published>
-    <updated>2024-08-07T13:44:44.360Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
-&lt;p&gt;今天起來後去看了一下 HTB 的一題 Pwn 題，做了一下不太會，決定找 Writeup。結果 Writeup 也看不太懂，我才發現自己 Pwn</summary>
-        
-      
-    
-    
-    
-    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
-    
-    
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
-    
-    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
-    
-    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
     
   </entry>
   

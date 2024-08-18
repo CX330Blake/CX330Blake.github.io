@@ -20,9 +20,9 @@
       
         <tags>
             
-            <tag> Crypto </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> Crypto </tag>
             
             <tag> CyberSec </tag>
             
@@ -37,23 +37,23 @@
       <link href="/posts/67b7db12/"/>
       <url>/posts/67b7db12/</url>
       
-        <content type="html"><![CDATA[<h1 id="0x00-Challenge-Info">0x00 Challenge Info</h1><blockquote><p>Qubit Enterprises is a new company touting it’s propriety method of qubit stabilization. They expect to be able to build a quantum computer that can factor a RSA-1024 number in the next 10 years. As a promotion they are giving out “time capsules” which contain a message for the future encrypted by 1024 bit RSA. They might be great engineers, but they certainly aren’t cryptographers, can you find a way to read the message without having to wait for their futuristic machine?</p></blockquote><p>It told us that this is a RSA question, so let’s see the code on the server side.</p><h1 id="0x01-Analyze">0x01 Analyze</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> bytes_to_long, getPrime</span><br><span class="line"><span class="keyword">import</span> socketserver</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">FLAG = <span class="string">b&quot;HTB&#123;--REDACTED--&#125;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TimeCapsule</span>:</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, msg</span>):</span><br><span class="line">        self.msg = msg</span><br><span class="line">        self.bit_size = <span class="number">1024</span></span><br><span class="line">        self.e = <span class="number">5</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_get_new_pubkey</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            p = getPrime(self.bit_size // <span class="number">2</span>)</span><br><span class="line">            q = getPrime(self.bit_size // <span class="number">2</span>)</span><br><span class="line">            n = p * q</span><br><span class="line">            phi = (p - <span class="number">1</span>) * (q - <span class="number">1</span>)</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                <span class="built_in">pow</span>(self.e, -<span class="number">1</span>, phi)</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">except</span> ValueError:</span><br><span class="line">                <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> n, self.e</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_new_time_capsule</span>(<span class="params">self</span>):</span><br><span class="line">        n, e = self._get_new_pubkey()</span><br><span class="line">        m = bytes_to_long(self.msg)</span><br><span class="line">        m = <span class="built_in">pow</span>(m, e, n)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> &#123;<span class="string">&quot;time_capsule&quot;</span>: <span class="string">f&quot;<span class="subst">&#123;m:X&#125;</span>&quot;</span>, <span class="string">&quot;pubkey&quot;</span>: [<span class="string">f&quot;<span class="subst">&#123;n:X&#125;</span>&quot;</span>, <span class="string">f&quot;<span class="subst">&#123;e:X&#125;</span>&quot;</span>]&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">challenge</span>(<span class="params">req</span>):</span><br><span class="line">    time_capsule = TimeCapsule(FLAG)</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            req.sendall(</span><br><span class="line">                <span class="string">b&quot;Welcome to Qubit Enterprises. Would you like your own time capsule? (Y/n) &quot;</span></span><br><span class="line">            )</span><br><span class="line">            msg = req.recv(<span class="number">4096</span>).decode().strip().upper()</span><br><span class="line">            <span class="keyword">if</span> msg == <span class="string">&quot;Y&quot;</span> <span class="keyword">or</span> msg == <span class="string">&quot;YES&quot;</span>:</span><br><span class="line">                capsule = time_capsule.get_new_time_capsule()</span><br><span class="line">                req.sendall(json.dumps(capsule).encode() + <span class="string">b&quot;\n&quot;</span>)</span><br><span class="line">            <span class="keyword">elif</span> msg == <span class="string">&quot;N&quot;</span> <span class="keyword">or</span> msg == <span class="string">&quot;NO&quot;</span>:</span><br><span class="line">                req.sendall(<span class="string">b&quot;Thank you, take care\n&quot;</span>)</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                req.sendall(<span class="string">b&quot;I&#x27;m sorry I don&#x27;t understand\n&quot;</span>)</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            <span class="comment"># Socket closed, bail</span></span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyTCPRequestHandler</span>(socketserver.BaseRequestHandler):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">handle</span>(<span class="params">self</span>):</span><br><span class="line">        req = self.request</span><br><span class="line">        challenge(req)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ThreadingTCPServer</span>(socketserver.ThreadingMixIn, socketserver.TCPServer):</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    socketserver.TCPServer.allow_reuse_address = <span class="literal">True</span></span><br><span class="line">    server = ThreadingTCPServer((<span class="string">&quot;0.0.0.0&quot;</span>, <span class="number">1337</span>), MyTCPRequestHandler)</span><br><span class="line">    server.serve_forever()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure><p>The most important part of this code is the <code>__init__()</code> function, cause it defined the public key exponent e to be always 5. And the server lets the users to get the different key pairs multiple times, so we can infer the plaintext by the <a href="https://cx330.tw/posts/72a59deb/">Chinese Remainder Theorem</a>.</p><p>In RSA, we know that <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><msup><mi>m</mi><mi>e</mi></msup><mtext> </mtext><mo lspace="0.22em" rspace="0.22em"><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow></mo><mtext> </mtext><mi>n</mi></mrow><annotation encoding="application/x-tex">c = m^e \bmod n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span>, which <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span> is ciphertext, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span></span></span></span> is message and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">e</span></span></span></span> is the public exponent.</p><p>We can also write the equation above to be the following.</p><p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable rowspacing="0.25em" columnalign="right left" columnspacing="0em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mi>x</mi><mo>=</mo><msup><mi>m</mi><mi>e</mi></msup></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mi>c</mi><mo>=</mo><mi>x</mi><mtext> </mtext><mo lspace="0.22em" rspace="0.22em"><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow></mo><mtext> </mtext><mi>n</mi></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned} &amp;x = m^e\\ &amp;c=x\bmod n\end{aligned}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3em;vertical-align:-1.25em;"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.75em;"><span style="top:-3.75em;"><span class="pstrut" style="height:2.84em;"></span><span class="mord"></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:2.84em;"></span><span class="mord"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.25em;"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.75em;"><span style="top:-3.91em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.25em;"><span></span></span></span></span></span></span></span></span></span></span></p><p>Here the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span> are congruence modulo when module <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span>.</p><p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable rowspacing="0.25em" columnalign="right left" columnspacing="0em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mi>x</mi><mo>≡</mo><msub><mi>c</mi><mn>1</mn></msub><mtext> </mtext><mo lspace="0.22em" rspace="0.22em"><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow></mo><mtext> </mtext><msub><mi>n</mi><mn>1</mn></msub></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mi>x</mi><mo>≡</mo><msub><mi>c</mi><mn>2</mn></msub><mtext> </mtext><mo lspace="0.22em" rspace="0.22em"><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow></mo><mtext> </mtext><msub><mi>n</mi><mn>2</mn></msub></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mi>x</mi><mo>≡</mo><msub><mi>c</mi><mn>3</mn></msub><mtext> </mtext><mo lspace="0.22em" rspace="0.22em"><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow></mo><mtext> </mtext><msub><mi>n</mi><mn>3</mn></msub></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}&amp;x\equiv c_1\bmod n_1\\&amp;x\equiv c_2\bmod n_2\\&amp;x\equiv c_3\bmod n_3 \end{aligned}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:4.5em;vertical-align:-2em;"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.5em;"><span style="top:-4.5em;"><span class="pstrut" style="height:2.84em;"></span><span class="mord"></span></span><span style="top:-3em;"><span class="pstrut" style="height:2.84em;"></span><span class="mord"></span></span><span style="top:-1.5em;"><span class="pstrut" style="height:2.84em;"></span><span class="mord"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2em;"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.5em;"><span style="top:-4.66em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.16em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-1.66em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2em;"><span></span></span></span></span></span></span></span></span></span></span></p><p>Now we can use CRT (Chinese Remainder Theorem) to find <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span>. Once we found <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span>, we can easily calculate the 5th root of it, since 5 isn’t a large number. That way, we can know the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span></span></span></span>.</p><h1 id="0x02-Exploit">0x02 Exploit</h1><p>So here’s the exploit.</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> gmpy2 <span class="keyword">import</span> iroot</span><br><span class="line"><span class="keyword">from</span> sympy.ntheory.modular <span class="keyword">import</span> crt</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> long_to_bytes</span><br><span class="line"><span class="keyword">from</span> sympy <span class="keyword">import</span> integer_nthroot</span><br><span class="line"></span><br><span class="line"><span class="comment"># Here are the given ciphertexts and public keys</span></span><br><span class="line">c1 = <span class="number">0x2B9562DA73EA4B61F4A34C9B73A4F51AA20E31311E07F16CF8975B9AF095C3168EFFF0DC17FCA34BC0510AC2A5A0D4FF40428F70A384FED8DD0FC317E3CF86BE08FFB7A607E18ACBC0B4A1E20CCA4D506427C28480931D86AE897A38FB4B1A2EAAD68E2D031FFE0C86328AFD5381B1A3DF53286675D51D954AF4B95B32439F4A</span></span><br><span class="line">c2 = <span class="number">0x49DB31D4844E30C86AA1EB3F76EA489BEEA27A833C6A3093FB9E8F39AEF789BF09A0E377CCF10C26A42422A3B1895F91F054C16009EADCE22FB4660AF02582C70F6E5612CB7ACE7E586CED4696767B03D0F412F95E23630CC67A83619A32BD2E25314E1089EAC49D291A3293DECDF125EAC54C247ED71D3C43F78E6430E52E3D</span></span><br><span class="line">c3 = <span class="number">0x54EDE9F2D3825E314EB4980457EF319142663D2B85CD14C959BEE706C14F9BC1158A204FF523B11F52DC828EC747E96697E76643A167E18BD335068EDC9A15EF5F92D61C3FA4506625FC5C37189F271321BA2B39D57F6359E9DE29C609F7F4DE4531E8CE39F028F1A603DC3AB78A70C58338E9EA3DA8EEF1EFFAD8CACCAF0C04</span></span><br><span class="line"></span><br><span class="line">n1 = <span class="number">0x58469A7931E268B0BC57AA95D2BE6FC288CBA4520909EC9964EAFE1F30CAA63D1FE4DDEFFA74CF9107CD8DFD6B09DC479062AA4B492AB0240EDB292E0C17EE21E4FBF621E783F90190AB7EBB97F5760C7DC3A113A9676828C1B210A72601D23AA3D1CDD236A65607B32BA7E5C797FE245300D6D9C37C209258FDEDF4E8EE92E5</span></span><br><span class="line">n2 = <span class="number">0x6FE5A8ABC6D747E31223E1F33C8308FD4CF9FCC12E8559F451DF7BC5B82D4872ED966DDA40C4E4484C5D0ED4B50518B4CCDF05ED167617C501797058689851FC25C77BAADE43ACF480C37CAE027BE600E8DCBEEAF13FCB6875989EB843A62432F94765D8041071A8D409F71C3968098A6FACD2BF8DF23E9733CDA50FBEF619BB</span></span><br><span class="line">n3 = <span class="number">0xC379270FF14CA4D3953AD46E80D4AC3F2094C95EF68DF6E44B0D1FBCAE5AEFB22E6CF447454528F18DBA5D79BCD8E8025FE5931B296683E09D465C0CC0852ACFE712F450D46B4CD683E0B0A099E73133C384CC0B2E527AE2E7D9E50CDAE0AA41784B1222DECE283BE7C537D16D9773F88CE246025CD1BA134A1E5C5C254B10F9</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Here x is m to the power of e, where e is 5</span></span><br><span class="line">x = crt([n1, n2, n3], [c1, c2, c3])[<span class="number">0</span>]</span><br><span class="line"><span class="comment"># Get the 5th root of x, which is m</span></span><br><span class="line">m = iroot(x, <span class="number">5</span>)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(long_to_bytes(m))</span><br></pre></td></tr></table></figure><h1 id="0x03-Pwned">0x03 Pwned</h1><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HTB&#123;t3h_FuTUr3_15_bR1ghT_1_H0p3_y0uR3_W34r1nG_5h4d35!&#125;</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h1 id="0x00-Challenge-Info">0x00 Challenge Info</h1><blockquote><p>Qubit Enterprises is a new company touting it’s propriety method of qubit stabilization. They expect to be able to build a quantum computer that can factor a RSA-1024 number in the next 10 years. As a promotion they are giving out “time capsules” which contain a message for the future encrypted by 1024 bit RSA. They might be great engineers, but they certainly aren’t cryptographers, can you find a way to read the message without having to wait for their futuristic machine?</p></blockquote><p>It told us that this is a RSA question, so let’s see the code on the server side.</p><h1 id="0x01-Analyze">0x01 Analyze</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> bytes_to_long, getPrime</span><br><span class="line"><span class="keyword">import</span> socketserver</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">FLAG = <span class="string">b&quot;HTB&#123;--REDACTED--&#125;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TimeCapsule</span>:</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, msg</span>):</span><br><span class="line">        self.msg = msg</span><br><span class="line">        self.bit_size = <span class="number">1024</span></span><br><span class="line">        self.e = <span class="number">5</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_get_new_pubkey</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            p = getPrime(self.bit_size // <span class="number">2</span>)</span><br><span class="line">            q = getPrime(self.bit_size // <span class="number">2</span>)</span><br><span class="line">            n = p * q</span><br><span class="line">            phi = (p - <span class="number">1</span>) * (q - <span class="number">1</span>)</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                <span class="built_in">pow</span>(self.e, -<span class="number">1</span>, phi)</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">except</span> ValueError:</span><br><span class="line">                <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> n, self.e</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_new_time_capsule</span>(<span class="params">self</span>):</span><br><span class="line">        n, e = self._get_new_pubkey()</span><br><span class="line">        m = bytes_to_long(self.msg)</span><br><span class="line">        m = <span class="built_in">pow</span>(m, e, n)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> &#123;<span class="string">&quot;time_capsule&quot;</span>: <span class="string">f&quot;<span class="subst">&#123;m:X&#125;</span>&quot;</span>, <span class="string">&quot;pubkey&quot;</span>: [<span class="string">f&quot;<span class="subst">&#123;n:X&#125;</span>&quot;</span>, <span class="string">f&quot;<span class="subst">&#123;e:X&#125;</span>&quot;</span>]&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">challenge</span>(<span class="params">req</span>):</span><br><span class="line">    time_capsule = TimeCapsule(FLAG)</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            req.sendall(</span><br><span class="line">                <span class="string">b&quot;Welcome to Qubit Enterprises. Would you like your own time capsule? (Y/n) &quot;</span></span><br><span class="line">            )</span><br><span class="line">            msg = req.recv(<span class="number">4096</span>).decode().strip().upper()</span><br><span class="line">            <span class="keyword">if</span> msg == <span class="string">&quot;Y&quot;</span> <span class="keyword">or</span> msg == <span class="string">&quot;YES&quot;</span>:</span><br><span class="line">                capsule = time_capsule.get_new_time_capsule()</span><br><span class="line">                req.sendall(json.dumps(capsule).encode() + <span class="string">b&quot;\n&quot;</span>)</span><br><span class="line">            <span class="keyword">elif</span> msg == <span class="string">&quot;N&quot;</span> <span class="keyword">or</span> msg == <span class="string">&quot;NO&quot;</span>:</span><br><span class="line">                req.sendall(<span class="string">b&quot;Thank you, take care\n&quot;</span>)</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                req.sendall(<span class="string">b&quot;I&#x27;m sorry I don&#x27;t understand\n&quot;</span>)</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            <span class="comment"># Socket closed, bail</span></span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyTCPRequestHandler</span>(socketserver.BaseRequestHandler):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">handle</span>(<span class="params">self</span>):</span><br><span class="line">        req = self.request</span><br><span class="line">        challenge(req)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ThreadingTCPServer</span>(socketserver.ThreadingMixIn, socketserver.TCPServer):</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    socketserver.TCPServer.allow_reuse_address = <span class="literal">True</span></span><br><span class="line">    server = ThreadingTCPServer((<span class="string">&quot;0.0.0.0&quot;</span>, <span class="number">1337</span>), MyTCPRequestHandler)</span><br><span class="line">    server.serve_forever()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure><p>The most important part of this code is the <code>__init__()</code> function, cause it defined the public key exponent e to be always 5. And the server lets the users to get the different key pairs multiple times, so we can infer the plaintext by the <a href="https://cx330.tw/posts/72a59deb/">Chinese Remainder Theorem</a>.</p><p>In RSA, we know that <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><msup><mi>m</mi><mi>e</mi></msup><mtext> </mtext><mo lspace="0.22em" rspace="0.22em"><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow></mo><mtext> </mtext><mi>n</mi></mrow><annotation encoding="application/x-tex">c = m^e \bmod n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span>, which <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span> is ciphertext, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span></span></span></span> is message and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">e</span></span></span></span> is the public exponent.</p><p>We can also write the equation above to be the following.</p><p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable rowspacing="0.25em" columnalign="right left" columnspacing="0em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mi>x</mi><mo>=</mo><msup><mi>m</mi><mi>e</mi></msup></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mi>c</mi><mo>=</mo><mi>x</mi><mtext> </mtext><mo lspace="0.22em" rspace="0.22em"><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow></mo><mtext> </mtext><mi>n</mi></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned} &amp;x = m^e\\ &amp;c=x\bmod n\end{aligned}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3em;vertical-align:-1.25em;"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.75em;"><span style="top:-3.75em;"><span class="pstrut" style="height:2.84em;"></span><span class="mord"></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:2.84em;"></span><span class="mord"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.25em;"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.75em;"><span style="top:-3.91em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">e</span></span></span></span></span></span></span></span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.25em;"><span></span></span></span></span></span></span></span></span></span></span></p><p>Here the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span> are congruence modulo when module <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span>.</p><p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable rowspacing="0.25em" columnalign="right left" columnspacing="0em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mi>x</mi><mo>≡</mo><msub><mi>c</mi><mn>1</mn></msub><mtext> </mtext><mo lspace="0.22em" rspace="0.22em"><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow></mo><mtext> </mtext><msub><mi>n</mi><mn>1</mn></msub></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mi>x</mi><mo>≡</mo><msub><mi>c</mi><mn>2</mn></msub><mtext> </mtext><mo lspace="0.22em" rspace="0.22em"><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow></mo><mtext> </mtext><msub><mi>n</mi><mn>2</mn></msub></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mi>x</mi><mo>≡</mo><msub><mi>c</mi><mn>3</mn></msub><mtext> </mtext><mo lspace="0.22em" rspace="0.22em"><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow></mo><mtext> </mtext><msub><mi>n</mi><mn>3</mn></msub></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}&amp;x\equiv c_1\bmod n_1\\&amp;x\equiv c_2\bmod n_2\\&amp;x\equiv c_3\bmod n_3 \end{aligned}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:4.5em;vertical-align:-2em;"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.5em;"><span style="top:-4.5em;"><span class="pstrut" style="height:2.84em;"></span><span class="mord"></span></span><span style="top:-3em;"><span class="pstrut" style="height:2.84em;"></span><span class="mord"></span></span><span style="top:-1.5em;"><span class="pstrut" style="height:2.84em;"></span><span class="mord"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2em;"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.5em;"><span style="top:-4.66em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.16em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-1.66em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2em;"><span></span></span></span></span></span></span></span></span></span></span></p><p>Now we can use CRT (Chinese Remainder Theorem) to find <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span>. Once we found <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span>, we can easily calculate the 5th root of it, since 5 isn’t a large number. That way, we can know the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span></span></span></span>.</p><h1 id="0x02-Exploit">0x02 Exploit</h1><p>So here’s the exploit.</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> gmpy2 <span class="keyword">import</span> iroot</span><br><span class="line"><span class="keyword">from</span> sympy.ntheory.modular <span class="keyword">import</span> crt</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> long_to_bytes</span><br><span class="line"></span><br><span class="line"><span class="comment"># Here are the given ciphertexts and public keys</span></span><br><span class="line">c1 = <span class="number">0x2B9562DA73EA4B61F4A34C9B73A4F51AA20E31311E07F16CF8975B9AF095C3168EFFF0DC17FCA34BC0510AC2A5A0D4FF40428F70A384FED8DD0FC317E3CF86BE08FFB7A607E18ACBC0B4A1E20CCA4D506427C28480931D86AE897A38FB4B1A2EAAD68E2D031FFE0C86328AFD5381B1A3DF53286675D51D954AF4B95B32439F4A</span></span><br><span class="line">c2 = <span class="number">0x49DB31D4844E30C86AA1EB3F76EA489BEEA27A833C6A3093FB9E8F39AEF789BF09A0E377CCF10C26A42422A3B1895F91F054C16009EADCE22FB4660AF02582C70F6E5612CB7ACE7E586CED4696767B03D0F412F95E23630CC67A83619A32BD2E25314E1089EAC49D291A3293DECDF125EAC54C247ED71D3C43F78E6430E52E3D</span></span><br><span class="line">c3 = <span class="number">0x54EDE9F2D3825E314EB4980457EF319142663D2B85CD14C959BEE706C14F9BC1158A204FF523B11F52DC828EC747E96697E76643A167E18BD335068EDC9A15EF5F92D61C3FA4506625FC5C37189F271321BA2B39D57F6359E9DE29C609F7F4DE4531E8CE39F028F1A603DC3AB78A70C58338E9EA3DA8EEF1EFFAD8CACCAF0C04</span></span><br><span class="line"></span><br><span class="line">n1 = <span class="number">0x58469A7931E268B0BC57AA95D2BE6FC288CBA4520909EC9964EAFE1F30CAA63D1FE4DDEFFA74CF9107CD8DFD6B09DC479062AA4B492AB0240EDB292E0C17EE21E4FBF621E783F90190AB7EBB97F5760C7DC3A113A9676828C1B210A72601D23AA3D1CDD236A65607B32BA7E5C797FE245300D6D9C37C209258FDEDF4E8EE92E5</span></span><br><span class="line">n2 = <span class="number">0x6FE5A8ABC6D747E31223E1F33C8308FD4CF9FCC12E8559F451DF7BC5B82D4872ED966DDA40C4E4484C5D0ED4B50518B4CCDF05ED167617C501797058689851FC25C77BAADE43ACF480C37CAE027BE600E8DCBEEAF13FCB6875989EB843A62432F94765D8041071A8D409F71C3968098A6FACD2BF8DF23E9733CDA50FBEF619BB</span></span><br><span class="line">n3 = <span class="number">0xC379270FF14CA4D3953AD46E80D4AC3F2094C95EF68DF6E44B0D1FBCAE5AEFB22E6CF447454528F18DBA5D79BCD8E8025FE5931B296683E09D465C0CC0852ACFE712F450D46B4CD683E0B0A099E73133C384CC0B2E527AE2E7D9E50CDAE0AA41784B1222DECE283BE7C537D16D9773F88CE246025CD1BA134A1E5C5C254B10F9</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Here x is m to the power of e, where e is 5</span></span><br><span class="line">x = crt([n1, n2, n3], [c1, c2, c3])[<span class="number">0</span>]</span><br><span class="line"><span class="comment"># Get the 5th root of x, which is m</span></span><br><span class="line">m = iroot(x, <span class="number">5</span>)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(long_to_bytes(m))</span><br></pre></td></tr></table></figure><h1 id="0x03-Pwned">0x03 Pwned</h1><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HTB&#123;t3h_FuTUr3_15_bR1ghT_1_H0p3_y0uR3_W34r1nG_5h4d35!&#125;</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
           
-          <category> CTF </category>
-          
           <category> HackTheBox </category>
+          
+          <category> CTF </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> HTB </tag>
-            
             <tag> Crypto </tag>
+            
+            <tag> HTB </tag>
             
             <tag> HacktTheBox </tag>
             
@@ -105,11 +105,11 @@
       
         <tags>
             
-            <tag> Web </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
+            
+            <tag> Web </tag>
             
         </tags>
       
@@ -181,18 +181,18 @@
       
       <categories>
           
-          <category> CTF </category>
-          
           <category> HackTheBox </category>
+          
+          <category> CTF </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> HTB </tag>
-            
             <tag> Crypto </tag>
+            
+            <tag> HTB </tag>
             
             <tag> HackTheBox </tag>
             
@@ -219,11 +219,11 @@
       
         <tags>
             
-            <tag> Pwn </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
+            
+            <tag> Pwn </tag>
             
         </tags>
       
@@ -248,11 +248,11 @@
       
         <tags>
             
-            <tag> Pwn </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
+            
+            <tag> Pwn </tag>
             
         </tags>
       
@@ -277,11 +277,11 @@
       
         <tags>
             
-            <tag> Pwn </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
+            
+            <tag> Pwn </tag>
             
         </tags>
       
@@ -299,9 +299,9 @@
       
       <categories>
           
-          <category> CTF </category>
-          
           <category> HackTheBox </category>
+          
+          <category> CTF </category>
           
       </categories>
       
@@ -310,9 +310,9 @@
             
             <tag> HTB </tag>
             
-            <tag> HackTheBox </tag>
-            
             <tag> Pwn </tag>
+            
+            <tag> HackTheBox </tag>
             
         </tags>
       
@@ -337,11 +337,11 @@
       
         <tags>
             
-            <tag> Pwn </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
+            
+            <tag> Pwn </tag>
             
         </tags>
       
@@ -393,11 +393,11 @@
       
         <tags>
             
-            <tag> Pwn </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
+            
+            <tag> Pwn </tag>
             
         </tags>
       
@@ -422,11 +422,11 @@
       
         <tags>
             
-            <tag> Pwn </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
+            
+            <tag> Pwn </tag>
             
         </tags>
       
@@ -451,11 +451,11 @@
       
         <tags>
             
-            <tag> Pwn </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
+            
+            <tag> Pwn </tag>
             
         </tags>
       
@@ -507,11 +507,11 @@
       
         <tags>
             
-            <tag> Pwn </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
+            
+            <tag> Pwn </tag>
             
         </tags>
       
@@ -536,11 +536,11 @@
       
         <tags>
             
-            <tag> Pwn </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
+            
+            <tag> Pwn </tag>
             
         </tags>
       
@@ -567,9 +567,9 @@
       
         <tags>
             
-            <tag> Pwn </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> Pwn </tag>
             
             <tag> Hacking </tag>
             
@@ -596,11 +596,11 @@
       
         <tags>
             
-            <tag> Pwn </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
+            
+            <tag> Pwn </tag>
             
         </tags>
       
@@ -654,11 +654,11 @@
       
         <tags>
             
-            <tag> Pwn </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
+            
+            <tag> Pwn </tag>
             
         </tags>
       
@@ -683,11 +683,11 @@
       
         <tags>
             
-            <tag> HTB </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
+            
+            <tag> HTB </tag>
             
         </tags>
       
@@ -705,9 +705,9 @@
       
       <categories>
           
-          <category> CTF </category>
-          
           <category> HackTheBox </category>
+          
+          <category> CTF </category>
           
       </categories>
       
@@ -716,9 +716,9 @@
             
             <tag> HTB </tag>
             
-            <tag> HackTheBox </tag>
-            
             <tag> Web </tag>
+            
+            <tag> HackTheBox </tag>
             
         </tags>
       
@@ -736,18 +736,18 @@
       
       <categories>
           
-          <category> CTF </category>
-          
           <category> HackTheBox </category>
+          
+          <category> CTF </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> HTB </tag>
-            
             <tag> Crypto </tag>
+            
+            <tag> HTB </tag>
             
             <tag> HackTheBox </tag>
             
@@ -774,11 +774,11 @@
       
         <tags>
             
-            <tag> HTB </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
+            
+            <tag> HTB </tag>
             
         </tags>
       
@@ -830,11 +830,11 @@
       
         <tags>
             
-            <tag> HTB </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
+            
+            <tag> HTB </tag>
             
         </tags>
       
@@ -852,9 +852,9 @@
       
       <categories>
           
-          <category> CTF </category>
-          
           <category> HackTheBox </category>
+          
+          <category> CTF </category>
           
       </categories>
       
@@ -863,9 +863,9 @@
             
             <tag> HTB </tag>
             
-            <tag> HackTheBox </tag>
-            
             <tag> Pwn </tag>
+            
+            <tag> HackTheBox </tag>
             
         </tags>
       
@@ -919,13 +919,13 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -950,13 +950,13 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -981,13 +981,13 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -1012,13 +1012,13 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -1043,13 +1043,13 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -1101,13 +1101,13 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -1132,15 +1132,15 @@
       
         <tags>
             
+            <tag> CTF </tag>
+            
             <tag> Crypto </tag>
             
-            <tag> CTF </tag>
+            <tag> Cryptography </tag>
             
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
-            
-            <tag> Cryptography </tag>
             
         </tags>
       
@@ -1165,15 +1165,15 @@
       
         <tags>
             
+            <tag> CTF </tag>
+            
             <tag> Crypto </tag>
             
-            <tag> CTF </tag>
+            <tag> Cryptography </tag>
             
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
-            
-            <tag> Cryptography </tag>
             
         </tags>
       
@@ -1198,11 +1198,11 @@
       
         <tags>
             
-            <tag> 資安 </tag>
+            <tag> CTF </tag>
             
             <tag> Crypto </tag>
             
-            <tag> CTF </tag>
+            <tag> 資安 </tag>
             
             <tag> 密碼學 </tag>
             
@@ -1231,13 +1231,13 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -1316,9 +1316,9 @@
       
         <tags>
             
-            <tag> 資安 </tag>
-            
             <tag> PicoCTF </tag>
+            
+            <tag> 資安 </tag>
             
         </tags>
       

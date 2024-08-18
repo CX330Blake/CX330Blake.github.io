@@ -6,7 +6,7 @@
   <link href="https://cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://cx330.tw/"/>
-  <updated>2024-08-16T13:10:25.603Z</updated>
+  <updated>2024-08-18T07:15:50.070Z</updated>
   <id>https://cx330.tw/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[Day 26] 看了看甚麼是中國剩餘定理</title>
+    <link href="https://cx330.tw/posts/4640530a/"/>
+    <id>https://cx330.tw/posts/4640530a/</id>
+    <published>2024-08-18T07:12:27.000Z</published>
+    <updated>2024-08-18T07:15:50.070Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
+&lt;p&gt;今天是在做 HTB 的 Baby Time Capsule 那題的時候發現要用到</summary>
+        
+      
+    
+    
+    
+    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
+    
+    
+    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    
+    <category term="Crypto" scheme="https://cx330.tw/tags/Crypto/"/>
+    
+    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    
+  </entry>
   
   <entry>
     <title>[HTB] Baby Time Capsule Writeup 💊</title>
@@ -597,39 +627,6 @@
     <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
     
     <category term="Hacking" scheme="https://cx330.tw/tags/Hacking/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Day 14] 用 THM + 影片繼續學 Pwn</title>
-    <link href="https://cx330.tw/posts/e58d0fa3/"/>
-    <id>https://cx330.tw/posts/e58d0fa3/</id>
-    <published>2024-07-19T12:25:13.000Z</published>
-    <updated>2024-08-07T13:44:53.255Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
-&lt;p&gt;今天下來嘉義了，明天準備坐船去澎湖。今天白天就是繼續看 Yuawn 的影片，搭配 TryHackMe 的練習，希望能夠更加熟悉 Pwn 的基礎！&lt;/p&gt;
-&lt;h1 id=&quot;今日進度&quot;&gt;今日進度&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
-    
-    
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
-    
-    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
-    
-    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
     
   </entry>
   

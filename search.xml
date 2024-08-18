@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>[Day 26] 看了看甚麼是中國剩餘定理</title>
+      <link href="/posts/4640530a/"/>
+      <url>/posts/4640530a/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>今天是在做 HTB 的 Baby Time Capsule 那題的時候發現要用到 CRT，所以趕緊去看一下到底是甚麼東西。感覺還是有很多數學定理沒有好好理解呀&gt;&lt;。</p><p>然後這些是我在去綠島前+回來之後做完的，但還是把它算在同一天囉。</p><h1 id="今日進度">今日進度</h1><ol><li><a href="https://cx330.tw/posts/72a59deb/">Intro to Chinese Remainder Theorem</a></li><li><a href="https://cx330.tw/posts/67b7db12/">[HTB] Baby Time Capsule Writeup 💊</a></li></ol><h1 id="今日狀態">今日狀態</h1><ul><li><p>起床時間：<code>07：00</code></p></li><li><p>知識量：⭐⭐⭐⭐</p></li><li><p>疲勞程度：⭐⭐⭐</p></li><li><p>精神狀態：⭐⭐⭐⭐</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 2024 CTF Training </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CTF </tag>
+            
+            <tag> Crypto </tag>
+            
+            <tag> CyberSec </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[HTB] Baby Time Capsule Writeup 💊</title>
       <link href="/posts/67b7db12/"/>
       <url>/posts/67b7db12/</url>
@@ -892,11 +921,11 @@
             
             <tag> CTF </tag>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -923,11 +952,11 @@
             
             <tag> CTF </tag>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -954,11 +983,11 @@
             
             <tag> CTF </tag>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -985,11 +1014,11 @@
             
             <tag> CTF </tag>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -1016,11 +1045,11 @@
             
             <tag> CTF </tag>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -1074,11 +1103,11 @@
             
             <tag> CTF </tag>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -1105,13 +1134,13 @@
             
             <tag> CTF </tag>
             
-            <tag> CyberSec </tag>
-            
-            <tag> TechStreak30 </tag>
-            
             <tag> Crypto </tag>
             
             <tag> Cryptography </tag>
+            
+            <tag> CyberSec </tag>
+            
+            <tag> TechStreak30 </tag>
             
         </tags>
       
@@ -1138,13 +1167,13 @@
             
             <tag> CTF </tag>
             
-            <tag> CyberSec </tag>
-            
-            <tag> TechStreak30 </tag>
-            
             <tag> Crypto </tag>
             
             <tag> Cryptography </tag>
+            
+            <tag> CyberSec </tag>
+            
+            <tag> TechStreak30 </tag>
             
         </tags>
       
@@ -1204,11 +1233,11 @@
             
             <tag> CTF </tag>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> PicoCTF </tag>
             
         </tags>
       

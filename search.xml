@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>[Day 28 &amp; 29] HITCON CMT 2024</title>
+      <link href="/posts/60102f54/"/>
+      <url>/posts/60102f54/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言">前言</h1><p>[2024/08/23 &amp; 2024/08/24]<br>這兩天是我第一次參加 HITCON，感覺是個重要的里程碑，紀錄一下。總之這兩天我收穫非常非常多，也深深感受到那種和一群和你有相同興趣、相同目標的人待在一起的充實感。</p><p>也由於大家都是駭客，所以有很多我們自己的專屬語言。每當聽到的時候都可以會心一笑，這種感覺真的很棒，也滿讓人感動的。真希望之後可以每年都來參加。（對於南北的資源差距有很深的感受，火車和住宿好貴 QQ）</p><h1 id="今日進度">今日進度</h1><ol><li>HITCON CMT 2024</li></ol><h1 id="今日狀態">今日狀態</h1><ul><li><p>起床時間：<code>08：00</code></p></li><li><p>知識量：⭐⭐⭐⭐⭐</p></li><li><p>疲勞程度：⭐⭐⭐⭐⭐</p></li><li><p>精神狀態：⭐⭐⭐⭐⭐</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 2024 CTF Training </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CTF </tag>
+            
+            <tag> CyberSec </tag>
+            
+            <tag> HITCON </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[Day 27] 玩玩 PicoCTF 建立信心 XD</title>
       <link href="/posts/37bd2e1d/"/>
       <url>/posts/37bd2e1d/</url>
@@ -49,9 +78,9 @@
             
             <tag> CTF </tag>
             
-            <tag> CyberSec </tag>
-            
             <tag> Crypto </tag>
+            
+            <tag> CyberSec </tag>
             
         </tags>
       
@@ -946,13 +975,13 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -977,13 +1006,13 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -1008,13 +1037,13 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -1039,13 +1068,13 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -1070,13 +1099,13 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -1128,13 +1157,13 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -1161,13 +1190,13 @@
             
             <tag> CTF </tag>
             
-            <tag> CyberSec </tag>
-            
-            <tag> TechStreak30 </tag>
-            
             <tag> Crypto </tag>
             
             <tag> Cryptography </tag>
+            
+            <tag> CyberSec </tag>
+            
+            <tag> TechStreak30 </tag>
             
         </tags>
       
@@ -1194,13 +1223,13 @@
             
             <tag> CTF </tag>
             
-            <tag> CyberSec </tag>
-            
-            <tag> TechStreak30 </tag>
-            
             <tag> Crypto </tag>
             
             <tag> Cryptography </tag>
+            
+            <tag> CyberSec </tag>
+            
+            <tag> TechStreak30 </tag>
             
         </tags>
       
@@ -1225,11 +1254,11 @@
       
         <tags>
             
-            <tag> 資安 </tag>
-            
             <tag> CTF </tag>
             
             <tag> Crypto </tag>
+            
+            <tag> 資安 </tag>
             
             <tag> 密碼學 </tag>
             
@@ -1258,13 +1287,13 @@
       
         <tags>
             
-            <tag> PicoCTF </tag>
-            
             <tag> CTF </tag>
             
             <tag> CyberSec </tag>
             
             <tag> TechStreak30 </tag>
+            
+            <tag> PicoCTF </tag>
             
         </tags>
       
@@ -1343,9 +1372,9 @@
       
         <tags>
             
-            <tag> 資安 </tag>
-            
             <tag> PicoCTF </tag>
+            
+            <tag> 資安 </tag>
             
         </tags>
       

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>CX330</title>
-  <icon>https://cx330.tw/assets/favicon.ico</icon>
+  <icon>https://blog.cx330.tw/assets/favicon.ico</icon>
   <subtitle>Hack the planet!</subtitle>
-  <link href="https://cx330.tw/atom.xml" rel="self"/>
+  <link href="https://blog.cx330.tw/atom.xml" rel="self"/>
   
-  <link href="https://cx330.tw/"/>
+  <link href="https://blog.cx330.tw/"/>
   <updated>2024-08-20T17:24:45.684Z</updated>
-  <id>https://cx330.tw/</id>
+  <id>https://blog.cx330.tw/</id>
   
   <author>
     <name>CX330</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>[Day 27] 玩玩 PicoCTF 建立信心 XD</title>
-    <link href="https://cx330.tw/posts/37bd2e1d/"/>
-    <id>https://cx330.tw/posts/37bd2e1d/</id>
+    <link href="https://blog.cx330.tw/posts/37bd2e1d/"/>
+    <id>https://blog.cx330.tw/posts/37bd2e1d/</id>
     <published>2024-08-20T17:18:10.000Z</published>
     <updated>2024-08-20T17:24:45.684Z</updated>
     
@@ -36,21 +36,21 @@
     
     
     
-    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
+    <category term="2024 CTF Training" scheme="https://blog.cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    <category term="CTF" scheme="https://blog.cx330.tw/tags/CTF/"/>
     
-    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    <category term="CyberSec" scheme="https://blog.cx330.tw/tags/CyberSec/"/>
     
   </entry>
   
   <entry>
     <title>[Day 26] 看了看甚麼是中國剩餘定理</title>
-    <link href="https://cx330.tw/posts/4640530a/"/>
-    <id>https://cx330.tw/posts/4640530a/</id>
+    <link href="https://blog.cx330.tw/posts/4640530a/"/>
+    <id>https://blog.cx330.tw/posts/4640530a/</id>
     <published>2024-08-18T07:12:27.000Z</published>
-    <updated>2024-08-18T07:16:22.739Z</updated>
+    <updated>2024-08-26T05:33:35.031Z</updated>
     
     
       
@@ -64,23 +64,23 @@
     
     
     
-    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
+    <category term="2024 CTF Training" scheme="https://blog.cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    <category term="CTF" scheme="https://blog.cx330.tw/tags/CTF/"/>
     
-    <category term="Crypto" scheme="https://cx330.tw/tags/Crypto/"/>
+    <category term="CyberSec" scheme="https://blog.cx330.tw/tags/CyberSec/"/>
     
-    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    <category term="Crypto" scheme="https://blog.cx330.tw/tags/Crypto/"/>
     
   </entry>
   
   <entry>
     <title>[HTB] Baby Time Capsule Writeup 💊</title>
-    <link href="https://cx330.tw/posts/67b7db12/"/>
-    <id>https://cx330.tw/posts/67b7db12/</id>
+    <link href="https://blog.cx330.tw/posts/67b7db12/"/>
+    <id>https://blog.cx330.tw/posts/67b7db12/</id>
     <published>2024-08-16T12:44:06.000Z</published>
-    <updated>2024-08-18T17:43:12.416Z</updated>
+    <updated>2024-08-26T05:33:33.554Z</updated>
     
     
       
@@ -95,23 +95,23 @@
     
     
     
-    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
+    <category term="CTF" scheme="https://blog.cx330.tw/categories/CTF/"/>
     
-    <category term="HackTheBox" scheme="https://cx330.tw/categories/HackTheBox/"/>
+    <category term="HackTheBox" scheme="https://blog.cx330.tw/categories/HackTheBox/"/>
     
     
-    <category term="Crypto" scheme="https://cx330.tw/tags/Crypto/"/>
+    <category term="Crypto" scheme="https://blog.cx330.tw/tags/Crypto/"/>
     
-    <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
+    <category term="HTB" scheme="https://blog.cx330.tw/tags/HTB/"/>
     
-    <category term="HacktTheBox" scheme="https://cx330.tw/tags/HacktTheBox/"/>
+    <category term="HacktTheBox" scheme="https://blog.cx330.tw/tags/HacktTheBox/"/>
     
   </entry>
   
   <entry>
     <title>Intro to Chinese Remainder Theorem</title>
-    <link href="https://cx330.tw/posts/72a59deb/"/>
-    <id>https://cx330.tw/posts/72a59deb/</id>
+    <link href="https://blog.cx330.tw/posts/72a59deb/"/>
+    <id>https://blog.cx330.tw/posts/72a59deb/</id>
     <published>2024-08-13T08:39:01.000Z</published>
     <updated>2024-08-16T12:40:01.005Z</updated>
     
@@ -127,19 +127,19 @@
     
     
     
-    <category term="StudyNotes" scheme="https://cx330.tw/categories/StudyNotes/"/>
+    <category term="StudyNotes" scheme="https://blog.cx330.tw/categories/StudyNotes/"/>
     
     
-    <category term="CRT" scheme="https://cx330.tw/tags/CRT/"/>
+    <category term="CRT" scheme="https://blog.cx330.tw/tags/CRT/"/>
     
   </entry>
   
   <entry>
     <title>[Day 25] 把 SQLMap 的文檔整理了一下！</title>
-    <link href="https://cx330.tw/posts/6c120880/"/>
-    <id>https://cx330.tw/posts/6c120880/</id>
+    <link href="https://blog.cx330.tw/posts/6c120880/"/>
+    <id>https://blog.cx330.tw/posts/6c120880/</id>
     <published>2024-08-12T17:04:30.000Z</published>
-    <updated>2024-08-12T17:15:40.461Z</updated>
+    <updated>2024-08-26T05:33:33.954Z</updated>
     
     
       
@@ -153,21 +153,21 @@
     
     
     
-    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
+    <category term="2024 CTF Training" scheme="https://blog.cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    <category term="CTF" scheme="https://blog.cx330.tw/tags/CTF/"/>
     
-    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    <category term="CyberSec" scheme="https://blog.cx330.tw/tags/CyberSec/"/>
     
-    <category term="Web" scheme="https://cx330.tw/tags/Web/"/>
+    <category term="Web" scheme="https://blog.cx330.tw/tags/Web/"/>
     
   </entry>
   
   <entry>
     <title>SQLMap Spellbook: Basic Usage of SQLMap</title>
-    <link href="https://cx330.tw/posts/97052569/"/>
-    <id>https://cx330.tw/posts/97052569/</id>
+    <link href="https://blog.cx330.tw/posts/97052569/"/>
+    <id>https://blog.cx330.tw/posts/97052569/</id>
     <published>2024-08-12T10:23:02.000Z</published>
     <updated>2024-08-12T16:50:26.656Z</updated>
     
@@ -183,21 +183,21 @@
     
     
     
-    <category term="StudyNotes" scheme="https://cx330.tw/categories/StudyNotes/"/>
+    <category term="StudyNotes" scheme="https://blog.cx330.tw/categories/StudyNotes/"/>
     
     
-    <category term="Web" scheme="https://cx330.tw/tags/Web/"/>
+    <category term="Web" scheme="https://blog.cx330.tw/tags/Web/"/>
     
-    <category term="SQLi" scheme="https://cx330.tw/tags/SQLi/"/>
+    <category term="SQLi" scheme="https://blog.cx330.tw/tags/SQLi/"/>
     
   </entry>
   
   <entry>
     <title>[Day 24] 解個 Pwn 以外的題目</title>
-    <link href="https://cx330.tw/posts/726c0654/"/>
-    <id>https://cx330.tw/posts/726c0654/</id>
+    <link href="https://blog.cx330.tw/posts/726c0654/"/>
+    <id>https://blog.cx330.tw/posts/726c0654/</id>
     <published>2024-08-11T15:34:37.000Z</published>
-    <updated>2024-08-12T08:21:16.552Z</updated>
+    <updated>2024-08-26T05:33:33.937Z</updated>
     
     
       
@@ -212,19 +212,19 @@
     
     
     
-    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
+    <category term="2024 CTF Training" scheme="https://blog.cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    <category term="CTF" scheme="https://blog.cx330.tw/tags/CTF/"/>
     
-    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    <category term="CyberSec" scheme="https://blog.cx330.tw/tags/CyberSec/"/>
     
   </entry>
   
   <entry>
     <title>[HTB] BabyEncryption Writeup</title>
-    <link href="https://cx330.tw/posts/3df19469/"/>
-    <id>https://cx330.tw/posts/3df19469/</id>
+    <link href="https://blog.cx330.tw/posts/3df19469/"/>
+    <id>https://blog.cx330.tw/posts/3df19469/</id>
     <published>2024-08-11T09:41:48.000Z</published>
     <updated>2024-08-16T12:47:27.847Z</updated>
     
@@ -241,23 +241,23 @@
     
     
     
-    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
+    <category term="CTF" scheme="https://blog.cx330.tw/categories/CTF/"/>
     
-    <category term="HackTheBox" scheme="https://cx330.tw/categories/HackTheBox/"/>
+    <category term="HackTheBox" scheme="https://blog.cx330.tw/categories/HackTheBox/"/>
     
     
-    <category term="Crypto" scheme="https://cx330.tw/tags/Crypto/"/>
+    <category term="Crypto" scheme="https://blog.cx330.tw/tags/Crypto/"/>
     
-    <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
+    <category term="HTB" scheme="https://blog.cx330.tw/tags/HTB/"/>
     
-    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
+    <category term="HackTheBox" scheme="https://blog.cx330.tw/tags/HackTheBox/"/>
     
   </entry>
   
   <entry>
     <title>[Day 23] 刷一些 PicoCTF 的 Pwn 題</title>
-    <link href="https://cx330.tw/posts/51f13f41/"/>
-    <id>https://cx330.tw/posts/51f13f41/</id>
+    <link href="https://blog.cx330.tw/posts/51f13f41/"/>
+    <id>https://blog.cx330.tw/posts/51f13f41/</id>
     <published>2024-08-10T06:49:33.000Z</published>
     <updated>2024-08-10T07:35:10.877Z</updated>
     
@@ -277,23 +277,23 @@
     
     
     
-    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
+    <category term="2024 CTF Training" scheme="https://blog.cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    <category term="CTF" scheme="https://blog.cx330.tw/tags/CTF/"/>
     
-    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    <category term="CyberSec" scheme="https://blog.cx330.tw/tags/CyberSec/"/>
     
-    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
+    <category term="Pwn" scheme="https://blog.cx330.tw/tags/Pwn/"/>
     
   </entry>
   
   <entry>
     <title>[Day 22] 今天嘗試了自己做出 Pwn106！</title>
-    <link href="https://cx330.tw/posts/26c65734/"/>
-    <id>https://cx330.tw/posts/26c65734/</id>
+    <link href="https://blog.cx330.tw/posts/26c65734/"/>
+    <id>https://blog.cx330.tw/posts/26c65734/</id>
     <published>2024-08-02T15:17:54.000Z</published>
-    <updated>2024-08-10T17:03:52.550Z</updated>
+    <updated>2024-08-26T05:33:33.587Z</updated>
     
     
       
@@ -308,23 +308,23 @@
     
     
     
-    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
+    <category term="2024 CTF Training" scheme="https://blog.cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    <category term="CTF" scheme="https://blog.cx330.tw/tags/CTF/"/>
     
-    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    <category term="CyberSec" scheme="https://blog.cx330.tw/tags/CyberSec/"/>
     
-    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
+    <category term="Pwn" scheme="https://blog.cx330.tw/tags/Pwn/"/>
     
   </entry>
   
   <entry>
     <title>[Day 21] Pwn 好難...但我會加油的</title>
-    <link href="https://cx330.tw/posts/ab8b10a3/"/>
-    <id>https://cx330.tw/posts/ab8b10a3/</id>
+    <link href="https://blog.cx330.tw/posts/ab8b10a3/"/>
+    <id>https://blog.cx330.tw/posts/ab8b10a3/</id>
     <published>2024-07-31T17:58:02.000Z</published>
-    <updated>2024-08-07T13:45:36.838Z</updated>
+    <updated>2024-08-26T05:33:33.937Z</updated>
     
     
       
@@ -338,21 +338,21 @@
     
     
     
-    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
+    <category term="2024 CTF Training" scheme="https://blog.cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    <category term="CTF" scheme="https://blog.cx330.tw/tags/CTF/"/>
     
-    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    <category term="CyberSec" scheme="https://blog.cx330.tw/tags/CyberSec/"/>
     
-    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
+    <category term="Pwn" scheme="https://blog.cx330.tw/tags/Pwn/"/>
     
   </entry>
   
   <entry>
     <title>[HTB] You know 0xDiablos Writeup</title>
-    <link href="https://cx330.tw/posts/ca279614/"/>
-    <id>https://cx330.tw/posts/ca279614/</id>
+    <link href="https://blog.cx330.tw/posts/ca279614/"/>
+    <id>https://blog.cx330.tw/posts/ca279614/</id>
     <published>2024-07-31T07:52:37.000Z</published>
     <updated>2024-07-31T17:56:55.985Z</updated>
     
@@ -370,23 +370,23 @@
     
     
     
-    <category term="CTF" scheme="https://cx330.tw/categories/CTF/"/>
+    <category term="CTF" scheme="https://blog.cx330.tw/categories/CTF/"/>
     
-    <category term="HackTheBox" scheme="https://cx330.tw/categories/HackTheBox/"/>
+    <category term="HackTheBox" scheme="https://blog.cx330.tw/categories/HackTheBox/"/>
     
     
-    <category term="HTB" scheme="https://cx330.tw/tags/HTB/"/>
+    <category term="HTB" scheme="https://blog.cx330.tw/tags/HTB/"/>
     
-    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
+    <category term="Pwn" scheme="https://blog.cx330.tw/tags/Pwn/"/>
     
-    <category term="HackTheBox" scheme="https://cx330.tw/tags/HackTheBox/"/>
+    <category term="HackTheBox" scheme="https://blog.cx330.tw/tags/HackTheBox/"/>
     
   </entry>
   
   <entry>
     <title>[Day 20] HTB Academy - Stack-Based Buffer Overflows on Linux x86</title>
-    <link href="https://cx330.tw/posts/4e5b6228/"/>
-    <id>https://cx330.tw/posts/4e5b6228/</id>
+    <link href="https://blog.cx330.tw/posts/4e5b6228/"/>
+    <id>https://blog.cx330.tw/posts/4e5b6228/</id>
     <published>2024-07-31T06:48:54.000Z</published>
     <updated>2024-07-31T06:52:42.332Z</updated>
     
@@ -402,21 +402,21 @@
     
     
     
-    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
+    <category term="2024 CTF Training" scheme="https://blog.cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    <category term="CTF" scheme="https://blog.cx330.tw/tags/CTF/"/>
     
-    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    <category term="CyberSec" scheme="https://blog.cx330.tw/tags/CyberSec/"/>
     
-    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
+    <category term="Pwn" scheme="https://blog.cx330.tw/tags/Pwn/"/>
     
   </entry>
   
   <entry>
     <title>Intro to CPU Registers</title>
-    <link href="https://cx330.tw/posts/1d65dc6/"/>
-    <id>https://cx330.tw/posts/1d65dc6/</id>
+    <link href="https://blog.cx330.tw/posts/1d65dc6/"/>
+    <id>https://blog.cx330.tw/posts/1d65dc6/</id>
     <published>2024-07-30T05:53:37.000Z</published>
     <updated>2024-07-30T17:24:13.617Z</updated>
     
@@ -432,19 +432,19 @@
     
     
     
-    <category term="StudyNotes" scheme="https://cx330.tw/categories/StudyNotes/"/>
+    <category term="StudyNotes" scheme="https://blog.cx330.tw/categories/StudyNotes/"/>
     
     
-    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
+    <category term="Pwn" scheme="https://blog.cx330.tw/tags/Pwn/"/>
     
-    <category term="Registers" scheme="https://cx330.tw/tags/Registers/"/>
+    <category term="Registers" scheme="https://blog.cx330.tw/tags/Registers/"/>
     
   </entry>
   
   <entry>
     <title>[Day 19] 上完 Yuawn 的 Pwn 第一堂課！</title>
-    <link href="https://cx330.tw/posts/289c779a/"/>
-    <id>https://cx330.tw/posts/289c779a/</id>
+    <link href="https://blog.cx330.tw/posts/289c779a/"/>
+    <id>https://blog.cx330.tw/posts/289c779a/</id>
     <published>2024-07-29T18:19:31.000Z</published>
     <updated>2024-08-07T13:45:24.989Z</updated>
     
@@ -463,21 +463,21 @@
     
     
     
-    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
+    <category term="2024 CTF Training" scheme="https://blog.cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    <category term="CTF" scheme="https://blog.cx330.tw/tags/CTF/"/>
     
-    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    <category term="CyberSec" scheme="https://blog.cx330.tw/tags/CyberSec/"/>
     
-    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
+    <category term="Pwn" scheme="https://blog.cx330.tw/tags/Pwn/"/>
     
   </entry>
   
   <entry>
     <title>[Day 18] Yuawn 的課真的上的不錯，大推大推</title>
-    <link href="https://cx330.tw/posts/dfbc9f18/"/>
-    <id>https://cx330.tw/posts/dfbc9f18/</id>
+    <link href="https://blog.cx330.tw/posts/dfbc9f18/"/>
+    <id>https://blog.cx330.tw/posts/dfbc9f18/</id>
     <published>2024-07-28T15:42:12.000Z</published>
     <updated>2024-08-07T13:45:15.285Z</updated>
     
@@ -494,21 +494,21 @@
     
     
     
-    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
+    <category term="2024 CTF Training" scheme="https://blog.cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    <category term="CTF" scheme="https://blog.cx330.tw/tags/CTF/"/>
     
-    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    <category term="CyberSec" scheme="https://blog.cx330.tw/tags/CyberSec/"/>
     
-    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
+    <category term="Pwn" scheme="https://blog.cx330.tw/tags/Pwn/"/>
     
   </entry>
   
   <entry>
     <title>[Day 17] HTB 和 THM 幫助我學 Pwn</title>
-    <link href="https://cx330.tw/posts/db00a960/"/>
-    <id>https://cx330.tw/posts/db00a960/</id>
+    <link href="https://blog.cx330.tw/posts/db00a960/"/>
+    <id>https://blog.cx330.tw/posts/db00a960/</id>
     <published>2024-07-27T18:07:05.000Z</published>
     <updated>2024-08-07T13:45:10.874Z</updated>
     
@@ -526,23 +526,23 @@
     
     
     
-    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
+    <category term="2024 CTF Training" scheme="https://blog.cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    <category term="CTF" scheme="https://blog.cx330.tw/tags/CTF/"/>
     
-    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    <category term="CyberSec" scheme="https://blog.cx330.tw/tags/CyberSec/"/>
     
-    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
+    <category term="Pwn" scheme="https://blog.cx330.tw/tags/Pwn/"/>
     
   </entry>
   
   <entry>
     <title>成大不分系轉系經驗分享</title>
-    <link href="https://cx330.tw/posts/baaabc06/"/>
-    <id>https://cx330.tw/posts/baaabc06/</id>
+    <link href="https://blog.cx330.tw/posts/baaabc06/"/>
+    <id>https://blog.cx330.tw/posts/baaabc06/</id>
     <published>2024-07-26T06:46:51.000Z</published>
-    <updated>2024-07-30T17:24:13.613Z</updated>
+    <updated>2024-08-26T05:33:33.516Z</updated>
     
     
       
@@ -555,21 +555,21 @@
     
     
     
-    <category term="LifeAndTalk" scheme="https://cx330.tw/categories/LifeAndTalk/"/>
+    <category term="LifeAndTalk" scheme="https://blog.cx330.tw/categories/LifeAndTalk/"/>
     
     
-    <category term="NCKU" scheme="https://cx330.tw/tags/NCKU/"/>
+    <category term="NCKU" scheme="https://blog.cx330.tw/tags/NCKU/"/>
     
-    <category term="CCEP" scheme="https://cx330.tw/tags/CCEP/"/>
+    <category term="CCEP" scheme="https://blog.cx330.tw/tags/CCEP/"/>
     
   </entry>
   
   <entry>
     <title>[Day 16] 計畫的一半！</title>
-    <link href="https://cx330.tw/posts/86a224b6/"/>
-    <id>https://cx330.tw/posts/86a224b6/</id>
+    <link href="https://blog.cx330.tw/posts/86a224b6/"/>
+    <id>https://blog.cx330.tw/posts/86a224b6/</id>
     <published>2024-07-25T15:36:41.000Z</published>
-    <updated>2024-07-30T17:24:13.606Z</updated>
+    <updated>2024-08-26T05:33:33.954Z</updated>
     
     
       
@@ -585,23 +585,23 @@
     
     
     
-    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
+    <category term="2024 CTF Training" scheme="https://blog.cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    <category term="CTF" scheme="https://blog.cx330.tw/tags/CTF/"/>
     
-    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    <category term="CyberSec" scheme="https://blog.cx330.tw/tags/CyberSec/"/>
     
-    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
+    <category term="Pwn" scheme="https://blog.cx330.tw/tags/Pwn/"/>
     
   </entry>
   
   <entry>
     <title>[Day 15] 我在澎湖刷 THM 的 Pwn 題目</title>
-    <link href="https://cx330.tw/posts/9071560f/"/>
-    <id>https://cx330.tw/posts/9071560f/</id>
+    <link href="https://blog.cx330.tw/posts/9071560f/"/>
+    <id>https://blog.cx330.tw/posts/9071560f/</id>
     <published>2024-07-20T15:38:54.000Z</published>
-    <updated>2024-08-07T13:45:00.906Z</updated>
+    <updated>2024-08-26T05:33:33.604Z</updated>
     
     
       
@@ -616,14 +616,14 @@
     
     
     
-    <category term="2024 CTF Training" scheme="https://cx330.tw/categories/2024-CTF-Training/"/>
+    <category term="2024 CTF Training" scheme="https://blog.cx330.tw/categories/2024-CTF-Training/"/>
     
     
-    <category term="CTF" scheme="https://cx330.tw/tags/CTF/"/>
+    <category term="CTF" scheme="https://blog.cx330.tw/tags/CTF/"/>
     
-    <category term="CyberSec" scheme="https://cx330.tw/tags/CyberSec/"/>
+    <category term="CyberSec" scheme="https://blog.cx330.tw/tags/CyberSec/"/>
     
-    <category term="Pwn" scheme="https://cx330.tw/tags/Pwn/"/>
+    <category term="Pwn" scheme="https://blog.cx330.tw/tags/Pwn/"/>
     
   </entry>
   

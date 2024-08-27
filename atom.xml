@@ -6,7 +6,7 @@
   <link href="https://blog.cx330.tw/atom.xml" rel="self"/>
   
   <link href="https://blog.cx330.tw/"/>
-  <updated>2024-08-26T11:43:07.925Z</updated>
+  <updated>2024-08-26T11:43:21.566Z</updated>
   <id>https://blog.cx330.tw/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.cx330.tw/posts/60102f54/"/>
     <id>https://blog.cx330.tw/posts/60102f54/</id>
     <published>2024-08-26T11:35:49.000Z</published>
-    <updated>2024-08-26T11:43:07.925Z</updated>
+    <updated>2024-08-26T11:43:21.566Z</updated>
     
     
       
@@ -100,9 +100,9 @@
     
     <category term="CTF" scheme="https://blog.cx330.tw/tags/CTF/"/>
     
-    <category term="Crypto" scheme="https://blog.cx330.tw/tags/Crypto/"/>
-    
     <category term="CyberSec" scheme="https://blog.cx330.tw/tags/CyberSec/"/>
+    
+    <category term="Crypto" scheme="https://blog.cx330.tw/tags/Crypto/"/>
     
   </entry>
   
